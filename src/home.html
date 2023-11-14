@@ -4,8 +4,466 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="main"></main>
-      @@include('html/_footer.htm',{})
+      <main class="main mainpage">
+        <section class="mainpage__hero hero">
+          <div class="hero__container container">
+            <div class="hero__head">
+              <div class="hero__sl-control sl-control">
+                <div class="sl-control__nav sl-nav">
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_next">
+                    <img
+                      src="@img/icons/arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_prev">
+                    <img
+                      src="@img/icons/arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                </div>
+                <div class="sl-control__pagination sl-pagination"></div>
+              </div>
+              <div class="hero__text-wrap">
+                <span class="hero__subtitle subtitle"
+                  >специальное предложение</span
+                >
+                <p class="hero__text txt">
+                  Скидки и бонусы за каждый заказ из нашей подборки этого месяца
+                </p>
+              </div>
+            </div>
+            <div class="hero__body">
+              <div class="hero__slider swiper">
+                <div class="hero__wrapper swiper-wrapper">
+                  <div class="hero__slide slide-hero swiper-slide">
+                    <div class="slide-hero__title-wrap">
+                      <span class="slide-hero__number"></span>
+                      <span class="slide-hero__title tl1"
+                        >Marques de Riscal Sauvignon Organic
+                        <span>-20%</span></span
+                      >
+                    </div>
+                    <div class="slide-hero__image-wrap">
+                      <img
+                        src="@img/hero/510dba4c02f11e4ff23d3d46811b899.webp"
+                        alt=""
+                        class="slide-hero__image" />
+                    </div>
+                    <a href="#" class="slide-hero__link btn btn_round">
+                      <div class="btn__icon-wrap"></div>
+                      <span class="btn__text">подробнее</span>
+                    </a>
+                  </div>
+                  <div class="hero__slide slide-hero swiper-slide">
+                    <div class="slide-hero__title-wrap">
+                      <span class="slide-hero__number"></span>
+                      <span class="slide-hero__title tl1"
+                        >Marques de Riscal Sauvignon Organic
+                        <span>-20%</span></span
+                      >
+                    </div>
+                    <div class="slide-hero__image-wrap">
+                      <img
+                        src="@img/hero/510dba4c02f11e4ff23d3d46811b899.webp"
+                        alt=""
+                        class="slide-hero__image" />
+                    </div>
+                    <a href="#" class="slide-hero__link btn btn_round">
+                      <div class="btn__icon-wrap"></div>
+                      <span class="btn__text">подробнее</span>
+                    </a>
+                  </div>
+                  <div class="hero__slide slide-hero swiper-slide">
+                    <div class="slide-hero__title-wrap">
+                      <span class="slide-hero__number"></span>
+                      <span class="slide-hero__title tl1"
+                        >Marques de Riscal Sauvignon Organic
+                        <span>-20%</span></span
+                      >
+                    </div>
+                    <div class="slide-hero__image-wrap">
+                      <img
+                        src="@img/hero/510dba4c02f11e4ff23d3d46811b899.webp"
+                        alt=""
+                        class="slide-hero__image" />
+                    </div>
+                    <a href="#" class="slide-hero__link btn btn_round">
+                      <div class="btn__icon-wrap"></div>
+                      <span class="btn__text">подробнее</span>
+                    </a>
+                  </div>
+                  <div class="hero__slide slide-hero swiper-slide">
+                    <div class="slide-hero__title-wrap">
+                      <span class="slide-hero__number"></span>
+                      <span class="slide-hero__title tl1"
+                        >Marques de Riscal Sauvignon Organic
+                        <span>-20%</span></span
+                      >
+                    </div>
+                    <div class="slide-hero__image-wrap">
+                      <img
+                        src="@img/hero/510dba4c02f11e4ff23d3d46811b899.webp"
+                        alt=""
+                        class="slide-hero__image" />
+                    </div>
+                    <a href="#" class="slide-hero__link btn btn_round">
+                      <div class="btn__icon-wrap"></div>
+                      <span class="btn__text">подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mainpage__categories categories">
+          <div class="categories__container container">
+            <span class="categories__title tl1">популярные категории</span>
+            <div class="categories__group">
+              <a href="#" class="categories__card category-card">
+                <span class="category-card__number">01</span>
+                <div
+                  class="category-card__image-wrap category-card__image-wrap_red">
+                  <img
+                    src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                    alt=""
+                    class="category-card__image" />
+                </div>
+                <span class="category-card__heading tl2">Красные вина</span>
+                <span class="category-card__text txt txt_md">43 позиции</span>
+              </a>
+              <a href="#" class="categories__card category-card">
+                <span class="category-card__number">02</span>
+                <div
+                  class="category-card__image-wrap category-card__image-wrap_white">
+                  <img
+                    src="@img/products/f34b89226b3d0ccf43cd11c7e6954ae5.webp"
+                    alt=""
+                    class="category-card__image" />
+                </div>
+                <span class="category-card__heading tl2">белые вина</span>
+                <span class="category-card__text txt txt_md">43 позиции</span>
+              </a>
+              <a href="#" class="categories__card category-card">
+                <span class="category-card__number">03</span>
+                <div
+                  class="category-card__image-wrap category-card__image-wrap_pink">
+                  <img
+                    src="@img/products/f707257c99fc1553c89d751a91b0cb87.webp"
+                    alt=""
+                    class="category-card__image" />
+                </div>
+                <span class="category-card__heading tl2">розовые вина</span>
+                <span class="category-card__text txt txt_md">43 позиции</span>
+              </a>
+              <a href="#" class="categories__card category-card">
+                <span class="category-card__number">04</span>
+                <div
+                  class="category-card__image-wrap category-card__image-wrap_black">
+                  <img
+                    src="@img/products/2b09445506122ee9091a593da5077391.webp"
+                    alt=""
+                    class="category-card__image" />
+                </div>
+                <span class="category-card__heading tl2">крепкий алкоголь</span>
+                <span class="category-card__text txt txt_md">43 позиции</span>
+              </a>
+              <a href="#" class="categories__card category-card">
+                <span class="category-card__number">05</span>
+                <div
+                  class="category-card__image-wrap category-card__image-wrap_red">
+                  <img
+                    src="@img/products/9d90d22c036e2d94e0423e47540840b8.webp"
+                    alt=""
+                    class="category-card__image" />
+                </div>
+                <span class="category-card__heading tl2"
+                  >подарки и сувениры</span
+                >
+                <span class="category-card__text txt txt_md">43 позиции</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="mainpage__recommendations recommendations">
+          <div class="recommendations__container container">
+            <div class="recommendations__head">
+              <span class="recommendations__number"></span>
+              <span class="recommendations__title tl1"
+                >рекомендации экспертов</span
+              >
+              <div
+                class="recommendations__sl-control sl-control sl-control_reversed">
+                <div class="sl-control__nav sl-nav">
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_next">
+                    <img
+                      src="@img/icons/arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_prev">
+                    <img
+                      src="@img/icons/arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                </div>
+                <div class="sl-control__pagination sl-pagination"></div>
+              </div>
+            </div>
+            <button type="submit" class="recommendations__link btn btn_icon">
+              <span class="btn__text txt txt_md">В каталог</span>
+            </button>
+            <div class="recommendations__body">
+              <div class="recommendations__slider swiper">
+                <div class="recommendations__wrapper swiper-wrapper">
+                  <div
+                    class="recommendations__product-card product-card swiper-slide">
+                    <a href="#" class="product-card__body">
+                      <div class="product-card__head">
+                        <span class="product-card__year txt txt_md">2021</span>
+                        <button type="button" class="product-card__heart">
+                          <svg
+                            class="product-card__heart-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="product-card__info">
+                        <span class="product-card__type txt">Белое сухое</span>
+                        <span class="product-card__price">1 440₽</span>
+                      </div>
+                      <div class="product-card__image-wrap">
+                        <img
+                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                          alt=""
+                          class="product-card__image" />
+                      </div>
+                      <div class="product-card__bg">
+                        <img
+                          src="@img/bg/3a3f94f671fc9954842ddba4e32b77a3.webp"
+                          alt=""
+                          class="product-card__bg-image" />
+                      </div>
+                    </a>
+                    <span class="product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
+                    >
+                    <a href="#" class="product-card__basket"
+                      ><img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="product-card__basket-icon"
+                    /></a>
+                  </div>
+                  <div
+                    class="recommendations__product-card product-card swiper-slide">
+                    <a href="#" class="product-card__body">
+                      <div class="product-card__head">
+                        <span class="product-card__year txt txt_md">2021</span>
+                        <button type="button" class="product-card__heart">
+                          <svg
+                            class="product-card__heart-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="product-card__info">
+                        <span class="product-card__type txt">Белое сухое</span>
+                        <span class="product-card__price">1 440₽</span>
+                      </div>
+                      <div class="product-card__image-wrap">
+                        <img
+                          src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                          alt=""
+                          class="product-card__image" />
+                      </div>
+                      <div class="product-card__bg">
+                        <img
+                          src="@img/bg/d0006c6f1c0a08a8875b9802ffd0f67cc66a.webp"
+                          alt=""
+                          class="product-card__bg-image" />
+                      </div>
+                    </a>
+                    <span class="product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
+                    >
+                    <a href="#" class="product-card__basket"
+                      ><img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="product-card__basket-icon"
+                    /></a>
+                  </div>
+                  <div
+                    class="recommendations__product-card product-card swiper-slide">
+                    <a href="#" class="product-card__body">
+                      <div class="product-card__head">
+                        <span class="product-card__year txt txt_md">2021</span>
+                        <button type="button" class="product-card__heart">
+                          <svg
+                            class="product-card__heart-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="product-card__info">
+                        <span class="product-card__type txt">Белое сухое</span>
+                        <span class="product-card__price">1 440₽</span>
+                      </div>
+                      <div class="product-card__image-wrap">
+                        <img
+                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                          alt=""
+                          class="product-card__image" />
+                      </div>
+                      <div class="product-card__bg">
+                        <img
+                          src="@img/bg/6e99b8a5fd19ac4af13c1401083ec6a8.webp"
+                          alt=""
+                          class="product-card__bg-image" />
+                      </div>
+                    </a>
+                    <span class="product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
+                    >
+                    <a href="#" class="product-card__basket"
+                      ><img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="product-card__basket-icon"
+                    /></a>
+                  </div>
+                  <div
+                    class="recommendations__product-card product-card swiper-slide">
+                    <a href="#" class="product-card__body">
+                      <div class="product-card__head">
+                        <span class="product-card__year txt txt_md">2021</span>
+                        <button type="button" class="product-card__heart">
+                          <svg
+                            class="product-card__heart-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="product-card__info">
+                        <span class="product-card__type txt">Белое сухое</span>
+                        <span class="product-card__price">1 440₽</span>
+                      </div>
+                      <div class="product-card__image-wrap">
+                        <img
+                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                          alt=""
+                          class="product-card__image" />
+                      </div>
+                      <div class="product-card__bg">
+                        <img
+                          src="@img/bg/2160667d6220acc0871d8d306ab50709.webp"
+                          alt=""
+                          class="product-card__bg-image" />
+                      </div>
+                    </a>
+                    <span class="product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
+                    >
+                    <a href="#" class="product-card__basket"
+                      ><img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="product-card__basket-icon"
+                    /></a>
+                  </div>
+                  <div
+                    class="recommendations__product-card product-card swiper-slide">
+                    <a href="#" class="product-card__body">
+                      <div class="product-card__head">
+                        <span class="product-card__year txt txt_md">2021</span>
+                        <button type="button" class="product-card__heart">
+                          <svg
+                            class="product-card__heart-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="product-card__info">
+                        <span class="product-card__type txt">Белое сухое</span>
+                        <span class="product-card__price">1 440₽</span>
+                      </div>
+                      <div class="product-card__image-wrap">
+                        <img
+                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                          alt=""
+                          class="product-card__image" />
+                      </div>
+                      <div class="product-card__bg">
+                        <img
+                          src="@img/bg/6e99b8a5fd19ac4af13c1401083ec6a8.webp"
+                          alt=""
+                          class="product-card__bg-image" />
+                      </div>
+                    </a>
+                    <span class="product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
+                    >
+                    <a href="#" class="product-card__basket"
+                      ><img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="product-card__basket-icon"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_svg.htm',{}) @@include('html/_footer.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

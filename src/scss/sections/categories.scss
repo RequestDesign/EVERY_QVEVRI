@@ -1,0 +1,30 @@
+.categories {
+  margin-bottom: 25rem;
+
+  // .categories__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .categories__title
+
+  &__title {
+    margin-bottom: 9rem;
+    align-self: center;
+  }
+
+  // .categories__group
+
+  &__group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5rem;
+  }
+
+  // .categories__card
+
+  &__card {
+  }
+}

@@ -6,7 +6,7 @@ $black: #303033;
 $white: #ffffff;
 $lightGray: #e9e8e8;
 $lightGray2: #f2f2f2;
-$grey: #b3b3b3;
+$gray: #b3b3b3;
 $backPattern: #ebe7dc;
 
 // ---------------------------------- fonts ---------------------------------
@@ -19,7 +19,14 @@ $backPattern: #ebe7dc;
 
 // ------------------------------- base styles ------------------------------
 
+// base file
+@import 'base/base';
+
+// body
 body {
+  background-image: url('@img/bg.webp');
+  background-size: cover;
+
   // scroll is blocked
   .lock & {
     overflow: hidden;
@@ -30,11 +37,15 @@ body {
   }
 }
 
+// wrapper
 .wrapper {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  max-width: 1920px;
   overflow: hidden;
+
   // press footer
   > main {
     flex: 1 1 auto;
@@ -47,7 +58,14 @@ body {
 
 // --------------------------------------------------------------------------
 
-// base scss file
+// base scss
 @import 'base/set';
+@import 'base/common';
+
+// header / footer
+@import 'components/header';
 
 // sections
+@import 'sections/hero';
+@import 'sections/categories';
+@import 'sections/recommendations';
