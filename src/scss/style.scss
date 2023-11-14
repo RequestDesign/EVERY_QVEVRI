@@ -1,0 +1,53 @@
+// -------------------------------- variables -------------------------------
+
+// colors
+$red: #eb5749;
+$black: #303033;
+$white: #ffffff;
+$lightGray: #e9e8e8;
+$lightGray2: #f2f2f2;
+$grey: #b3b3b3;
+$backPattern: #ebe7dc;
+
+// ---------------------------------- fonts ---------------------------------
+
+// google fonts
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+Georgian:700&display=swap');
+
+// local fonts
+@import 'base/fonts';
+
+// ------------------------------- base styles ------------------------------
+
+body {
+  // scroll is blocked
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+  // site is loaded
+  .loaded & {
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  // press footer
+  > main {
+    flex: 1 1 auto;
+  }
+  // fix for sliders
+  > * {
+    min-width: 0;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+// base scss file
+@import 'base/set';
+
+// sections
