@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<script src="https://api-maps.yandex.ru/v3/?apikey=893d068f-6a82-4f63-aec8-f0e9ed9ed59c&lang=ru_RU"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -19,7 +20,7 @@
 				<div class="header__top">
 					<a href="#" class="header__logo-wrap"><img src="img/logo.svg" alt="" class="header__logo" /></a>
 					<form data-dev action="#" class="header__search">
-						<div class="header__search-input input txt">
+						<div class="header__search-input input input_search txt">
 							<input autocomplete="off" type="search" name="form[]" data-error="Заполните поле" placeholder="Я ищу..." class="input__field" />
 						</div>
 						<button type="submit" class="header__search-btn btn btn_icon">
@@ -219,9 +220,9 @@
 							<div class="sl-control__pagination sl-pagination"></div>
 						</div>
 					</div>
-					<button type="submit" class="recommendations__link btn btn_icon">
+					<a href="#" class="recommendations__link btn btn_icon">
 						<span class="btn__text txt txt_md">В каталог</span>
-					</button>
+					</a>
 					<div class="recommendations__body">
 						<div class="recommendations__slider swiper">
 							<div class="recommendations__wrapper swiper-wrapper">
@@ -350,31 +351,600 @@
 					</div>
 				</div>
 			</section>
+			<section class="mainpage__privileges privileges">
+				<div class="privileges__container container">
+					<span class="privileges__title tl1">Наши преимущества</span>
+					<div class="privileges__group">
+						<div class="privileges__card privilege-card privilege-card_experts">
+							<div class="privilege-card__head">
+								<span class="privilege-card__characters"><span>ექსპერტები</span></span>
+								<span class="privilege-card__number">1</span>
+							</div>
+							<div class="privilege-card__body">
+								<span class="privilege-card__heading tl2">Ведущие эксперты</span>
+								<p class="privilege-card__text txt">
+									Мы 10 лет привозим грузинское вино и знаем о нем все
+								</p>
+							</div>
+						</div>
+						<div class="privileges__card privilege-card privilege-card_tasting">
+							<div class="privilege-card__head">
+								<span class="privilege-card__characters"><span>დეგუსტაცია</span></span>
+								<span class="privilege-card__number">2</span>
+							</div>
+							<div class="privilege-card__body">
+								<span class="privilege-card__heading tl2">Дегустация в магазинах</span>
+								<p class="privilege-card__text txt">
+									Уникальная возможность поучаствовать в дегустации от лучших
+									сомелье
+								</p>
+							</div>
+						</div>
+						<div class="privileges__card privilege-card privilege-card_bonuses">
+							<div class="privilege-card__head">
+								<span class="privilege-card__characters"><span>ბონუსები</span></span>
+								<span class="privilege-card__number">3</span>
+							</div>
+							<div class="privilege-card__body">
+								<span class="privilege-card__heading tl2">Бонусная система</span>
+								<p class="privilege-card__text txt">
+									Получай бонусы и скидки за заказы, участвуй в специальных
+									акциях
+								</p>
+							</div>
+						</div>
+						<div class="privileges__card privilege-card privilege-card_stock">
+							<div class="privilege-card__head">
+								<span class="privilege-card__characters"><span>ასორტიმენტი</span></span>
+								<span class="privilege-card__number">4</span>
+							</div>
+							<div class="privilege-card__body">
+								<span class="privilege-card__heading tl2">Широкий ассортимент</span>
+								<p class="privilege-card__text txt">
+									Более 100 видов вина, которого ни у кого нет в других
+									магазинах
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="privileges__bg">
+					<img src="img/bg/c82a204f-2dd1-464c-9bd4-387c5a12fc86.webp" alt="" class="privileges__bg-image" />
+				</div>
+			</section>
+			<section class="mainpage__tests tests">
+				<div class="tests__container container">
+					<div class="tests__slider swiper">
+						<div class="tests__wrapper swiper-wrapper">
+							<div class="tests__slide slide-tests swiper-slide">
+								<div class="slide-tests__images">
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_large">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/dbf594934943b6b7976f9835b2c3f79e.webp" alt="" class="slide-tests__image" />
+										</div>
+										<span class="slide-tests__subheading caps">Как хранить вино</span>
+									</div>
+
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_small">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp" alt="" class="slide-tests__image" />
+										</div>
+									</div>
+								</div>
+								<div class="slide-tests__content">
+									<span class="slide-tests__subtitle txt txt_md">Пройдите наши тесты</span>
+									<span class="slide-tests__heading tl1">Как хранить вино?</span>
+									<p class="slide-tests__text txt">Ему нужна забота ❤️</p>
+									<a href="#" class="slide-tests__link btn btn_round">
+										<div class="btn__icon-wrap"></div>
+										<span class="btn__text">пройти тест</span>
+									</a>
+								</div>
+							</div>
+							<div class="tests__slide slide-tests swiper-slide">
+								<div class="slide-tests__images">
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_large">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/dbf594934943b6b7976f9835b2c3f79e.webp" alt="" class="slide-tests__image" />
+										</div>
+										<span class="slide-tests__subheading caps">Как хранить вино</span>
+									</div>
+
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_small">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp" alt="" class="slide-tests__image" />
+										</div>
+									</div>
+								</div>
+								<div class="slide-tests__content">
+									<span class="slide-tests__subtitle txt txt_md">Пройдите наши тесты</span>
+									<span class="slide-tests__heading tl1">Как хранить вино?</span>
+									<p class="slide-tests__text txt">Ему нужна забота ❤️</p>
+									<a href="#" class="slide-tests__link btn btn_round">
+										<div class="btn__icon-wrap"></div>
+										<span class="btn__text">пройти тест</span>
+									</a>
+								</div>
+							</div>
+							<div class="tests__slide slide-tests swiper-slide">
+								<div class="slide-tests__images">
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_large">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/dbf594934943b6b7976f9835b2c3f79e.webp" alt="" class="slide-tests__image" />
+										</div>
+										<span class="slide-tests__subheading caps">Как хранить вино</span>
+									</div>
+
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_small">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp" alt="" class="slide-tests__image" />
+										</div>
+									</div>
+								</div>
+								<div class="slide-tests__content">
+									<span class="slide-tests__subtitle txt txt_md">Пройдите наши тесты</span>
+									<span class="slide-tests__heading tl1">Как хранить вино?</span>
+									<p class="slide-tests__text txt">Ему нужна забота ❤️</p>
+									<a href="#" class="slide-tests__link btn btn_round">
+										<div class="btn__icon-wrap"></div>
+										<span class="btn__text">пройти тест</span>
+									</a>
+								</div>
+							</div>
+							<div class="tests__slide slide-tests swiper-slide">
+								<div class="slide-tests__images">
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_large">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/dbf594934943b6b7976f9835b2c3f79e.webp" alt="" class="slide-tests__image" />
+										</div>
+										<span class="slide-tests__subheading caps">Как хранить вино</span>
+									</div>
+
+									<div class="slide-tests__image-wrap slide-tests__image-wrap_small">
+										<div class="slide-tests__image-content">
+											<img src="img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp" alt="" class="slide-tests__image" />
+										</div>
+									</div>
+								</div>
+								<div class="slide-tests__content">
+									<span class="slide-tests__subtitle txt txt_md">Пройдите наши тесты</span>
+									<span class="slide-tests__heading tl1">Как хранить вино?</span>
+									<p class="slide-tests__text txt">Ему нужна забота ❤️</p>
+									<a href="#" class="slide-tests__link btn btn_round">
+										<div class="btn__icon-wrap"></div>
+										<span class="btn__text">пройти тест</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tests__footer">
+						<span class="tests__active-number txt txt_wide"></span>
+						<div class="tests__sl-control sl-control sl-control_reversed">
+							<div class="sl-control__nav sl-nav">
+								<button type="button" class="sl-nav__arrow sl-nav__arrow_next">
+									<img src="img/icons/arr.svg" alt="" class="sl-nav__arrow-icon" />
+								</button>
+								<button type="button" class="sl-nav__arrow sl-nav__arrow_prev">
+									<img src="img/icons/arr.svg" alt="" class="sl-nav__arrow-icon" />
+								</button>
+							</div>
+							<div class="sl-control__pagination sl-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mainpage__blog blog">
+				<div class="blog__container container">
+					<span class="blog__title tl1">Блог every qvevri</span>
+					<a href="#" class="blog__link btn btn_icon">
+						<span class="btn__text txt txt_md">Все статьи</span>
+					</a>
+					<div class="blog__group">
+						<a href="#" class="blog__card blog-card blog-card_red">
+							<span class="blog-card__number txt txt_wide">01</span>
+							<div class="blog-card__group">
+								<div class="blog-card__image-wrap">
+									<img src="img/bg/c7609815fef72236759600b3f031a127.webp" alt="" class="blog-card__image" />
+								</div>
+								<span class="blog-card__date">
+									<span class="blog-card__date-txt">24</span>
+									<span class="blog-card__date-txt">10</span>
+								</span>
+							</div>
+							<span class="blog-card__heading tl2"> Мероприятие ноября</span>
+							<div class="blog-card__row">
+								<span class="blog-card__text txt">Мини-анонс</span>
+								<svg class="blog-card__arrow" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.85777 24.0002L38.142 24.0002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M23.9999 9.85806L38.142 24.0002L23.9999 38.1423" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="blog__card blog-card">
+							<span class="blog-card__number txt txt_wide">02</span>
+							<div class="blog-card__group">
+								<div class="blog-card__image-wrap">
+									<img src="img/bg/d52aa003aac636265f345b025bcd8a69.webp" alt="" class="blog-card__image" />
+								</div>
+								<span class="blog-card__date">
+									<span class="blog-card__date-txt">30</span>
+									<span class="blog-card__date-txt">10</span>
+								</span>
+							</div>
+							<span class="blog-card__heading tl2"> Мероприятие ноября</span>
+							<div class="blog-card__row">
+								<span class="blog-card__text txt">Мини-анонс</span>
+								<svg class="blog-card__arrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+									<path d="M9.85778 24.0002L38.142 24.0002" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M23.9999 9.85806L38.142 24.0002L23.9999 38.1423" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="blog__card blog-card blog-card_red">
+							<span class="blog-card__number txt txt_wide">03</span>
+							<div class="blog-card__group">
+								<div class="blog-card__image-wrap">
+									<img src="img/bg/c7609815fef72236759600b3f031a127.webp" alt="" class="blog-card__image" />
+								</div>
+								<span class="blog-card__date">
+									<span class="blog-card__date-txt">31</span>
+									<span class="blog-card__date-txt">10</span>
+								</span>
+							</div>
+							<span class="blog-card__heading tl2"> Мероприятие ноября</span>
+							<div class="blog-card__row">
+								<span class="blog-card__text txt">Мини-анонс</span>
+								<svg class="blog-card__arrow" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.85777 24.0002L38.142 24.0002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M23.9999 9.85806L38.142 24.0002L23.9999 38.1423" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="blog__card blog-card">
+							<span class="blog-card__number txt txt_wide">04</span>
+							<div class="blog-card__group">
+								<div class="blog-card__image-wrap">
+									<img src="img/bg/d52aa003aac636265f345b025bcd8a69.webp" alt="" class="blog-card__image" />
+								</div>
+								<span class="blog-card__date">
+									<span class="blog-card__date-txt">01</span>
+									<span class="blog-card__date-txt">11</span>
+								</span>
+							</div>
+							<span class="blog-card__heading tl2"> Мероприятие ноября</span>
+							<div class="blog-card__row">
+								<span class="blog-card__text txt">Мини-анонс</span>
+								<svg class="blog-card__arrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+									<path d="M9.85778 24.0002L38.142 24.0002" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M23.9999 9.85806L38.142 24.0002L23.9999 38.1423" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="blog__bg">
+					<img src="img/bg/bffabb6a1187159308cf61dac3363771.webp" alt="" class="blog__bg-image" />
+				</div>
+			</section>
+			<section class="mainpage__collections collections">
+				<div class="collections__container container">
+					<div class="collections__head">
+						<p class="collections__text txt">
+							Собрали для вас все в готовые подборки
+						</p>
+						<span class="collections__title tl1">подборки</span>
+					</div>
+					<div class="collections__body">
+						<div class="collections__slider swiper">
+							<div class="collections__wrapper swiper-wrapper">
+								<div class="collections__slide slide-collections swiper-slide">
+									<a href="#" class="slide-collections__inner">
+										<div class="slide-collections__image-wrap">
+											<img src="img/collections/8e6cd525fff13bf7bcde8db1be62b80ed54956f0.webp" alt="" class="slide-collections__image" />
+										</div>
+										<span class="slide-collections__heading tl2">рейтинг вин every qvevri</span>
+									</a>
+								</div>
+								<div class="collections__slide slide-collections swiper-slide">
+									<a href="#" class="slide-collections__inner">
+										<div class="slide-collections__image-wrap">
+											<img src="img/collections/48097497.webp" alt="" class="slide-collections__image" />
+										</div>
+										<div class="slide-collections__content">
+											<span class="slide-collections__heading tl2">все виды игристых</span>
+										</div>
+									</a>
+								</div>
+								<div class="collections__slide slide-collections swiper-slide">
+									<a href="#" class="slide-collections__inner">
+										<div class="slide-collections__image-wrap">
+											<img src="img/collections/480974497.webp" alt="" class="slide-collections__image" />
+										</div>
+										<div class="slide-collections__content">
+											<span class="slide-collections__heading tl2">крепкие напитки</span>
+										</div>
+									</a>
+								</div>
+								<div class="collections__slide slide-collections swiper-slide">
+									<a href="#" class="slide-collections__inner">
+										<div class="slide-collections__image-wrap">
+											<img src="img/collections/8e6cd525fff13bf7bcde8db1be62b80ed54956f0.webp" alt="" class="slide-collections__image" />
+										</div>
+										<div class="slide-collections__content">
+											<span class="slide-collections__heading tl2">рейтинг вин every qvevri</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collections__footer">
+						<span class="collections__active-number txt txt_wide"></span>
+						<div class="collections__sl-control sl-control sl-control_reversed">
+							<div class="sl-control__nav sl-nav">
+								<button type="button" class="sl-nav__arrow sl-nav__arrow_next">
+									<img src="img/icons/arr.svg" alt="" class="sl-nav__arrow-icon" />
+								</button>
+								<button type="button" class="sl-nav__arrow sl-nav__arrow_prev">
+									<img src="img/icons/arr.svg" alt="" class="sl-nav__arrow-icon" />
+								</button>
+							</div>
+							<div class="sl-control__pagination sl-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mainpage__promo promo">
+				<div class="promo__container container">
+					<a href="#" class="promo__ambassadors ambassadors-promo">
+						<div class="ambassadors-promo__head">
+							<span class="ambassadors-promo__title tl1">лица бренда</span>
+							<svg class="ambassadors-promo__arrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+								<path d="M9.85686 24L38.1411 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M23.999 9.85782L38.1411 24L23.999 38.1421" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="ambassadors-promo__body">
+							<div class="ambassadors-promo__card">
+								<div class="ambassadors-promo__image-wrap">
+									<img src="img/promo/befb3368df3f1d692f99cba4e0fb0f40.webp" alt="" class="ambassadors-promo__image" />
+								</div>
+								<span class="ambassadors-promo__heading tl2">Евгений касин</span>
+								<p class="ambassadors-promo__text txt">
+									Бренд-амбассадор Every Qvevri
+								</p>
+							</div>
+							<div class="ambassadors-promo__card ambassadors-promo__card_rotated">
+								<div class="ambassadors-promo__image-wrap">
+									<img src="img/promo/c57696da09be87897718d45ed50a4d7f.webp" alt="" class="ambassadors-promo__image" />
+								</div>
+								<span class="ambassadors-promo__heading tl2">Оксана Плотникова</span>
+								<p class="ambassadors-promo__text txt">
+									Бренд-амбассадор Every Qvevri
+								</p>
+							</div>
+						</div>
+					</a>
+					<div class="promo__app app-promo">
+						<div class="app-promo__text-wrap">
+							<span class="app-promo__title tl1">мобильное приложение</span>
+							<p class="app-promo__text txt">Скачайте наше приложение</p>
+							<div class="app-promo__group">
+								<a href="#" class="app-promo__group-item"><img src="img/promo/app-store.svg" alt="" class="app-promo__group-img" /></a>
+								<a href="#" class="app-promo__group-item"><img src="img/promo/google-play.svg" alt="" class="app-promo__group-img" /></a>
+							</div>
+						</div>
+						<div class="app-promo__image-wrap">
+							<img src="img/promo/48097497.webp" alt="" class="app-promo__image" />
+						</div>
+					</div>
+				</div>
+				<div class="promo__bg">
+					<img src="img/bg/bffabb6a1187159308cf61dac3363771.webp" alt="" class="promo__bg-image" />
+				</div>
+			</section>
+			<section class="mainpage__location location">
+				<div class="location__container container">
+					<span class="location__title tl1">мы <span>на карте</span></span>
+					<div id="map" class="location__map"></div>
+					<div class="location__info">
+						<p class="location__text txt">
+							Находимся рядом с метро Чкаловская и Петроградская
+						</p>
+						<div class="location__panel">
+							<div class="location__image-wrap">
+								<img src="img/bg/8dd172f1ddf93591e4cc3534560fd673.webp" class="location__image" />
+							</div>
+							<div class="location__text-wrap">
+								<span class="location__address txt">Санкт-Петербург, Левашовский пр. 13а</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div style="height: 0">
+				<svg height="0" xmlns="http://www.w3.org/2000/svg">
+					<filter id="drop-shadow-1">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="15" />
+						<feOffset dx="15" dy="15" result="offsetblur" />
+						<feFlood flood-color="rgba(0,0,0,0.3)" />
+						<feComposite in2="offsetblur" operator="in" />
+						<feMerge>
+							<feMergeNode />
+							<feMergeNode in="SourceGraphic" />
+						</feMerge>
+					</filter>
+				</svg>
+				<svg height="0" xmlns="http://www.w3.org/2000/svg">
+					<filter id="drop-shadow-2">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="7" />
+						<feOffset dx="1" dy="15" result="offsetblur" />
+						<feFlood flood-color="rgba(0,0,0,0.13)" />
+						<feComposite in2="offsetblur" operator="in" />
+						<feMerge>
+							<feMergeNode />
+							<feMergeNode in="SourceGraphic" />
+						</feMerge>
+					</filter>
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="261" viewBox="0 0 260 261" fill="none">
+					<clipPath id="clip-img">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M242.426 18.1885L200 0.614868L157.574 18.1885L140 60.6149L157.574 103.041L200 120.615L242.426 103.041L260 60.6149L242.426 18.1885ZM60 0.615356L102.426 18.1889L120 60.6154L102.426 103.042L60 120.615L17.5736 103.042L0 60.6154L17.5736 18.1889L60 0.615356ZM60 140.615L102.426 158.189L120 200.615L102.426 243.042L60 260.615L17.5736 243.042L0 200.615L17.5736 158.189L60 140.615Z" fill="url(#pattern0)" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M242.426 18.1885L200 0.614868L157.574 18.1885L140 60.6149L157.574 103.041L200 120.615L242.426 103.041L260 60.6149L242.426 18.1885ZM60 0.615356L102.426 18.1889L120 60.6154L102.426 103.042L60 120.615L17.5736 103.042L0 60.6154L17.5736 18.1889L60 0.615356ZM60 140.615L102.426 158.189L120 200.615L102.426 243.042L60 260.615L17.5736 243.042L0 200.615L17.5736 158.189L60 140.615Z" fill="url(#pattern1)" />
+						<defs>
+							<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+								<use xlink:href="#image0_405_2169" transform="translate(0 -0.126109) scale(0.0017762)" />
+							</pattern>
+							<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+								<use xlink:href="#image1_405_2169" transform="matrix(0 -0.00108225 0.00108225 0 0 1.01299)" />
+							</pattern>
+						</defs>
+					</clipPath>
+				</svg>
+			</div>
+
 		</main>
-		<svg height="0" xmlns="http://www.w3.org/2000/svg">
-			<filter id="drop-shadow-1">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="15" />
-				<feOffset dx="15" dy="15" result="offsetblur" />
-				<feFlood flood-color="rgba(0,0,0,0.3)" />
-				<feComposite in2="offsetblur" operator="in" />
-				<feMerge>
-					<feMergeNode />
-					<feMergeNode in="SourceGraphic" />
-				</feMerge>
-			</filter>
-		</svg>
-		<svg height="0" xmlns="http://www.w3.org/2000/svg">
-			<filter id="drop-shadow-2">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="7" />
-				<feOffset dx="1" dy="15" result="offsetblur" />
-				<feFlood flood-color="rgba(0,0,0,0.13)" />
-				<feComposite in2="offsetblur" operator="in" />
-				<feMerge>
-					<feMergeNode />
-					<feMergeNode in="SourceGraphic" />
-				</feMerge>
-			</filter>
-		</svg>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__main">
+					<div class="footer__logo-group">
+						<a href="#" class="footer__logo-wrap"><img src="img/logo.svg" alt="" class="footer__logo" /></a>
+						<a href="#" class="footer__logo-wrap footer__logo-wrap_mks"><img src="img/mks.svg" alt="" class="footer__logo" /></a>
+					</div>
+					<nav class="footer__nav">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<ul class="footer__subnav caps caps_md">
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">акции</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">белые вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">розовые вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">красные вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">квеври вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">крепкий алкоголь</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">сувениры и подарки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__item">
+								<span class="footer__heading caps caps_md">покупателям</span>
+								<ul class="footer__subnav">
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">адреса магазинов</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">контактная информация</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">о компании</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">блог</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">новости</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">бонусная программа</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__item">
+								<span class="footer__heading caps caps_md">партнерам</span>
+								<ul class="footer__subnav">
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">корпоративные продажи</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">поставщикам</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">связаться с нами</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">работа у нас</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer__item">
+						<span class="footer__heading caps caps_md">мобильное приложение</span>
+						<div class="footer__group">
+							<a href="#" class="footer__group-item"><img src="img/promo/app-store.svg" alt="" class="footer__group-item-img" /></a>
+							<a href="#" class="footer__group-item"><img src="img/promo/google-play.svg" alt="" class="footer__group-item-img" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__row">
+					<ul class="footer__socials socials-footer">
+						<li class="socials-footer__item">
+							<a target="_blank" href="#" class="socials-footer__link"><img src="img/icons/tg.svg" alt="" class="socials-footer__icon" /></a>
+						</li>
+						<li class="socials-footer__item">
+							<a target="_blank" href="#" class="socials-footer__link"><img src="img/icons/yt.svg" alt="" class="socials-footer__icon" /></a>
+						</li>
+						<li class="socials-footer__item">
+							<a target="_blank" href="#" class="socials-footer__link"><img src="img/icons/vk.svg" alt="" class="socials-footer__icon" /></a>
+						</li>
+					</ul>
+					<div class="footer__newsletter newsletter-footer">
+						<span class="newsletter-footer__heading caps caps_md">Винные истории, акции и бонусы. Один клик — и у вас на почте</span>
+						<form action="#" class="newsletter-footer__form">
+							<div class="newsletter-footer__input input">
+								<input autocomplete="off" type="email" name="form[]" data-error placeholder="E-mail" class="input__field" />
+							</div>
+							<a href="#" class="newsletter-footer__btn btn btn_icon">
+								<span class="btn__text txt txt_md">Отправить</span>
+							</a>
+						</form>
+					</div>
+				</div>
+				<div class="footer__text-wrap">
+					<p class="footer__text txt">
+						Продажа алкогольной продукции Согласно ФЗ РФ N 171 О госрегулировании
+						алкогольного рынка от 22.11.1995 (ред. от 31.12.2014) продажа
+						алкогольных напитков через интернет признана дистанционным способом
+						распространения продукции и попадает под запрет. ««EveryQvevri»
+						соблюдает законодательство, поэтому все алкогольные напитки реализуются
+						в магазинах путём самовывоза.
+					</p>
+					<p class="footer__text txt txt_uc">
+						18+ МИНЗДРАВ ПРЕДУПРЕЖДАЕТ: ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ
+						ВАШЕМУ ЗДОРОВЬЮ
+					</p>
+					<p class="footer__text txt txt_uc">
+						ЦЕНЫ, ХАРАКТЕРИСТИКИ И ВНЕШНИЙ ВИД ТОВАРА В МАГАЗИНАХ МОГУТ ОТЛИЧАТЬСЯ
+						ОТ УКАЗАННЫХ НА САЙТЕ. НА АКЦИОННЫЕ ТОВАРЫ И ТОВАРЫ, ОТМЕЧЕННЫЕ «*» НА
+						ЦЕННИКАХ В ТОРГОВЫХ ЗАЛАХ МАГАЗИНОВ, СКИДКА ПО ДИСКОНТНЫМ КАРТАМ НЕ
+						РАСПРОСТРАНЯЕТСЯ. МАГАЗИНЫ ««EveryQvevri» НЕ ОСУЩЕСТВЛЯЮТ ДИСТАНЦИОННУЮ
+						ТОРГОВЛЮ, ДОСТАВКА ТОВАРА НЕ ПРОИЗВОДИТСЯ, ОПЛАТА ТОВАРА ПРОИСХОДИТ
+						НЕПОСРЕДСТВЕННО В МАГАЗИНАХ «EveryQvevri» В СООТВЕТСТВИИ С ДЕЙСТВУЮЩИМ
+						ЗАКОНОДАТЕЛЬСТВОМ РФ И РЕЖИМОМ РАБОТЫ МАГАЗИНОВ, КРУГЛОСУТОЧНАЯ И
+						ДИСТАНЦИОННАЯ ПРОДАЖА АЛКОГОЛЬНОЙ ПРОДУКЦИИ НЕ ОСУЩЕСТВЛЯЕТСЯ.
+						ИНФОРМАЦИЯ О ТОВАРАХ, РАЗМЕЩЕННАЯ НА САЙТЕ НОСИТ ОЗНАКОМИТЕЛЬНЫЙ
+						ХАРАКТЕР, ПОДРОБНОСТИ О ПРИОБРЕТЕНИИ ТОВАРОВ УТОЧНЯЙТЕ В МАГАЗИНАХ
+					</p>
+				</div>
+				<div class="footer__copyright">
+					<span class="footer__copyright-text txt">«EveryQvevri» © Все права защищены 2023</span>
+					<a href="#" class="footer__copyright-text txt">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
 
 	</div>
 	<script src="js/app.js"></script>

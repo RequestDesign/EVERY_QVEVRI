@@ -68,7 +68,9 @@
   // .recommendations__product-card
 
   &__product-card {
-    transition: opacity 0.4s ease;
+    &.swiper-slide {
+      transition: opacity 0.4s ease;
+    }
     &._hidden {
       opacity: 0.5;
     }

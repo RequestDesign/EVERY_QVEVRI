@@ -23,15 +23,17 @@ input:focus {
   column-gap: 2rem;
   width: 100%;
   border-radius: 0 !important;
-  &::before {
-    content: '';
-    flex: 0 0 2.4rem;
-    width: 2.4rem;
-    height: 2.4rem;
-    background-image: url('@img/icons/search.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  &_search {
+    &::before {
+      content: '';
+      flex: 0 0 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url('@img/icons/search.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
   &._form-focus {
   }

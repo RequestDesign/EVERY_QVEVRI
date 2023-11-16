@@ -228,6 +228,213 @@
   }
 }
 
+.privilege-card {
+  padding: 0 4.3rem 6rem 4.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  &_experts {
+    .privilege-card__number {
+      background-image: url('@img/bg/abd4880a7a6501a53ad73b558558ee94.webp');
+    }
+  }
+  &_tasting {
+    .privilege-card__number {
+      background-image: url('@img/bg/061c0522450b9f794652b44ccabefc2d.webp');
+    }
+  }
+  &_bonuses {
+    .privilege-card__number {
+      background-image: url('@img/bg/4be6194940bc6272f6f6d9fdfe65d268.webp');
+    }
+  }
+  &_stock {
+    .privilege-card__number {
+      background-image: url('@img/bg/7d1be1009cec6cc5dc0b9c3ed719c64d.webp');
+    }
+  }
+
+  // .privilege-card__head
+
+  &__head {
+    margin-bottom: -2rem;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  // .privilege-card__characters
+
+  &__characters {
+    height: 0;
+    width: 0;
+    span {
+      display: inline-block;
+      font-family: NotoSerifGeorgian;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      text-transform: lowercase;
+      color: $backPattern;
+      transform: translate(-7rem, 11rem) rotate(-90deg);
+    }
+  }
+
+  // .privilege-card__number
+
+  &__number {
+    font-family: Corbby;
+    font-size: 30rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-3.6rem);
+  }
+
+  // .privilege-card__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .privilege-card__heading
+
+  &__heading {
+    margin-bottom: 2rem;
+    flex: 1 1 auto;
+    max-width: 16.9rem;
+  }
+
+  // .privilege-card__text
+
+  &__text {
+    max-width: 24.5rem;
+  }
+}
+
+.blog-card {
+  padding: 3rem 3rem 5rem 7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  &_red {
+    background-color: $red;
+    .blog-card__number,
+    .blog-card__heading,
+    .blog-card__row {
+      color: $white;
+    }
+  }
+
+  // .blog-card__number
+
+  &__number {
+    margin-bottom: 4.4rem;
+    align-self: flex-end;
+  }
+
+  // .blog-card__group
+
+  &__group {
+    position: relative;
+    margin-bottom: 5.5rem;
+    align-self: center;
+  }
+
+  // .blog-card__image-wrap
+
+  &__image-wrap {
+    width: 29rem;
+    height: 29rem;
+    clip-path: url(#clip-img);
+  }
+
+  // .blog-card__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .blog-card__date
+
+  &__date {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.2rem;
+  }
+
+  // .blog-card__date-txt
+
+  &__date-txt {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    font-family: DrukWideCyr;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    &:first-child {
+      .blog-card_red & {
+        color: $white;
+      }
+      &::after {
+        content: '';
+        width: 7rem;
+        height: 1px;
+        background-color: $gray;
+        .blog-card_red & {
+          background-color: rgba(250, 250, 250, 0.5);
+        }
+      }
+    }
+    &:not(:first-child) {
+      color: $gray;
+      .blog-card_red & {
+        color: rgba(250, 250, 250, 0.5);
+      }
+    }
+  }
+
+  // .blog-card__heading
+
+  &__heading {
+    margin-bottom: 2.5rem;
+    max-width: 26.2rem;
+  }
+
+  // .blog-card__row
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .blog-card__text
+
+  &__text {
+  }
+
+  // .blog-card__arrow
+
+  &__arrow {
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 // --------------------------------------------------------------------------
 
 .sl-control {
@@ -336,6 +543,21 @@
 
   &_md {
     font-weight: 500;
+  }
+
+  // .txt_wide
+
+  &_wide {
+    font-family: DrukWideCyr;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  // .txt_uc
+
+  &_uc {
+    text-transform: uppercase;
   }
 }
 

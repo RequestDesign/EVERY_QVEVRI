@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import { removeClasses } from './utils';
+
+import { rem } from './utils';
 
 // styles
 import 'swiper/css';
@@ -34,24 +36,19 @@ import 'swiper/css';
 //   }
 // };
 
-const changeSlideNum = (swiper, pagination) => {
+const changeSlideNum = (swiper, pagination, target) => {
   const slides = swiper.slides;
 
   if (slides.length && pagination) {
     slides.forEach(slide => {
-      const target = slide.querySelector('.slide-hero__number');
-
-      if (target) {
-        target.innerHTML = `${
-          pagination.querySelector('.swiper-pagination-bullet-active').innerHTML
-        }`;
-      }
+      console.log(target);
+      slide.querySelector(target).innerHTML = `${
+        pagination.querySelector('.swiper-pagination-bullet-active').innerHTML
+      }`;
     });
   }
 };
-const changeActiveNum = pagination => {
-  const target = document.querySelector('.recommendations__number');
-
+const changeActiveNum = (pagination, target) => {
   if (target && pagination.el) {
     target.innerHTML = `${
       pagination.el.querySelector('.swiper-pagination-bullet-active').innerHTML
@@ -99,10 +96,10 @@ const initSliders = () => {
       // events
       on: {
         init: swiper => {
-          changeSlideNum(swiper, swiper.pagination.el);
+          changeSlideNum(swiper, swiper.pagination.el, '.slide-hero__number');
         },
         slideChange: swiper => {
-          changeSlideNum(swiper, swiper.pagination.el);
+          changeSlideNum(swiper, swiper.pagination.el, '.slide-hero__number');
         },
       },
     });
@@ -140,12 +137,114 @@ const initSliders = () => {
       // events
       on: {
         afterInit: swiper => {
-          changeActiveNum(swiper.pagination);
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.recommendations__number')
+          );
           hideSlide(swiper);
         },
         slideChange: swiper => {
-          changeActiveNum(swiper.pagination);
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.recommendations__number')
+          );
           hideSlide(swiper);
+        },
+      },
+    });
+  }
+  if (document.querySelector('.tests__slider')) {
+    new Swiper('.tests__slider', {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1.01,
+      spaceBetween: 30,
+      speed: 1000,
+      loop: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+
+      // navigation
+      navigation: {
+        prevEl: '.tests .sl-nav__arrow_prev',
+        nextEl: '.tests .sl-nav__arrow_next',
+      },
+
+      // pagination
+      pagination: {
+        el: '.tests .sl-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '">' + '0' + (index + 1) + '</span>'
+          );
+        },
+      },
+
+      // events
+      on: {
+        afterInit: swiper => {
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.tests__active-number')
+          );
+        },
+        slideChange: swiper => {
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.tests__active-number')
+          );
+        },
+      },
+    });
+  }
+  if (document.querySelector('.collections__slider')) {
+    new Swiper('.collections__slider', {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: rem(42),
+      speed: 1000,
+      loop: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      resistance: false,
+
+      // navigation
+      navigation: {
+        prevEl: '.collections .sl-nav__arrow_prev',
+        nextEl: '.collections .sl-nav__arrow_next',
+      },
+
+      // pagination
+      pagination: {
+        el: '.collections .sl-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '">' + '0' + (index + 1) + '</span>'
+          );
+        },
+      },
+
+      // events
+      on: {
+        sliderFirstMove: swiper => {
+          swiper.el.classList.add('_slide');
+        },
+        afterInit: swiper => {
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.collections__active-number')
+          );
+        },
+        slideChange: swiper => {
+          changeActiveNum(
+            swiper.pagination,
+            document.querySelector('.collections__active-number')
+          );
         },
       },
     });

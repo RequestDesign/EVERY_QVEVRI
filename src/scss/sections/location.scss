@@ -1,0 +1,100 @@
+.location {
+  margin-bottom: 16rem;
+
+  // .location__container
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .location__title
+
+  &__title {
+    position: absolute;
+    z-index: 2;
+    top: 14.4rem;
+    left: 0;
+    transform: translateX(2rem);
+    span {
+      display: block;
+      color: $black;
+    }
+  }
+
+  // .location__map
+
+  &__map {
+    align-self: flex-end;
+    height: 56rem;
+    width: 148.3rem;
+    cursor: grab;
+  }
+
+  // .location__info
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 148.3rem;
+  }
+
+  // .location__text
+
+  &__text {
+    max-width: 25.3rem;
+    transform: translateY(5rem);
+  }
+
+  // .location__panel
+
+  &__panel {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    transform: translateY(-11rem);
+  }
+
+  // .location__image-wrap
+
+  &__image-wrap {
+    width: 32rem;
+    height: 24rem;
+  }
+
+  // .location__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .location__text-wrap
+
+  &__text-wrap {
+    padding: 5rem;
+    display: flex;
+    align-self: flex-end;
+    background-color: $white;
+  }
+
+  // .location__address
+
+  &__address {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    &::before {
+      content: '';
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-image: url(@img/icons/location.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

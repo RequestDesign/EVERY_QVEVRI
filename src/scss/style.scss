@@ -64,8 +64,15 @@ body {
 
 // header / footer
 @import 'components/header';
+@import 'components/footer';
 
 // sections
 @import 'sections/hero';
 @import 'sections/categories';
 @import 'sections/recommendations';
+@import 'sections/privileges';
+@import 'sections/tests';
+@import 'sections/blog';
+@import 'sections/collections';
+@import 'sections/promo';
+@import 'sections/location';
