@@ -164,15 +164,11 @@ const initSliders = () => {
   if (document.querySelector('.recommendations__slider')) {
     new Swiper('.recommendations__slider', {
       modules: [Navigation, Pagination],
-      observer: true,
-      observeParents: true,
       slidesPerView: 1.4,
       spaceBetween: 65,
       speed: 800,
       loop: true,
       longSwipes: false,
-      watchSlidesProgress: true,
-      watchSlidesVisibility: true,
 
       // navigation
       navigation: {
@@ -318,7 +314,7 @@ const initSliders = () => {
       breakpoints: {
         768: {
           slidesPerView: 'auto',
-          spaceBetween: 420,
+          spaceBetween: '21%',
         },
       },
 
