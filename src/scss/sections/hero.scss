@@ -244,9 +244,7 @@
   &__image {
     object-fit: contain;
     @media (min-width: 48em) {
-      will-change: contents;
       transform: translateY(-4rem);
-      filter: drop-shadow(0.5rem 3rem 6rem rgba(0, 0, 0, 0.4));
     }
   }
 
