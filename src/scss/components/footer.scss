@@ -1,4 +1,8 @@
 .footer {
+  @media (max-width: 48em) {
+    margin-bottom: 18rem;
+  }
+
   // .footer__container
 
   &__container {
@@ -86,16 +90,16 @@
     display: flex;
     flex-direction: column;
     @media (min-width: 48em) {
-      row-gap: 2.8rem;
+      row-gap: 2.5rem;
       &_app {
         display: none;
         justify-self: flex-end;
       }
+      .spoiler__title {
+        cursor: text;
+      }
     }
     @media (max-width: 48em) {
-      &:first-child {
-        margin-bottom: 5rem;
-      }
       &_app {
         .footer__heading {
           max-width: 24rem;
@@ -123,12 +127,12 @@
   // .footer__subnav
 
   &__subnav {
-    padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 2rem;
     @media (max-width: 48em) {
+      padding-bottom: 5rem;
       row-gap: 3.4rem;
     }
   }
@@ -154,9 +158,9 @@
   // .footer__heading
 
   &__heading {
-    max-width: 14.2rem;
-    @media (max-width: 48em) {
-      max-width: 53.4rem;
+    max-width: 53.4rem;
+    @media (min-width: 48em) {
+      max-width: 14.2rem;
     }
   }
 
@@ -279,7 +283,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $lightGray;
     @media (max-width: 48em) {
       padding-bottom: 2.4rem;
     }

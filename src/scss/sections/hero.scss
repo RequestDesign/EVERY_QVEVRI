@@ -1,38 +1,42 @@
 .hero {
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    bottom: -2rem;
-    right: 0;
-    width: 44rem;
-    height: 44rem;
-    background-image: url('@img/hero/circle.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.35;
-    transform: translateX(55%);
-  }
+  margin-bottom: 16rem;
   @media (min-width: 48em) {
-    position: relative;
-    margin-bottom: 25rem;
-    &::after {
-      bottom: 0;
-      width: 57rem;
-      height: 57rem;
-      opacity: 0.6;
-      transform: translate(43%, 13%);
-    }
+    margin-bottom: 10rem;
+    overflow: hidden;
   }
 
   // .hero__container
 
   &__container {
-    padding-top: 6rem;
+    position: relative;
+    padding-top: 7.5rem;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 10rem;
+      right: 0;
+      width: 44rem;
+      height: 44rem;
+      background-image: url('@img/hero/circle.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.35;
+      transform: translateX(55%);
+    }
+    @media (min-width: 48em) {
+      &::after {
+        bottom: 0;
+        width: 57rem;
+        height: 57rem;
+        opacity: 0.6;
+        transform: translate(68%, -6rem);
+      }
+    }
     @media (max-width: 48em) {
+      overflow: hidden;
       &.container {
         padding: 6.4rem 2.4rem 0 2.4rem;
       }
@@ -57,13 +61,26 @@
   // .hero__sl-control
 
   &__sl-control {
+    .sl-pagination {
+      justify-content: flex-start;
+    }
     @media (max-width: 48em) {
+      .sl-control__pagination-wrap {
+        width: auto;
+      }
       .sl-pagination {
+        justify-content: flex-end;
+        text-align: right;
         .swiper-pagination-bullet {
           display: none;
         }
         .swiper-pagination-bullet-active {
           display: block;
+          flex: 0 0 9rem;
+          width: 9rem;
+          font-size: 3rem;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }
@@ -90,7 +107,7 @@
   // .hero__text
 
   &__text {
-    max-width: 24.9rem;
+    max-width: 23.9rem;
     @media (max-width: 48em) {
       max-width: 43.6rem;
     }
@@ -125,6 +142,9 @@
 
     &.swiper {
       overflow: visible;
+      @media (min-width: 48em) {
+        padding-bottom: 13rem;
+      }
     }
   }
 
@@ -171,9 +191,11 @@
   // .slide-hero__number
 
   &__number {
+    font-size: 2rem;
     transform: translateY(1rem);
     @media (max-width: 48em) {
       display: none;
+      font-size: 3rem;
     }
   }
 
@@ -196,7 +218,7 @@
       content: '';
       position: absolute;
       z-index: -1;
-      bottom: 26rem;
+      bottom: 27rem;
       left: 50%;
       width: 70.5rem;
       height: 58rem;
@@ -222,7 +244,9 @@
   &__image {
     object-fit: contain;
     @media (min-width: 48em) {
+      will-change: contents;
       transform: translateY(-4rem);
+      filter: drop-shadow(0.5rem 3rem 6rem rgba(0, 0, 0, 0.4));
     }
   }
 

@@ -1,7 +1,7 @@
 .location {
   margin-bottom: 16rem;
   @media (max-width: 48em) {
-    margin-bottom: 20rem;
+    margin-bottom: 18rem;
   }
 
   // .location__container
@@ -25,7 +25,6 @@
       top: 14.4rem;
       left: 0;
       margin: 0;
-      transform: translateX(2rem);
       span {
         display: block;
       }

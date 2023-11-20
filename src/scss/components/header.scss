@@ -290,8 +290,8 @@
   &__close-btn {
     margin-bottom: 1.6rem;
     align-self: flex-end;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   // .menu__close-btn-icon
@@ -385,8 +385,8 @@
     &::before {
       content: '';
       flex: 0 0 5rem;
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       background-image: url(@img/icons/call-red.svg);
       background-size: contain;
       background-position: center;

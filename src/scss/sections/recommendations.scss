@@ -68,11 +68,24 @@
     }
   }
 
+  // .recommendations__carousel
+
+  &__carousel {
+    @media (min-width: 48em) {
+      position: relative;
+      height: 52.8rem;
+      width: 162rem;
+    }
+  }
+
   // .recommendations__slider
 
   &__slider {
     @media (min-width: 48em) {
-      width: 200rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 206rem;
     }
   }
 

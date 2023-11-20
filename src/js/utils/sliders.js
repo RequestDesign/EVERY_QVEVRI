@@ -195,7 +195,7 @@ const initSliders = () => {
       breakpoints: {
         768: {
           slidesPerView: 4,
-          spaceBetween: rem(13.7),
+          spaceBetween: 137,
         },
       },
 
@@ -318,7 +318,7 @@ const initSliders = () => {
       breakpoints: {
         768: {
           slidesPerView: 'auto',
-          spaceBetween: rem(42),
+          spaceBetween: 420,
         },
       },
 
