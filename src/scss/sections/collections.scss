@@ -1,5 +1,8 @@
 .collections {
   margin-bottom: 19rem;
+  @media (max-width: 48em) {
+    margin-bottom: 22rem;
+  }
 
   // .collections__container
 
@@ -21,21 +24,38 @@
       background-repeat: no-repeat;
       transform: translate(-50%, -3rem);
     }
+    @media (max-width: 48em) {
+      &::after {
+        width: 158rem;
+        height: 24rem;
+        transform: translate(-32%, -3rem);
+      }
+    }
   }
 
   // .collections__head
 
   &__head {
-    margin-bottom: 11.6rem;
-    display: grid;
-    grid-template-columns: repeat(2, 6fr);
+    margin-bottom: 9rem;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 8rem;
     align-items: center;
+    @media (min-width: 48em) {
+      margin-bottom: 11.6rem;
+      display: grid;
+      grid-template-columns: repeat(2, 6fr);
+      column-gap: normal;
+    }
   }
 
   // .collections__text
 
   &__text {
     max-width: 19.4rem;
+    @media (max-width: 48em) {
+      max-width: 39rem;
+    }
   }
 
   // .collections__title
@@ -46,21 +66,27 @@
   // .collections__body
 
   &__body {
-    padding-top: 2rem;
     overflow: hidden;
+    width: calc(100vw - 2.4rem);
+    @media (min-width: 48em) {
+      padding-top: 2rem;
+      width: auto;
+    }
   }
 
   // .collections__slider
 
   &__slider {
-    height: 63rem;
-    transform: margin-right 0.5s ease;
-    &.swiper {
-      margin-right: -42rem;
-      overflow: visible;
-    }
-    &._slide {
-      margin-right: -38rem;
+    @media (min-width: 48em) {
+      height: 63rem;
+      transform: margin-right 0.5s ease;
+      &.swiper {
+        margin-right: -42rem;
+        overflow: visible;
+      }
+      &._slide {
+        margin-right: -38rem;
+      }
     }
   }
 
@@ -72,13 +98,18 @@
   // .collections__slide
 
   &__slide {
-    transition: transform 0.8s ease;
+    @media (min-width: 48em) {
+      transition: transform 0.8s ease;
+    }
   }
 
   // .collections__footer
 
   &__footer {
     @extend .tests__footer;
+    @media (max-width: 48em) {
+      display: none;
+    }
   }
 
   // .collections__active-num
@@ -93,14 +124,19 @@
 
 .slide-collections {
   &.swiper-slide {
-    width: 39rem;
-    height: 49.8rem;
+    height: 58rem;
   }
-  &.slide-collections.swiper-slide-active {
-    transform: translate(7rem, 7rem) scale(1.35, 1.28);
-  }
-  &:not(&.swiper-slide-active, &.swiper-slide-prev, &.swiper-slide-next) {
-    transform: translateX(-38rem);
+  @media (min-width: 48em) {
+    &.swiper-slide {
+      width: 39rem;
+      height: 49.8rem;
+    }
+    &.slide-collections.swiper-slide-active {
+      transform: translate(7rem, 7rem) scale(1.35, 1.28);
+    }
+    &:not(&.swiper-slide-active, &.swiper-slide-prev, &.swiper-slide-next) {
+      transform: translateX(-38rem);
+    }
   }
 
   // .slide-collections__inner
@@ -123,10 +159,24 @@
       background-position: center;
       background-repeat: no-repeat;
       transform-origin: center;
-      transform: scale(0) translate(0rem, -5rem);
-      transition: transform 0.5s ease;
-      .swiper-slide-active & {
-        transform: scale(0.5) translate(0rem, -5rem);
+    }
+    @media (max-width: 48em) {
+      padding: 3.4rem;
+      &::after {
+        width: 3rem;
+        height: 3rem;
+        bottom: 3.4rem;
+        right: 3.4rem;
+        background-image: url(@img/icons/sl-arr.svg);
+      }
+    }
+    @media (min-width: 48em) {
+      &::after {
+        transform: scale(0) translate(0rem, -5rem);
+        transition: transform 0.5s ease;
+        .swiper-slide-active & {
+          transform: scale(0.5) translate(0rem, -5rem);
+        }
       }
     }
   }
@@ -138,6 +188,10 @@
     width: 23rem;
     height: 100%;
     clip-path: circle(62% at 0 50%);
+    @media (max-width: 48em) {
+      flex: 0 0 25rem;
+      width: 25rem;
+    }
   }
 
   // .slide-collections__image
@@ -153,11 +207,15 @@
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 16rem;
-    transform: translate(-1rem, -2.3rem);
-    transition: transform 0.5s ease;
-    .swiper-slide-active & {
-      transform: translate(11rem, 12rem);
+    max-width: 19rem;
+    transform: translate(10rem, 5rem);
+    @media (min-width: 48em) {
+      max-width: 16rem;
+      transform: translate(-1rem, -2.3rem);
+      transition: transform 0.5s ease;
+      .swiper-slide-active & {
+        transform: translate(11rem, 12rem);
+      }
     }
   }
 }

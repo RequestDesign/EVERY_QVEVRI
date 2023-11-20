@@ -19,6 +19,14 @@
         }
       }
     }
+    @media (max-width: 48em) {
+      height: 16rem;
+      column-gap: 2.4rem;
+      .btn__text {
+        font-size: 3rem;
+        letter-spacing: 0.36rem;
+      }
+    }
   }
 
   // .btn__icon-wrap
@@ -49,6 +57,19 @@
       transform: translateX(-2rem);
       transition: transform 0.3s ease;
     }
+    @media (max-width: 48em) {
+      &::before {
+        flex: 0 0 16rem;
+        width: 16rem;
+        height: 16rem;
+      }
+      &::after {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+        transform: translateX(-1rem);
+      }
+    }
   }
 
   // .btn__icon
@@ -77,6 +98,14 @@
         &::after {
           transform: translateX(0.8rem);
         }
+      }
+    }
+    @media (max-width: 48em) {
+      column-gap: 2.4rem;
+      &::after {
+        flex: 0 0 2.8rem;
+        width: 2.8rem;
+        height: 2.8rem;
       }
     }
   }

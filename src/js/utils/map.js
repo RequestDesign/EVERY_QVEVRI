@@ -5,7 +5,10 @@ if (document.getElementById('map')) {
     await ymaps3.ready;
 
     const LOCATION = {
-      center: [30.29070872801772, 59.96487327442857],
+      center:
+        window.innerWidth > 768
+          ? [30.29070872801772, 59.96487327442857]
+          : [30.285804994973198, 59.96628435583354],
       zoom: 15,
     };
     const PIN_LOCATION = {

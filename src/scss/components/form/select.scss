@@ -1,0 +1,306 @@
+.select {
+  position: relative;
+  // min-width: 37rem;
+
+  // .select__body
+
+  &__body {
+    position: relative;
+  }
+
+  // .select__title
+
+  &__title {
+    border: 2px solid transparent;
+    border-radius: 0.4rem;
+    width: 100%;
+    // background-color: #f1f2f6;
+    cursor: pointer;
+    text-align: left;
+    color: inherit;
+    transition: all 0.3s ease;
+    // &:not(._select-opened &, ._select-error &, ._select-disabled &) {
+    //   @media (any-hover: hover) {
+    //     &:hover {
+    //       background-color: #e4e7ee;
+    //     }
+    //   }
+    // }
+  }
+
+  // .select__value
+
+  &__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+
+    > * {
+      flex: 1 1 auto;
+    }
+
+    &:after {
+      content: '';
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(@img/icons/sel-arr.svg);
+      background-size: 2rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease;
+    }
+    // &._select-label {
+    //   font-size: 1.8rem;
+    //   line-height: 144.444%;
+    //   color: #737b8c;
+    //   &::before {
+    //     content: attr(data-sel-label);
+    //     color: #737b8c;
+    //     transition: color 0.3s ease;
+    //   }
+    // }
+    &._select-label::before,
+    .select__content {
+      max-width: 31.4rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // .select__content
+
+  &__content {
+    @extend .caps;
+    font-weight: 500;
+    line-height: 100%;
+    // display: none;
+  }
+
+  // .select__text
+
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  // .select__input
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  // .select__options
+
+  &__options {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 0.8rem);
+    left: 50%;
+    padding: 1.5rem 0;
+    min-width: 100%;
+    box-shadow: 0 0.8rem 2.5rem 0 rgba(99, 119, 156, 0.2);
+    border-top: 0;
+    border-top: 0;
+    border-radius: 0.4rem;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+
+    .select_has-subtitle & {
+      &::before {
+        content: 'Assisteve text';
+        padding-left: 1.6rem;
+        font-family: 'Roboto Flex';
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        color: #737b8c;
+      }
+    }
+  }
+
+  // .select__scroll
+
+  &__scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // maximum height
+    max-height: 19rem;
+
+    // scrollbar styles
+    &.simplebar-scrollable-y {
+      .simplebar-track.simplebar-vertical {
+        right: 1.2rem;
+        width: 0.4rem;
+        border-radius: 0.8rem;
+        background-color: #e4e7ee;
+      }
+      .simplebar-scrollbar {
+        min-height: 3.2rem;
+        border-radius: 0.8rem;
+        background-color: #a2adc1;
+      }
+    }
+  }
+  // .select__option
+  &__option {
+    @extend .caps;
+    width: 100%;
+    padding: 0 2.4rem;
+    font-weight: 500;
+    text-align: left;
+    color: $gray;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    // transition: background-color 0.3s ease;
+    &._select-selected {
+      color: $black;
+    }
+    // @media (any-hover: hover) {
+    //   &:hover {
+    //     &:not(&.select__subtitle) {
+    //       cursor: pointer;
+    //       background-color: #e4e7ee64;
+    //     }
+    //   }
+    // }
+  }
+
+  // .select__group
+
+  &__group {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  // .select__asset
+
+  &__asset {
+    font-family: 'Roboto Flex';
+    font-size: 1.4rem;
+    line-height: 142.857%;
+    color: #737b8c;
+  }
+
+  // .select__text
+
+  &__text {
+    font-family: 'Roboto Flex';
+    font-size: 1.8rem;
+    line-height: 144.444%;
+    color: #1f232b;
+  }
+
+  // .select__hint
+
+  &__hint {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    font-size: 1.4rem;
+    line-height: 142.857%;
+    font-family: 'Roboto Flex';
+    color: #737b8c;
+  }
+
+  // .select__subtitle
+
+  &__subtitle {
+    cursor: text;
+  }
+
+  // select state
+  &._select-opened {
+    z-index: 5;
+    // .select__title {
+    //   border: 2px solid #a2adc1;
+    //   background-color: #ffffff;
+    // }
+    .select__value::after {
+      transform: rotate(-180deg);
+    }
+  }
+  // &._select-focused {
+  //   .select__content {
+  //     color: #1f232b;
+  //   }
+  // }
+  // &._select-error {
+  //   &:not(&._select-filled, &._select-opened) {
+  //     .select__hint {
+  //       color: #f3566a;
+  //     }
+  //     .select__title {
+  //       border: 2px solid #f3566a;
+  //       background-color: #fee7ea;
+  //     }
+  //     ._select-label::before {
+  //       color: #f3566a;
+  //     }
+  //   }
+  // }
+  // &._select-filled {
+  //   &:not(&._select-opened) {
+  //     &:not(&._select-show-val) {
+  //       ._select-label::before {
+  //         color: #1f232b;
+  //       }
+  //     }
+  //     .select__title {
+  //       background-color: #f1f2f6;
+  //     }
+  //   }
+  // }
+  // &._select-show-val {
+  //   &._select-focused,
+  //   &._select-filled,
+  //   &._select-error,
+  //   &._select-disabled {
+  //     ._select-label::before {
+  //       position: absolute;
+  //       top: 0.7rem;
+  //       left: 1.8rem;
+  //       line-height: 150%;
+  //       font-size: 1.2rem;
+  //     }
+  //     .select__content {
+  //       display: block;
+  //       padding-top: 1.7rem;
+  //       line-height: 144%;
+  //       color: #1f232b;
+  //     }
+  //   }
+  // }
+  // &._select-disabled {
+  //   .select__title {
+  //     background-color: #dce1ef;
+  //     cursor: not-allowed;
+  //     .select__content {
+  //       color: #737b8c;
+  //     }
+  //   }
+  //   ._select-label::before {
+  //     color: #8591a9;
+  //   }
+  //   .select__value::after {
+  //     background-image: url(./assets/images/select-arr-disabled.svg);
+  //   }
+  // }
+  // &._select-multiple {
+  // }
+  // &._select-active {
+  // }
+  // &._select-checkbox {
+  // }
+}
+
+// list
+._select-list {
+  cursor: pointer;
+}

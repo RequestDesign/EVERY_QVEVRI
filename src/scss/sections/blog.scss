@@ -1,6 +1,8 @@
 .blog {
   position: relative;
-  margin-bottom: 16rem;
+  @media (min-width: 48em) {
+    margin-bottom: 16rem;
+  }
 
   // .blog__container
 
@@ -11,6 +13,11 @@
     padding-bottom: 24.1rem;
     display: flex;
     flex-direction: column;
+    @media (max-width: 48em) {
+      &.container {
+        padding: 22rem 2.4rem 20rem 2.4rem;
+      }
+    }
   }
 
   // .blog__title
@@ -20,6 +27,9 @@
     align-self: center;
     text-align: center;
     color: $white;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
   }
 
   // .blog__link
@@ -28,14 +38,23 @@
     margin-bottom: 7.7rem;
     align-self: center;
     color: $white;
+    @media (max-width: 48em) {
+      margin: 0;
+      order: 1;
+    }
   }
 
   // .blog__group
 
   &__group {
+    margin-bottom: 6.4rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 2.1rem;
+    row-gap: 1.6rem;
+    @media (min-width: 48em) {
+      margin: 0;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 2.1rem;
+    }
   }
 
   // .blog__card

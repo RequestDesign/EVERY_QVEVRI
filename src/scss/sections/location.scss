@@ -1,5 +1,8 @@
 .location {
   margin-bottom: 16rem;
+  @media (max-width: 48em) {
+    margin-bottom: 20rem;
+  }
 
   // .location__container
 
@@ -12,24 +15,34 @@
   // .location__title
 
   &__title {
-    position: absolute;
-    z-index: 2;
-    top: 14.4rem;
-    left: 0;
-    transform: translateX(2rem);
+    margin-bottom: 10rem;
     span {
-      display: block;
       color: $black;
+    }
+    @media (min-width: 48em) {
+      position: absolute;
+      z-index: 2;
+      top: 14.4rem;
+      left: 0;
+      margin: 0;
+      transform: translateX(2rem);
+      span {
+        display: block;
+      }
     }
   }
 
   // .location__map
 
   &__map {
-    align-self: flex-end;
-    height: 56rem;
-    width: 148.3rem;
+    height: 88rem;
+    width: 100%;
     cursor: grab;
+    @media (min-width: 48em) {
+      align-self: flex-end;
+      height: 56rem;
+      width: 148.3rem;
+    }
   }
 
   // .location__info
@@ -37,15 +50,21 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    align-self: flex-end;
-    width: 148.3rem;
+    @media (min-width: 48em) {
+      align-self: flex-end;
+      width: 148.3rem;
+    }
   }
 
   // .location__text
 
   &__text {
-    max-width: 25.3rem;
-    transform: translateY(5rem);
+    padding-left: 6.5rem;
+    @media (min-width: 48em) {
+      padding: 0;
+      max-width: 25.3rem;
+      transform: translateY(5rem);
+    }
   }
 
   // .location__panel
@@ -53,8 +72,16 @@
   &__panel {
     position: relative;
     z-index: 2;
+    padding: 3.4rem 3rem;
     display: flex;
-    transform: translateY(-11rem);
+    flex-direction: column;
+    background-color: $white;
+    @media (min-width: 48em) {
+      padding: 0;
+      flex-direction: row;
+      background-color: transparent;
+      transform: translateY(-11rem);
+    }
   }
 
   // .location__image-wrap
@@ -74,10 +101,25 @@
   // .location__text-wrap
 
   &__text-wrap {
-    padding: 5rem;
+    margin-bottom: 1.2rem;
     display: flex;
-    align-self: flex-end;
     background-color: $white;
+    @media (min-width: 48em) {
+      margin: 0;
+      padding: 5rem;
+      align-self: flex-end;
+    }
+  }
+
+  // .location__address-txt
+
+  &__address-txt {
+    @media (max-width: 48em) {
+      span {
+        margin-right: 1rem;
+        font-weight: 500;
+      }
+    }
   }
 
   // .location__address
@@ -85,9 +127,9 @@
   &__address {
     display: flex;
     align-items: center;
-    column-gap: 0.8rem;
     &::before {
       content: '';
+      margin-right: 0.8rem;
       flex: 0 0 3.2rem;
       width: 3.2rem;
       height: 3.2rem;
@@ -95,6 +137,14 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    @media (max-width: 48em) {
+      &::before {
+        margin-right: 1.3rem;
+        flex: 0 0 4.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+      }
     }
   }
 }

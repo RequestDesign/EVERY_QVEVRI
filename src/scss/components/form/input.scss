@@ -39,6 +39,16 @@ input:focus {
   }
   &._form-error {
   }
+  @media (max-width: 48em) {
+    column-gap: 2.4rem;
+    &_search {
+      &::before {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
 
   // .input__field
 

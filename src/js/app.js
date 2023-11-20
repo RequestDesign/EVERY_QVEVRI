@@ -2,7 +2,13 @@ import '../scss/style.scss';
 
 // ---------------------------------- utils ---------------------------------
 
-// import * as utils from './utils/utils.js'
+import * as utils from './utils/utils.js';
+
+// menu
+utils.menuInit();
+
+// spoilers
+utils.spoilers();
 
 // ---------------------------------- form ----------------------------------
 
@@ -21,6 +27,14 @@ import './utils/sliders.js';
 // ----------------------------------- map ----------------------------------
 
 import './utils/map.js';
+
+// --------------------------------- libs -----------------------------------
+
+// select
+import './libs/select.js';
+
+// dynamic dom
+import './libs/da.js';
 
 // --------------------------------------------------------------------------
 

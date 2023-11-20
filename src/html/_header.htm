@@ -1,22 +1,473 @@
 <header class="header">
   <div class="header__container container">
     <div class="header__top">
+      <ul data-da=".menu__body,768,last" class="header__links-list">
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16">О компании</a>
+        </li>
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16">Адрес</a>
+        </li>
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16"
+            >Контактная информация</a
+          >
+        </li>
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16">Система лояльности</a>
+        </li>
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16">Работа у нас</a>
+        </li>
+        <li class="header__link-item">
+          <a href="#" class="header__link-txt txt txt_16">Публичная оферта</a>
+        </li>
+      </ul>
+      <select data-show-selection name="form[]" class="header__select-lang">
+        <option value="1" selected>RU</option>
+        <option value="2">ENG</option>
+      </select>
+    </div>
+    <div class="header__main">
+      <div class="header__menu menu">
+        <button type="button" class="menu__hamburger hamburger">
+          <span></span>
+        </button>
+        <div class="menu__body">
+          <button type="button" class="menu__close-btn">
+            <img
+              src="@img/icons/cross-gray.svg"
+              alt=""
+              class="menu__close-btn-icon" />
+          </button>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_catalog txt"
+                  >Каталог</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_profile txt"
+                  >Аккаунт</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_liked txt"
+                  >Избранное</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link_basket txt">Корзина</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__tel-wrap">
+            <a href="tel:88003010790" class="menu__tel txt txt_md"
+              >8 800 301 07 90</a
+            >
+          </div>
+        </div>
+      </div>
       <a href="#" class="header__logo-wrap"
         ><img src="@img/logo.svg" alt="" class="header__logo"
       /></a>
-      <form data-dev action="#" class="header__search">
-        <div class="header__search-input input input_search txt">
-          <input
-            autocomplete="off"
-            type="search"
-            name="form[]"
-            data-error="Заполните поле"
-            placeholder="Я ищу..."
-            class="input__field" />
+      <a href="#" class="header__catalog">Каталог</a>
+      <form
+        data-da=".header__bottom,768,first"
+        data-dev
+        action="#"
+        class="header__search">
+        <div class="header__search-inner">
+          <div class="header__search-input input input_search txt">
+            <input
+              autocomplete="off"
+              type="search"
+              name="form[]"
+              data-error="Заполните поле"
+              placeholder="Я ищу..."
+              class="input__field" />
+          </div>
+          <button
+            type="submit"
+            class="header__search-btn btn btn_icon desktop-only">
+            <span class="btn__text txt txt_md">Найти</span>
+          </button>
         </div>
-        <button type="submit" class="header__search-btn btn btn_icon">
-          <span class="btn__text txt txt_md">Найти</span>
-        </button>
+        <div class="header__search-box search-box">
+          <div class="search-box__inner">
+            <div class="search-box__content">
+              <div class="search-box__group search-box__group_recent">
+                <span class="search-box__heading txt txt_md">
+                  Вы недавно искали
+                </span>
+                <ul class="search-box__list">
+                  <li class="search-box__item search-box__item_recent">
+                    <span class="search-box__item-txt txt">Киндзмараули</span>
+                    <button class="search-box__delete-btn">
+                      <img
+                        src="@img/icons/cross.svg"
+                        alt=""
+                        class="search-box__delete-icon" />
+                    </button>
+                  </li>
+                  <li class="search-box__item search-box__item_recent">
+                    <span class="search-box__item-txt txt">Белое вино</span>
+                    <button class="search-box__delete-btn">
+                      <img
+                        src="@img/icons/cross.svg"
+                        alt=""
+                        class="search-box__delete-icon" />
+                    </button>
+                  </li>
+                  <li class="search-box__item search-box__item_recent">
+                    <span class="search-box__item-txt txt"
+                      >Chateu Mukhrani</span
+                    >
+                    <button class="search-box__delete-btn">
+                      <img
+                        src="@img/icons/cross.svg"
+                        alt=""
+                        class="search-box__delete-icon" />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-box__group search-box__group_suggest">
+                <span class="search-box__heading txt txt_md"> Часто ищут </span>
+                <ul class="search-box__list">
+                  <li class="search-box__item search-box__item_suggest">
+                    <span class="search-box__item-txt txt">Mogzauri</span>
+                  </li>
+                  <li class="search-box__item search-box__item_suggest">
+                    <span class="search-box__item-txt txt">Prosecco</span>
+                  </li>
+                  <li class="search-box__item search-box__item_suggest">
+                    <span class="search-box__item-txt txt">Ром</span>
+                  </li>
+                  <li class="search-box__item search-box__item_suggest">
+                    <span class="search-box__item-txt txt">Martini</span>
+                  </li>
+                  <li class="search-box__item search-box__item_suggest">
+                    <span class="search-box__item-txt txt">Pinot Noir</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-box__group search-box__group_hint">
+                <span class="search-box__heading txt txt_md"> Подсказка </span>
+                <ul class="search-box__list">
+                  <li class="search-box__item search-box__item_hint">
+                    <span class="search-box__item-txt txt">Киндзмараули</span>
+                  </li>
+                  <li class="search-box__item search-box__item_hint">
+                    <span class="search-box__item-txt txt"
+                      >Вино киндзмараули красное</span
+                    >
+                  </li>
+                  <li class="search-box__item search-box__item_hint">
+                    <span class="search-box__item-txt txt"
+                      >Киндзмараули красное</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="search-box__group search-box__group_categories">
+                <span class="search-box__heading txt txt_md">
+                  Найти в категории
+                </span>
+                <ul class="search-box__list">
+                  <li class="search-box__item search-box__item_category">
+                    <span class="search-box__item-txt txt">Красные вина</span>
+                  </li>
+                  <li class="search-box__item search-box__item_category">
+                    <span class="search-box__item-txt txt">В подарок</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-box__group search-box__group_brands">
+                <span class="search-box__heading">Бренды</span>
+                <ul class="search-box__brands">
+                  <li class="search-box__brand">
+                    <div class="search-box__brand-img-wrap">
+                      <img
+                        src="@img/logos/278be0d96db058969e10b9d55ba02782.webp"
+                        alt=""
+                        class="search-box__brand-img" />
+                    </div>
+                  </li>
+                  <li class="search-box__brand">
+                    <div class="search-box__brand-img-wrap">
+                      <img
+                        src="@img/logos/edd0afc912094c490061d6baca373696.webp"
+                        alt=""
+                        class="search-box__brand-img" />
+                    </div>
+                  </li>
+                  <li class="search-box__brand">
+                    <div class="search-box__brand-img-wrap">
+                      <img
+                        src="@img/logos/aff0f5a4748121a7ebdf8cf2874d08d0.webp"
+                        alt=""
+                        class="search-box__brand-img" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-box__carousel">
+              <div class="search-box__slider swiper">
+                <div class="search-box__wrapper swiper-wrapper">
+                  <div class="search-box__slide menu-product-card swiper-slide">
+                    <a href="#" class="menu-product-card__inner">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__labels">
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Суперцена</span
+                            >
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Эксклюзив</span
+                            >
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__product">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                        <span class="menu-product-card__heading tl2"
+                          >вино Kartuli Vazi Akhasheni</span
+                        >
+                      </div>
+                      <div class="menu-product-card__grade grade">
+                        <span class="grade__text txt txt_md">4.5</span>
+                      </div>
+                      <ul class="menu-product-card__features txt txt_16">
+                        <li class="menu-product-card__feature">Россия</li>
+                        <li class="menu-product-card__feature">Красное</li>
+                        <li class="menu-product-card__feature">Сухое</li>
+                        <li class="menu-product-card__feature">0.75 л</li>
+                      </ul>
+                      <div class="menu-product-card__price-wrap">
+                        <div class="menu-product-card__price price">
+                          <span class="price__value txt txt_wide">1 200₽</span>
+                          <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                        </div>
+                        <div class="menu-product-card__coins coins">
+                          <span class="coins__value txt">16</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="menu-product-card__basket-btn basket-btn">
+                      <img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="basket-btn__icon" />
+                    </a>
+                  </div>
+                  <div class="search-box__slide menu-product-card swiper-slide">
+                    <a href="#" class="menu-product-card__inner">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__labels">
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Суперцена</span
+                            >
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Эксклюзив</span
+                            >
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__product">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                        <span class="menu-product-card__heading tl2"
+                          >вино Kartuli Vazi Akhasheni</span
+                        >
+                      </div>
+                      <div class="menu-product-card__grade grade">
+                        <span class="grade__text txt txt_md">4.5</span>
+                      </div>
+                      <ul class="menu-product-card__features txt txt_16">
+                        <li class="menu-product-card__feature">Россия</li>
+                        <li class="menu-product-card__feature">Красное</li>
+                        <li class="menu-product-card__feature">Сухое</li>
+                        <li class="menu-product-card__feature">0.75 л</li>
+                      </ul>
+                      <div class="menu-product-card__price-wrap">
+                        <div class="menu-product-card__price price">
+                          <span class="price__value txt txt_wide">1 200₽</span>
+                          <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                        </div>
+                        <div class="menu-product-card__coins coins">
+                          <span class="coins__value txt">16</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="menu-product-card__basket-btn basket-btn">
+                      <img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="basket-btn__icon" />
+                    </a>
+                  </div>
+                  <div class="search-box__slide menu-product-card swiper-slide">
+                    <a href="#" class="menu-product-card__inner">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__labels">
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Суперцена</span
+                            >
+                          </div>
+                          <div class="menu-product-card__label label">
+                            <span class="label__text txt txt_16"
+                              >Эксклюзив</span
+                            >
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__product">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                        <span class="menu-product-card__heading tl2"
+                          >вино Kartuli Vazi Akhasheni</span
+                        >
+                      </div>
+                      <div class="menu-product-card__grade grade">
+                        <span class="grade__text txt txt_md">4.5</span>
+                      </div>
+                      <ul class="menu-product-card__features txt txt_16">
+                        <li class="menu-product-card__feature">Россия</li>
+                        <li class="menu-product-card__feature">Красное</li>
+                        <li class="menu-product-card__feature">Сухое</li>
+                        <li class="menu-product-card__feature">0.75 л</li>
+                      </ul>
+                      <div class="menu-product-card__price-wrap">
+                        <div class="menu-product-card__price price">
+                          <span class="price__value txt txt_wide">1 200₽</span>
+                          <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                        </div>
+                        <div class="menu-product-card__coins coins">
+                          <span class="coins__value txt">16</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="menu-product-card__basket-btn basket-btn">
+                      <img
+                        src="@img/icons/bag-white.svg"
+                        alt=""
+                        class="basket-btn__icon" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="search-box__slider-nav">
+                <button
+                  type="button"
+                  class="search-box__slider-arr search-box__slider-arr_prev">
+                  <img
+                    src="@img/icons/sl-arr.svg"
+                    alt=""
+                    class="search-box__slider-arr-icon" />
+                </button>
+                <button
+                  type="button"
+                  class="search-box__slider-arr search-box__slider-arr_next">
+                  <img
+                    src="@img/icons/sl-arr.svg"
+                    alt=""
+                    class="search-box__slider-arr-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
       <div class="header__actions actions-header">
         <a href="#" class="actions-header__icon-wrap"
@@ -31,20 +482,10 @@
       </div>
     </div>
     <div class="header__bottom">
-      <div class="header__menu menu">
-        <button type="button" class="menu__hamburger hamburger">
-          <span class="hamburger__icon"></span>
-          <span class="hamburger__text caps caps_md">Меню</span>
-        </button>
-      </div>
       <nav class="header__nav">
         <ul class="header__list list-header">
           <li class="list-header__item">
-            <a
-              href="#"
-              class="list-header__link list-header__link_catalog caps caps_md"
-              >Каталог</a
-            >
+            <a href="#" class="list-header__link caps">Акции</a>
           </li>
           <li class="list-header__item">
             <a href="#" class="list-header__link caps">Белые вина</a>
@@ -66,9 +507,34 @@
           </li>
         </ul>
       </nav>
-      <a href="tel:88003010790" class="header__tel txt txt_md"
-        >8 800 301 07 90</a
-      >
+      <a
+        data-da=".header__main,768,last"
+        href="tel:88003010790"
+        class="header__tel txt txt_md">
+        <div class="header__tel-icon mobile-only">
+          <img src="@img/icons/call.svg" alt="" class="header__tel-icon-img" />
+        </div>
+        <span class="header__tel-txt txt txt_md desktop-only"
+          >8 800 301 07 90</span
+        >
+      </a>
+      <ul class="header__socials socials">
+        <li class="socials__item">
+          <a href="#" target="_blank" class="socials__link"
+            ><img src="@img/icons/tg.svg" alt="" class="socials__icon"
+          /></a>
+        </li>
+        <li class="socials__item">
+          <a href="#" target="_blank" class="socials__link"
+            ><img src="@img/icons/yt.svg" alt="" class="socials__icon"
+          /></a>
+        </li>
+        <li class="socials__item">
+          <a href="#" target="_blank" class="socials__link"
+            ><img src="@img/icons/vk.svg" alt="" class="socials__icon"
+          /></a>
+        </li>
+      </ul>
     </div>
   </div>
 </header>

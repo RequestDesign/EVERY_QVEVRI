@@ -45,6 +45,11 @@ body {
   min-height: 100%;
   max-width: 1920px;
   overflow: hidden;
+  .container {
+    @media (max-width: 48em) {
+      padding: 0 2.4rem;
+    }
+  }
 
   // press footer
   > main {
@@ -53,6 +58,19 @@ body {
   // fix for sliders
   > * {
     min-width: 0;
+  }
+}
+
+// swiper fade fix
+.swiper-fade {
+  .swiper-slide {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    &.swiper-slide-active {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
   }
 }
 
