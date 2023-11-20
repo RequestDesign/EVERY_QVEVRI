@@ -165,6 +165,7 @@
 // --------------------------------------------------------------------------
 
 .slide-hero {
+  user-select: none;
   &.swiper-slide {
     display: flex;
     flex-direction: column-reverse;
