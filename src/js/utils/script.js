@@ -1,5 +1,10 @@
 import { removeClasses } from '../utils/utils.js';
 
+window.addEventListener('load', function () {
+  // show page body
+  document.body.style.opacity = 1;
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   // header search
   const searchInput = document.querySelector('.header__search-input');
