@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Каталог" })
+  <body style="opacity: 0">
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="main catalog-page">
+        <section class="catalog-page__hero-banner hero-banner">
+          <div class="hero-banner__container container">
+            <nav class="hero-banner__breadcrumbs breadcrumbs caps">
+              <a href="#" class="breadcrumbs__text">Главная</a>
+              <span class="breadcrumbs__text">Вино</span>
+            </nav>
+            <div class="hero-banner__content">
+              <div class="hero-banner__text-wrap">
+                <span class="hero-banner__date caps"
+                  >25 октября - 7 ноября</span
+                >
+                <span class="hero-banner__heading tl2">Скидки до 50%</span>
+                <p class="hero-banner__text">
+                  На крепкие напитки для любого повода и события
+                </p>
+                <a href="#" class="hero-banner__link btn btn_icon">
+                  <span class="btn__text txt txt_md">Подробнее</span>
+                </a>
+                <div class="hero-banner__image-wrap">
+                  <img
+                    src="@img/bg/1184.webp"
+                    alt=""
+                    class="hero-banner__image" />
+                </div>
+              </div>
+              <div class="hero-banner__bg">
+                <img
+                  src="@img/bg/19249.webp"
+                  alt=""
+                  class="hero-banner__bg-image" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-page__catalog catalog">
+          <div class="catalog__container container">
+            <span class="catalog__title tl1">Вино</span>
+            <div class="catalog__head">
+              <div data-showmore class="catalog__categories categories-catalog">
+                <div data-showmore-content class="categories-catalog__content">
+                  <ul class="categories-catalog__list txt txt_md">
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Белые вина</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Игристые вина</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Розовые вина</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Крепкий алкоголь</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Красные вина</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >Крепкий алкоголь</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >сувениры и подарки</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link">в подарок</a>
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >наш рейтинг вин</a
+                      >
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link">новинки</a>
+                    </li>
+                    <li class="categories-catalog__item">
+                      <a href="#" class="categories-catalog__link"
+                        >для вечеринки</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <button
+                  hidden
+                  data-showmore-button
+                  type="button"
+                  class="categories-catalog__more">
+                  <span>Все</span><span>Скрыть</span>
+                </button>
+              </div>
+              <div class="catalog__row">
+                <span class="catalog__count txt">
+                  <span class="catalog__count-value">1 523</span>
+                  <span class="catalog__count-text">товара</span>
+                </span>
+                <select name="form[]" class="catalog__sort">
+                  <option value="1" selected>По популярности</option>
+                  <option value="2">По возрастанию цены</option>
+                  <option value="3">По убыванию цены</option>
+                  <option value="4">Высокий рейтинг</option>
+                  <option value="5">Новинки</option>
+                </select>
+                <div class="catalog__view view-catalog">
+                  <span class="view-catalog__text txt">Вид каталога</span>
+                  <div class="view-catalog__btns">
+                    <a href="#" class="view-catalog__btn">
+                      <svg
+                        class="view-catalog__btn-icon"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="3" fill="#E9E8E8" />
+                        <circle cx="22" cy="10" r="3" fill="#E9E8E8" />
+                        <circle cx="10" cy="22" r="3" fill="#E9E8E8" />
+                        <circle cx="22" cy="22" r="3" fill="#E9E8E8" />
+                      </svg>
+                    </a>
+                    <a href="#" class="view-catalog__btn">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="20" height="4" rx="2" fill="#EB5749"/>
+                            <rect x="6" y="20" width="20" height="4" rx="2" fill="#EB5749"/>
+                            </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__filters filters">
+                    <span class="filters__heading tl2">фильтры</span>
+                    <form data-dev action="#" class="filters__form">
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Акции</span>
+                            <div class="filters__options">
+                                <div class="filters__checkbox ">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">2 + 1</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Выгодная цена</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">цена (₽)</span>
+                            <div class="filters__fields">
+                                <div class="filters__field input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="от" class="input__field">
+                                </div>
+                                <div class="filters__field input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="до" class="input__field">
+                                </div>
+                            </div>
+                            <div class="filters__options">
+                                <div class="filters__checkbox checkbox">
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">500 — 1500</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">1600 — 2500</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">2600 — 3500</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Более 3500</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Цвет</span>
+                            <div class="filters__options">
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Красное</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Белое</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Розовое</span>
+                                    </label>
+                                </div>
+                                  <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Оранжевое</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Тип</span>
+                            <div class="filters__options">
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Безалкогольные вина</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Вермут</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Херес</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Портвейн</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Страна</span>
+                            <div class="filters__options">
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Грузия</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Россия</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Армения</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">регион</span>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Кубань</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Венетто</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Бордо</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Тоскана</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Крым</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">бренд</span>
+                            <div class="filters__search-input input">
+                                <input autocomplete="off" type="search" name="form[]" placeholder="Я ищу..." class="filters__search-field input__field">
+                            </div>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Adega de Favaios</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Africa's Pride</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Bisci</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Botter</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Duffour</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">производитель</span>
+                            <div class="filters__search-input input">
+                                <input autocomplete="off" type="search" name="form[]" placeholder="Я ищу..." class="filters__search-field input__field">
+                            </div>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Adega de Favaios</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Africa's Pride</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Bisci</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Botter</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Duffour</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Объем бутылки</span>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">0.1 л</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">0.2 л</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">0.25 л</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">0.35 л</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">0.5 л</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Содержание сахара</span>
+                            <div class="filters__options">
+                                <div class="filters__checkbox ">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Сухое</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Полусухое</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Полусладкое</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Сладкое</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Брют</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Содержание винограда</span>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Сорт 1</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Сорт 2</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Сорт 3</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Сорт 4</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Сорт 5</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Крепость</span>
+                            <div class="filters__fields">
+                                <div class="filters__field input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="от" class="input__field">
+                                </div>
+                                <div class="filters__field input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="до" class="input__field">
+                                </div>
+                            </div>
+                            <div class="filters__options">
+                                <div class="filters__checkbox checkbox">
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">0 — 5</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">6 — 10</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">11 — 14</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">15 — 20</span>
+                                    </label>
+                                </div>
+                                <div class="filters__checkbox">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                        <span class="checkbox__text txt">Более 20</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Аромат</span>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Ваниль</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Вишня</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Вишня</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Гранат</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Абрикос</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <div class="filters__group">
+                            <span class="filters__subtitle caps caps_md">Гастрономические сочетания</span>
+                            <div data-showmore class="filters__showmore">
+                                <div data-showmore-content class="filters__showmore-list">
+                                    <div class="filters__options">
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Красное мясо</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Грибы</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Десерты</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Рыба</span>
+                                            </label>
+                                        </div>
+                                        <div class="filters__checkbox">
+                                            <label class="checkbox">
+                                                <input class="checkbox__input" type="checkbox" value="" name="form[]">
+                                                <span class="checkbox__text txt">Морепродукты</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="filters__showmore-btn"><span>Показать все</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                        <button type="button" class="filters__btn btn_ol"><span class="btn__text txt txt_md">Скрыть фильтры</span></button>
+                        <button type="button" class="filters__clean-form-btn txt">Очистить фильтр</button>
+                    </form>
+                </div>
+                <div class="catalog__content">
+                    <div class="catalog__tags tags-catalog">
+                        <ul class="tags-catalog__list">
+                            <li class="tags-catalog__item">
+                                <span class="tags-catalog__text txt">Бордо</span>
+                                <button type="button" class="tags-catalog__remove-btn"><img src="@img/icons/cross.svg" alt="" class="tags-catalog__remove-btn-icon"></img></button>
+                            </li>
+                            <li class="tags-catalog__item">
+                                <span class="tags-catalog__text txt">500 ₽ - 1 500 ₽</span>
+                                <button type="button" class="tags-catalog__remove-btn"><img src="@img/icons/cross.svg" alt="" class="tags-catalog__remove-btn-icon"></img></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog__products">
+                        <div class="catalog__card catalog-card">
+                            <a href="#" class="catalog-card__preview">
+                                <div class="catalog-card__image-wrap">
+                                    <img src="@img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="catalog-card__image">
+                                </div>
+                                <div class="catalog-card__labels">
+                                    <span class="catalog-card__label label">-25%</span>
+                                    <span class="catalog-card__label label">Суперцена</span>
+                                    <span class="catalog-card__label label">Эксклюзив</span>
+                                </div>
+                            </a>
+                            <div class="catalog-card__info">
+                                <a href="#" class="catalog-card__heading tl2">Вино Saperavi Binekhi</a>
+                                <div class="catalog-card__reviews">
+                                    <div class="catalog-card__grade grade">
+                                        <span class="grade__text txt txt_md">4.5</span>
+                                    </div>
+                                    <span class="catalog-card__text txt">(12 отзывов)</span>
+                                </div>
+                                <div class="catalog-card__characteristics characteristics">
+                                    <ul class="characteristics__list">
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Вино:</span>
+                                            <span class="characteristics__text">Полусухое, белое </span>
+                                        </li>
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Объем:</span>
+                                            <span class="characteristics__text">0.75 л</span>
+                                        </li>
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Крепость:</span>
+                                            <span class="characteristics__text">12.5%</span>
+                                        </li>
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Страна, регион:</span>
+                                            <span class="characteristics__text">Грузия, Кахетия</span>
+                                        </li>
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Бренд:</span>
+                                            <span class="characteristics__text">Binekhi</span>
+                                        </li>
+                                        <li class="characteristics__item txt">
+                                            <span class="characteristics__label">Производитель:</span>
+                                            <span class="characteristics__text">Vasi+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="catalog-card__group">
+                                <div class="catalog-card__price">
+                                    <span class="catalog-card__price catalog-card__price_current txt txt_wide">1 200₽</span>
+                                    <span class="catalog-card__price catalog-card__price_old txt txt_wide">1 700₽</span>
+                                </div>
+                                <div class="catalog-card__coins coins">
+                                    <span class="coins__value">16</span>
+                                </div>
+                                <div class="catalog-card__actions">
+                                    <a href="#" class="catalog-card__basket-btn basket-btn">
+                                        <img
+                          src="@img/icons/bag-white.svg"
+                          alt=""
+                          class="basket-btn__icon"
+                      />
+                                    </a>
+                                    <button
+                                    type="button"
+                                    class="catalog-card__heart-btn heart-btn">
+                                    <svg
+                                      class="heart-btn__icon"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="48"
+                                      height="48"
+                                      viewBox="0 0 48 48"
+                                      fill="none">
+                                      <path
+                                        d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                                        fill="#E9E8E8"></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_svg.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

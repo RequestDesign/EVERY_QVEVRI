@@ -929,12 +929,16 @@
   top: 100%;
   left: 0;
   width: 100%;
+  height: 0;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   ._search-box-opened & {
+    height: auto;
     opacity: 1;
     visibility: visible;
+    overflow: visible;
   }
   &::before {
     content: '';
@@ -1264,6 +1268,27 @@
   color: $white;
   &._hidden {
     display: none;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  column-gap: 1.1rem;
+
+  // .breadcrumbs__text
+
+  &__text {
+    &:not(:last-child) {
+      position: relative;
+      color: $gray;
+      &::after {
+        @extend .caps;
+        content: '/';
+        padding-left: 1.1rem;
+        display: inline-block;
+      }
+    }
   }
 }
 
