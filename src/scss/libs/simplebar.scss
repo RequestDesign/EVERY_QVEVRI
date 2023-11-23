@@ -1,0 +1,11 @@
+.simplebar-scrollable-y {
+  .simplebar-track.simplebar-vertical {
+    width: 2px;
+    background-color: $lightGray;
+  }
+  .simplebar-scrollbar {
+    min-height: 3.6rem;
+    width: 2px;
+    background-color: $black;
+  }
+}

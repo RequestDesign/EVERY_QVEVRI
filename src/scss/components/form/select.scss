@@ -1,6 +1,5 @@
 .select {
   position: relative;
-  // min-width: 37rem;
 
   // .select__body
 
@@ -14,18 +13,9 @@
     border: 2px solid transparent;
     border-radius: 0.4rem;
     width: 100%;
-    // background-color: #f1f2f6;
     cursor: pointer;
     text-align: left;
     color: inherit;
-    // transition: all 0.3s ease;
-    // &:not(._select-opened &, ._select-error &, ._select-disabled &) {
-    //   @media (any-hover: hover) {
-    //     &:hover {
-    //       background-color: #e4e7ee;
-    //     }
-    //   }
-    // }
   }
 
   // .select__value
@@ -52,16 +42,6 @@
       background-repeat: no-repeat;
       transition: transform 0.3s ease;
     }
-    // &._select-label {
-    //   font-size: 1.8rem;
-    //   line-height: 144.444%;
-    //   color: #737b8c;
-    //   &::before {
-    //     content: attr(data-sel-label);
-    //     color: #737b8c;
-    //     transition: color 0.3s ease;
-    //   }
-    // }
     &._select-label::before,
     .select__content {
       max-width: 31.4rem;
@@ -74,10 +54,8 @@
   // .select__content
 
   &__content {
-    @extend .caps;
     font-weight: 500;
     line-height: 100%;
-    // display: none;
   }
 
   // .select__text
@@ -103,7 +81,7 @@
     left: 50%;
     padding: 1.5rem 0;
     min-width: 100%;
-    box-shadow: 0 0.8rem 2.5rem 0 rgba(99, 119, 156, 0.2);
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
     border-top: 0;
     border-top: 0;
     border-radius: 0.4rem;
@@ -148,10 +126,8 @@
   }
   // .select__option
   &__option {
-    @extend .caps;
     width: 100%;
     padding: 0 2.4rem;
-    font-weight: 500;
     text-align: left;
     color: $gray;
 

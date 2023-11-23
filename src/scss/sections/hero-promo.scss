@@ -1,21 +1,21 @@
-.hero-banner {
+.hero-promo {
   margin-bottom: 4.8rem;
   padding-top: 4rem;
 
-  // .hero-banner__container
+  // .hero-promo__container
 
   &__container {
     display: flex;
     flex-direction: column;
   }
 
-  // .hero-banner__breadcrumbs
+  // .hero-promo__breadcrumbs
 
   &__breadcrumbs {
     margin-bottom: 3.2rem;
   }
 
-  // .hero-banner__content
+  // .hero-promo__content
 
   &__content {
     position: relative;
@@ -25,7 +25,7 @@
     overflow: hidden;
   }
 
-  // .hero-banner__text-wrap
+  // .hero-promo__text-wrap
 
   &__text-wrap {
     position: relative;
@@ -47,31 +47,31 @@
     }
   }
 
-  // .hero-banner__date
+  // .hero-promo__date
 
   &__date {
     margin-bottom: 3.2rem;
     color: $gray;
   }
 
-  // .hero-banner__heading
+  // .hero-promo__heading
 
   &__heading {
     margin-bottom: 2rem;
   }
 
-  // .hero-banner__text
+  // .hero-promo__text
 
   &__text {
     margin-bottom: 4rem;
   }
 
-  // .hero-banner__link
+  // .hero-promo__link
 
   &__link {
   }
 
-  // .hero-banner__image-wrap
+  // .hero-promo__image-wrap
 
   &__image-wrap {
     position: absolute;
@@ -81,13 +81,13 @@
     transform: translate(50%, -6rem);
   }
 
-  // .hero-banner__image
+  // .hero-promo__image
 
   &__image {
     object-fit: contain;
   }
 
-  // .hero-banner__bg
+  // .hero-promo__bg
 
   &__bg {
     position: absolute;
@@ -98,7 +98,7 @@
     transform: translate(3rem, -50%);
   }
 
-  // .hero-banner__bg-image
+  // .hero-promo__bg-image
 
   &__bg-image {
     object-fit: cover;

@@ -1,11 +1,32 @@
 // form
 @import '../components/form/form';
 
+// spoilers
+@import '../components/spoilers';
+
+// --------------------------------------------------------------------------
+
 // map
 @import '../libs/map';
 
 // swiper
 @import '../libs/swiper';
 
-// spoilers
-@import '../components/spoilers';
+// simplebar
+@import '../libs/simplebar';
+
+// --------------------------------------------------------------------------
+
+[data-showmore-btn] {
+  span {
+    &:last-child {
+      display: none;
+    }
+    ._active & {
+      display: none;
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}

@@ -83,6 +83,11 @@ const revealSlides = swiper => {
       if (window.innerWidth > 768) {
         slides[index + 1] ? slides[index + 1].classList.add('_revealed') : null;
         slides[index + 2] ? slides[index + 2].classList.add('_revealed') : null;
+        if (document.querySelector('.catalog-page')) {
+          slides[index + 3]
+            ? slides[index + 3].classList.add('_revealed')
+            : null;
+        }
       }
     }
   });
@@ -190,8 +195,8 @@ const initSliders = () => {
       // breakpoints
       breakpoints: {
         768: {
-          slidesPerView: 4,
-          spaceBetween: 137,
+          slidesPerView: document.querySelector('.catalog-page') ? 5 : 4,
+          spaceBetween: document.querySelector('.catalog-page') ? 90 : 137,
         },
       },
 

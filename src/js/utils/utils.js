@@ -79,7 +79,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
     target.style.height = `${target.offsetHeight}px`;
     target.offsetHeight;
     target.style.overflow = 'hidden';
-    target.style.height = showmore ? `${showmore}px` : `0px`;
+    target.style.height = showmore ? `${showmore}rem` : `0`;
     target.style.paddingTop = 0;
     target.style.paddingBottom = 0;
     target.style.marginTop = 0;
@@ -113,7 +113,7 @@ export let _slideDown = (target, duration = 500, showmore = 0) => {
     showmore ? target.style.removeProperty('height') : null;
     let height = target.offsetHeight;
     target.style.overflow = 'hidden';
-    target.style.height = showmore ? `${showmore}px` : `0px`;
+    target.style.height = showmore ? `${showmore}rem` : `0`;
     target.style.paddingTop = 0;
     target.style.paddingBottom = 0;
     target.style.marginTop = 0;
@@ -152,14 +152,14 @@ export let _slideToggle = (target, duration = 500) => {
 };
 
 // array uniqueization
-export function uniqueArray(array) {
+export const uniqueArray = array => {
   return array.filter(function (item, index, self) {
     return self.indexOf(item) === index;
   });
-}
+};
 
 // processing media requests from attributes
-export function dataMediaQueries(array, dataSetValue) {
+export const dataMediaQueries = (array, dataSetValue) => {
   // get objects with media queries
   const media = Array.from(array).filter(function (item, index, self) {
     if (item.dataset[dataSetValue]) {
@@ -215,10 +215,10 @@ export function dataMediaQueries(array, dataSetValue) {
       return mdQueriesArray;
     }
   }
-}
+};
 
 // spoilers
-export function spoilers() {
+export const spoilers = () => {
   const spoilersArray = document.querySelectorAll('[data-spoilers]');
   if (spoilersArray.length > 0) {
     // get regular spoilers
@@ -334,4 +334,4 @@ export function spoilers() {
       });
     }
   }
-}
+};

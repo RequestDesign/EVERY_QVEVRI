@@ -36,6 +36,10 @@ import './libs/select.js';
 // dynamic dom
 import './libs/da.js';
 
+// -------------------------------- simplebar -------------------------------
+
+import './utils/simplebar.js';
+
 // --------------------------------------------------------------------------
 
 // scripts

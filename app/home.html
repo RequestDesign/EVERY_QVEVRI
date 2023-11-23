@@ -11,6 +11,24 @@
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<script src="https://api-maps.yandex.ru/v3/?apikey=893d068f-6a82-4f63-aec8-f0e9ed9ed59c&lang=ru_RU"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<noscript>
+		<style>
+			/**
+      * reinstate scrolling for non-JS clients
+      */
+			.simplebar-content-wrapper {
+				scrollbar-width: auto;
+				-ms-overflow-style: auto;
+			}
+
+			.simplebar-content-wrapper::-webkit-scrollbar,
+			.simplebar-hide-scrollbar::-webkit-scrollbar {
+				display: initial;
+				width: initial;
+				height: initial;
+			}
+		</style>
+	</noscript>
 </head>
 
 <body style="opacity: 0">
@@ -38,10 +56,12 @@
 							<a href="#" class="header__link-txt txt txt_16">Публичная оферта</a>
 						</li>
 					</ul>
-					<select data-show-selection name="form[]" class="header__select-lang">
-						<option value="1" selected>RU</option>
-						<option value="2">ENG</option>
-					</select>
+					<div class="header__select-lang caps caps_md">
+						<select data-show-selection name="form[]">
+							<option value="1" selected>RU</option>
+							<option value="2">ENG</option>
+						</select>
+					</div>
 				</div>
 				<div class="header__main">
 					<div class="header__menu menu">
@@ -228,9 +248,9 @@
 														</div>
 													</div>
 												</a>
-												<a href="#" class="menu-product-card__basket-btn basket-btn">
+												<button class="menu-product-card__basket-btn basket-btn">
 													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</a>
+												</button>
 											</div>
 											<div class="search-box__slide menu-product-card swiper-slide">
 												<a href="#" class="menu-product-card__inner">
@@ -277,9 +297,9 @@
 														</div>
 													</div>
 												</a>
-												<a href="#" class="menu-product-card__basket-btn basket-btn">
+												<button class="menu-product-card__basket-btn basket-btn">
 													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</a>
+												</button>
 											</div>
 											<div class="search-box__slide menu-product-card swiper-slide">
 												<a href="#" class="menu-product-card__inner">
@@ -326,9 +346,9 @@
 														</div>
 													</div>
 												</a>
-												<a href="#" class="menu-product-card__basket-btn basket-btn">
+												<button class="menu-product-card__basket-btn basket-btn">
 													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</a>
+												</button>
 											</div>
 										</div>
 									</div>
@@ -577,7 +597,7 @@
 						<div class="recommendations__carousel">
 							<div class="recommendations__slider swiper">
 								<div class="recommendations__wrapper swiper-wrapper">
-									<div class="recommendations__product-card product-card swiper-slide">
+									<div class="recommendations__slide product-card swiper-slide">
 										<a href="#" class="product-card__body">
 											<div class="product-card__head">
 												<span class="product-card__year txt txt_md">2021</span>
@@ -599,9 +619,11 @@
 											</div>
 											<span class="product-card__heading tl2">Вино Saperavi Binekhi</span>
 										</a>
-										<a href="#" class="product-card__basket-btn basket-btn"><img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" /></a>
+										<button class="product-card__basket-btn basket-btn">
+											<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+										</button>
 									</div>
-									<div class="recommendations__product-card product-card swiper-slide">
+									<div class="recommendations__slide product-card swiper-slide">
 										<a href="#" class="product-card__body">
 											<div class="product-card__head">
 												<span class="product-card__year txt txt_md">2021</span>
@@ -623,9 +645,11 @@
 											</div>
 											<span class="product-card__heading tl2">Вино Saperavi Binekhi</span>
 										</a>
-										<a href="#" class="product-card__basket-btn basket-btn"><img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" /></a>
+										<button class="product-card__basket-btn basket-btn">
+											<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+										</button>
 									</div>
-									<div class="recommendations__product-card product-card swiper-slide">
+									<div class="recommendations__slide product-card swiper-slide">
 										<a href="#" class="product-card__body">
 											<div class="product-card__head">
 												<span class="product-card__year txt txt_md">2021</span>
@@ -647,9 +671,11 @@
 											</div>
 											<span class="product-card__heading tl2">Вино Saperavi Binekhi</span>
 										</a>
-										<a href="#" class="product-card__basket-btn basket-btn"><img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" /></a>
+										<button class="product-card__basket-btn basket-btn">
+											<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+										</button>
 									</div>
-									<div class="recommendations__product-card product-card swiper-slide">
+									<div class="recommendations__slide product-card swiper-slide">
 										<a href="#" class="product-card__body">
 											<div class="product-card__head">
 												<span class="product-card__year txt txt_md">2021</span>
@@ -671,9 +697,11 @@
 											</div>
 											<span class="product-card__heading tl2">Вино Saperavi Binekhi</span>
 										</a>
-										<a href="#" class="product-card__basket-btn basket-btn"><img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" /></a>
+										<button class="product-card__basket-btn basket-btn">
+											<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+										</button>
 									</div>
-									<div class="recommendations__product-card product-card swiper-slide">
+									<div class="recommendations__slide product-card swiper-slide">
 										<a href="#" class="product-card__body">
 											<div class="product-card__head">
 												<span class="product-card__year txt txt_md">2021</span>
@@ -695,7 +723,9 @@
 											</div>
 											<span class="product-card__heading tl2">Вино Saperavi Binekhi</span>
 										</a>
-										<a href="#" class="product-card__basket-btn basket-btn"><img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" /></a>
+										<button class="product-card__basket-btn basket-btn">
+											<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+										</button>
 									</div>
 								</div>
 							</div>
@@ -1004,6 +1034,12 @@
 											<img src="img/collections/8e6cd525fff13bf7bcde8db1be62b80ed54956f0.webp" alt="" class="slide-collections__image" />
 										</div>
 										<span class="slide-collections__heading tl2">рейтинг вин every qvevri</span>
+										<div class="slide-collections__arrow">
+											<svg class="slide-collections__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+												<path d="M9.85777 24.8606L38.142 24.8605" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M23.9999 10.7184L38.142 24.8605L23.9999 39.0027" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
 									</a>
 								</div>
 								<div class="collections__slide slide-collections swiper-slide">
@@ -1013,6 +1049,12 @@
 										</div>
 										<div class="slide-collections__content">
 											<span class="slide-collections__heading tl2">все виды игристых</span>
+											<div class="slide-collections__arrow">
+												<svg class="slide-collections__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+													<path d="M9.85777 24.8606L38.142 24.8605" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M23.9999 10.7184L38.142 24.8605L23.9999 39.0027" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -1023,6 +1065,12 @@
 										</div>
 										<div class="slide-collections__content">
 											<span class="slide-collections__heading tl2">крепкие напитки</span>
+											<div class="slide-collections__arrow">
+												<svg class="slide-collections__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+													<path d="M9.85777 24.8606L38.142 24.8605" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M23.9999 10.7184L38.142 24.8605L23.9999 39.0027" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -1033,6 +1081,12 @@
 										</div>
 										<div class="slide-collections__content">
 											<span class="slide-collections__heading tl2">рейтинг вин every qvevri</span>
+											<div class="slide-collections__arrow">
+												<svg class="slide-collections__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+													<path d="M9.85777 24.8606L38.142 24.8605" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<path d="M23.9999 10.7184L38.142 24.8605L23.9999 39.0027" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
 										</div>
 									</a>
 								</div>

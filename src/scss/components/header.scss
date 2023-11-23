@@ -56,6 +56,12 @@
   // .header__select-lang
 
   &__select-lang {
+    .select {
+      &__option {
+        @extend .caps;
+        font-weight: 500;
+      }
+    }
   }
 
   // .header__main
