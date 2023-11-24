@@ -45,49 +45,71 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // get original height
-  const setOriginalHeight = () => {
-    const elements = document.querySelectorAll('[data-original-height]');
-    if (elements.length) {
-      elements.forEach(element => {
-        const visibleHeight = element.dataset.visibleHeight;
-        const showmoreBtn = element.parentElement.querySelector(
-          '[data-showmore-btn]'
-        );
-
-        element.dataset.originalHeight = `${element.offsetHeight}px`;
-        visibleHeight
-          ? (element.style.height = element.dataset.visibleHeight)
-          : null;
-
-        if (showmoreBtn && visibleHeight) {
-          showmoreBtn.addEventListener('click', function () {
-            if (element.parentElement.classList.contains('_active')) {
-              element.parentElement.classList.remove('_active');
-              element.style.height = element.dataset.visibleHeight;
-            } else {
-              element.parentElement.classList.add('_active');
-              element.style.height = element.dataset.originalHeight;
-            }
-          });
-        }
-      });
+  // relocate dom elements
+  const relocateDOMElements = (array, parent, target) => {
+    if (array.length) {
+      array.forEach(item =>
+        item.closest(parent).querySelector(target).appendChild(item)
+      );
     }
   };
-  setOriginalHeight();
+  relocateDOMElements(
+    document.querySelectorAll(
+      '.catalog__card.menu-product-card_list-view .menu-product-card__heart-btn'
+    ),
+    '.catalog__card',
+    '.menu-product-card__actions'
+  );
+  relocateDOMElements(
+    document.querySelectorAll(
+      '.catalog__card.menu-product-card_list-view .menu-product-card__labels'
+    ),
+    '.catalog__card',
+    '.menu-product-card__preview'
+  );
+
+  // get original height
+  if (window.innerWidth > 768) {
+    const setOriginalHeight = () => {
+      const elements = document.querySelectorAll('[data-original-height]');
+      if (elements.length) {
+        elements.forEach(element => {
+          const visibleHeight = element.dataset.visibleHeight;
+          const showmoreBtn = element.parentElement.querySelector(
+            '[data-showmore-btn]'
+          );
+
+          element.dataset.originalHeight = `${element.offsetHeight}px`;
+          visibleHeight
+            ? (element.style.height = element.dataset.visibleHeight)
+            : null;
+
+          if (showmoreBtn && visibleHeight) {
+            showmoreBtn.addEventListener('click', function () {
+              if (element.parentElement.classList.contains('_active')) {
+                element.parentElement.classList.remove('_active');
+                element.style.height = element.dataset.visibleHeight;
+              } else {
+                element.parentElement.classList.add('_active');
+                element.style.height = element.dataset.originalHeight;
+              }
+            });
+          }
+        });
+      }
+    };
+    setOriginalHeight();
+  }
 
   // show filters selections
   const setSelections = target => {
-    const filter = target.closest('.filters .checkbox__input');
-    const filterTxt = filter.parentElement.dataset.filterText;
+    const targetElement = document.querySelector('.tags-catalog__list');
 
-    if (filter) {
-      const targetElement = document.querySelector('.tags-catalog__list');
+    const addTag = (filter, filterTxt) => {
       const tagBody = `
         <span class="tags-catalog__text txt">${filterTxt}</span>
         <button type="button" class="tags-catalog__remove-btn"><img src="./img/icons/cross.svg" alt="" class="tags-catalog__remove-btn-icon" /></button>
       `;
-
       if (filter.checked) {
         const tag = document.createElement('div');
         tag.classList.add('tags-catalog__item');
@@ -102,8 +124,25 @@ document.addEventListener('DOMContentLoaded', function () {
           targetElement.querySelector(`[data-tag-text="${filterTxt}"]`)
         );
       }
+    };
+
+    if (target && target.closest('.filters .checkbox__input')) {
+      addTag(
+        target.closest('.filters .checkbox__input'),
+        target.closest('.filters .checkbox__input').nextElementSibling.innerHTML
+      );
+    } else if (!target) {
+      const checkboxes = document.querySelectorAll(
+        '.filters .checkbox__input[checked]'
+      );
+      if (checkboxes.length) {
+        checkboxes.forEach(checkbox => {
+          addTag(checkbox, checkbox.nextElementSibling.innerHTML);
+        });
+      }
     }
   };
+  setSelections();
   const filters = document.querySelectorAll('.filters .checkbox');
   const setFiltersAttributes = arr => {
     arr.forEach(item =>
@@ -131,7 +170,11 @@ document.addEventListener('DOMContentLoaded', function () {
       tag.remove();
     }
     if (target.closest('.filters .checkbox__input')) {
-      setSelections(target.closest('.filters .checkbox__input'));
+      setSelections(
+        target.closest('.filters .checkbox__input'),
+        target.closest('.filters .checkbox__input').parentElement.dataset
+          .filterTxt
+      );
     }
     if (target.closest('[data-clean-form-btn]')) {
       formValidate.formClean(target.closest('form'));
@@ -141,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const parent = target.closest('.filters__show-all-btn').parentElement;
       parent.classList.toggle('_show-all');
     }
-    if (target.closest('.filters__showmore-btn')) {
+    if (target.closest('.filters__showmore-btn') && window.innerWidth > 768) {
       const parent = target.closest('.filters__showmore-list');
 
       if (parent && !parent.classList.contains('scroll')) {

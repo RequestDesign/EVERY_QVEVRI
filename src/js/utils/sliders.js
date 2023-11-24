@@ -8,6 +8,7 @@ import { rem } from './utils';
 // --------------------------------------------------------------------------
 
 let categoriesSlider = null;
+let catalogCategoriesSlider = null;
 
 const changeSlideNum = (swiper, pagination, target) => {
   const slides = swiper.slides;
@@ -392,6 +393,22 @@ const initSliders = () => {
     } else if (window.innerWidth > 768 && categoriesSlider) {
       categoriesSlider.destroy();
       categoriesSlider = null;
+    }
+  }
+  if (document.querySelector('.catalog__categories')) {
+    if (window.innerWidth <= 768 && !catalogCategoriesSlider) {
+      catalogCategoriesSlider = new Swiper('.catalog__categories', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        spaceBetween: rem(2.5),
+        slideToClickedSlide: true,
+        slideClass: 'categories-catalog__item',
+        wrapperClass: 'categories-catalog__list',
+      });
+    } else if (window.innerWidth > 768 && catalogCategoriesSlider) {
+      catalogCategoriesSlider.destroy();
+      catalogCategoriesSlider = null;
     }
   }
 };

@@ -1,5 +1,8 @@
 .catalog {
   margin-bottom: 26rem;
+  @media (max-width: 48em) {
+    margin-bottom: 20rem;
+  }
 
   // .catalog__container
 
@@ -8,22 +11,38 @@
     flex-direction: column;
   }
 
+  // .catalog__title-wrap
+
+  &__title-wrap {
+    margin-bottom: 5rem;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+      display: flex;
+      align-items: flex-end;
+      column-gap: 1.6rem;
+    }
+  }
+
   // .catalog__title
 
   &__title {
-    margin-bottom: 5rem;
   }
 
   // .catalog__head
 
   &__head {
     margin-bottom: 3.2rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+    }
   }
 
   // .catalog__categories
 
   &__categories {
-    margin-bottom: 3.2rem;
+    @media (min-width: 48em) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   // .catalog__row
@@ -34,11 +53,18 @@
     grid-template-columns: 5fr 2fr 5fr;
     align-items: center;
     border-bottom: 1px solid $lightGray;
+    @media (max-width: 48em) {
+      display: none;
+    }
   }
 
   // .catalog__count
 
   &__count {
+    @media (max-width: 48em) {
+      padding-bottom: 0.2rem;
+      color: $gray;
+    }
   }
 
   // .catalog__count-value
@@ -73,9 +99,9 @@
       &__option {
         @extend .txt;
         padding: 0;
-        font-weight: 500;
         color: $black;
         &._select-selected {
+          font-weight: 500;
           color: $red;
         }
         &:not(:last-child) {
@@ -97,13 +123,18 @@
 
   &__body {
     display: grid;
-    grid-template-columns: 2fr 10fr;
-    column-gap: 6.4rem;
+    @media (min-width: 48em) {
+      grid-template-columns: 2fr 10fr;
+      column-gap: 6.4rem;
+    }
   }
 
   // .catalog__filters
 
   &__filters {
+    @media (max-width: 48em) {
+      display: none;
+    }
   }
 
   // .catalog__content
@@ -117,20 +148,27 @@
 
   &__tags {
     margin-bottom: 3.8rem;
+    @media (max-width: 48em) {
+      display: none;
+    }
   }
 
   // .catalog__products
 
   &__products {
-    margin-bottom: 8rem;
+    margin-bottom: 6.4rem;
     display: flex;
     flex-direction: column;
-    row-gap: 2.4rem;
-    &_grid-view {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 9rem;
-      row-gap: 6.4rem;
+    row-gap: 1.6rem;
+    @media (min-width: 48em) {
+      margin-bottom: 8rem;
+      row-gap: 2.4rem;
+      &_grid-view {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 9rem;
+        row-gap: 6.4rem;
+      }
     }
   }
 
@@ -154,6 +192,9 @@
         }
       }
     }
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+    }
   }
 
   // .catalog__pagination
@@ -166,23 +207,35 @@
 // --------------------------------------------------------------------------
 
 .categories-catalog {
-  padding-bottom: 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid $lightGray;
+  width: calc(100% + 2.4rem);
+  &.swiper {
+    padding-bottom: 2px;
+  }
+  @media (min-width: 48em) {
+    border-bottom: 1px solid $lightGray;
+    &.swiper {
+      padding-bottom: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+    }
+  }
 
   // .categories-catalog__list
 
   &__list {
+    padding-right: 2.4rem;
     display: flex;
     align-items: center;
-    column-gap: 4.8rem;
-    row-gap: 2.4rem;
-    flex-wrap: wrap;
-    max-width: 140rem;
-    overflow: hidden;
-    transition: height 0.3s ease;
+    @media (min-width: 48em) {
+      column-gap: 5rem;
+      row-gap: 2.4rem;
+      flex-wrap: wrap;
+      max-width: 140rem;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
   }
 
   // .categories-catalog__item
@@ -191,8 +244,13 @@
     &._active {
       .categories-catalog__link {
         padding-bottom: 0.4rem;
-        border-bottom: 1px solid $red;
+        border-bottom: 2px solid $red;
         color: $red;
+      }
+    }
+    @media (max-width: 48em) {
+      &:last-child {
+        margin-right: 2.5rem;
       }
     }
   }
@@ -206,6 +264,10 @@
     color: $gray;
     transition: padding-bottom 0.3s ease, border-bottom 0.3s ease,
       color 0.3s ease;
+    @media (max-width: 48em) {
+      white-space: nowrap;
+      transition: none;
+    }
   }
 
   // .categories-catalog__showmore-btn
@@ -215,6 +277,9 @@
     align-items: center;
     column-gap: 0.8rem;
     span {
+      font-weight: 500;
+      letter-spacing: 0.216rem;
+      text-transform: uppercase;
       &:last-child {
         display: none;
       }
@@ -252,6 +317,7 @@
   // .view-catalog__text
 
   &__text {
+    font-weight: 500;
   }
 
   // .view-catalog__btns
