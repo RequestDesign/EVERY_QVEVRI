@@ -103,6 +103,9 @@
 							<button type="submit" class="header__search-btn btn btn_icon desktop-only">
 								<span class="btn__text txt txt_md">Найти</span>
 							</button>
+							<button id="close-search-btn" type="button" class="header__close-search-btn mobile-only">
+								<img src="img/icons/cross-gray.svg" alt="" class="search-box__close-search-btn-icon" />
+							</button>
 						</div>
 						<div class="header__search-box search-box">
 							<div class="search-box__inner">
@@ -115,19 +118,19 @@
 											<li class="search-box__item search-box__item_recent">
 												<span class="search-box__item-txt txt">Киндзмараули</span>
 												<button class="search-box__delete-btn">
-													<img src="img/icons/cross.svg" alt="" class="search-box__delete-icon" />
+													<img src="img/icons/cross-gray.svg" alt="" class="search-box__delete-icon" />
 												</button>
 											</li>
 											<li class="search-box__item search-box__item_recent">
 												<span class="search-box__item-txt txt">Белое вино</span>
 												<button class="search-box__delete-btn">
-													<img src="img/icons/cross.svg" alt="" class="search-box__delete-icon" />
+													<img src="img/icons/cross-gray.svg" alt="" class="search-box__delete-icon" />
 												</button>
 											</li>
 											<li class="search-box__item search-box__item_recent">
 												<span class="search-box__item-txt txt">Chateu Mukhrani</span>
 												<button class="search-box__delete-btn">
-													<img src="img/icons/cross.svg" alt="" class="search-box__delete-icon" />
+													<img src="img/icons/cross-gray.svg" alt="" class="search-box__delete-icon" />
 												</button>
 											</li>
 										</ul>
@@ -180,7 +183,7 @@
 										</ul>
 									</div>
 									<div class="search-box__group search-box__group_brands">
-										<span class="search-box__heading">Бренды</span>
+										<span class="search-box__heading txt txt_md">Бренды</span>
 										<ul class="search-box__brands">
 											<li class="search-box__brand">
 												<div class="search-box__brand-img-wrap">
@@ -204,7 +207,7 @@
 									<div class="search-box__slider swiper">
 										<div class="search-box__wrapper swiper-wrapper">
 											<div class="search-box__slide menu-product-card swiper-slide">
-												<a href="#" class="menu-product-card__inner">
+												<div href="#" class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__labels">
 															<div class="menu-product-card__label label">
@@ -223,37 +226,42 @@
 															</svg>
 														</button>
 													</div>
-													<div class="menu-product-card__preview">
+													<a href="#" class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</div>
-													<div class="menu-product-card__grade grade">
-														<span class="grade__text txt txt_md">4.5</span>
-													</div>
-													<ul class="menu-product-card__features txt txt_16">
-														<li class="menu-product-card__feature">Россия</li>
-														<li class="menu-product-card__feature">Красное</li>
-														<li class="menu-product-card__feature">Сухое</li>
-														<li class="menu-product-card__feature">0.75 л</li>
-													</ul>
-													<div class="menu-product-card__price-wrap">
-														<div class="menu-product-card__price price">
-															<span class="price__value txt txt_wide">1 200₽</span>
-															<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+													</a>
+													<div class="menu-product-card__info">
+
+														<div class="menu-product-card__grade grade">
+															<span class="grade__text txt txt_md">4.5</span>
 														</div>
-														<div class="menu-product-card__coins coins">
-															<span class="coins__value txt">16</span>
-														</div>
+														<ul class="menu-product-card__features txt txt_16">
+															<li class="menu-product-card__feature">Россия</li>
+															<li class="menu-product-card__feature">Красное</li>
+															<li class="menu-product-card__feature">Сухое</li>
+															<li class="menu-product-card__feature">0.75 л</li>
+														</ul>
 													</div>
-												</a>
-												<button class="menu-product-card__basket-btn basket-btn">
-													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</button>
+													<div class="menu-product-card__group">
+														<div class="menu-product-card__price-wrap">
+															<div class="menu-product-card__price price">
+																<span class="price__value txt txt_wide">1 200₽</span>
+																<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+															</div>
+															<div class="menu-product-card__coins coins">
+																<span class="coins__value txt">16</span>
+															</div>
+														</div>
+														<button class="menu-product-card__basket-btn basket-btn">
+															<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+														</button>
+													</div>
+												</div>
 											</div>
 											<div class="search-box__slide menu-product-card swiper-slide">
-												<a href="#" class="menu-product-card__inner">
+												<div href="#" class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__labels">
 															<div class="menu-product-card__label label">
@@ -272,37 +280,42 @@
 															</svg>
 														</button>
 													</div>
-													<div class="menu-product-card__preview">
+													<a href="#" class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</div>
-													<div class="menu-product-card__grade grade">
-														<span class="grade__text txt txt_md">4.5</span>
-													</div>
-													<ul class="menu-product-card__features txt txt_16">
-														<li class="menu-product-card__feature">Россия</li>
-														<li class="menu-product-card__feature">Красное</li>
-														<li class="menu-product-card__feature">Сухое</li>
-														<li class="menu-product-card__feature">0.75 л</li>
-													</ul>
-													<div class="menu-product-card__price-wrap">
-														<div class="menu-product-card__price price">
-															<span class="price__value txt txt_wide">1 200₽</span>
-															<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+													</a>
+													<div class="menu-product-card__info">
+
+														<div class="menu-product-card__grade grade">
+															<span class="grade__text txt txt_md">4.5</span>
 														</div>
-														<div class="menu-product-card__coins coins">
-															<span class="coins__value txt">16</span>
-														</div>
+														<ul class="menu-product-card__features txt txt_16">
+															<li class="menu-product-card__feature">Россия</li>
+															<li class="menu-product-card__feature">Красное</li>
+															<li class="menu-product-card__feature">Сухое</li>
+															<li class="menu-product-card__feature">0.75 л</li>
+														</ul>
 													</div>
-												</a>
-												<button class="menu-product-card__basket-btn basket-btn">
-													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</button>
+													<div class="menu-product-card__group">
+														<div class="menu-product-card__price-wrap">
+															<div class="menu-product-card__price price">
+																<span class="price__value txt txt_wide">1 200₽</span>
+																<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+															</div>
+															<div class="menu-product-card__coins coins">
+																<span class="coins__value txt">16</span>
+															</div>
+														</div>
+														<button class="menu-product-card__basket-btn basket-btn">
+															<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+														</button>
+													</div>
+												</div>
 											</div>
 											<div class="search-box__slide menu-product-card swiper-slide">
-												<a href="#" class="menu-product-card__inner">
+												<div href="#" class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__labels">
 															<div class="menu-product-card__label label">
@@ -321,34 +334,39 @@
 															</svg>
 														</button>
 													</div>
-													<div class="menu-product-card__preview">
+													<a href="#" class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</div>
-													<div class="menu-product-card__grade grade">
-														<span class="grade__text txt txt_md">4.5</span>
-													</div>
-													<ul class="menu-product-card__features txt txt_16">
-														<li class="menu-product-card__feature">Россия</li>
-														<li class="menu-product-card__feature">Красное</li>
-														<li class="menu-product-card__feature">Сухое</li>
-														<li class="menu-product-card__feature">0.75 л</li>
-													</ul>
-													<div class="menu-product-card__price-wrap">
-														<div class="menu-product-card__price price">
-															<span class="price__value txt txt_wide">1 200₽</span>
-															<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+													</a>
+													<div class="menu-product-card__info">
+
+														<div class="menu-product-card__grade grade">
+															<span class="grade__text txt txt_md">4.5</span>
 														</div>
-														<div class="menu-product-card__coins coins">
-															<span class="coins__value txt">16</span>
-														</div>
+														<ul class="menu-product-card__features txt txt_16">
+															<li class="menu-product-card__feature">Россия</li>
+															<li class="menu-product-card__feature">Красное</li>
+															<li class="menu-product-card__feature">Сухое</li>
+															<li class="menu-product-card__feature">0.75 л</li>
+														</ul>
 													</div>
-												</a>
-												<button class="menu-product-card__basket-btn basket-btn">
-													<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
-												</button>
+													<div class="menu-product-card__group">
+														<div class="menu-product-card__price-wrap">
+															<div class="menu-product-card__price price">
+																<span class="price__value txt txt_wide">1 200₽</span>
+																<span class="price__value price__value_old txt txt_wide">1 700₽</span>
+															</div>
+															<div class="menu-product-card__coins coins">
+																<span class="coins__value txt">16</span>
+															</div>
+														</div>
+														<button class="menu-product-card__basket-btn basket-btn">
+															<img src="img/icons/bag-white.svg" alt="" class="basket-btn__icon" />
+														</button>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>

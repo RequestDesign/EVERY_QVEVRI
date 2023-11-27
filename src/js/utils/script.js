@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.querySelector('.header__search-input');
   if (searchInput) {
     searchInput.addEventListener('focusin', function () {
-      document.documentElement.classList.add('_search-box-opened');
+      if (!document.documentElement.classList.contains('_search-box-opened')) {
+        document.documentElement.classList.add('_search-box-opened');
+        if (window.innerWidth <= 768) {
+          setTimeout(() => {
+            document
+              .querySelector('.search-box__content')
+              .prepend(searchInput.parentElement);
+          }, 0);
+          bodyLock();
+        }
+      }
     });
     searchInput.addEventListener('input', function () {
       if (searchInput.querySelector('input').value.length) {
@@ -27,6 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
     searchInput.closest('form').addEventListener('submit', function () {
       if (document.documentElement.classList.contains('_search-box-opened')) {
         document.documentElement.classList.remove('_search-box-opened');
+        if (window.innerWidth <= 768) {
+          setTimeout(() => {
+            document
+              .querySelector('.header__search')
+              .appendChild(searchInput.parentElement);
+          }, 0);
+
+          bodyUnlock();
+        }
       }
       if (searchInput.closest('form').classList.contains('_filled')) {
         searchInput.closest('form').classList.remove('_filled');
@@ -155,6 +174,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // console.log(target);
 
+    if (target.closest('#close-search-btn')) {
+      document.documentElement.classList.remove('_search-box-opened');
+      setTimeout(() => {
+        document
+          .querySelector('.header__search')
+          .appendChild(searchInput.parentElement);
+      }, 0);
+      bodyUnlock();
+    }
     if (target.closest('.sublist-filters__options .option__input')) {
       const targetEl = document.querySelector('.filters__sort-btn');
       targetEl.innerHTML = target.closest(
