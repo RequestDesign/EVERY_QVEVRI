@@ -26,7 +26,7 @@ if (document.getElementById('map')) {
     const map = new YMap(
       document.getElementById('map'),
 
-      { location: LOCATION }
+      { location: LOCATION, behaviors: ['drag'] }
     );
 
     map.addChild(new YMapDefaultSchemeLayer());

@@ -10,6 +10,9 @@ utils.menuInit();
 // spoilers
 utils.spoilers();
 
+// showmore
+utils.showmore();
+
 // ---------------------------------- form ----------------------------------
 
 import * as forms from './utils/form/form.js';

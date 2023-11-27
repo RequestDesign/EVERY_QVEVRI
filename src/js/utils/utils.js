@@ -335,3 +335,38 @@ export const spoilers = () => {
     }
   }
 };
+
+// showmore
+export const showmore = () => {
+  const elements = document.querySelectorAll('[data-original-height]');
+  if (elements.length) {
+    elements.forEach(element => {
+      const visibleHeight = element.dataset.visibleHeight;
+      const showmoreBtn = element.parentElement.querySelector(
+        '[data-showmore-btn]'
+      );
+
+      const setHeight = () => {
+        element.dataset.originalHeight = `${element.offsetHeight}px`;
+        visibleHeight
+          ? (element.style.height = element.dataset.visibleHeight)
+          : null;
+      };
+      setHeight();
+
+      if (showmoreBtn && visibleHeight) {
+        showmoreBtn.addEventListener('click', function () {
+          if (element.parentElement.classList.contains('_show-all')) {
+            element.parentElement.classList.remove('_show-all');
+            element.style.height = element.dataset.visibleHeight;
+          } else {
+            element.parentElement.classList.add('_show-all');
+            element.style.height = element.dataset.originalHeight;
+          }
+        });
+      }
+
+      window.addEventListener('resize', setHeight);
+    });
+  }
+};

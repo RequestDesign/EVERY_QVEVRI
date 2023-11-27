@@ -395,6 +395,8 @@ const initSliders = () => {
       categoriesSlider = null;
     }
   }
+};
+const initSlidersOnResize = () => {
   if (document.querySelector('.catalog__categories')) {
     if (window.innerWidth <= 768 && !catalogCategoriesSlider) {
       catalogCategoriesSlider = new Swiper('.catalog__categories', {
@@ -418,5 +420,7 @@ const initSliders = () => {
 window.addEventListener('load', function (e) {
   setTimeout(() => {
     initSliders();
+    initSlidersOnResize();
   }, 0);
 });
+window.addEventListener('resize', initSlidersOnResize);

@@ -508,6 +508,7 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
+
   &::before {
     content: '';
     position: absolute;
@@ -518,179 +519,185 @@
     height: 100%;
     box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
   }
-  .catalog & {
-    &__head {
-      display: none;
-    }
-    &__labels {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+
   @media (min-width: 48em) {
     padding: 1.6rem;
     padding-bottom: 0;
-    display: flex;
     flex-direction: column;
-    .catalog & {
-      &__head {
-        margin-bottom: 1.8rem;
-        display: flex;
-        justify-content: space-between;
-        flex: 1 1 auto;
-      }
-      &__basket-btn {
-        position: static;
+    &_grid-view,
+    &_list-view {
+      .menu-product-card {
+        &__head {
+          margin-bottom: 1.8rem;
+          display: flex;
+          justify-content: space-between;
+          flex: 1 1 auto;
+          min-height: 8.6rem;
+        }
+        &__basket-btn {
+          position: static;
+        }
+        &__image {
+          transform: none;
+        }
+        &__labels {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     }
     &_list-view {
       padding: 2.6rem 4rem;
       flex-direction: row;
-      .menu-product-card__preview {
-        margin-right: 19rem;
-        margin-bottom: 0;
-        padding-right: 3rem;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex: 0 0 21rem;
-        width: 21rem;
-      }
-      .menu-product-card__image-wrap {
-        height: 25.3rem;
-        transform: translateY(-4rem);
-      }
-      .menu-product-card__image {
-        transform: none;
-      }
-      .menu-product-card__labels {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        transform: translateY(-1.4rem);
-      }
-      .menu-product-card__info {
-        margin-right: auto;
-      }
-      .menu-product-card__heading {
-        position: static;
-        margin-bottom: 2.6rem;
-        max-width: none;
-        transform: none;
-      }
-      .menu-product-card__reviews {
-        margin-bottom: 1.6rem;
-        display: flex;
-        align-items: center;
-        column-gap: 1rem;
-      }
-      .menu-product-card__group {
-        flex-direction: column;
-        width: auto;
-      }
-      .menu-product-card__head {
-        display: none;
-      }
-      .menu-product-card__grade {
-        margin: 0;
-      }
-      .menu-product-card__features {
-        display: none;
-      }
-      .menu-product-card__characteristics {
-        display: block;
-      }
-      .menu-product-card__price-wrap {
-        margin-bottom: auto;
-        flex-direction: column;
-      }
-      .menu-product-card__heart-btn {
-        transform: none;
-      }
-      .menu-product-card__price {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: 1.2rem;
-        .price__value {
-          &_old {
-            margin-bottom: 1.7rem;
-          }
-          &.txt {
-            font-size: 2rem;
+
+      .menu-product-card {
+        &__preview {
+          margin-right: 19rem;
+          margin-bottom: 0;
+          padding-right: 3rem;
+          justify-content: flex-end;
+          align-items: flex-end;
+          flex: 0 0 21rem;
+          width: 21rem;
+        }
+        &__image-wrap {
+          height: 25.3rem;
+          transform: translateY(-4rem);
+        }
+        &__labels {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transform: translateY(-1.4rem);
+        }
+        &__info {
+          margin-right: auto;
+        }
+        &__heading {
+          position: static;
+          margin-bottom: 2.6rem;
+          max-width: none;
+          transform: none;
+        }
+        &__reviews {
+          margin-bottom: 1.6rem;
+          display: flex;
+          align-items: center;
+          column-gap: 1rem;
+        }
+        &__group {
+          flex-direction: column;
+          width: auto;
+        }
+        &__head {
+          display: none;
+        }
+        &__grade {
+          margin: 0;
+        }
+        &__features {
+          display: none;
+        }
+        &__characteristics {
+          display: block;
+        }
+        &__price-wrap {
+          margin-bottom: auto;
+        }
+        &__heart-btn {
+          transform: none;
+        }
+        &__price {
+          margin-bottom: 1.7rem;
+          flex-direction: column;
+          align-items: flex-start;
+          row-gap: 1.2rem;
+          .price__value {
+            &.txt {
+              font-size: 2rem;
+            }
           }
         }
-      }
-      .menu-product-card__actions {
-        display: flex;
-        align-items: center;
-        column-gap: 3rem;
-        transform: translateY(-1.4rem);
-      }
-      .menu-product-card__reviews-text {
-        display: block;
+        &__actions {
+          display: flex;
+          align-items: center;
+          column-gap: 3rem;
+          transform: translateY(-1.4rem);
+        }
+        &__reviews-text {
+          display: block;
+        }
       }
     }
   }
   @media (max-width: 48em) {
     padding: 3.4rem;
+
+    &_grid-view,
+    &_list-view {
+      padding: 9.5rem 2.4rem 2.4rem 2.4rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 5rem;
+
+      .menu-product-card {
+        &__head {
+          display: none;
+        }
+        &__labels {
+          position: absolute;
+          bottom: 0rem;
+          left: 0rem;
+          gap: 0.8rem;
+        }
+        &__actions {
+          height: 0;
+          width: 0;
+        }
+        &__image-wrap {
+          height: 35.6rem;
+          transform: translateY(-6rem);
+        }
+        &__heart-btn {
+          position: absolute;
+          top: 1.6rem;
+          right: 1.6rem;
+          transform: none;
+        }
+        &__preview {
+          margin: 0;
+          padding-left: 3rem;
+          grid-row: span 2;
+          grid-column: 1/2;
+          align-items: flex-end;
+        }
+        &__reviews {
+          margin-bottom: 2rem;
+          display: flex;
+          align-items: center;
+          column-gap: 1.6rem;
+        }
+        &__features {
+          margin-bottom: 6.4rem;
+        }
+        &__price {
+          margin-bottom: 2rem;
+          column-gap: 1.6rem;
+        }
+        &__heading {
+          position: static;
+          margin-bottom: 2.4rem;
+          max-width: none;
+          transform: none;
+        }
+      }
+    }
+
     &.swiper-slide {
       display: flex;
       flex-direction: column;
       min-height: 90.4rem;
       height: auto;
-    }
-    .catalog & {
-      padding: 9.5rem 2.4rem 2.4rem 2.4rem;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      column-gap: 5rem;
-      &__labels {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        gap: 0.8rem;
-      }
-      &__actions {
-        height: 0;
-        width: 0;
-      }
-      &__image-wrap {
-        height: 35.6rem;
-        transform: translateY(-5rem);
-      }
-      &__heart-btn {
-        position: absolute;
-        top: 1.6rem;
-        right: 1.6rem;
-        transform: none;
-      }
-      &__preview {
-        margin: 0;
-        padding-left: 3rem;
-        grid-row: span 2;
-        align-items: flex-end;
-      }
-      &__reviews {
-        margin-bottom: 2rem;
-        display: flex;
-        align-items: center;
-        column-gap: 1.6rem;
-      }
-      &__features {
-        margin-bottom: 6.4rem;
-      }
-      &__price {
-        margin-bottom: 2rem;
-        column-gap: 1.6rem;
-      }
-      &__heading {
-        position: static;
-        margin-bottom: 2.4rem;
-        max-width: none;
-        transform: none;
-      }
     }
   }
 
@@ -702,6 +709,9 @@
     justify-content: space-between;
     align-items: flex-start;
     flex: 1 1 auto;
+    .header & {
+      margin-bottom: -1.5rem;
+    }
     @media (max-width: 48em) {
       margin-bottom: 3.4rem;
     }
@@ -712,9 +722,14 @@
   &__labels {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
-    @media (max-width: 48em) {
-      gap: 0.8rem;
+    gap: 0.8rem;
+    @media (min-width: 48em) {
+      gap: 0.4rem;
+      &:not(.header &) {
+        z-index: 2;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
 
@@ -744,13 +759,18 @@
     margin-bottom: 3.7rem;
     display: flex;
     justify-content: center;
+    .header & {
+      margin-bottom: 3rem;
+    }
   }
 
   // .menu-product-card__image-wrap
 
   &__image-wrap {
-    // width: 11.4rem;
     height: 38.4rem;
+    .header & {
+      height: 22rem;
+    }
     @media (min-width: 48em) {
       height: 22rem;
       transform: none;
@@ -767,12 +787,6 @@
   &__image {
     height: 100%;
     object-fit: contain;
-    .catalog-page & {
-      transform: none;
-    }
-    @media (min-width: 48em) {
-      transform: translateY(-2rem);
-    }
   }
 
   // .menu-product-card__heading
@@ -785,7 +799,7 @@
     max-width: 16.6rem;
     transform: translate(6.5rem, 17rem);
     .header & {
-      transform: translateX(9rem);
+      transform: translate(9rem, 2rem);
     }
     @media (max-width: 48em) {
       top: 0;
@@ -920,81 +934,114 @@
 
 .advertising {
   position: relative;
-  padding: 5.5rem 7.2rem 0.5rem 7.2rem;
   display: flex;
   justify-content: space-between;
   background-color: $white;
   overflow: hidden;
-  .hero-promo & {
+  &.red {
+    color: $white;
+    background-color: $red;
+    .advertising__link {
+      &::after {
+        background-image: url(@img/icons/arr.svg);
+      }
+    }
+  }
+  &.black {
+    color: $white;
+    background-color: $black;
+  }
+
+  &_hero {
     padding: 0;
     &::after {
       width: 29.4rem;
       height: 29.4rem;
       transform: translate(27.7rem, 18.5rem);
     }
+
+    .advertising {
+      &__content {
+        padding: 4.8rem 3rem 8rem 5.5rem;
+        @media (max-width: 48em) {
+          padding: 4rem 0 4rem 3.4rem;
+        }
+      }
+      &__subtitle {
+        margin-bottom: 3.2rem;
+        color: $gray;
+        @media (max-width: 48em) {
+          margin-bottom: 6.4rem;
+        }
+      }
+      &__title {
+        margin-bottom: 2rem;
+      }
+      &__bg {
+        width: 86.9rem;
+        @media (max-width: 48em) {
+          width: 25.6rem;
+        }
+      }
+      &__image-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 23.5rem;
+        transform: translate(-6rem, 15.5rem);
+        @media (max-width: 48em) {
+          left: auto;
+          right: 0rem;
+          width: 17.4rem;
+          transform: translate(-2rem, 5rem);
+        }
+      }
+      &__bg-wrap {
+        top: 50%;
+        right: 0;
+        width: 86.9rem;
+        height: 71.5rem;
+        border-radius: 0;
+        overflow: visible;
+        transform: translate(5rem, -50%);
+        @media (max-width: 48em) {
+          top: 0;
+          width: 59.4rem;
+          height: 48.8rem;
+          transform: rotate(-302deg) translate(6rem, -40rem);
+        }
+      }
+      &__bg-image {
+        object-fit: contain;
+      }
+    }
   }
-  @media (max-width: 48em) {
-    padding: 4rem 0 4rem 3.2rem;
-    &.red {
-      background-color: $red;
-    }
-    &.black {
-      background-color: $black;
-    }
-    &:not(.hero-promo &) {
-      color: $white;
-    }
-  }
+
   @media (min-width: 48em) {
-    &_vertical {
-      padding: 0;
-      flex-direction: column-reverse;
-      color: $white;
-      background-color: $black;
-      &.red {
-        background-color: $red;
-        .advertising__link {
+    &:not(&_hero, &_vertical) {
+      .advertising {
+        &__content {
+          padding: 5.5rem 3rem 9.7rem 7.2rem;
+        }
+      }
+    }
+    &:not(&_vertical) {
+      color: $black;
+      background-color: $white;
+
+      .advertising {
+        &__link {
           &::after {
-            background-image: url(@img/icons/arr.svg);
+            background-image: url(@img/icons/btn-arr.svg);
           }
         }
       }
-      .advertising__bg-wrap {
-        top: 0;
-        left: 0;
-        width: 34.3rem;
-        height: 19.7rem;
-        border-radius: 0 0 50rem 0;
-      }
-      .advertising__bg {
-        margin-bottom: 8.2rem;
-        &:not(.hero-promo &) {
-          flex: 0 0 auto;
-          height: 19.7rem;
-        }
-      }
-      .advertising__image-wrap {
-        position: absolute;
-        top: 2rem;
-        left: auto;
-        right: 2.4rem;
-        height: 24.8rem;
-        transform: none;
-      }
-      .advertising__image {
-        height: 100%;
-      }
-      .advertising__content {
-        padding: 0 2.4rem 4rem 2.4rem;
-      }
-      .advertising__subtitle {
-        color: $white;
-      }
-      .advertising__title {
-        max-width: 23.4rem;
-      }
-      .advertising__text {
-        max-width: 23.4rem;
+    }
+    &:not(&_hero) {
+      &::after {
+        width: 35rem;
+        height: 35rem;
+        transform: translate(36.7rem, 24.5rem);
       }
     }
     &::after {
@@ -1002,14 +1049,49 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 35rem;
-      height: 35rem;
       background-image: url(@img/hero/circle.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0.5;
-      transform: translate(36.7rem, 24.5rem);
+    }
+    &_vertical {
+      padding: 0;
+      flex-direction: column-reverse;
+      color: $white;
+
+      .advertising {
+        &__content {
+          padding: 0 2.4rem 4rem 2.4rem;
+        }
+        &__title,
+        &__text {
+          max-width: 23.4rem;
+        }
+        &__bg {
+          margin-bottom: 8.2rem;
+          flex: 0 0 auto;
+          height: 19.7rem;
+        }
+        &__bg-wrap {
+          top: 0;
+          left: 0;
+          width: 34.3rem;
+          height: 19.7rem;
+          border-radius: 0 0 50rem 0;
+        }
+        &__image-wrap {
+          position: absolute;
+          top: 2rem;
+          left: auto;
+          right: 2.4rem;
+          height: 24.8rem;
+          transform: none;
+        }
+        &__image {
+          height: 100%;
+        }
+      }
     }
   }
 
@@ -1019,12 +1101,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    .hero-promo & {
-      padding: 4.8rem 3rem 8rem 5.5rem;
-    }
     @media (max-width: 48em) {
-      .hero-promo & {
-        padding: 4rem 0 4rem 3.4rem;
+      &:not(&_hero) {
+        padding: 4rem 3.4rem;
       }
     }
   }
@@ -1033,17 +1112,10 @@
 
   &__subtitle {
     margin-bottom: 2.4rem;
-    .hero-promo & {
-      margin-bottom: 3.2rem;
-      color: $gray;
-    }
     @media (max-width: 48em) {
       margin-bottom: 6.4rem;
       font-weight: 400;
       color: $white;
-      .hero-promo & {
-        margin-bottom: 6.4rem;
-      }
     }
   }
 
@@ -1051,9 +1123,6 @@
 
   &__title {
     margin-bottom: 2.4rem;
-    .hero-promo & {
-      margin-bottom: 2rem;
-    }
     @media (max-width: 48em) {
       max-width: 38rem;
     }
@@ -1072,34 +1141,23 @@
   // .advertising__link
 
   &__link {
-    @media (max-width: 48em) {
-      .red & {
-        &::after {
-          background-image: url(@img/icons/arr.svg);
-        }
-      }
-    }
   }
 
   // .advertising__bg
 
   &__bg {
     position: relative;
-    &:not(.hero-promo &) {
-      flex: 0 0 40rem;
-    }
-    .hero-promo & {
-      width: 86.9rem;
-    }
     @media (max-width: 48em) {
-      &:not(.hero-promo &) {
+      &:not(.advertising_hero &) {
         display: flex;
         justify-content: center;
         align-items: flex-end;
         flex: 0 0 24.6rem;
       }
-      .hero-promo & {
-        width: 25.6rem;
+    }
+    @media (min-width: 48em) {
+      &:not(.advertising_hero &, .advertising_vertical &) {
+        flex: 0 0 40rem;
       }
     }
   }
@@ -1109,24 +1167,11 @@
   &__image-wrap {
     position: relative;
     z-index: 1;
-    width: 10.4rem;
-    transform: translate(12.8rem, -1.5rem);
-    .hero-promo & {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 23.5rem;
-      transform: translate(-6rem, 15.5rem);
-    }
+    width: 9.8rem;
+    transform: translate(7.5rem, 4.5rem);
     @media (max-width: 48em) {
       width: 11.4rem;
-      transform: translateY(1rem);
-      .hero-promo & {
-        left: auto;
-        right: 3.4rem;
-        width: 17.4rem;
-        transform: translate(-1rem, 5rem);
-      }
+      transform: translateY(-2rem);
     }
   }
 
@@ -1140,34 +1185,18 @@
 
   &__bg-wrap {
     position: absolute;
-    top: -5.5rem;
-    right: -7.2rem;
+    top: 0;
+    right: 0;
     width: 40rem;
     height: 36.5rem;
     overflow: hidden;
     border-radius: 0 0 0 50rem;
-    .hero-promo & {
-      top: 50%;
-      right: 0;
-      width: 86.9rem;
-      height: 71.5rem;
-      border-radius: 0;
-      overflow: visible;
-      transform: translate(5rem, -50%);
-    }
+    transform: translateY(-2rem);
     @media (max-width: 48em) {
-      top: -4rem;
-      right: 0;
       width: 24.6rem;
       height: 36rem;
       border-radius: 0 0 0 100rem;
       transform: none;
-      .hero-promo & {
-        top: -4rem;
-        width: 79rem;
-        height: 79rem;
-        transform: rotate(62deg) translate(8rem, -61rem);
-      }
     }
   }
 
@@ -1176,13 +1205,37 @@
   &__bg-image {
     height: 100%;
     object-fit: cover;
-    .hero-promo & {
-      object-fit: contain;
-    }
   }
 }
 
 // --------------------------------------------------------------------------
+
+.filters-btn {
+  @media (max-width: 48em) {
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    bottom: 18rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    box-shadow: 0.2rem 0.4rem 4rem 0 rgba(0, 0, 0, 0.12);
+    background-color: $black;
+    transform: translateX(-50%);
+  }
+
+  // .filters-btn__icon
+
+  &__icon {
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+  }
+}
 
 .pagination {
   display: flex;
@@ -1434,7 +1487,7 @@
     background-repeat: no-repeat;
   }
   @media (max-width: 48em) {
-    column-gap: 1.4rem;
+    column-gap: 1rem;
     &::before {
       flex: 0 0 3rem;
       width: 3rem;

@@ -2,11 +2,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>верстка «NEW_PROJECT_NAME»</title>
+    <title>вёрстка «NEW_PROJECT_NAME»</title>
   </head>
   <body>
     <div class="root">
-      <h1>верстка «NEW_PROJECT_NAME»</h1>
+      <h1>вёрстка «NEW_PROJECT_NAME»</h1>
       <h2>готовые страницы:</h2>
       <ol>
         <li>
@@ -25,7 +25,7 @@
     </div>
     <style>
       @charset "UTF-8";
-      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
       * {
         padding: 0;
         margin: 0;
@@ -39,8 +39,8 @@
         height: 100%;
         width: 100%;
         min-width: 32rem;
-        background-color: #161616;
-        color: #c5c5c5;
+        background-color: #ffffff;
+        color: #202020;
       }
       html {
         font-size: 0.5208335vw;
@@ -51,7 +51,6 @@
         font-size: 100%;
         line-height: 1;
         font-size: 2.5rem;
-        letter-spacing: 0.3rem;
         user-select: none;
       }
       ul,
@@ -61,14 +60,6 @@
       ul li,
       ol li {
         font-size: 2.3rem;
-        list-style: none;
-      }
-      ol {
-        counter-reset: list;
-      }
-      ol > li:before {
-        content: '(' counter(list) ') ';
-        counter-increment: list;
       }
       li {
         margin-bottom: 2rem;
@@ -78,26 +69,22 @@
         text-decoration: none;
       }
       a {
-        color: #c5c5c5;
+        color: #202020;
         transition: color 0.5s ease;
       }
       a:visited {
         text-decoration: none;
-        color: #c5c5c5;
+        color: #202020;
       }
       a:hover {
-        text-decoration: none;
-        color: #ffffff;
+        color: #202020;
+        text-decoration: underline;
       }
       h1 {
         margin-bottom: 5rem;
         font-size: 5rem;
         font-weight: 300;
         text-align: center;
-        transition: transform 0.5s linear;
-      }
-      h1:hover {
-        transform: scale(1.05);
       }
       h2 {
         margin-bottom: 2.5rem;

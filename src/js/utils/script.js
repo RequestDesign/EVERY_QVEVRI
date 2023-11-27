@@ -1,4 +1,4 @@
-import { removeClasses } from '../utils/utils.js';
+import { removeClasses, bodyLock, bodyUnlock } from '../utils/utils.js';
 import { formValidate } from './form/form.js';
 
 window.addEventListener('load', function () {
@@ -67,38 +67,21 @@ document.addEventListener('DOMContentLoaded', function () {
     '.catalog__card',
     '.menu-product-card__preview'
   );
-
-  // get original height
-  if (window.innerWidth > 768) {
-    const setOriginalHeight = () => {
-      const elements = document.querySelectorAll('[data-original-height]');
-      if (elements.length) {
-        elements.forEach(element => {
-          const visibleHeight = element.dataset.visibleHeight;
-          const showmoreBtn = element.parentElement.querySelector(
-            '[data-showmore-btn]'
-          );
-
-          element.dataset.originalHeight = `${element.offsetHeight}px`;
-          visibleHeight
-            ? (element.style.height = element.dataset.visibleHeight)
-            : null;
-
-          if (showmoreBtn && visibleHeight) {
-            showmoreBtn.addEventListener('click', function () {
-              if (element.parentElement.classList.contains('_active')) {
-                element.parentElement.classList.remove('_active');
-                element.style.height = element.dataset.visibleHeight;
-              } else {
-                element.parentElement.classList.add('_active');
-                element.style.height = element.dataset.originalHeight;
-              }
-            });
-          }
-        });
-      }
-    };
-    setOriginalHeight();
+  if (window.innerWidth <= 768) {
+    relocateDOMElements(
+      document.querySelectorAll(
+        '.catalog__card.menu-product-card_grid-view .menu-product-card__heart-btn'
+      ),
+      '.catalog__card',
+      '.menu-product-card__actions'
+    );
+    relocateDOMElements(
+      document.querySelectorAll(
+        '.catalog__card.menu-product-card_grid-view .menu-product-card__labels'
+      ),
+      '.catalog__card',
+      '.menu-product-card__preview'
+    );
   }
 
   // show filters selections
@@ -127,10 +110,20 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     if (target && target.closest('.filters .checkbox__input')) {
-      addTag(
-        target.closest('.filters .checkbox__input'),
-        target.closest('.filters .checkbox__input').nextElementSibling.innerHTML
-      );
+      if (
+        !targetElement.querySelector(
+          `[data-tag-text="${
+            target.closest('.filters .checkbox__input').nextElementSibling
+              .innerHTML
+          }"]`
+        )
+      ) {
+        addTag(
+          target.closest('.filters .checkbox__input'),
+          target.closest('.filters .checkbox__input').nextElementSibling
+            .innerHTML
+        );
+      }
     } else if (!target) {
       const checkboxes = document.querySelectorAll(
         '.filters .checkbox__input[checked]'
@@ -162,11 +155,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // console.log(target);
 
+    if (target.closest('.sublist-filters__options .option__input')) {
+      const targetEl = document.querySelector('.filters__sort-btn');
+      targetEl.innerHTML = target.closest(
+        '.sublist-filters__options .option__input'
+      ).nextElementSibling.innerHTML;
+    }
+    if (target.closest('[data-sl-btn]')) {
+      target.closest('[data-sl-parent]').classList.add('_sublist-opened');
+    }
+    if (target.closest('[data-close-sl-btn]')) {
+      target.closest('[data-sl-parent]').classList.remove('_sublist-opened');
+    }
+    if (target.closest('#open-filters-btn')) {
+      document.documentElement.classList.add('_filters-visible');
+      bodyLock();
+    }
+    if (target.closest('#close-filters-btn')) {
+      document.documentElement.classList.remove('_filters-visible');
+      bodyUnlock();
+    }
     if (target.closest('.tags-catalog__remove-btn-icon')) {
       const tag = target.closest('.tags-catalog__item');
-      document.querySelector(
+      const checkedInputs = document.querySelectorAll(
         `[data-filter-text="${tag.dataset.tagText}"] input`
-      ).checked = false;
+      );
+      checkedInputs.forEach(checkedInput => (checkedInput.checked = false));
+
       tag.remove();
     }
     if (target.closest('.filters .checkbox__input')) {
@@ -181,22 +196,13 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.tags-catalog__list').innerHTML = '';
     }
     if (target.closest('.filters__show-all-btn')) {
-      const parent = target.closest('.filters__show-all-btn').parentElement;
-      parent.classList.toggle('_show-all');
+      target.closest('.filters__form').classList.toggle('_show-all-filters');
     }
     if (target.closest('.filters__showmore-btn') && window.innerWidth > 768) {
-      const parent = target.closest('.filters__showmore-list');
+      const parent = target.closest('.filters__group');
 
-      if (parent && !parent.classList.contains('scroll')) {
-        parent.classList.toggle('_active');
-      } else if (parent && parent.classList.contains('scroll')) {
-        if (parent.classList.contains('_active')) {
-          parent.classList.remove('_active');
-          parent.querySelector('.filters__options').style.height = 0;
-        } else {
-          parent.classList.add('_active');
-          parent.querySelector('.filters__options').style.height = `22rem`;
-        }
+      if (parent) {
+        parent.classList.toggle('_show-all-options');
       }
     }
     if (target.closest('.heart-btn__icon')) {

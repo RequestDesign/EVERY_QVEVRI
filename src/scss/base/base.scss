@@ -22,11 +22,29 @@
     &:last-child {
       display: none;
     }
-    ._active & {
+    ._show-all & {
       display: none;
       &:last-child {
         display: block;
       }
     }
+  }
+}
+
+%showLess {
+  @media (min-width: 48em) {
+    position: absolute;
+    top: -110vh;
+    left: -110vw;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+%showMore {
+  @media (min-width: 48em) {
+    position: static;
+    width: auto;
+    opacity: 1;
   }
 }

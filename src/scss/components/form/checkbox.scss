@@ -15,6 +15,15 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    @media (max-width: 48em) {
+      .checkbox__text {
+        margin-right: 1.6rem;
+      }
+      &::after {
+        width: 3.4rem;
+        height: 3.4rem;
+      }
+    }
   }
 
   // .checkbox__input
@@ -64,6 +73,23 @@
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0;
+    }
+    @media (max-width: 48em) {
+      gap: 1.6rem;
+      &.txt {
+        line-height: 100%;
+      }
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+      &::after {
+        top: 0.8rem;
+        left: 0.8rem;
+        width: 2.3rem;
+        height: 2.3rem;
+      }
     }
   }
 }
