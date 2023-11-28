@@ -1,7 +1,23 @@
 .blog {
   position: relative;
-  @media (min-width: 48em) {
+  @media (min-width: 1920px) {
     margin-bottom: 16rem;
+    width: 104vw;
+    transform: translateX(calc((104vw - 1920px) / -2));
+    overflow: hidden;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   // .blog__container
@@ -60,20 +76,6 @@
   // .blog__card
 
   &__card {
-  }
-
-  // .blog__bg
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    @media (min-width: 48em) {
-      left: calc((1920px - 104vw) / 2);
-      width: 104vw;
-    }
   }
 
   // .blog__bg-image

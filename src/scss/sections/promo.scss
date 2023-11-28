@@ -1,7 +1,27 @@
 .promo {
   position: relative;
-  @media (min-width: 48em) {
+  @media (min-width: 1920px) {
     margin-bottom: 16rem;
+    width: 104vw;
+    transform: translateX(calc((104vw - 1920px) / -2));
+    overflow: hidden;
+    &::after {
+      background-size: cover;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 4rem);
+    height: 100%;
+    top: 0;
+    left: -4rem;
+    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
+    background-repeat: no-repeat;
+    @media (max-width: 48em) {
+      background-size: cover;
+    }
   }
 
   // .promo__container
@@ -29,22 +49,6 @@
   // .promo__ambassadors
 
   &__ambassadors {
-  }
-
-  // .promo__bg
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    @media (min-width: 48em) {
-      @media (min-width: 48em) {
-        left: calc((1920px - 104vw) / 2);
-        width: 104vw;
-      }
-    }
   }
 
   // .promo__bg-image

@@ -1,7 +1,8 @@
 .collections {
-  margin-bottom: 19rem;
-  @media (max-width: 48em) {
-    margin-bottom: 22rem;
+  margin-bottom: 22rem;
+  @media (min-width: 48em) {
+    margin-bottom: 19rem;
+    overflow: hidden;
   }
 
   // .collections__container
