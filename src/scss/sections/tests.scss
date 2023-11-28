@@ -1,5 +1,8 @@
 .tests {
   margin-bottom: 16rem;
+  @media (min-width: 48em) {
+    overflow: hidden;
+  }
 
   // .tests__container
 

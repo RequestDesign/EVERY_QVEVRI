@@ -192,10 +192,12 @@
   // .slide-hero__number
 
   &__number {
+    width: 4rem;
     font-size: 2rem;
     transform: translateY(1rem);
     @media (max-width: 48em) {
       display: none;
+      width: auto;
       font-size: 3rem;
     }
   }

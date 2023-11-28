@@ -45,9 +45,9 @@ body {
   flex-direction: column;
   min-height: 100%;
   max-width: 1920px;
-  overflow: hidden;
-  .container {
-    @media (max-width: 48em) {
+  @media (max-width: 48em) {
+    overflow: hidden;
+    .container {
       padding: 0 2.4rem;
     }
   }

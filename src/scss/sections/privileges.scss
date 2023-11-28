@@ -63,6 +63,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @media (min-width: 48em) {
+      left: calc((1920px - 100vw) / 2);
+      width: 100vw;
+    }
   }
 
   // .privileges__bg-image

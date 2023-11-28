@@ -70,6 +70,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @media (min-width: 48em) {
+      left: calc((1920px - 104vw) / 2);
+      width: 104vw;
+    }
   }
 
   // .blog__bg-image

@@ -1,6 +1,7 @@
 .recommendations {
   @media (min-width: 48em) {
     margin-bottom: 16rem;
+    overflow: hidden;
     .catalog-page & {
       margin-bottom: 26rem;
     }
@@ -80,7 +81,6 @@
   &__carousel {
     @media (min-width: 48em) {
       position: relative;
-      height: 52.8rem;
       width: 162rem;
     }
   }

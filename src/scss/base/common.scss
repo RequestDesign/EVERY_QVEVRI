@@ -1018,7 +1018,7 @@
   }
 
   @media (min-width: 48em) {
-    &:not(&_hero, &_vertical) {
+    &:not(&_hero, &_vertical, .header__catalog &) {
       .advertising {
         &__content {
           padding: 5.5rem 3rem 9.7rem 7.2rem;
@@ -1037,7 +1037,7 @@
         }
       }
     }
-    &:not(&_hero) {
+    &:not(&_hero, .header__catalog &) {
       &::after {
         width: 35rem;
         height: 35rem;
@@ -1225,6 +1225,12 @@
     box-shadow: 0.2rem 0.4rem 4rem 0 rgba(0, 0, 0, 0.12);
     background-color: $black;
     transform: translateX(-50%);
+    ._search-box-opened &,
+    ._menu-opened &,
+    ._show-catalog & {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   // .filters-btn__icon
@@ -1700,7 +1706,8 @@
   background-color: $white;
   transition: transform 0.2s ease, opacity 0.3s ease;
   ._menu-opened &,
-  ._search-box-opened & {
+  ._search-box-opened &,
+  ._show-catalog & {
     opacity: 0;
     transform: translateY(110%);
   }
