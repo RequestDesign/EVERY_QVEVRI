@@ -339,7 +339,7 @@ export const spoilers = () => {
 // showmore
 export const showmore = () => {
   const elements = document.querySelectorAll('[data-original-height]');
-  if (elements.length) {
+  if (elements.length && window.innerWidth > 768) {
     elements.forEach(element => {
       const visibleHeight = element.dataset.visibleHeight;
       const showmoreBtn = element.parentElement.querySelector(

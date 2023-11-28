@@ -12,7 +12,7 @@
       border: 2px solid $red;
     }
     &:checked + .option__text::after {
-      transform: scale(1);
+      transform: scale(0.6);
     }
   }
 
@@ -35,10 +35,10 @@
     &::after {
       content: '';
       position: absolute;
-      top: 4.8rem;
-      right: 0.8rem;
-      width: 2.5rem;
-      height: 2.5rem;
+      top: 4rem;
+      right: 0;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
       background-color: $red;
       transform: scale(0);

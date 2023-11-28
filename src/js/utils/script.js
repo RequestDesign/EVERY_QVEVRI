@@ -1,4 +1,9 @@
-import { removeClasses, bodyLock, bodyUnlock } from '../utils/utils.js';
+import {
+  removeClasses,
+  bodyLock,
+  bodyUnlock,
+  bodyLockStatus,
+} from '../utils/utils.js';
 import { formValidate } from './form/form.js';
 
 window.addEventListener('load', function () {
@@ -13,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     searchInput.addEventListener('focusin', function () {
       if (!document.documentElement.classList.contains('_search-box-opened')) {
         document.documentElement.classList.add('_search-box-opened');
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 768 && bodyLockStatus) {
           setTimeout(() => {
             document
               .querySelector('.search-box__content')
@@ -119,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
         tag.innerHTML = tagBody;
         targetElement.appendChild(tag);
       } else if (!filter.checked) {
-        console.log('log');
         targetElement.removeChild(
           targetElement.querySelector(`[data-tag-text="${filterTxt}"]`)
         );
@@ -230,12 +234,12 @@ document.addEventListener('DOMContentLoaded', function () {
         )
         .classList.add('_active');
     }
-    if (target.closest('.menu__link_catalog')) {
+    if (target.closest('.menu__link_catalog') && bodyLockStatus) {
       document.documentElement.classList.add('_show-catalog');
       document.documentElement.classList.remove('_menu-opened');
       bodyLock();
     }
-    if (target.closest('.header-catalog__close-btn')) {
+    if (target.closest('.header-catalog__close-btn') && bodyLockStatus) {
       document.documentElement.classList.remove('_show-catalog');
       removeClasses(
         document.querySelectorAll('[data-subnav-index]'),
@@ -264,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (target.closest('[data-close-sl-btn]')) {
       target.closest('[data-sl-parent]').classList.remove('_sublist-opened');
     }
-    if (target.closest('#open-filters-btn')) {
+    if (target.closest('#open-filters-btn') && bodyLockStatus) {
       document.documentElement.classList.add('_filters-visible');
       bodyLock();
     }

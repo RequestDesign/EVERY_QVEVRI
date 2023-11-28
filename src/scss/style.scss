@@ -22,17 +22,18 @@ $backPattern: #ebe7dc;
 // base file
 @import 'base/base';
 
+// html
+html.lock,
+html.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+
 // body
 body {
   overflow-x: hidden;
   background-image: url('@img/bg.webp');
   background-size: cover;
-
-  // scroll is blocked
-  .lock & {
-    overflow: hidden;
-    touch-action: none;
-  }
   // site is loaded
   .loaded & {
   }
