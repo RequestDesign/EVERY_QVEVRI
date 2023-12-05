@@ -248,16 +248,18 @@
             </div>
           </div>
         </section>
-        <section class="mainpage__recommendations recommendations">
-          <div class="recommendations__container container">
-            <div class="recommendations__head">
+        <section
+          data-shopify-section="1"
+          class="mainpage__shopify-section shopify-section">
+          <div class="shopify-section__container container">
+            <div class="shopify-section__head">
               <span
-                class="recommendations__number txt txt_wide desktop-only"></span>
-              <span class="recommendations__title tl1"
+                class="shopify-section__number txt txt_wide desktop-only"></span>
+              <span class="shopify-section__title tl1"
                 >рекомендации экспертов</span
               >
               <div
-                class="recommendations__sl-control sl-control sl-control_reversed desktop-only">
+                class="shopify-section__sl-control sl-control sl-control_reversed desktop-only">
                 <div class="sl-control__nav sl-nav">
                   <button
                     type="button"
@@ -282,15 +284,15 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="recommendations__link btn btn_icon">
+            <a href="#" class="shopify-section__link btn btn_icon">
               <span class="btn__text txt txt_md">В каталог</span>
             </a>
-            <div class="recommendations__body">
-              <div class="recommendations__carousel">
-                <div class="recommendations__slider swiper">
-                  <div class="recommendations__wrapper swiper-wrapper">
+            <div class="shopify-section__body">
+              <div class="shopify-section__carousel">
+                <div class="shopify-section__slider swiper">
+                  <div class="shopify-section__wrapper swiper-wrapper">
                     <div
-                      class="recommendations__slide product-card swiper-slide">
+                      class="shopify-section__slide product-card swiper-slide">
                       <a href="#" class="product-card__body">
                         <div class="product-card__head">
                           <span class="product-card__year txt txt_md"
@@ -344,7 +346,7 @@
                       </button>
                     </div>
                     <div
-                      class="recommendations__slide product-card swiper-slide">
+                      class="shopify-section__slide product-card swiper-slide">
                       <a href="#" class="product-card__body">
                         <div class="product-card__head">
                           <span class="product-card__year txt txt_md"
@@ -398,7 +400,7 @@
                       </button>
                     </div>
                     <div
-                      class="recommendations__slide product-card swiper-slide">
+                      class="shopify-section__slide product-card swiper-slide">
                       <a href="#" class="product-card__body">
                         <div class="product-card__head">
                           <span class="product-card__year txt txt_md"
@@ -452,7 +454,7 @@
                       </button>
                     </div>
                     <div
-                      class="recommendations__slide product-card swiper-slide">
+                      class="shopify-section__slide product-card swiper-slide">
                       <a href="#" class="product-card__body">
                         <div class="product-card__head">
                           <span class="product-card__year txt txt_md"
@@ -506,7 +508,7 @@
                       </button>
                     </div>
                     <div
-                      class="recommendations__slide product-card swiper-slide">
+                      class="shopify-section__slide product-card swiper-slide">
                       <a href="#" class="product-card__body">
                         <div class="product-card__head">
                           <span class="product-card__year txt txt_md"
@@ -1316,6 +1318,7 @@
         </section>
       </main>
       @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
+      @@include('html/_modal.htm',{})
       <div class="menu-bar mobile-only">
         <ul class="menu-bar__list">
           <li class="menu-bar__item _active">

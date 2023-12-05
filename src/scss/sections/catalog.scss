@@ -226,6 +226,7 @@
     display: flex;
     align-items: center;
     @media (min-width: 48em) {
+      padding-bottom: 0.8rem;
       column-gap: 5rem;
       row-gap: 2.4rem;
       flex-wrap: wrap;
@@ -238,32 +239,10 @@
   // .categories-catalog__item
 
   &__item {
-    &._active {
-      .categories-catalog__link {
-        padding-bottom: 0.4rem;
-        border-bottom: 2px solid $red;
-        color: $red;
-      }
-    }
     @media (max-width: 48em) {
       &:last-child {
         margin-right: 2.5rem;
       }
-    }
-  }
-
-  // .categories-catalog__link
-
-  &__link {
-    font-weight: 500;
-    letter-spacing: 0.216rem;
-    text-transform: uppercase;
-    color: $gray;
-    transition: padding-bottom 0.3s ease, border-bottom 0.3s ease,
-      color 0.3s ease;
-    @media (max-width: 48em) {
-      white-space: nowrap;
-      transition: none;
     }
   }
 
@@ -349,6 +328,11 @@
 .filters {
   display: flex;
   flex-direction: column;
+  &__group._hidden,
+  &__checkbox._hidden,
+  &__scrollable-list {
+    @extend %showLess;
+  }
   @media (max-width: 48em) {
     z-index: 200;
     left: 0;
@@ -372,11 +356,6 @@
       background-repeat: no-repeat;
       overflow: auto;
     }
-  }
-  &__group._hidden,
-  &__checkbox._hidden,
-  &__scrollable-list {
-    @extend %showLess;
   }
   @media (min-width: 48em) {
     &__scrollable-list {
@@ -543,7 +522,12 @@
   // .filters__checkbox
 
   &__checkbox {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+    &_hint {
+      display: flex;
+      align-items: center;
+      column-gap: 0.8rem;
+    }
     .filters__scrollable-list & {
       &:last-child {
         margin: 0;
@@ -551,6 +535,9 @@
     }
     @media (max-width: 48em) {
       margin-bottom: 4rem;
+      &_hint {
+        column-gap: 1.6rem;
+      }
     }
   }
 
@@ -567,13 +554,6 @@
   // .filters__field
 
   &__field {
-    .input__field {
-      padding-bottom: 1rem;
-      border-bottom: 1px solid $lightGray;
-      @media (max-width: 48em) {
-        padding-bottom: 2.4rem;
-      }
-    }
   }
 
   // .filters__showmore-btn

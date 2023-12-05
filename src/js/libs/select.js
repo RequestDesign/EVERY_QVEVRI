@@ -55,7 +55,9 @@ class Select {
   init(selectList) {
     // init
     selectList.forEach((select, index) => {
-      this.initSelItem(select, index + 1);
+      if (!select.classList.contains('star-rating')) {
+        this.initSelItem(select, index + 1);
+      }
     });
 
     // events

@@ -9,7 +9,8 @@
           <div class="hero-promo__container container">
             <nav class="hero-promo__breadcrumbs breadcrumbs caps">
               <a href="#" class="breadcrumbs__text">Главная</a>
-              <span class="breadcrumbs__text">Вино</span>
+              <a href="#" class="breadcrumbs__text">Вино</a>
+              <span class="breadcrumbs__text">Белые вина</span>
             </nav>
             <div class="hero-promo__advertising advertising advertising_hero">
               <div class="advertising__content">
@@ -47,59 +48,62 @@
           <div class="catalog__container container">
             <div class="catalog__title-wrap"><span class="catalog__title tl1">Вино</span></div>
             <div class="catalog__head">
-              <div class="catalog__categories categories-catalog swiper">
+              <div class="catalog__categories categories-catalog tabs swiper">
                 <ul data-original-height  data-visible-height="3rem"
-                  class="categories-catalog__list txt txt_md">
-                  <li class="categories-catalog__item _active">
-                    <a href="#" class="categories-catalog__link">Белые вина</a>
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >Игристые вина</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >Розовые вина</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >Крепкий алкоголь</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >Красные вина</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >Крепкий алкоголь</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >сувениры и подарки</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link">в подарок</a>
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >наш рейтинг вин</a
-                    >
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link">новинки</a>
-                  </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
-                      >для вечеринки</a
-                    >
-                  </li>
-                </ul>
+                class="categories-catalog__list tabs-wrap txt txt_md">
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text">Все</a>
+                </li>
+                <li class="categories-catalog__item tab _active">
+                  <a href="#" class="tab__text ">Белые вина</a>
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >Игристые вина</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >Розовые вина</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >Крепкий алкоголь</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >Красные вина</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >Крепкий алкоголь</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >сувениры и подарки</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text ">в подарок</a>
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >наш рейтинг вин</a
+                  >
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text ">новинки</a>
+                </li>
+                <li class="categories-catalog__item tab">
+                  <a href="#" class="tab__text "
+                    >для вечеринки</a
+                  >
+                </li>
+              </ul>
                 <button
                   data-showmore-btn
                   type="button"
@@ -213,8 +217,8 @@
                       <div class="filters__group">
                         <span class="filters__subtitle caps caps_md">Акции</span>
                         <div class="filters__options">
-                          <div class="filters__checkbox">
-                            <label class="checkbox checkbox_hint">
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
                               <input
                                 class="checkbox__input"
                                 type="checkbox"
@@ -222,9 +226,15 @@
                                 name="form[]" />
                               <span class="checkbox__text txt">2 + 1</span>
                             </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
                           </div>
-                          <div class="filters__checkbox">
-                            <label class="checkbox checkbox_hint">
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
                               <input
                                 class="checkbox__input"
                                 type="checkbox"
@@ -234,6 +244,12 @@
                                 >Выгодная цена</span
                               >
                             </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1229,9 +1245,9 @@
                 <div class="catalog__products catalog__products_grid-view">
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">-25%</span>
+                      <div class="menu-product-card__badges">
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">-25%</span>
                         </div>
                       </div>
                       <button
@@ -1343,12 +1359,12 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
                         </div>
                         <button
@@ -1456,12 +1472,12 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
                         </div>
                         <button
@@ -1573,12 +1589,12 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                          <div class="menu-product-card__labels">
-                            <div class="menu-product-card__label label">
-                              <span class="label__text txt txt_16">-25%</span>
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
                             </div>
-                            <div class="menu-product-card__label label">
-                              <span class="label__text txt txt_16">Эксклюзив</span>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
                             </div>
                           </div>
                         <button
@@ -1690,12 +1706,12 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
                         </div>
                         <button
@@ -1833,15 +1849,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -1954,7 +1970,7 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
+                        <div class="menu-product-card__badges">
                         </div>
                         <button
                           type="button"
@@ -2061,15 +2077,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2212,15 +2228,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2328,15 +2344,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2449,252 +2465,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          class="menu-product-card__heart-btn heart-btn">
-                          <svg
-                            class="heart-btn__icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="48"
-                            height="48"
-                            viewBox="0 0 48 48"
-                            fill="none">
-                            <path
-                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                              fill="#E9E8E8"></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <a href="#" class="menu-product-card__preview">
-                        <div class="menu-product-card__image-wrap">
-                          <img
-                            src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
-                            alt=""
-                            class="menu-product-card__image" />
-                        </div>
-                      </a>
-                      <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
-                        >Вино
-                        Saperavi Binekhi</a
-                      >
-                      <div class="menu-product-card__reviews">
-                        <div class="menu-product-card__grade grade">
-                          <span class="grade__text txt txt_md">4.5</span>
-                        </div>
-                        <span class="menu-product-card__reviews-text txt"
-                        >(12 отзывов)</span
-                      >
-                      </div>
-                        <ul class="menu-product-card__features txt txt_16">
-                          <li class="menu-product-card__feature">Россия</li>
-                          <li class="menu-product-card__feature">Красное</li>
-                          <li class="menu-product-card__feature">Сухое</li>
-                          <li class="menu-product-card__feature">0.75 л</li>
-                        </ul>
-                        <div
-                        class="menu-product-card__characteristics characteristics">
-                        <ul class="characteristics__list">
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Вино:</span>
-                            <span class="characteristics__text"
-                              >Полусухое, белое
-                            </span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Объем:</span>
-                            <span class="characteristics__text">0.75 л</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Крепость:</span
-                            >
-                            <span class="characteristics__text">12.5%</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Страна, регион:</span
-                            >
-                            <span class="characteristics__text"
-                              >Грузия, Кахетия</span
-                            >
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Бренд:</span>
-                            <span class="characteristics__text">Binekhi</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Производитель:</span
-                            >
-                            <span class="characteristics__text">Vasi+</span>
-                          </li>
-                        </ul>
-                      </div>
-                      </div>
-                      <div class="menu-product-card__group">
-                        <div class="menu-product-card__price-wrap">
-                          <div class="menu-product-card__price price">
-                            <span class="price__value txt txt_wide">1 200₽</span>
-
-                            <span
-                            class="price__value price__value_old txt txt_wide"
-                            >1 700₽</span
-                          >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
-                        </div>
-                        <div class="menu-product-card__actions">
-                          <button
-                          class="menu-product-card__basket-btn basket-btn">
-                          <img
-                            src="@img/icons/bag-white.svg"
-                            alt=""
-                            class="basket-btn__icon" />
-                        </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
-                      <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          class="menu-product-card__heart-btn heart-btn">
-                          <svg
-                            class="heart-btn__icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="48"
-                            height="48"
-                            viewBox="0 0 48 48"
-                            fill="none">
-                            <path
-                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                              fill="#E9E8E8"></path>
-                          </svg>
-                        </button>
-                      </div>
-                      <a href="#" class="menu-product-card__preview">
-                        <div class="menu-product-card__image-wrap">
-                          <img
-                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
-                            alt=""
-                            class="menu-product-card__image" />
-                        </div>
-                      </a>
-                      <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
-                        >Вино
-                        Saperavi Binekhi</a
-                      >
-                      <div class="menu-product-card__reviews">
-                        <div class="menu-product-card__grade grade">
-                          <span class="grade__text txt txt_md">4.5</span>
-                        </div>
-                        <span class="menu-product-card__reviews-text txt"
-                        >(12 отзывов)</span
-                      >
-                      </div>
-                        <ul class="menu-product-card__features txt txt_16">
-                          <li class="menu-product-card__feature">Россия</li>
-                          <li class="menu-product-card__feature">Красное</li>
-                          <li class="menu-product-card__feature">Сухое</li>
-                          <li class="menu-product-card__feature">0.75 л</li>
-                        </ul>
-                        <div
-                        class="menu-product-card__characteristics characteristics">
-                        <ul class="characteristics__list">
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Вино:</span>
-                            <span class="characteristics__text"
-                              >Полусухое, белое
-                            </span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Объем:</span>
-                            <span class="characteristics__text">0.75 л</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Крепость:</span
-                            >
-                            <span class="characteristics__text">12.5%</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Страна, регион:</span
-                            >
-                            <span class="characteristics__text"
-                              >Грузия, Кахетия</span
-                            >
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Бренд:</span>
-                            <span class="characteristics__text">Binekhi</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Производитель:</span
-                            >
-                            <span class="characteristics__text">Vasi+</span>
-                          </li>
-                        </ul>
-                      </div>
-                      </div>
-                      <div class="menu-product-card__group">
-                        <div class="menu-product-card__price-wrap">
-                          <div class="menu-product-card__price price">
-                            <span class="price__value txt txt_wide">1 200₽</span>
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
-                        </div>
-                        <div class="menu-product-card__actions">
-                          <button
-                          class="menu-product-card__basket-btn basket-btn">
-                          <img
-                            src="@img/icons/bag-white.svg"
-                            alt=""
-                            class="basket-btn__icon" />
-                        </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
-                      <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2807,15 +2586,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2923,15 +2702,252 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <a href="#" class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </a>
+                      <div class="menu-product-card__info">
+                        <a href="#" class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</a
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                        <span class="menu-product-card__reviews-text txt"
+                        >(12 отзывов)</span
+                      >
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__basket-btn basket-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="basket-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <a href="#" class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </a>
+                      <div class="menu-product-card__info">
+                        <a href="#" class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</a
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                        <span class="menu-product-card__reviews-text txt"
+                        >(12 отзывов)</span
+                      >
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__basket-btn basket-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="basket-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3044,15 +3060,15 @@
                     </div>
                     <div class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3233,16 +3249,16 @@
             </div>
           </div>
         </section>
-        <section class="catalog-page__recommendations recommendations">
-          <div class="recommendations__container container">
-            <div class="recommendations__head">
+        <section data-shopify-section="1" class="catalog-page__shopify-section shopify-section">
+          <div class="shopify-section__container container">
+            <div class="shopify-section__head">
               <span
-                class="recommendations__number txt txt_wide desktop-only"></span>
-              <span class="recommendations__title tl1"
+                class="shopify-section__number txt txt_wide desktop-only"></span>
+              <span class="shopify-section__title tl1"
                 >рекомендуем</span
               >
               <div
-                class="recommendations__sl-control sl-control sl-control_reversed desktop-only">
+                class="shopify-section__sl-control sl-control sl-control_reversed desktop-only">
                 <div class="sl-control__nav sl-nav">
                   <button
                     type="button"
@@ -3267,22 +3283,22 @@
                 </div>
               </div>
             </div>
-            <p class="recommendations__text txt txt_md">Рекомендации на основе просмотренного</p>
-            <div class="recommendations__body">
-              <div class="recommendations__carousel">
-                <div class="recommendations__slider swiper">
-                  <div class="recommendations__wrapper swiper-wrapper">
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+            <p class="shopify-section__text txt txt_md">Рекомендации на основе просмотренного</p>
+            <div class="shopify-section__body">
+              <div class="shopify-section__carousel">
+                <div class="shopify-section__slider swiper">
+                  <div class="shopify-section__wrapper swiper-wrapper">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3389,17 +3405,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3506,17 +3522,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3623,17 +3639,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3740,17 +3756,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3857,17 +3873,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -4005,8 +4021,7 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{})
-      @@include('html/_svg.htm',{})
+      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{}) @@include('html/_modal.htm',{})
       <div class="menu-bar mobile-only">
         <ul class="menu-bar__list">
           <li class="menu-bar__item">

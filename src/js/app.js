@@ -13,6 +13,16 @@ utils.spoilers();
 // showmore
 utils.showmore();
 
+// tabs
+utils.tabs();
+
+// --------------------------------- scroll ---------------------------------
+
+import * as scroll from './utils/scroll.js';
+
+// header scroll
+scroll.headerScroll();
+
 // ---------------------------------- form ----------------------------------
 
 import * as forms from './utils/form/form.js';
@@ -23,6 +33,9 @@ forms.formFieldsInit({ viewPass: false });
 // form submit
 forms.formSubmit();
 
+// quantity
+forms.formQuantity();
+
 // --------------------------------- swiper ---------------------------------
 
 import './utils/sliders.js';
@@ -30,6 +43,10 @@ import './utils/sliders.js';
 // ----------------------------------- map ----------------------------------
 
 import './utils/map.js';
+
+// -------------------------------- simplebar -------------------------------
+
+import './utils/simplebar.js';
 
 // --------------------------------- libs -----------------------------------
 
@@ -39,9 +56,11 @@ import './libs/select.js';
 // dynamic dom
 import './libs/da.js';
 
-// -------------------------------- simplebar -------------------------------
+// modals
+import './libs/modals.js';
 
-import './utils/simplebar.js';
+// star rating
+import './libs/star_rating.js';
 
 // --------------------------------------------------------------------------
 

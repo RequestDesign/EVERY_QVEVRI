@@ -1,0 +1,83 @@
+<div id="reviewSentModal" aria-hidden="true" class="modal review-sent-modal">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="review-sent-modal__inner">
+          <span class="review-sent-modal__title tl2"
+            >Ваш отзыв успешно отправлен</span
+          >
+          <p class="review-sent-modal__text txt">
+            Отзыв будет опубликован после проверки модератором
+          </p>
+          <button
+            data-close
+            type="button"
+            class="review-sent-modal__btn btn btn_ol">
+            <span class="btn__text txt txt_md">Понятно</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="writeReviewModal" aria-hidden="true" class="modal write-review-modal">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <form data-dev action="#" class="write-review-modal__form">
+          <span class="write-review-modal__title tl2">оставьте отзыв</span>
+          <div class="write-review-modal__rate">
+            <span class="write-review-modal__rate-txt txt">Ваша оценка</span>
+            <select class="write-review-modal__rating star-rating">
+              <option value="5"></option>
+              <option value="4"></option>
+              <option value="3"></option>
+              <option value="2"></option>
+              <option value="1"></option>
+            </select>
+          </div>
+          <div class="write-review-modal__input input">
+            <input
+              autocomplete="off"
+              type="text"
+              name="form[]"
+              data-error
+              placeholder="Имя"
+              class="input__field" />
+          </div>
+          <div class="write-review-modal__text-input text-input">
+            <textarea
+              maxlength="500"
+              autocomplete="off"
+              name="form[]"
+              placeholder="Ваше мнение о продукте..."
+              data-error
+              class="text-input__field"></textarea>
+            <span class="text-input__hint txt txt_16"
+              >Максимальное количество символов — 500</span
+            >
+          </div>
+          <button
+            data-modal="#reviewSentModal"
+            type="submit"
+            class="write-review-modal__btn btn btn_ol">
+            <span class="btn__text txt txt_md">Оправить</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

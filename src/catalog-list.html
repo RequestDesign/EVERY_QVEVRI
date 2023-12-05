@@ -9,7 +9,8 @@
           <div class="hero-promo__container container">
             <nav class="hero-promo__breadcrumbs breadcrumbs caps">
               <a href="#" class="breadcrumbs__text">Главная</a>
-              <span class="breadcrumbs__text">Вино</span>
+              <a href="#" class="breadcrumbs__text">Вино</a>
+              <span class="breadcrumbs__text">Белые вина</span>
             </nav>
             <div class="hero-promo__advertising advertising advertising_hero">
               <div class="advertising__content">
@@ -47,55 +48,58 @@
           <div class="catalog__container container">
             <div class="catalog__title-wrap"><span class="catalog__title tl1">Вино</span></div>
             <div class="catalog__head">
-              <div class="catalog__categories categories-catalog swiper">
+              <div class="catalog__categories categories-catalog tabs swiper">
                 <ul data-original-height  data-visible-height="3rem"
-                  class="categories-catalog__list txt txt_md">
-                  <li class="categories-catalog__item _active">
-                    <a href="#" class="categories-catalog__link">Белые вина</a>
+                  class="categories-catalog__list tabs-wrap txt txt_md">
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text">Все</a>
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab _active">
+                    <a href="#" class="tab__text ">Белые вина</a>
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >Игристые вина</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >Розовые вина</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >Крепкий алкоголь</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >Красные вина</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >Крепкий алкоголь</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >сувениры и подарки</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link">в подарок</a>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text ">в подарок</a>
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >наш рейтинг вин</a
                     >
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link">новинки</a>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text ">новинки</a>
                   </li>
-                  <li class="categories-catalog__item">
-                    <a href="#" class="categories-catalog__link"
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
                       >для вечеринки</a
                     >
                   </li>
@@ -171,7 +175,6 @@
                 <div class="filters__head mobile-only">
                   <span class="filters__title tl2">Сортировка и фильтры</span>
                   <button id="close-filters-btn" type="button" class="filters__close-btn"><img src="@img/icons/cross.svg" alt="" class="filters__close-btn-icon"></button>
-
                 </div>
                 <div data-sl-parent class="filters__sort mobile-only">
                   <span class="filters__sort-title caps">Сортировка</span>
@@ -214,8 +217,8 @@
                       <div class="filters__group">
                         <span class="filters__subtitle caps caps_md">Акции</span>
                         <div class="filters__options">
-                          <div class="filters__checkbox">
-                            <label class="checkbox checkbox_hint">
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
                               <input
                                 class="checkbox__input"
                                 type="checkbox"
@@ -223,9 +226,15 @@
                                 name="form[]" />
                               <span class="checkbox__text txt">2 + 1</span>
                             </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
                           </div>
-                          <div class="filters__checkbox">
-                            <label class="checkbox checkbox_hint">
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
                               <input
                                 class="checkbox__input"
                                 type="checkbox"
@@ -235,6 +244,12 @@
                                 >Выгодная цена</span
                               >
                             </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1230,15 +1245,15 @@
                 <div class="catalog__products">
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -1350,9 +1365,9 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                   <div class="menu-product-card__head">
-                    <div class="menu-product-card__labels">
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">Эксклюзив</span>
+                    <div class="menu-product-card__badges">
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">Эксклюзив</span>
                       </div>
                     </div>
                     <button
@@ -1464,12 +1479,12 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">-25%</span>
+                      <div class="menu-product-card__badges">
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">-25%</span>
                         </div>
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">Суперцена</span>
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
                       </div>
                       <button
@@ -1581,7 +1596,7 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
+                      <div class="menu-product-card__badges">
                       </div>
                       <button
                         type="button"
@@ -1722,15 +1737,15 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                   <div class="menu-product-card__head">
-                    <div class="menu-product-card__labels">
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">-25%</span>
+                    <div class="menu-product-card__badges">
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">-25%</span>
                       </div>
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">Суперцена</span>
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">Суперцена</span>
                       </div>
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">Эксклюзив</span>
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">Эксклюзив</span>
                       </div>
                     </div>
                     <button
@@ -1842,9 +1857,9 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                 <div class="menu-product-card__head">
-                  <div class="menu-product-card__labels">
-                    <div class="menu-product-card__label label">
-                      <span class="label__text txt txt_16">Эксклюзив</span>
+                  <div class="menu-product-card__badges">
+                    <div class="menu-product-card__badge badge">
+                      <span class="badge__text txt txt_16">Эксклюзив</span>
                     </div>
                   </div>
                   <button
@@ -1956,12 +1971,12 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                   <div class="menu-product-card__head">
-                    <div class="menu-product-card__labels">
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">-25%</span>
+                    <div class="menu-product-card__badges">
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">-25%</span>
                       </div>
-                      <div class="menu-product-card__label label">
-                        <span class="label__text txt txt_16">Суперцена</span>
+                      <div class="menu-product-card__badge badge">
+                        <span class="badge__text txt txt_16">Суперцена</span>
                       </div>
                     </div>
                     <button
@@ -2073,15 +2088,15 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">-25%</span>
+                      <div class="menu-product-card__badges">
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">-25%</span>
                         </div>
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">Суперцена</span>
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
                       <button
@@ -2223,9 +2238,9 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">Эксклюзив</span>
+                      <div class="menu-product-card__badges">
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
                       <button
@@ -2337,12 +2352,12 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">-25%</span>
+                      <div class="menu-product-card__badges">
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">-25%</span>
                         </div>
-                        <div class="menu-product-card__label label">
-                          <span class="label__text txt txt_16">Суперцена</span>
+                        <div class="menu-product-card__badge badge">
+                          <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
                       </div>
                       <button
@@ -2454,7 +2469,7 @@
                   </div>
                   <div class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
-                      <div class="menu-product-card__labels">
+                      <div class="menu-product-card__badges">
                       </div>
                       <button
                         type="button"
@@ -2632,16 +2647,16 @@
             </div>
           </div>
         </section>
-        <section class="catalog-page__recommendations recommendations">
-          <div class="recommendations__container container">
-            <div class="recommendations__head">
+        <section data-shopify-section="1" class="catalog-page__shopify-section shopify-section">
+          <div class="shopify-section__container container">
+            <div class="shopify-section__head">
               <span
-                class="recommendations__number txt txt_wide desktop-only"></span>
-              <span class="recommendations__title tl1"
+                class="shopify-section__number txt txt_wide desktop-only"></span>
+              <span class="shopify-section__title tl1"
                 >рекомендуем</span
               >
               <div
-                class="recommendations__sl-control sl-control sl-control_reversed desktop-only">
+                class="shopify-section__sl-control sl-control sl-control_reversed desktop-only">
                 <div class="sl-control__nav sl-nav">
                   <button
                     type="button"
@@ -2666,22 +2681,22 @@
                 </div>
               </div>
             </div>
-            <p class="recommendations__text txt txt_md">Рекомендации на основе просмотренного</p>
-            <div class="recommendations__body">
-              <div class="recommendations__carousel">
-                <div class="recommendations__slider swiper">
-                  <div class="recommendations__wrapper swiper-wrapper">
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+            <p class="shopify-section__text txt txt_md">Рекомендации на основе просмотренного</p>
+            <div class="shopify-section__body">
+              <div class="shopify-section__carousel">
+                <div class="shopify-section__slider swiper">
+                  <div class="shopify-section__wrapper swiper-wrapper">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2788,17 +2803,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -2905,17 +2920,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3022,17 +3037,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3139,17 +3154,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3256,17 +3271,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="recommendations__slide menu-product-card swiper-slide">
+                    <div class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__labels">
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">-25%</span>
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Суперцена</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
                           </div>
-                          <div class="menu-product-card__label label">
-                            <span class="label__text txt txt_16">Эксклюзив</span>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
                           </div>
                         </div>
                         <button
@@ -3404,8 +3419,7 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{})
-      @@include('html/_svg.htm',{})
+      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{}) @@include('html/_modal.htm',{})
       <div class="menu-bar mobile-only">
         <ul class="menu-bar__list">
           <li class="menu-bar__item">

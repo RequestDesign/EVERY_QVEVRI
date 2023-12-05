@@ -293,6 +293,10 @@
 
   &__input {
     padding-right: 2rem;
+    &.input {
+      padding: 0;
+      border: none;
+    }
   }
 
   // .newsletter-footer__btn

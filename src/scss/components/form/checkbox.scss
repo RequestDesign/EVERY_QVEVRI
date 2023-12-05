@@ -1,30 +1,6 @@
 .checkbox {
   position: relative;
-  &_hint {
-    display: flex;
-    align-items: center;
-    .checkbox__text {
-      margin-right: 0.8rem;
-    }
-    &::after {
-      content: '';
-      width: 2rem;
-      height: 2rem;
-      background-image: url(@img/icons/hint.svg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    @media (max-width: 48em) {
-      .checkbox__text {
-        margin-right: 1.6rem;
-      }
-      &::after {
-        width: 3.4rem;
-        height: 3.4rem;
-      }
-    }
-  }
+  display: flex;
 
   // .checkbox__input
 

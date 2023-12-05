@@ -1,0 +1,102 @@
+.application {
+  position: relative;
+  margin-bottom: 26rem;
+  padding: 6.2rem 29.3rem 14.7rem 15rem;
+  background-color: $white;
+  overflow: hidden;
+  @media (max-width: 48em) {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+    margin-bottom: 20rem;
+    padding: 30rem 4rem 40rem 4rem;
+  }
+
+  // .application__content
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 48em) {
+      align-items: flex-start;
+    }
+  }
+
+  // .application__image-wrap
+
+  &__image-wrap {
+    position: absolute;
+    &_left {
+      bottom: -48rem;
+      left: -12rem;
+      width: 85rem;
+      height: 85rem;
+    }
+    &_right {
+      top: -15rem;
+      right: -35rem;
+      width: 98.2rem;
+      height: 63.7rem;
+    }
+    @media (max-width: 48em) {
+      &_left {
+        bottom: -38rem;
+        left: 50%;
+        width: 60rem;
+        height: 72rem;
+        transform: translateX(-50%);
+      }
+      &_right {
+        top: -10rem;
+        right: -19rem;
+        width: 65rem;
+        height: 50rem;
+      }
+    }
+  }
+
+  // .application__title
+
+  &__title {
+    margin-bottom: 7.2rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+      max-width: 35rem;
+    }
+  }
+
+  // .application__text
+
+  &__text {
+    margin-bottom: 6.4rem;
+    @media (min-width: 48em) {
+      margin-bottom: 7rem;
+      margin-left: 41rem;
+      max-width: 48rem;
+    }
+  }
+
+  // .application__text-link
+
+  &__text-link {
+    color: $red;
+  }
+
+  // .application__image
+
+  &__image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // .application__btn
+
+  &__btn {
+    transform: translateX(13rem);
+    @media (min-width: 48em) {
+      align-self: flex-end;
+      transform: none;
+    }
+  }
+}

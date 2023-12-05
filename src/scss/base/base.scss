@@ -4,8 +4,10 @@
 // spoilers
 @import '../components/spoilers';
 
-// --------------------------------------------------------------------------
+// modals
+@import '../components/modals';
 
+// --------------------------------------------------------------------------
 // map
 @import '../libs/map';
 
@@ -14,6 +16,9 @@
 
 // simplebar
 @import '../libs/simplebar';
+
+// rating
+@import '../libs/rating';
 
 // --------------------------------------------------------------------------
 
@@ -38,7 +43,7 @@
     left: -110vw;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
   }
 }
 %showMore {

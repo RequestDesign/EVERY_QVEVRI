@@ -1,15 +1,26 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 50;
-  height: 17.4rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  ._header-scroll &,
+  ._header-show & {
+    &::after {
+      opacity: 1;
+    }
+  }
 
   // .header__container
 
   &__container {
     display: flex;
     flex-direction: column;
+    height: 17.4rem;
     @media (max-width: 48em) {
       padding: 0 2.4rem;
+      height: 20.2rem;
     }
   }
 
@@ -102,6 +113,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      min-height: 100vh;
       background-color: $black;
       opacity: 0;
       visibility: hidden;
@@ -165,7 +177,6 @@
     @media (max-width: 48em) {
       z-index: 210;
       padding: 0;
-      padding-bottom: 2.4rem;
       column-gap: 5rem;
       transition: transform 0.3s ease;
       ._search-box-opened & {
@@ -179,11 +190,11 @@
 
   &__search-input {
     padding-right: 2rem;
+    padding: 0;
+    border: none;
     @media (max-width: 48em) {
       padding-right: 0;
       ._search-box-opened & {
-        padding-bottom: 2.4rem;
-        border-bottom: 1px solid $lightGray;
         &.input {
           &::before {
             background-image: url(@img/icons/search-black.svg);
@@ -364,6 +375,7 @@
     flex-direction: column;
     width: 52rem;
     height: 100%;
+    min-height: 100vh;
     background-color: $white;
     transform: translateX(-110%);
     transition: transform 0.5s ease;
@@ -580,7 +592,7 @@
   @media (max-width: 48em) {
     position: fixed;
     z-index: 200;
-    top: 0;
+    top: -100%;
     padding: 4rem 2.4rem 5rem 2.4rem;
     height: 100%;
     overflow: auto;
@@ -592,6 +604,7 @@
       transform: none;
     }
     ._search-box-opened & {
+      top: 0;
       height: 100%;
       overflow: auto;
     }
@@ -721,6 +734,7 @@
     &_recent,
     &_suggest,
     &_category,
+    &_brand,
     &_hint {
       &::before {
         content: '';
@@ -760,6 +774,17 @@
     &_category {
       &::before {
         background-image: url(@img/icons/catalog-gray.svg);
+      }
+    }
+
+    // .search-box__item_brand
+
+    &_brand {
+      &::before {
+        background-image: url(@img/icons/badge.svg);
+        @media (max-width: 48em) {
+          height: 4rem;
+        }
       }
     }
   }
@@ -1025,11 +1050,11 @@
   &__subnav-content {
     display: flex;
     flex-direction: column;
-    row-gap: 5rem;
     @media (min-width: 48em) {
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       column-gap: 19rem;
+      row-gap: 5rem;
       height: 100%;
       width: 100%;
     }
@@ -1077,12 +1102,13 @@
     row-gap: 2rem;
     @media (max-width: 48em) {
       row-gap: 4rem;
-      &:not(:last-child) {
+      &:not(:last-child, &_sublist) {
+        margin-bottom: 5rem;
         padding-bottom: 5rem;
         border-bottom: 1px solid $lightGray;
       }
-      &_brands {
-        order: -1;
+      &_sublist {
+        margin-bottom: 2.4rem;
       }
     }
   }
@@ -1101,7 +1127,7 @@
     row-gap: 2.4rem;
     @media (min-width: 48em) {
       flex-direction: row;
-      column-gap: 10.4rem;
+      column-gap: 10rem;
     }
   }
 
@@ -1352,6 +1378,7 @@
 
   &__heading {
     line-height: 122.222%;
+    color: $gray;
   }
 
   // .header-subnav__list-wrap
@@ -1382,6 +1409,15 @@
     z-index: 2;
     line-height: 133.333%;
     white-space: nowrap;
+    .header__bottom & {
+      color: $gray;
+      transition: color 0.3s ease;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $black;
+        }
+      }
+    }
   }
 
   // .header-subnav__brands

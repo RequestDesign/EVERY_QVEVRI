@@ -17,11 +17,20 @@ input:focus {
   outline: none;
 }
 
+.input__field,
+.text-input__field,
+.input__field::placeholder,
+.text-inpu__field::placeholder {
+  @extend .txt;
+}
+
 .input {
+  padding-bottom: 1rem;
   display: flex;
   align-items: center;
   column-gap: 2rem;
   width: 100%;
+  border-bottom: 1px solid $lightGray;
   border-radius: 0 !important;
   &_search {
     &::before {
@@ -40,6 +49,7 @@ input:focus {
   &._form-error {
   }
   @media (max-width: 48em) {
+    padding-bottom: 2.4rem;
     column-gap: 2.4rem;
     &_search {
       &::before {
@@ -61,7 +71,34 @@ input:focus {
   }
 }
 
-textarea.input {
-  padding: 0;
-  resize: none;
+.text-input {
+  display: flex;
+  flex-direction: column;
+
+  // .text-input__field
+
+  &__field {
+    margin-bottom: 0.8rem;
+    padding: 2.4rem;
+    min-height: 24rem;
+    border: 1px solid $lightGray;
+    resize: none;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    &::placeholder {
+      color: $black;
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 1.6rem;
+      padding: 5rem;
+      min-height: 32rem;
+    }
+  }
+
+  // .text-input__hint
+
+  &__hint {
+    color: $gray;
+  }
 }

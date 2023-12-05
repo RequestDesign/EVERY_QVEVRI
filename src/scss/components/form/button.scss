@@ -13,6 +13,25 @@
     }
   }
 
+  // .btn_link
+
+  &_link {
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid $red;
+    color: $red;
+    transition: opacity 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: 48em) {
+      .btn__text.txt {
+        font-size: 3rem;
+      }
+    }
+  }
+
   // .btn_solid
 
   &_solid {
@@ -121,6 +140,19 @@
 
   &_icon {
     column-gap: 1.8rem;
+    &.black {
+      &::after {
+        background-image: url('@img/icons/sm-arr.svg');
+        transform: rotate(-90deg);
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          &::after {
+            transform: rotate(-90deg) translateY(0.8rem);
+          }
+        }
+      }
+    }
     &::after {
       content: '';
       flex: 0 0 1.9rem;

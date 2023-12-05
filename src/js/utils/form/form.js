@@ -227,6 +227,21 @@ export function formSubmit(options = { validate: true }) {
 
 // quantity
 export function formQuantity() {
+  const qntInputs = document.querySelectorAll('.quantity');
+  if (qntInputs.length) {
+    qntInputs.forEach(qntInput => {
+      const input = qntInput.querySelector('input');
+
+      input.addEventListener('change', function () {
+        if (/0$/.test(input.value)) input.value = '1';
+      });
+      input.addEventListener('focusout', function () {
+        if (!input.value) {
+          input.value = '1';
+        }
+      });
+    });
+  }
   document.addEventListener('click', function (e) {
     let targetElement = e.target;
     if (targetElement.closest('.quantity__button')) {
@@ -242,106 +257,4 @@ export function formQuantity() {
       targetElement.closest('.quantity').querySelector('input').value = value;
     }
   });
-}
-
-// rating
-export function formRating() {
-  const ratings = document.querySelectorAll('.rating');
-  if (ratings.length > 0) {
-    initRatings();
-  }
-  // main function
-  function initRatings() {
-    let ratingActive, ratingValue;
-    // "run" through all the ratings on the page
-    for (let index = 0; index < ratings.length; index++) {
-      const rating = ratings[index];
-      initRating(rating);
-    }
-    // initialize a specific rating
-    function initRating(rating) {
-      initRatingVars(rating);
-
-      setRatingActiveWidth();
-
-      if (rating.classList.contains('rating_set')) {
-        setRating(rating);
-      }
-    }
-    // variables initialization
-    function initRatingVars(rating) {
-      ratingActive = rating.querySelector('.rating__active');
-      ratingValue = rating.querySelector('.rating__value');
-    }
-    // change the width of active stars
-    function setRatingActiveWidth(index = ratingValue.innerHTML) {
-      const ratingActiveWidth = index / 0.05;
-      ratingActive.style.width = `${ratingActiveWidth}%`;
-    }
-    // indicate the grade
-    function setRating(rating) {
-      const ratingItems = rating.querySelectorAll('.rating__item');
-      for (let index = 0; index < ratingItems.length; index++) {
-        const ratingItem = ratingItems[index];
-        ratingItem.addEventListener('mouseenter', function (e) {
-          // update variables
-          initRatingVars(rating);
-          // update active stars
-          setRatingActiveWidth(ratingItem.value);
-        });
-        ratingItem.addEventListener('mouseleave', function (e) {
-          // update active stars
-          setRatingActiveWidth();
-        });
-        ratingItem.addEventListener('click', function (e) {
-          // update variables
-          initRatingVars(rating);
-
-          if (rating.dataset.ajax) {
-            // "send" to server
-            setRatingValue(ratingItem.value, rating);
-          } else {
-            // show specified grade
-            ratingValue.innerHTML = index + 1;
-            setRatingActiveWidth();
-          }
-        });
-      }
-    }
-    async function setRatingValue(value, rating) {
-      if (!rating.classList.contains('rating_sending')) {
-        rating.classList.add('rating_sending');
-
-        // sending data (value) to server
-        let response = await fetch('rating.json', {
-          method: 'GET',
-
-          //body: JSON.stringify({
-          //	userRating: value
-          //}),
-          //headers: {
-          //	'content-type': 'application/json'
-          //}
-        });
-        if (response.ok) {
-          const result = await response.json();
-
-          // get new rating
-          const newRating = result.newRating;
-
-          // new average result output
-          ratingValue.innerHTML = newRating;
-
-          // update active stars
-          setRatingActiveWidth();
-
-          rating.classList.remove('rating_sending');
-        } else {
-          alert('error');
-
-          rating.classList.remove('rating_sending');
-        }
-      }
-    }
-  }
 }
