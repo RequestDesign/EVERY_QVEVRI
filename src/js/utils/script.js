@@ -220,6 +220,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // console.log(target);
 
+    if (
+      document.querySelector('.user-cashback._active') &&
+      (target.closest('.user-cashback__value') ||
+        !target.closest('.user-cashback'))
+    ) {
+      document
+        .querySelector('.user-cashback._active')
+        .classList.remove('_active');
+    } else if (
+      !document.querySelector('.user-cashback._active') &&
+      target.closest('.user-cashback__value')
+    ) {
+      target.closest('.user-cashback').classList.add('_active');
+    }
+    if (
+      target.closest('.actions-header__item_account') &&
+      window.innerWidth > 768
+    ) {
+      e.preventDefault();
+    }
     if (target.closest('.show-all-btn')) {
       target.closest('.info-product__tab-body').classList.toggle('_show-all');
     }

@@ -1,0 +1,190 @@
+.account-section {
+  margin-bottom: 23.3rem;
+  display: flex;
+  flex-direction: column;
+  .header & {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    padding: 4rem;
+    min-width: 39.6rem;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
+    background-color: $white;
+    background-image: url(@img/bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(12rem, 1.5rem);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  // .account-section__head
+
+  &__head {
+    margin-bottom: 9rem;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      margin-bottom: 4rem;
+    }
+    .header & {
+      margin-bottom: 3.6rem;
+      display: block;
+    }
+  }
+
+  // .account-section__head-group
+
+  &__head-group {
+    margin-bottom: 3.6rem;
+    display: flex;
+    align-items: center;
+    .header & {
+      margin: 0;
+      column-gap: 1.6rem;
+    }
+  }
+
+  // .account-section__user-avatar
+
+  &__user-avatar {
+    margin-right: 2.4rem;
+    flex: 0 0 12rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    .header & {
+      margin: 0;
+    }
+    @media (min-width: 48em) {
+      flex: 0 0 6rem;
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  // .account-section__user-avatar-image
+
+  &__user-avatar-image {
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  // .account-section__user-name
+
+  &__user-name {
+    margin-right: auto;
+    max-width: 39rem;
+    .header & {
+      margin: 0;
+    }
+    @media (min-width: 48em) {
+      max-width: 24rem;
+    }
+  }
+
+  // .account-section__body
+
+  &__body {
+    margin-bottom: 8rem;
+    .header & {
+      padding: 3.6rem 0;
+      border-top: 1px solid $lightGray;
+      border-bottom: 1px solid $lightGray;
+    }
+    @media (min-width: 48em) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  // .account-section__user-cashback
+
+  &__user-cashback {
+    .header & {
+      display: none;
+    }
+  }
+
+  // .account-section__user-sum
+
+  &__user-sum {
+    .header & {
+      display: none;
+    }
+  }
+
+  // .account-section__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    .header & {
+      align-items: flex-start;
+      row-gap: 2rem;
+    }
+  }
+
+  // .account-section__link-item
+
+  &__link-item {
+    @media (any-hover: hover) {
+      &:hover {
+        .account-section__link {
+          color: $red;
+        }
+      }
+    }
+    &:not(.header &, &:last-child) {
+      border-bottom: 1px solid $lightGray;
+    }
+  }
+
+  // .account-section__link
+
+  &__link {
+    transition: color 0.3s ease;
+    &:not(.header &) {
+      padding: 3.4rem 0;
+      display: block;
+      @media (min-width: 48em) {
+        padding: 2.4rem 0;
+      }
+    }
+  }
+
+  // .account-section__footer
+
+  &__footer {
+  }
+
+  // .account-section__logout-btn
+
+  &__logout-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    color: $gray;
+    &::before {
+      content: '';
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-image: url(@img/icons/logout.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+      &::before {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+}
