@@ -5,9 +5,9 @@
     <div class="wrapper">
       @@include('html/_header.htm',{})
       <main class="main account-page">
-        <section class="account-page__main main-account">
-          <div class="main-account__container container">
-            <div class="actions-header__account account-section">
+        <section class="account-page__main">
+          <div class="account-page__container container">
+            <div class="account-page__account account-section">
               <div class="account-section__head">
                 <div class="account-section__head-group">
                   <div class="account-section__user-avatar">
@@ -27,7 +27,8 @@
                       >
                       <span class="user-cashback__text txt"
                         ><span class="user-cashback__text-content"
-                          >Кэшбек <span>5%</span> на все товары</span
+                          >Кэшбек <span class="cashback-value">5%</span> на все
+                          товары</span
                         >
                         <span class="user-cashback__subtext"
                           >* кроме акционных</span
@@ -84,7 +85,9 @@
                 </ul>
               </div>
               <div class="account-section__footer">
-                <a href="#" class="account-section__logout-btn txt txt_md"
+                <a
+                  href="#"
+                  class="account-section__logout-btn logout-btn txt txt_md"
                   >Выйти</a
                 >
               </div>

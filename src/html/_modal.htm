@@ -1,4 +1,7 @@
-<div id="reviewSentModal" aria-hidden="true" class="modal review-sent-modal">
+<div
+  id="reviewSentModal"
+  aria-hidden="true"
+  class="modal txt-info-modal txt-info-modal_review-sent">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button data-close type="button" class="modal__close">
@@ -8,17 +11,17 @@
           class="modal__close-icon" />
       </button>
       <div class="modal__body">
-        <div class="review-sent-modal__inner">
-          <span class="review-sent-modal__title tl2"
+        <div class="txt-info-modal__inner">
+          <span class="txt-info-modal__title tl2"
             >Ваш отзыв успешно отправлен</span
           >
-          <p class="review-sent-modal__text txt">
+          <p class="txt-info-modal__text txt">
             Отзыв будет опубликован после проверки модератором
           </p>
           <button
             data-close
             type="button"
-            class="review-sent-modal__btn btn btn_ol">
+            class="txt-info-modal__btn btn btn_ol">
             <span class="btn__text txt txt_md">Понятно</span>
           </button>
         </div>
@@ -77,6 +80,520 @@
             <span class="btn__text txt txt_md">Оправить</span>
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="confirmAccDeletionModal"
+  aria-hidden="true"
+  class="modal txt-info-modal txt-info-modal_confirm-acc-deletion">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="txt-info-modal__inner">
+          <span class="txt-info-modal__title tl2">Подтверждение удаления</span>
+          <p class="txt-info-modal__text txt">
+            Вы точно хотите удалить аккаунт? Изменить действие будет невозможно
+          </p>
+          <a href="#" class="txt-info-modal__btn btn btn_ol">
+            <span class="btn__text txt txt_md">Удалить аккаунт</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="updatePhoneNumberModal"
+  aria-hidden="true"
+  class="modal update-personal-data-modal update-personal-data-modal_phone-number">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".update-personal-data-modal_phone-number .update-personal-data-modal__content,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="update-personal-data-modal__inner">
+          <div class="update-personal-data-modal__content">
+            <span class="update-personal-data-modal__title tl2"
+              >Укажите Новый номер</span
+            >
+            <p class="update-personal-data-modal__text txt">
+              Введите новый контактный номер телефона. Вам поступит SMS с
+              кодом-паролем.
+            </p>
+            <form
+              data-dev
+              data-modal-message="#verifyPhoneModal"
+              action="#"
+              class="update-personal-data-modal__form">
+              <div class="update-personal-data-modal__input input">
+                <input
+                  data-phone-mask
+                  autocomplete="off"
+                  type="tel"
+                  name="form[]"
+                  data-error="Заполните поле"
+                  placeholder=""
+                  class="input__field" />
+              </div>
+              <button
+                type="submit"
+                class="update-personal-data-modal__btn btn btn_icon">
+                <span class="btn__text txt txt_md">Получить код</span>
+              </button>
+            </form>
+          </div>
+          <div class="update-personal-data-modal__image-wrap">
+            <img
+              src="@img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp"
+              alt=""
+              class="update-personal-data-modal__image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="updateEmailModal"
+  aria-hidden="true"
+  class="modal update-personal-data-modal update-personal-data-modal_email">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".update-personal-data-modal_email .update-personal-data-modal__content,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="update-personal-data-modal__inner">
+          <div class="update-personal-data-modal__content">
+            <span class="update-personal-data-modal__title tl2"
+              >Укажите <span>Новую электронную почту</span></span
+            >
+            <p class="update-personal-data-modal__text txt">
+              Введите новый адрес электронной почты. Вам поступит письмо с
+              кодом-паролем.
+            </p>
+            <form
+              data-dev
+              data-modal-message="#verifyEmailModal"
+              action="#"
+              class="update-personal-data-modal__form">
+              <div class="update-personal-data-modal__input input">
+                <input
+                  autocomplete="off"
+                  type="email"
+                  name="form[]"
+                  data-error="Заполните поле"
+                  placeholder="E-mail"
+                  class="input__field" />
+              </div>
+              <button
+                type="submit"
+                class="update-personal-data-modal__btn btn btn_icon">
+                <span class="btn__text txt txt_md">Получить код</span>
+              </button>
+            </form>
+          </div>
+          <div class="update-personal-data-modal__image-wrap">
+            <img
+              src="@img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp"
+              alt=""
+              class="update-personal-data-modal__image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="verifyPhoneModal"
+  aria-hidden="true"
+  class="modal verify-code-modal verify-code-modal_phone-number">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".verify-code-modal_phone-number .verify-code-modal__content,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="verify-code-modal__inner">
+          <div class="verify-code-modal__content">
+            <span class="verify-code-modal__title tl2">Введите код</span>
+            <p class="verify-code-modal__text txt">
+              Укажите код из SMS на номер
+              <span class="verify-code-modal__text-number txt_md"
+                >+7 (999) 999 99-99</span
+              >
+            </p>
+            <a href="#" class="verify-code-modal__link btn btn_link">
+              <span class="btn__text txt txt_16">Изменить номер</span>
+            </a>
+            <form data-dev action="#" class="verify-code-modal__form">
+              <div class="verify-code-modal__input-wrap input-row">
+                <div class="input-row__group">
+                  <div class="input-row__input input">
+                    <input
+                      data-index="1"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="2"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="3"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="4"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                </div>
+                <div class="input-row__hint txt txt_16">Ошибка</div>
+              </div>
+            </form>
+            <button
+              type="button"
+              disabled
+              class="verify-code-modal__btn btn btn_ol">
+              <span class="btn__text txt txt_md"
+                >Запросить код повторно через
+                <span data-countdown="1">01:00</span></span
+              >
+              <span hidden class="btn__text txt txt_md"
+                >Запросить код повторно</span
+              >
+            </button>
+            <button
+              type="button"
+              data-modal="#noPhoneMessageModal"
+              class="verify-code-modal__message-btn btn btn_link">
+              <span class="btn__text txt txt_16">Не приходит SMS с кодом?</span>
+            </button>
+          </div>
+          <div class="verify-code-modal__image-wrap">
+            <img
+              src="@img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp"
+              alt=""
+              class="verify-code-modal__image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="verifyEmailModal"
+  aria-hidden="true"
+  class="modal verify-code-modal verify-code-modal_email">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".verify-code-modal_email .verify-code-modal__content,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="verify-code-modal__inner">
+          <div class="verify-code-modal__content">
+            <span class="verify-code-modal__title tl2">Введите код</span>
+            <p class="verify-code-modal__text txt">
+              Укажите код из письма на адрес электронной почты
+              <span class="verify-code-modal__text-email txt_md"
+                >example@gmail.com</span
+              >
+            </p>
+            <a href="#" class="verify-code-modal__link btn btn_link">
+              <span class="btn__text txt txt_16">Изменить почту</span>
+            </a>
+            <form data-dev action="#" class="verify-code-modal__form">
+              <div class="verify-code-modal__input-wrap input-row">
+                <div class="input-row__group">
+                  <div class="input-row__input input">
+                    <input
+                      data-index="1"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="2"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="3"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                  <div class="input-row__input input">
+                    <input
+                      data-index="4"
+                      data-numbers-only
+                      maxlength="1"
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      class="input__field" />
+                  </div>
+                </div>
+                <div class="input-row__hint txt txt_16">Ошибка</div>
+              </div>
+            </form>
+            <button
+              type="button"
+              disabled
+              class="verify-code-modal__btn btn btn_ol">
+              <span class="btn__text txt txt_md"
+                >Запросить код повторно через
+                <span data-countdown="1">01:00</span></span
+              >
+              <span hidden class="btn__text txt txt_md"
+                >Запросить код повторно</span
+              >
+            </button>
+            <button
+              type="button"
+              data-modal="#noEmailMessageModal"
+              class="verify-code-modal__message-btn btn btn_link">
+              <span class="btn__text txt txt_16"
+                >Не приходит письмо с кодом?</span
+              >
+            </button>
+          </div>
+          <div class="verify-code-modal__image-wrap">
+            <img
+              src="@img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp"
+              alt=""
+              class="verify-code-modal__image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="noPhoneMessageModal"
+  aria-hidden="true"
+  class="modal no-message-modal no-message-modal_phone-number">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".no-message-modal_phone-number .no-message-modal__inner,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="no-message-modal__inner">
+          <span class="no-message-modal__title tl2"
+            >Не поступает SMS с кодом</span
+          >
+          <p class="no-message-modal__head-text txt">
+            Если вы столкнулись с проблемой неполучения SMS-кода, есть несколько
+            шагов, которые можно предпринять:
+          </p>
+          <ul class="no-message-modal__list">
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Проверьте правильность номера телефона.</span
+                >
+                Убедитесь, что вы указали правильный номер телефона в настройках
+                вашего профиля.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Проверьте соединение с сетью.</span
+                >
+                Убедитесь, что у вас хорошее соединение с мобильной сетью, так
+                как плохая связь может привести к задержкам в доставке SMS.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Проверьте папку «Спам»</span
+                >
+                Иногда SMS-коды могут попадать в папку со спамом. Пожалуйста,
+                проверьте эту папку в вашем мобильном устройстве.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Попробуйте еще раз.</span
+                >
+                В случае отсутствия SMS-кода,
+                <a href="#" class="no-message-modal__link"
+                  >попробуйте запросить его повторно</a
+                >.
+              </span>
+            </li>
+          </ul>
+          <p class="no-message-modal__text txt">
+            Если проблема сохраняется, свяжитесь с нашей
+            <a href="#" class="no-message-modal__link">службой поддержки</a>, и
+            мы постараемся помочь вам как можно быстрее.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="noEmailMessageModal"
+  aria-hidden="true"
+  class="modal no-message-modal no-message-modal_email">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button
+        data-da=".no-message-modal_email .no-message-modal__inner,768,first"
+        data-close
+        type="button"
+        class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="no-message-modal__inner">
+          <span class="no-message-modal__title tl2"
+            >Не поступает письмо с кодом</span
+          >
+          <p class="no-message-modal__head-text txt">
+            Если вы не получили письмо с кодом на ваш адрес электронной почты,
+            рекомендуем выполнить следующие шаги:
+          </p>
+          <ul class="no-message-modal__list">
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Проверьте папку «Спам»</span
+                >
+                Иногда письма могут попадать в папку со спамом. Пожалуйста,
+                проверьте эту папку в вашем почтовом ящике.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Проверьте правильность адреса.</span
+                >
+                Убедитесь, что вы ввели правильный адрес электронной почты при
+                регистрации или оформлении заказа.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Повторите запрос.</span
+                >
+                Если письмо не поступило,
+                <span class="no-message-modal__link"
+                  >попробуйте повторно запросить код</span
+                >.
+              </span>
+            </li>
+            <li class="no-message-modal__list-item txt">
+              <span class="no-message-modal__list-text">
+                <span class="no-message-modal__list-subtitle txt_md"
+                  >Белый список.</span
+                >
+                Добавьте наш адрес электронной почты в белый список вашего
+                почтового клиента, чтобы гарантировать доставку.
+              </span>
+            </li>
+          </ul>
+          <p class="no-message-modal__text txt">
+            Если проблема сохраняется, свяжитесь с нашей
+            <a href="#" class="no-message-modal__link">службой поддержки</a>, и
+            мы постараемся помочь вам как можно быстрее.
+          </p>
+        </div>
       </div>
     </div>
   </div>

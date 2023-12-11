@@ -89,14 +89,14 @@ body::after {
   // .modal__close-icon
 
   &__close-icon {
-    flex: 0 0 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    flex: 0 0 1.3rem;
+    width: 1.3rem;
+    height: 1.3rem;
     object-fit: contain;
     @media (max-width: 48em) {
-      flex: 0 0 3rem;
-      width: 3rem;
-      height: 3rem;
+      flex: 0 0 2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 }
@@ -178,7 +178,7 @@ body::after {
 
 // --------------------------------------------------------------------------
 
-.review-sent-modal {
+.txt-info-modal {
   .modal__content {
     padding: 8rem 4rem;
     @media (min-width: 48em) {
@@ -187,7 +187,7 @@ body::after {
     }
   }
 
-  // .review-sent-modal__inner
+  // .txt-info-modal__inner
 
   &__inner {
     display: flex;
@@ -195,7 +195,7 @@ body::after {
     align-items: center;
   }
 
-  // .review-sent-modal__title
+  // .txt-info-modal__title
 
   &__title {
     margin-bottom: 2rem;
@@ -204,7 +204,7 @@ body::after {
     }
   }
 
-  // .review-sent-modal__text
+  // .txt-info-modal__text
 
   &__text {
     margin-bottom: 4.8rem;
@@ -213,12 +213,395 @@ body::after {
     @media (max-width: 48em) {
       margin-bottom: 6.4rem;
       max-width: 48rem;
+      .txt-info-modal_confirm-acc-deletion & {
+        max-width: 57rem;
+      }
     }
   }
 
-  // .review-sent-modal__btn
+  // .txt-info-modal__btn
 
   &__btn {
     width: 100%;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.update-personal-data-modal,
+.verify-code-modal,
+.no-message-modal {
+  @media (max-width: 48em) {
+    padding: 0;
+    .modal__content {
+      height: 100%;
+      min-height: 100vh;
+    }
+    .modal__close {
+      position: static;
+      margin-bottom: 17rem;
+      display: inline-block;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0;
+      backdrop-filter: none;
+      background-color: transparent;
+      transform: none;
+      &::after {
+        content: '';
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-image: url(@img/icons/cross-gray.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .modal__close-icon {
+      display: none;
+    }
+  }
+  .modal__content {
+    @media (min-width: 48em) {
+      max-width: 61.8rem;
+    }
+  }
+}
+.update-personal-data-modal__inner,
+.verify-code-modal__inner {
+  position: relative;
+  padding: 6.4rem 3.4rem;
+  overflow: hidden;
+  @media (min-width: 48em) {
+    padding: 18rem 6.8rem 8rem 6.8rem;
+  }
+}
+.update-personal-data-modal__content,
+.verify-code-modal__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.update-personal-data-modal__image-wrap,
+.verify-code-modal__image-wrap {
+  position: absolute;
+  top: -16rem;
+  right: -20rem;
+  width: 50rem;
+  height: 41rem;
+  @media (max-width: 48em) {
+    top: -20rem;
+    right: -30rem;
+    width: 64.2rem;
+    height: 54.6rem;
+  }
+}
+
+.update-personal-data-modal {
+  // .update-personal-data-modal__inner
+
+  &__inner {
+  }
+
+  // .update-personal-data-modal__content
+
+  &__content {
+  }
+
+  // .update-personal-data-modal__title
+
+  &__title {
+    margin-bottom: 2.4rem;
+    max-width: 20.7rem;
+    .update-personal-data-modal_email & {
+      max-width: none;
+      span {
+        display: block;
+      }
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+      max-width: 23rem;
+    }
+  }
+
+  // .update-personal-data-modal__text
+
+  &__text {
+    margin-bottom: 10rem;
+    max-width: 70rem;
+    .update-personal-data-modal_email & {
+      max-width: 66rem;
+    }
+    @media (min-width: 48em) {
+      margin-bottom: 5.6rem;
+      max-width: 42.2rem;
+      .update-personal-data-modal_email & {
+        max-width: 40rem;
+      }
+    }
+  }
+
+  // .update-personal-data-modal__form
+
+  &__form {
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $lightGray;
+    @media (max-width: 48em) {
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  // .update-personal-data-modal__input
+
+  &__input {
+    flex: 1 1 auto;
+    &.input {
+      padding: 0;
+      padding-right: 2rem;
+      border: none;
+      @media (max-width: 48em) {
+        padding-right: 4rem;
+      }
+    }
+  }
+
+  // .update-personal-data-modal__btn
+
+  &__btn {
+    .btn__text {
+      white-space: nowrap;
+    }
+  }
+
+  // .update-personal-data-modal__image-wrap
+
+  &__image-wrap {
+  }
+
+  // .update-personal-data-modal__image
+
+  &__image {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.verify-code-modal {
+  // .verify-code-modal_phone-number
+
+  &_phone-number {
+  }
+
+  // .verify-code-modal__inner
+
+  &__inner {
+  }
+
+  // .verify-code-modal__content
+
+  &__content {
+  }
+
+  // .verify-code-modal__title
+
+  &__title {
+    margin-bottom: 2.4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // .verify-code-modal__text
+
+  &__text {
+    margin-bottom: 0.8rem;
+    @media (max-width: 48em) {
+      margin-bottom: 2.4rem;
+      max-width: 47rem;
+      .verify-code-modal_email & {
+        max-width: 68rem;
+      }
+    }
+  }
+
+  // .verify-code-modal__text-number
+
+  &__text-number {
+    white-space: nowrpap;
+  }
+
+  // .verify-code-modal__link
+
+  &__link {
+    margin-bottom: 5.6rem;
+    align-self: flex-start;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .verify-code-modal__form
+
+  &__form {
+    margin-bottom: 5.6rem;
+    align-self: center;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .verify-code-modal__input-wrap
+
+  &__input-wrap {
+  }
+
+  // .verify-code-modal__btn
+
+  &__btn {
+    margin-bottom: 5rem;
+    align-self: center;
+    width: 100%;
+    .btn__text {
+      display: none;
+      white-space: nowrap;
+      &:last-child {
+        display: block;
+      }
+      @media (max-width: 48em) {
+        font-size: 2.8rem;
+      }
+    }
+    &:disabled {
+      .btn__text {
+        display: block;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    @media (min-width: 48em) {
+      margin-bottom: 2.4rem;
+      min-width: 48.2rem;
+      width: auto;
+    }
+  }
+
+  // .verify-code-modal__message-btn
+
+  &__message-btn {
+    align-self: center;
+  }
+
+  // .verify-code-modal__image-wrap
+
+  &__image-wrap {
+  }
+
+  // .verify-code-modal__image
+
+  &__image {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.no-message-modal {
+  &.modal {
+    .modal__content {
+      padding: 6.4rem 2.4rem;
+    }
+    @media (min-width: 48em) {
+      .modal__content {
+        padding: 8rem 6.8rem;
+      }
+    }
+    @media (max-width: 48em) {
+      .modal__close {
+        margin-bottom: 6.4rem;
+      }
+    }
+  }
+
+  // .no-message-modal_phone-number
+
+  &_phone-number {
+  }
+
+  // .no-message-modal__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .no-message-modal__title
+
+  &__title {
+    margin-bottom: 5.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // .no-message-modal__head-text
+
+  &__head-text {
+    margin-bottom: 2.4rem;
+    @media (min-width: 48em) {
+      margin-bottom: 3.2rem;
+      max-width: 48.2rem;
+    }
+  }
+
+  // .no-message-modal__list
+
+  &__list {
+    padding-left: 2rem;
+    display: flex;
+    margin-bottom: 3.2rem;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    list-style: decimal;
+    @media (max-width: 48em) {
+      margin-bottom: 2.4rem;
+      padding-left: 4rem;
+      row-gap: 3.5rem;
+    }
+  }
+
+  // .no-message-modal__list-item
+
+  &__list-item {
+    list-style: decimal;
+  }
+
+  // .no-message-modal__list-text
+
+  &__list-text {
+  }
+
+  // .no-message-modal__list-subtitle
+
+  &__list-subtitle {
+  }
+
+  // .no-message-modal__link
+
+  &__link {
+    color: $red;
+    text-decoration: underline $red;
+  }
+
+  // .no-message-modal__text
+
+  &__text {
   }
 }

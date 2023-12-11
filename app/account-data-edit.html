@@ -3823,64 +3823,185 @@
 			</div>
 		</header>
 
-		<main class="main account-page">
-			<section class="account-page__main">
+		<main class="main account-page account-page_personal-data-edit">
+			<section class="account-page__chapter">
 				<div class="account-page__container container">
-					<div class="account-page__account account-section">
-						<div class="account-section__head">
-							<div class="account-section__head-group">
-								<div class="account-section__user-avatar">
-									<img src="img/icons/avatar.svg" alt="" class="account-section__user-avatar-image" />
+					<div class="account-page__inner">
+						<div class="account-page__group">
+							<button id="show-navbar-btn" type="button" class="account-page__heading tl2">
+								Личные данные
+							</button>
+							<div class="account-page__navbar navbar-account-page">
+								<nav class="navbar-account-page__navigation">
+									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Мои заказы</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Вы заказывали</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Статусы</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">История баллов</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Избранные товары</span></a>
+								</nav>
+								<a href="#" class="navbar-account-page__logout-btn logout-btn txt txt_md">Выйти</a>
+							</div>
+						</div>
+						<div class="account-page__content">
+							<div class="account-page__personal-data personal-data-account">
+								<div class="personal-data-account__main-content">
+									<form data-dev action="#" class="personal-data-account__form form-personal-data-account">
+										<div class="form-personal-data-account__head">
+											<div class="personal-data-account__head-inner">
+												<div class="personal-data-account__user-avatar user-avatar">
+													<label class="user-avatar__inner">
+														<input type="file" class="user-avatar__input" />
+														<div class="user-avatar__wrap">
+															<div class="user-avatar__image-wrap">
+																<img src="img/icons/avatar.svg" alt="" class="user-avatar__image" />
+															</div>
+															<div class="user-avatar__caption">
+																<img src="img/icons/avatar-upload.svg" alt="" class="user-avatar__caption-icon" />
+															</div>
+														</div>
+														<div class="user-avatar__dropdown">
+															<ul class="user-avatar__dropdown-list">
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt">
+																		Медиатека
+																	</button>
+																</li>
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt">
+																		Сделать снимок
+																	</button>
+																</li>
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt txt_red">
+																		Удалить фото
+																	</button>
+																</li>
+															</ul>
+														</div>
+														<button type="button" class="user-avatar__close-btn">
+															<img src="img/icons/cross-white.svg" alt="" class="user-avatar__close-btn-icon" />
+														</button>
+													</label>
+												</div>
+												<div class="personal-data-account__head-info">
+													<span class="personal-data-account__heading tl2">константин Константинопольский</span>
+													<p data-da=".form-personal-data-account__head,768,last" class="personal-data-account__head-text txt txt_16">
+														Загрузите фото и получите
+														<span class="txt txt_md">100</span> приветственных
+														баллов
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="form-personal-data-account__body">
+											<div class="form-personal-data-account__group">
+												<span class="form-personal-data-account__heading subtitle">Личные данные</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__input input input_required">
+														<input data-validate data-required value="Константинопольский" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input input_date input_required">
+														<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" maxlength="10" class="input__field" />
+														<button data-dp-btn type="button" class="input__calendar-btn">
+															<img src="img/icons/calendar.svg" alt="" class="input__calendar-btn-icon" />
+														</button>
+													</div>
+													<div class="form-personal-data-account__input input input_required">
+														<input data-validate data-required value="Константин" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__options">
+														<label class="form-personal-data-account__option option option_reversed">
+															<input hidden class="option__input" checked type="radio" value="1" name="option" />
+															<span class="option__text txt">Муж</span>
+														</label>
+														<label class="form-personal-data-account__option option option_reversed">
+															<input hidden class="option__input" type="radio" value="2" name="option" />
+															<span class="option__text txt">Жен</span>
+														</label>
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field" />
+													</div>
+												</div>
+											</div>
+											<div class="form-personal-data-account__group">
+												<span class="form-personal-data-account__heading subtitle">Контактные данные</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__input input input_edit">
+														<input data-value="constantinopolitan.konstantin@gmail.com" value="constantinopolitan.konstantin@gmail.com" autocomplete="off" type="email" name="form[]" data-error placeholder="E-mail" class="input__field" />
+														<button type="button" data-modal="#updateEmailModal" class="input__edit-btn">
+															<img src="img/icons/edit-gray.svg" alt="" class="input__edit-btn-icon" />
+														</button>
+													</div>
+													<div class="form-personal-data-account__input input input_edit">
+														<input data-value="+7 (999) 999 99-99" value="+7 (999) 999 99-99" autocomplete="off" type="tel" name="form[]" data-error placeholder="Телефон" class="input__field" />
+														<button data-modal="#updatePhoneNumberModal" type="button" class="input__edit-btn">
+															<img src="img/icons/edit-gray.svg" alt="" class="input__edit-btn-icon" />
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-personal-data-account__group form-personal-data-account__group_pass">
+												<span class="form-personal-data-account__heading subtitle">Смена пароля</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__input input _verified">
+														<input disabled value="123456" autocomplete="off" type="password" name="form[]" data-error placeholder="Пароль" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Новый пароль" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Повторите пароль" class="input__field" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<button type="submit" class="form-personal-data-account__btn btn btn_ol">
+											<span class="btn__text txt txt_md">Сохранить изменения</span>
+										</button>
+									</form>
 								</div>
-								<span class="account-section__user-name txt txt_md">Константин Константинопольский</span>
-								<div class="account-section__user-cashback user-cashback">
-									<span class="user-cashback__value caps caps_md">5%</span>
-									<div class="user-cashback__hint">
-										<span class="user-cashback__text txt">Ваш статус — Новичок</span>
-										<span class="user-cashback__text txt"><span class="user-cashback__text-content">Кэшбек <span class="cashback-value">5%</span> на все
-												товары</span>
-											<span class="user-cashback__subtext">* кроме акционных</span>
-										</span>
+								<div class="personal-data-account__aside-content">
+									<div class="personal-data-account__status-banner status-banner">
+										<div class="status-banner__text-content">
+											<span class="status-banner__heading tl2">новичок</span>
+											<p class="status-banner__text txt">
+												<span class="status-banner__txt-content">
+													Кэшбек 5%
+													<span class="desktop-only"> на все товары </span>
+												</span>
+												<span class="status-banner__txt-content txt_16">*кроме акционных</span>
+											</p>
+											<a href="#" class="status-banner__link btn btn_icon">
+												<span class="btn__text txt txt_md">Подробнее</span>
+											</a>
+										</div>
+										<div class="status-banner__track">
+											<span data-cash-sum="1200" class="status-banner__current-value txt txt_wide"></span>
+											<div class="status-banner__track-image-wrap">
+												<div class="status-banner__track-image"></div>
+												<div class="status-banner__clip-path-container">
+													<div class="status-banner__track-image status-banner__track-image_red"></div>
+												</div>
+											</div>
+											<div class="status-banner__range">
+												<span data-total-cash-sum="5000" class="status-banner__range-value txt txt_16"></span>
+												<span class="status-banner__range-value txt txt_16">0</span>
+											</div>
+										</div>
+									</div>
+									<div class="personal-data-account__coins-history-banner coins-history-banner">
+										<div class="coins-history-banner__text-content">
+											<span class="coins-history-banner__heading tl2">1200</span>
+											<span class="coins-history-banner__text txt txt_16">Баллов на счёте</span>
+										</div>
+										<a href="#" class="coins-history-banner__link btn btn_icon">
+											<span class="btn__text txt txt_md">История баллов</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="account-section__user-sum user-sum">
-								<div class="user-sum__track">
-									<span class="user-sum__inner-track"></span>
-								</div>
-								<div class="user-sum__row">
-									<span class="user-sum__current">
-										<span class="user-sum__text txt">Сумма покупок:</span>
-										<span class="user-sum__current-value txt">1 200₽</span>
-									</span>
-									<span class="user-sum__total-value txt">5 000₽</span>
-								</div>
-							</div>
-						</div>
-						<div class="account-section__body">
-							<ul class="account-section__list">
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Личные данные</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Мои заказы</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Вы заказывали</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Статусы</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">История баллов</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Избранные товары</a>
-								</li>
-							</ul>
-						</div>
-						<div class="account-section__footer">
-							<a href="#" class="account-section__logout-btn logout-btn txt txt_md">Выйти</a>
 						</div>
 					</div>
 				</div>

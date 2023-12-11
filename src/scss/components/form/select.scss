@@ -171,7 +171,7 @@
     font-family: 'Roboto Flex';
     font-size: 1.8rem;
     line-height: 144.444%;
-    color: #1f232b;
+    color: $black;
   }
 
   // .select__hint
@@ -204,7 +204,7 @@
   }
   // &._select-focused {
   //   .select__content {
-  //     color: #1f232b;
+  //     color: $black;
   //   }
   // }
   // &._select-error {
@@ -225,11 +225,11 @@
   //   &:not(&._select-opened) {
   //     &:not(&._select-show-val) {
   //       ._select-label::before {
-  //         color: #1f232b;
+  //         color: $black;
   //       }
   //     }
   //     .select__title {
-  //       background-color: #f1f2f6;
+  //       background-color: $lightGray;
   //     }
   //   }
   // }
@@ -249,7 +249,7 @@
   //       display: block;
   //       padding-top: 1.7rem;
   //       line-height: 144%;
-  //       color: #1f232b;
+  //       color: $black;
   //     }
   //   }
   // }

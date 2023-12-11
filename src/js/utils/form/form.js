@@ -1,3 +1,8 @@
+import { modules } from '../../modules.js';
+import { initCountdown } from '../utils.js';
+
+// --------------------------------------------------------------------------
+
 // init form fields
 export function formFieldsInit(options = { viewPass: false }) {
   const formFields = document.querySelectorAll(
@@ -23,6 +28,7 @@ export function formFieldsInit(options = { viewPass: false }) {
         targetElement.classList.add('_form-focus');
         targetElement.parentElement.classList.add('_form-focus');
       }
+      targetElement.closest('.input').classList.remove('_filled');
       formValidate.removeError(targetElement);
     }
   });
@@ -41,6 +47,22 @@ export function formFieldsInit(options = { viewPass: false }) {
       }
       if (targetElement.hasAttribute('data-validate')) {
         formValidate.validateInput(targetElement);
+      }
+      if (targetElement.closest('.input_date')) {
+        if (targetElement.value.length === 10) {
+          targetElement.closest('.input_date').classList.add('_filled');
+        } else if (targetElement.value.length < 10) {
+          targetElement.value = '';
+          targetElement.closest('.input_date').classList.remove('_filled');
+        }
+      } else if (targetElement.closest('.input_edit')) {
+        if (!targetElement.value.length) {
+          targetElement.value = targetElement.dataset.value;
+        }
+      } else {
+        if (targetElement.value.length) {
+          targetElement.closest('.input').classList.add('_filled');
+        }
       }
     }
   });
@@ -109,21 +131,21 @@ export let formValidate = {
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
     let inputError =
-      formRequiredItem.parentElement.querySelector('.form__error');
+      formRequiredItem.parentElement.querySelector('.form-error');
     if (inputError) formRequiredItem.parentElement.removeChild(inputError);
     if (formRequiredItem.dataset.error) {
       formRequiredItem.parentElement.insertAdjacentHTML(
         'beforeend',
-        `<div class="form__error">${formRequiredItem.dataset.error}</div>`
+        `<div class="form-error txt txt_16">${formRequiredItem.dataset.error}</div>`
       );
     }
   },
   removeError(formRequiredItem) {
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
-    if (formRequiredItem.parentElement.querySelector('.form__error')) {
+    if (formRequiredItem.parentElement.querySelector('.form-error')) {
       formRequiredItem.parentElement.removeChild(
-        formRequiredItem.parentElement.querySelector('.form__error')
+        formRequiredItem.parentElement.querySelector('.form-error')
       );
     }
   },
@@ -212,6 +234,24 @@ export function formSubmit(options = { validate: true }) {
   }
   // actions after submitting the form
   function formSent(form, responseResult = ``) {
+    // show popup, if popup module is connected and form has setting
+    setTimeout(() => {
+      if (modules.modal) {
+        const modal = form.dataset.modalMessage;
+        modal ? modules.modal.open(modal) : null;
+        if (form.closest('#updatePhoneNumberModal')) {
+          initCountdown(
+            document.querySelector('#verifyPhoneModal [data-countdown]')
+          );
+        }
+        if (form.closest('#updateEmailModal')) {
+          initCountdown(
+            document.querySelector('#verifyEmailModal [data-countdown]')
+          );
+        }
+      }
+    }, 0);
+
     // form submit event
     document.dispatchEvent(
       new CustomEvent('formSent', {

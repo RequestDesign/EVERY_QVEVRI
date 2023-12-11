@@ -48,6 +48,10 @@ import './utils/map.js';
 
 import './utils/simplebar.js';
 
+// ------------------------------- input mask -------------------------------
+
+import './utils/form/input_mask.js';
+
 // --------------------------------- libs -----------------------------------
 
 // select

@@ -3823,64 +3823,146 @@
 			</div>
 		</header>
 
-		<main class="main account-page">
-			<section class="account-page__main">
+		<main class="main account-page account-page_personal-data">
+			<section class="account-page__chapter">
 				<div class="account-page__container container">
-					<div class="account-page__account account-section">
-						<div class="account-section__head">
-							<div class="account-section__head-group">
-								<div class="account-section__user-avatar">
-									<img src="img/icons/avatar.svg" alt="" class="account-section__user-avatar-image" />
+					<div class="account-page__inner">
+						<div class="account-page__group">
+							<button id="show-navbar-btn" type="button" class="account-page__heading tl2">
+								Личные данные
+							</button>
+							<div class="account-page__navbar navbar-account-page">
+								<nav class="navbar-account-page__navigation">
+									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Мои заказы</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Вы заказывали</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Статусы</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">История баллов</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Избранные товары</span></a>
+								</nav>
+								<a href="#" class="navbar-account-page__logout-btn logout-btn txt txt_md">Выйти</a>
+							</div>
+						</div>
+						<div class="account-page__content">
+							<div class="account-page__personal-data personal-data-account">
+								<div class="personal-data-account__main-content">
+									<div class="personal-data-account__main-inner">
+										<div class="personal-data-account__head">
+											<div class="personal-data-account__head-inner">
+												<div class="personal-data-account__user-avatar">
+													<img src="img/icons/avatar.svg" alt="" class="personal-data-account__user-avatar-img" />
+												</div>
+												<div class="personal-data-account__head-info">
+													<span class="personal-data-account__heading tl2">константин Константинопольский</span>
+													<p data-da=".personal-data-account__head,768,last" class="personal-data-account__head-text txt txt_16">
+														Загрузите фото и получите
+														<span class="txt txt_md">100</span> приветственных
+														баллов
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="personal-data-account__body">
+											<div class="personal-data-account__group group-personal-data-account">
+												<span class="group-personal-data-account__heading subtitle">
+													Личные данные
+												</span>
+												<div class="group-personal-data-account__content">
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Фамилия</span>
+														<span class="group-personal-data-account__text txt">Константинопольский</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">дата рождения</span>
+														<span class="group-personal-data-account__text txt">12.11.1999</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Имя</span>
+														<span class="group-personal-data-account__text txt">Константин</span>
+													</div>
+													<div class="group-personal-data-account__item _empty">
+														<span class="group-personal-data-account__subtitle caps caps_md">пол</span>
+													</div>
+													<div class="group-personal-data-account__item _empty">
+														<span class="group-personal-data-account__subtitle caps caps_md">отчество</span>
+													</div>
+												</div>
+											</div>
+											<div class="personal-data-account__group group-personal-data-account">
+												<span class="group-personal-data-account__heading subtitle">
+													Контактные данные
+												</span>
+												<div class="group-personal-data-account__content">
+													<div class="group-personal-data-account__item group-personal-data-account__item_email">
+														<span class="group-personal-data-account__subtitle caps caps_md">E-mail</span>
+														<span class="group-personal-data-account__text txt">constantinopolitan.konsta@mail.ru</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Номер телефона</span>
+														<span class="group-personal-data-account__text txt">+7 (999) 999 99-99</span>
+													</div>
+												</div>
+											</div>
+											<div class="personal-data-account__checkbox">
+												<label class="checkbox">
+													<input checked class="checkbox__input" type="checkbox" value="" name="form[]" />
+													<span class="checkbox__text txt txt_md">Получать чеки по e-mail</span>
+												</label>
+												<div class="personal-data-account__checkbox-hint txt txt_16">
+													Чеки будут приходить на указанную электронную почту
+												</div>
+											</div>
+										</div>
+										<div class="personal-data-account__footer">
+											<a href="#" class="personal-data-account__edit-btn btn-link btn-link_edit txt txt_md">
+												Редактировать профиль
+											</a>
+											<button data-modal="#confirmAccDeletionModal" type="button" class="personal-data-account__delete-btn btn-link btn-link_delete txt txt_md">
+												Удалить аккаунт
+											</button>
+										</div>
+									</div>
 								</div>
-								<span class="account-section__user-name txt txt_md">Константин Константинопольский</span>
-								<div class="account-section__user-cashback user-cashback">
-									<span class="user-cashback__value caps caps_md">5%</span>
-									<div class="user-cashback__hint">
-										<span class="user-cashback__text txt">Ваш статус — Новичок</span>
-										<span class="user-cashback__text txt"><span class="user-cashback__text-content">Кэшбек <span class="cashback-value">5%</span> на все
-												товары</span>
-											<span class="user-cashback__subtext">* кроме акционных</span>
-										</span>
+								<div class="personal-data-account__aside-content">
+									<div class="personal-data-account__status-banner status-banner">
+										<div class="status-banner__text-content">
+											<span class="status-banner__heading tl2">новичок</span>
+											<p class="status-banner__text txt">
+												<span class="status-banner__txt-content">
+													Кэшбек 5%
+													<span class="desktop-only"> на все товары </span>
+												</span>
+												<span class="status-banner__txt-content txt_16">*кроме акционных</span>
+											</p>
+											<a href="#" class="status-banner__link btn btn_icon">
+												<span class="btn__text txt txt_md">Подробнее</span>
+											</a>
+										</div>
+										<div class="status-banner__track">
+											<span data-cash-sum="1200" class="status-banner__current-value txt txt_wide"></span>
+											<div class="status-banner__track-image-wrap">
+												<div class="status-banner__track-image"></div>
+												<div class="status-banner__clip-path-container">
+													<div class="status-banner__track-image status-banner__track-image_red"></div>
+												</div>
+											</div>
+											<div class="status-banner__range">
+												<span data-total-cash-sum="5000" class="status-banner__range-value txt txt_16"></span>
+												<span class="status-banner__range-value txt txt_16">0</span>
+											</div>
+										</div>
+									</div>
+									<div class="personal-data-account__coins-history-banner coins-history-banner">
+										<div class="coins-history-banner__text-content">
+											<span class="coins-history-banner__heading tl2">1200</span>
+											<span class="coins-history-banner__text txt txt_16">Баллов на счёте</span>
+										</div>
+										<a href="#" class="coins-history-banner__link btn btn_icon">
+											<span class="btn__text txt txt_md">История баллов</span>
+										</a>
 									</div>
 								</div>
 							</div>
-							<div class="account-section__user-sum user-sum">
-								<div class="user-sum__track">
-									<span class="user-sum__inner-track"></span>
-								</div>
-								<div class="user-sum__row">
-									<span class="user-sum__current">
-										<span class="user-sum__text txt">Сумма покупок:</span>
-										<span class="user-sum__current-value txt">1 200₽</span>
-									</span>
-									<span class="user-sum__total-value txt">5 000₽</span>
-								</div>
-							</div>
-						</div>
-						<div class="account-section__body">
-							<ul class="account-section__list">
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Личные данные</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Мои заказы</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Вы заказывали</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Статусы</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">История баллов</a>
-								</li>
-								<li class="account-section__link-item">
-									<a href="#" class="account-section__link txt txt_md">Избранные товары</a>
-								</li>
-							</ul>
-						</div>
-						<div class="account-section__footer">
-							<a href="#" class="account-section__logout-btn logout-btn txt txt_md">Выйти</a>
 						</div>
 					</div>
 				</div>

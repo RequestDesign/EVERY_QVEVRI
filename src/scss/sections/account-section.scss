@@ -1,3 +1,88 @@
+.account-page {
+  // .account-page__chapter
+
+  &__chapter {
+    margin-bottom: 16rem;
+    @media (max-width: 48em) {
+      margin-bottom: 20rem;
+    }
+  }
+
+  // .account-page__container
+
+  &__container {
+  }
+
+  // .account-page__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: 2fr 10fr;
+    }
+  }
+
+  // .account-page__content
+
+  &__content {
+  }
+
+  // .account-page__personal-data
+
+  &__personal-data {
+  }
+
+  // .account-page__group
+
+  &__group {
+    @media (max-width: 48em) {
+      position: relative;
+      margin-bottom: 5rem;
+      width: 100%;
+      &._visible-dropdown {
+        .account-page__heading::after {
+          transform: rotate(180deg);
+        }
+        .account-page__navbar {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  // .account-page__heading
+
+  &__heading {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3.5rem;
+    width: 100%;
+    &::after {
+      content: '';
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-image: url(@img/icons/sm-arr.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s ease;
+    }
+    @media (min-width: 48em) {
+      display: none;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+
 .account-section {
   margin-bottom: 23.3rem;
   display: flex;
@@ -164,27 +249,90 @@
   // .account-section__logout-btn
 
   &__logout-btn {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.navbar-account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media (max-width: 48em) {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 2rem);
+    left: -2%;
+    padding: 4rem;
+    align-items: stretch;
+    width: 102%;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
+    background-color: $white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  // .navbar-account-page__navigation
+
+  &__navigation {
     display: flex;
-    align-items: center;
-    column-gap: 1.2rem;
-    color: $gray;
-    &::before {
-      content: '';
-      flex: 0 0 3.2rem;
-      width: 3.2rem;
-      height: 3.2rem;
-      background-image: url(@img/icons/logout.svg);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      margin-bottom: 8rem;
+      align-items: flex-start;
+      row-gap: 2.5rem;
     }
-    @media (max-width: 48em) {
-      column-gap: 1.6rem;
-      &::before {
-        flex: 0 0 5rem;
-        width: 5rem;
-        height: 5rem;
+  }
+
+  // .navbar-account-page__link
+
+  &__link {
+    padding: 3.6rem 0;
+    display: flex;
+    &:not(:last-child) {
+      border-bottom: 1px solid $lightGray;
+    }
+    &._active {
+      .navbar-account-page__link-txt {
+        color: $red;
       }
+    }
+    @media (min-width: 48em) {
+      padding: 0;
+      &:not(:last-child) {
+        border: none;
+      }
+      &._active {
+        &::before {
+          margin-right: 1.6rem;
+          transform: scale(1);
+        }
+      }
+      &::before {
+        content: '';
+        height: 2.4rem;
+        width: 0.3rem;
+        background-color: $red;
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform 0.3s ease, margin-right 0.3s ease;
+      }
+    }
+  }
+
+  // .navbar-account-page__link-txt
+
+  &__link-txt {
+    transition: color 0.3s ease;
+  }
+
+  // .navbar-account-page__logout-btn
+
+  &__logout-btn {
+    @media (max-width: 48em) {
+      display: none;
     }
   }
 }

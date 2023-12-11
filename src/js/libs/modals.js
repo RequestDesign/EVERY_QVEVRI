@@ -1,3 +1,4 @@
+import { modules } from '../modules.js';
 import { bodyLockStatus, bodyLock, bodyUnlock } from '../utils/utils.js';
 
 // --------------------------------------------------------------------------
@@ -392,4 +393,5 @@ class Modal {
     }
   }
 }
-new Modal({});
+
+modules.modal = new Modal({});

@@ -1,0 +1,272 @@
+.personal-data-account {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.6rem;
+  @media (min-width: 48em) {
+    display: grid;
+    grid-template-columns: 1fr 52.7rem;
+    gap: 2rem;
+  }
+
+  // .personal-data-account__main-content
+
+  &__main-content {
+    padding: 6rem;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+    background-color: $white;
+    @media (max-width: 48em) {
+      padding: 10rem 3.6rem;
+      box-shadow: none;
+    }
+  }
+
+  // .personal-data-account__main-inner
+
+  &__main-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .personal-data-account__head
+
+  &__head {
+    margin-bottom: 8rem;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // .personal-data-account__head-inner
+
+  &__head-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 3.2rem;
+    @media (max-width: 48em) {
+      margin-bottom: 2.6rem;
+      column-gap: 2.4rem;
+    }
+  }
+
+  // .personal-data-account__user-avatar
+
+  &__user-avatar {
+    flex: 0 0 12rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    @media (max-width: 48em) {
+      flex: 0 0 13rem;
+      width: 13rem;
+      height: 13rem;
+    }
+  }
+
+  // .personal-data-account__user-avatar-img
+
+  &__user-avatar-img {
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  // .personal-data-account__head-info
+
+  &__head-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .personal-data-account__heading
+
+  &__heading {
+    @media (min-width: 48em) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  // .personal-data-account__head-text
+
+  &__head-text {
+    position: relative;
+    padding-left: 2rem;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: $red;
+    }
+  }
+
+  // .personal-data-account__body
+
+  &__body {
+    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    border-bottom: 2px solid $lightGray;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+      padding-bottom: 10rem;
+      row-gap: 10rem;
+    }
+  }
+
+  // .personal-data-account__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .personal-data-account__checkbox
+
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      row-gap: 0.2rem;
+      .checkbox__text {
+        &::before {
+          flex: 0 0 2.4rem;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+        &::after {
+          top: 0.6rem;
+          left: 0.6rem;
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // .personal-data-account__checkbox-hint
+
+  &__checkbox-hint {
+    padding-left: 3.6rem;
+    @media (max-width: 48em) {
+      padding-left: 6rem;
+    }
+  }
+
+  // .personal-data-account__footer
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    @media (min-width: 48em) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: normal;
+    }
+  }
+
+  // .personal-data-account__edit-btn
+
+  &__edit-btn {
+  }
+
+  // .personal-data-account__delete-btn
+
+  &__delete-btn {
+  }
+
+  // .personal-data-account__aside-content
+
+  &__aside-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    @media (max-width: 48em) {
+      row-gap: 1.6rem;
+    }
+  }
+
+  // .personal-data-account__status-banner
+
+  &__status-banner {
+  }
+
+  // .personal-data-account__coins-history-banner
+
+  &__coins-history-banner {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.group-personal-data-account {
+  display: flex;
+  flex-direction: column;
+
+  // .group-personal-data-account__heading
+
+  &__heading {
+    margin-bottom: 3.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // .group-personal-data-account__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      row-gap: 2.4rem;
+    }
+  }
+
+  // .group-personal-data-account__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &._empty {
+      &::after {
+        @extend .txt;
+        content: '—';
+      }
+    }
+    @media (min-width: 48em) {
+      &_email {
+        .group-personal-data-account__text {
+          max-width: 24rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  // .group-personal-data-account__subtitle
+
+  &__subtitle {
+    margin-bottom: 0.8rem;
+    color: $gray;
+    @media (max-width: 48em) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  // .group-personal-data-account__text
+
+  &__text {
+  }
+}

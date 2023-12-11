@@ -533,3 +533,76 @@ export const tabs = () => {
     }
   }
 };
+
+// set active class
+export const setActiveClass = (
+  event,
+  target,
+  innerTarget,
+  activeClass,
+  isPreventDef
+) => {
+  if (
+    document.querySelector(`${target}.${activeClass}`) &&
+    (!event.target.closest(`${target}`) ||
+      event.target.closest(`${innerTarget}`))
+  ) {
+    if (isPreventDef) {
+      event.preventDefault();
+    }
+    document
+      .querySelector(`${target}.${activeClass}`)
+      .classList.remove(`${activeClass}`);
+  } else if (
+    !document.querySelector(`${target}.${activeClass}`) &&
+    event.target.closest(`${target}`)
+  ) {
+    if (isPreventDef) {
+      event.preventDefault();
+    }
+    event.target.closest(`${target}`).classList.add(`${activeClass}`);
+  }
+};
+
+// countdown
+export const initCountdown = el => {
+  if (el) {
+    let limitMinutes = Number(el.dataset.countdown);
+    let limitSeconds = limitMinutes * 60;
+
+    const start = () => {
+      limitSeconds--;
+      let minutes = Math.floor(limitSeconds / 60);
+      let seconds = limitSeconds % 60;
+
+      if (limitSeconds < 0) {
+        clearInterval(interval);
+        setTimeout(() => {
+          el.textContent =
+            limitMinutes >= 10 ? `${limitMinutes}:00` : `0${limitMinutes}:00`;
+        }, 0);
+        if (el.closest('.btn')) {
+          const btn = el.closest('.btn');
+          btn.removeAttribute('disabled');
+          btn.addEventListener('click', function () {
+            btn.setAttribute('disabled', '');
+            limitSeconds = limitMinutes * 60;
+            initCountdown(el);
+          });
+        }
+        return;
+      }
+
+      if (minutes < 10) {
+        minutes = '0' + minutes;
+      }
+      if (seconds < 10) {
+        seconds = '0' + seconds;
+      }
+
+      el.textContent = minutes + ':' + seconds;
+    };
+
+    const interval = setInterval(start, 1000);
+  }
+};

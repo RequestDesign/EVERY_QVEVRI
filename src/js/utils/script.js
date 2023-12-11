@@ -1,17 +1,129 @@
+// node modules
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+// utils
 import {
   removeClasses,
   bodyLock,
   bodyUnlock,
   bodyLockStatus,
+  setActiveClass,
 } from '../utils/utils.js';
 import { formValidate } from './form/form.js';
 
-window.addEventListener('load', function () {
-  // show page body
-  document.body.style.opacity = 1;
-});
+// --------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
+  // row input
+  const rowInput = document.querySelector('.input-row');
+  if (rowInput) {
+    const inputs = rowInput.querySelectorAll('input');
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('keyup', function () {
+        const value = input.value;
+        const curIndex = Number(input.dataset.index);
+        const nextIndex = curIndex + 1;
+        const prevIndex = curIndex - 1;
+
+        if (value.length === 1 && nextIndex !== inputs.length + 1) {
+          rowInput.querySelector(`[data-index="${nextIndex}"]`).focus();
+        } else if (!value.length && prevIndex !== 0) {
+          rowInput.querySelector(`[data-index="${prevIndex}"]`).focus();
+        }
+      });
+    });
+  }
+
+  // date input
+  const dateInp = document.querySelector('.input_date input');
+  if (dateInp) {
+    dateInp.addEventListener('input', function () {
+      if (!/\d+/.test(dateInp.value)) dateInp.value = '';
+    });
+    dateInp.addEventListener('keyup', function (e) {
+      if (e.keyCode < 47 || e.keyCode > 57) {
+        e.preventDefault();
+      }
+
+      const len = dateInp.value.length;
+
+      if (len !== 1 || len !== 3) {
+        if (dateInp.keyCode == 47) {
+          dateInp.preventDefault();
+        }
+      }
+
+      if (len === 2) {
+        dateInp.value += '.';
+      }
+
+      if (len === 5) {
+        dateInp.value += '.';
+      }
+    });
+  }
+
+  // datepicker
+  const dp = new AirDatepicker('[data-dp]', {
+    visible: true,
+    showOtherMonths: false,
+    selectOtherMonths: false,
+    container: document.querySelector('[data-dp]').parentElement,
+    monthsField: 'months',
+    inline: true,
+    autoClose: true,
+    navTitles: {
+      days: '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+      months:
+        '<span class="air-datepicker-nav--text _active" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+      years:
+        '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text _active" data-show-years>yyyy</span>',
+    },
+    prevHtml:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14 18L6 10L14 2" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    nextHtml:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 2L14 10L6 18" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    position({ $datepicker }) {
+      $datepicker.style.top = `calc(100% + 0.8rem)`;
+    },
+    onSelect: () => {
+      document
+        .querySelector('[data-dp]')
+        .parentElement.classList.add('_filled');
+    },
+  });
+  if (dp) {
+    dp.$customContainer.addEventListener('click', function (e) {
+      const target = e.target;
+
+      if (target.closest('[data-dp-btn]')) {
+        if (!dp.$customContainer.classList.contains('_dp-show')) {
+          dp.$customContainer.classList.add('_dp-show');
+        } else {
+          dp.$customContainer.classList.remove('_dp-show');
+        }
+      }
+    });
+  }
+
+  // cashback status
+  let cashSum = document.querySelector('[data-cash-sum]');
+  let totalCashSum = document.querySelector('[data-total-cash-sum]');
+  if (cashSum && totalCashSum) {
+    const cashSumVal = Number(cashSum.dataset.cashSum);
+    const totalCashSumVal = Number(totalCashSum.dataset.totalCashSum);
+    const percentValue = 100 - (cashSumVal / totalCashSumVal) * 100;
+
+    cashSum.innerHTML = `${cashSumVal}`;
+    totalCashSum.innerHTML = `${totalCashSumVal}`;
+    document.documentElement.setAttribute(
+      'style',
+      `--percentValue: ${percentValue}%`
+    );
+  }
+
   // show header
   if (window.scrollY >= 50) {
     document.documentElement.classList.add('_header-scroll');
@@ -220,6 +332,75 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // console.log(target);
 
+    if (window.innerWidth <= 768) {
+      if (document.querySelector('.user-avatar__inner')) {
+        setActiveClass(
+          e,
+          '.user-avatar__inner',
+          '.user-avatar__wrap',
+          '_active',
+          true
+        );
+      }
+      if (target.closest('#show-navbar-btn')) {
+        target.closest('.account-page__group').classList.add;
+      }
+      if (
+        document.querySelector('.account-page__group._visible-dropdown') &&
+        (target.closest('#show-navbar-btn') ||
+          !target.closest('.account-page__group'))
+      ) {
+        document
+          .querySelector('.account-page__group._visible-dropdown')
+          .classList.remove('_visible-dropdown');
+      } else if (
+        !document.querySelector('.account-page__group._visible-dropdown') &&
+        target.closest('#show-navbar-btn')
+      ) {
+        target
+          .closest('.account-page__group')
+          .classList.add('_visible-dropdown');
+      }
+    }
+
+    if (target.closest('[data-show-months]')) {
+      if (dp.currentView === 'months') {
+        dp.setCurrentView('months');
+      } else {
+        dp.setCurrentView('days');
+      }
+    }
+    if (
+      (!target.closest('[data-dp-btn]') &&
+        !target.closest('.air-datepicker') &&
+        !target.closest('.air-datepicker-nav--title') &&
+        !target.closest('.air-datepicker-nav--text')) ||
+      target.closest('.air-datepicker-cell.-day-')
+    ) {
+      dp.$customContainer.classList.remove('_dp-show');
+    }
+    if (
+      !target.closest('[data-dp-parent]') &&
+      document.querySelector('[data-dp-parent]._focused')
+    ) {
+      document
+        .querySelector('[data-dp-parent]._focused')
+        .classList.remove('_focused');
+    }
+    if (target.closest('[data-show-years]')) {
+      if (dp.currentView === 'years') {
+        dp.setCurrentView('days');
+      } else {
+        dp.setCurrentView('years');
+      }
+    }
+    if (target.closest('.navbar-account-page__link')) {
+      removeClasses(
+        document.querySelectorAll('.navbar-account-page__link'),
+        '_active'
+      );
+      target.closest('.navbar-account-page__link').classList.add('_active');
+    }
     if (
       document.querySelector('.user-cashback._active') &&
       (target.closest('.user-cashback__value') ||
@@ -372,4 +553,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // document events
   document.addEventListener('click', onClickHandler);
+});
+
+window.addEventListener('load', function () {
+  // show page body
+  document.body.style.opacity = 1;
 });

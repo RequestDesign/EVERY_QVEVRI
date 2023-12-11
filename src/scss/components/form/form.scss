@@ -1,3 +1,117 @@
+.form-error {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  color: $red;
+  @media (max-width: 48em) {
+    top: calc(100% + 0.8rem);
+  }
+}
+
+.form-personal-data-account {
+  display: flex;
+  flex-direction: column;
+
+  // .form-personal-data-account__head
+
+  &__head {
+    margin-bottom: 8rem;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .form-personal-data-account__body
+
+  &__body {
+    margin-bottom: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+      row-gap: 10rem;
+    }
+  }
+
+  // .form-personal-data-account__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 48em) {
+      &_pass {
+        .form-personal-data-account__input {
+          grid-column: 1/2;
+          &._verified {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  // .form-personal-data-account__heading
+
+  &__heading {
+    margin-bottom: 4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // .form-personal-data-account__fields
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  // .form-personal-data-account__input
+
+  &__input {
+    height: 3.2rem;
+    @media (max-width: 48em) {
+      height: 6.4rem;
+      &.input_date {
+        order: 1;
+      }
+    }
+  }
+
+  // .form-personal-data-account__options
+
+  &__options {
+    display: flex;
+    column-gap: 2.4rem;
+    @media (max-width: 48em) {
+      column-gap: 6.4rem;
+      order: 1;
+    }
+  }
+
+  // .form-personal-data-account__option
+
+  &__option {
+  }
+
+  // .form-personal-data-account__btn
+
+  &__btn {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+// --------------------------------------------------------------------------
+
 // input
 @import 'input';
 
