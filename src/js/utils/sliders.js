@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade, Controller } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 import { removeClasses } from './utils';
@@ -159,12 +159,17 @@ const initSliders = () => {
     document.querySelectorAll('.shopify-section').forEach(section => {
       const shopifySection = section.dataset.shopifySection;
       new Swiper(`[data-shopify-section="${shopifySection}"] .swiper`, {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Mousewheel],
         slidesPerView: 1.4,
         spaceBetween: 65,
         speed: 800,
         loop: true,
         longSwipes: false,
+        touchRatio: 0.5,
+        mousewheel: {
+          enabled: true,
+          forceToAxis: true,
+        },
 
         // navigation
         navigation: {
@@ -232,15 +237,19 @@ const initSliders = () => {
   }
   if (document.querySelector('.tests__slider')) {
     new Swiper('.tests__slider', {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Mousewheel],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 30,
-      speed: 1000,
+      speed: 600,
       loop: true,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+      },
 
       // navigation
       navigation: {
@@ -290,16 +299,21 @@ const initSliders = () => {
   }
   if (document.querySelector('.collections__slider')) {
     new Swiper('.collections__slider', {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Mousewheel],
       observer: true,
       observeParents: true,
-      speed: 1000,
+      speed: 600,
       loop: true,
       slidesPerView: 1.6,
       spaceBetween: 64,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
       resistance: false,
+      loopPreventsSliding: true,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+      },
 
       // navigation
       navigation: {
@@ -329,6 +343,7 @@ const initSliders = () => {
       // events
       on: {
         afterInit: swiper => {
+          swiper.update();
           changeActiveNum(
             swiper.pagination,
             document.querySelector('.collections__active-number')
@@ -399,7 +414,7 @@ const initSliders = () => {
   }
   if (document.querySelector('.reviews-product__slider')) {
     new Swiper('.reviews-product__slider', {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Mousewheel],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -407,6 +422,10 @@ const initSliders = () => {
       speed: 700,
       loop: true,
       watchSlidesProgress: true,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+      },
 
       // navigation
       navigation: {
@@ -462,7 +481,7 @@ const initSliders = () => {
 const initSlidersOnResize = () => {
   if (document.querySelector('.search-box__slider')) {
     new Swiper('.search-box__slider', {
-      modules: [Navigation, EffectFade],
+      modules: [Navigation, EffectFade, Mousewheel],
       observer: true,
       observeParents: true,
       observeSlideChildren: true,
@@ -470,6 +489,10 @@ const initSlidersOnResize = () => {
       spaceBetween: 50,
       speed: 700,
       loop: true,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+      },
 
       // navigation
       navigation: {

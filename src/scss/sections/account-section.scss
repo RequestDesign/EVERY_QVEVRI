@@ -93,7 +93,6 @@
 // --------------------------------------------------------------------------
 
 .account-section {
-  margin-bottom: 23.3rem;
   display: flex;
   flex-direction: column;
   .header & {
@@ -112,6 +111,66 @@
     visibility: hidden;
     transform: translate(12rem, 1.5rem);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+  @media (max-width: 48em) {
+    position: fixed;
+    z-index: 50;
+    padding: 4rem 2.4rem 21rem 2.4rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(@img/bg.webp);
+    background-color: $white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(110vw);
+    overflow: auto;
+    transition: transform 0.3s ease;
+    ._show-account-menu & {
+      transform: translateX(0);
+    }
+  }
+  @media (min-width: 48em) {
+    &:not(.header &) {
+      display: none;
+    }
+  }
+
+  // .account-section__head-row
+
+  &__head-row {
+    margin-bottom: 6.6rem;
+    display: grid;
+    grid-template-columns: 3.5rem 1fr 3.5rem;
+    align-items: center;
+    @media (min-width: 48em) {
+      display: none;
+    }
+  }
+
+  // .account-section__head-heading
+
+  &__head-heading {
+    grid-column: 2/3;
+    text-align: center;
+  }
+
+  // .account-section__head-close-btn
+
+  &__head-close-btn {
+    margin-bottom: 1.6rem;
+    align-self: flex-end;
+    width: 3.5rem;
+    height: 3.5rem;
+    grid-column: 3/4;
+  }
+
+  // .account-section__head-close-btn-icon
+
+  &__head-close-btn-icon {
+    height: 100%;
+    object-fit: contain;
   }
 
   // .account-section__head
@@ -184,14 +243,11 @@
   // .account-section__body
 
   &__body {
-    margin-bottom: 8rem;
+    margin-bottom: 3.6rem;
     .header & {
       padding: 3.6rem 0;
       border-top: 1px solid $lightGray;
       border-bottom: 1px solid $lightGray;
-    }
-    @media (min-width: 48em) {
-      margin-bottom: 3.6rem;
     }
   }
 

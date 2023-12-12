@@ -752,7 +752,9 @@
   &__heart-btn {
     transform: translate(1rem, -1rem);
     @media (max-width: 48em) {
-      transform: translate(2rem, -1.5rem);
+      &:not(.mainpage__shopify-section &) {
+        transform: translate(2rem, -1.5rem);
+      }
     }
   }
 
@@ -2303,9 +2305,27 @@
 
 .sl-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.5rem;
+  column-gap: 2rem;
+  &:not(&_vertical) {
+    flex-direction: row-reverse;
+    .sl-nav__arrow_prev {
+      transform: rotate(-180deg);
+    }
+  }
+  &_vertical {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    .sl-nav__arrow {
+      &_next {
+        transform: rotate(-90deg);
+      }
+
+      &_prev {
+        transform: rotate(90deg);
+      }
+    }
+  }
 
   // .sl-nav__arrow
 
@@ -2319,24 +2339,9 @@
       flex: 0 0 3.5rem;
       width: 3.5rem;
       height: 3.5rem;
-      &_next {
-        transform: none;
-      }
       &_prev {
         transform: rotate(-180deg);
       }
-    }
-
-    // .sl-nav__arrow_next
-
-    &_next {
-      transform: rotate(-90deg);
-    }
-
-    // .sl-nav__arrow_prev
-
-    &_prev {
-      transform: rotate(90deg);
     }
   }
 
@@ -2432,7 +2437,8 @@
   transition: transform 0.2s ease, opacity 0.3s ease;
   ._menu-opened &,
   ._search-box-opened &,
-  ._show-catalog & {
+  ._show-catalog &,
+  ._show-account-menu & {
     opacity: 0;
     transform: translateY(110%);
   }

@@ -67,11 +67,11 @@
   // .collections__body
 
   &__body {
+    padding-top: 3rem;
     overflow: hidden;
-    width: calc(100vw - 2.4rem);
-    @media (min-width: 48em) {
-      padding-top: 3rem;
-      width: auto;
+    @media (max-width: 48em) {
+      padding: 0;
+      width: calc(100vw - 2.4rem);
     }
   }
 
@@ -100,7 +100,7 @@
 
   &__slide {
     &.swiper-slide {
-      transition: transform 0.8s ease;
+      transition: transform 0.6s ease;
     }
     @media (max-width: 48em) {
       &.swiper-slide {
@@ -132,6 +132,7 @@
 // --------------------------------------------------------------------------
 
 .slide-collections {
+  user-select: none;
   &.swiper-slide {
     height: 58rem;
   }

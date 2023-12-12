@@ -23,6 +23,9 @@ import * as scroll from './utils/scroll.js';
 // header scroll
 scroll.headerScroll();
 
+// page navigation
+scroll.pageNavigation();
+
 // ---------------------------------- form ----------------------------------
 
 import * as forms from './utils/form/form.js';

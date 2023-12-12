@@ -78,7 +78,9 @@
 										<a href="#" class="menu__link menu__link_catalog txt">Каталог</a>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link menu__link_profile txt">Аккаунт</a>
+										<button data-open-account-menu type="button" class="menu__link menu__link_profile txt">
+											Аккаунт
+										</button>
 									</li>
 									<li class="menu__item">
 										<a href="#" class="menu__link menu__link_liked txt">Избранное</a>
@@ -2025,6 +2027,10 @@
 															<a href="#" class="header-catalog__list-link">Санджовезе</a>
 														</li>
 													</ul>
+												</div>
+											</div>
+											<div class="header-catalog__group">
+												<div class="header-catalog__list-wrap">
 													<ul class="header-catalog__list txt">
 														<li class="header-catalog__list-item">
 															<a href="#" class="header-catalog__list-link">Санджовезе</a>
@@ -4115,6 +4121,69 @@
 			</div>
 		</footer>
 
+		<div class="account-section">
+			<div class="account-section__head">
+				<div class="account-section__head-row">
+					<span class="account-section__head-heading txt txt_md">Аккаунт</span>
+					<button data-close-account-menu class="account-section__head-close-btn">
+						<img src="img/icons/cross-gray.svg" alt="" class="header-catalog__head-close-btn-icon" />
+					</button>
+				</div>
+				<div class="account-section__head-group">
+					<div class="account-section__user-avatar">
+						<img src="img/icons/avatar.svg" alt="" class="account-section__user-avatar-image" />
+					</div>
+					<span class="account-section__user-name txt txt_md">Константин Константинопольский</span>
+					<div class="account-section__user-cashback user-cashback">
+						<span class="user-cashback__value caps caps_md">5%</span>
+						<div class="user-cashback__hint">
+							<span class="user-cashback__text txt">Ваш статус — Новичок</span>
+							<span class="user-cashback__text txt"><span class="user-cashback__text-content">Кэшбек <span class="cashback-value">5%</span> на все
+									товары</span>
+								<span class="user-cashback__subtext">* кроме акционных</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="account-section__user-sum user-sum">
+					<div class="user-sum__track">
+						<span class="user-sum__inner-track"></span>
+					</div>
+					<div class="user-sum__row">
+						<span class="user-sum__current">
+							<span class="user-sum__text txt">Сумма покупок:</span>
+							<span class="user-sum__current-value txt">1 200₽</span>
+						</span>
+						<span class="user-sum__total-value txt">5 000₽</span>
+					</div>
+				</div>
+			</div>
+			<div class="account-section__body">
+				<ul class="account-section__list">
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Личные данные</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Мои заказы</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Вы заказывали</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Статусы</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">История баллов</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Избранные товары</a>
+					</li>
+				</ul>
+			</div>
+			<div class="account-section__footer">
+				<a href="#" class="account-section__logout-btn logout-btn txt txt_md">Выйти</a>
+			</div>
+		</div>
 		<div style="height: 0; position: absolute">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
 				<clipPath id="clip-img-mobile">
@@ -4547,7 +4616,7 @@
 					</a>
 				</li>
 				<li class="menu-bar__item _active">
-					<a href="#" class="menu-bar__link">
+					<button data-open-account-menu type="button" class="menu-bar__link">
 						<div class="menu-bar__icon">
 							<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.651 12.3636C15.5568 12.3542 15.4438 12.3542 15.3402 12.3636C13.0986 12.2882 11.3185 10.4495 11.3185 8.18653C11.3185 5.8764 13.1833 4 15.5003 4C17.8078 4 19.6821 5.8764 19.6821 8.18653C19.6727 10.4495 17.8926 12.2882 15.651 12.3636Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -4556,7 +4625,7 @@
 						</div>
 
 						<span class="menu-bar__text caps caps_md">Аккаунт</span>
-					</a>
+					</button>
 				</li>
 				<li class="menu-bar__item">
 					<a href="#" class="menu-bar__link">

@@ -349,6 +349,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.log(target);
 
     if (window.innerWidth <= 768) {
+      if (bodyLockStatus && target.closest('[data-open-account-menu]')) {
+        bodyLock();
+        document.documentElement.classList.add('_show-account-menu');
+        if (document.documentElement.classList.contains('_menu-opened')) {
+          document.documentElement.classList.remove('_menu-opened');
+        }
+      }
+      if (bodyLockStatus && target.closest('[data-close-account-menu]')) {
+        bodyUnlock();
+        document.documentElement.classList.remove('_show-account-menu');
+      }
       if (document.querySelector('.user-avatar__inner')) {
         setActiveClass(
           e,
@@ -548,7 +559,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ) {
       document.documentElement.classList.remove('_search-box-opened');
     }
-    if (target.closest('.menu-bar__item')) {
+    if (
+      target.closest('.menu-bar__link') &&
+      !target.closest('.menu-bar__link').hasAttribute('data-open-account-menu')
+    ) {
       removeClasses(document.querySelectorAll('.menu-bar__item'), '_active');
       target.closest('.menu-bar__item').classList.add('_active');
     }

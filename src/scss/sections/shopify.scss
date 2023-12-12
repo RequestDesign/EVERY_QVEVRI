@@ -105,6 +105,7 @@
   // .shopify-section__slide
 
   &__slide {
+    user-select: none;
     &.swiper-slide {
       transition: opacity 0.4s ease;
       will-change: contents;
