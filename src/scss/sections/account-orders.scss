@@ -124,19 +124,6 @@
 .no-orders-account {
   display: flex;
   flex-direction: column;
-  @media (min-width: 48em) {
-    .shopify-section__head,
-    .shopify-section__text {
-      width: calc(162rem - 25.3rem);
-    }
-    .shopify-section__head {
-      margin-bottom: 2.4rem;
-    }
-    .shopify-section__text {
-      align-self: stretch;
-      text-align: center;
-    }
-  }
 
   // .no-orders-account__hero
 

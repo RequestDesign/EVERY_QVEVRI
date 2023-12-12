@@ -3,6 +3,19 @@
   @media (max-width: 48em) {
     margin-top: 0;
   }
+  @media (min-width: 48em) {
+    .shopify-section__head,
+    .shopify-section__text {
+      width: calc(162rem - 25.3rem);
+    }
+    .shopify-section__head {
+      margin-bottom: 2.4rem;
+    }
+    .shopify-section__text {
+      align-self: stretch;
+      text-align: center;
+    }
+  }
 
   // .account-page__chapter
 

@@ -1,0 +1,154 @@
+.coins-history-account {
+  display: flex;
+  flex-direction: column;
+
+  // .coins-history-account__hero
+
+  &__hero {
+    margin-bottom: 16rem;
+    @media (max-width: 48em) {
+      margin-bottom: 20rem;
+    }
+  }
+
+  // .coins-history-account__navigation
+
+  &__navigation {
+    margin-bottom: 4.8rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  // .coins-history-account__main
+
+  &__main {
+  }
+
+  // .coins-history-account__table-wrap
+
+  &__table-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .coins-history-account__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: 1fr 39rem;
+      column-gap: 2rem;
+    }
+  }
+
+  // .coins-history-account__quantity
+
+  &__quantity {
+    margin-bottom: 1.8rem;
+    color: $gray;
+    @media (max-width: 48em) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  // .coins-history-account__table
+
+  &__table {
+    @media (max-width: 48em) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // .coins-history-account__aside-content
+
+  &__aside-content {
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+      order: 1;
+    }
+  }
+
+  // .coins-history-account__coins-banner
+
+  &__coins-banner {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.table-coins-history-account {
+  @media (min-width: 48em) {
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+  }
+
+  // .table-coins-history-account__head
+
+  &__head {
+    display: none;
+    @media (min-width: 48em) {
+      padding: 2.4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 2fr) 1fr;
+      background-color: $lightGray;
+    }
+  }
+
+  // .table-coins-history-account__subtitle
+
+  &__subtitle {
+    @media (max-width: 48em) {
+      color: $gray;
+    }
+  }
+
+  // .table-coins-history-account__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .table-coins-history-account__group
+
+  &__group {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    border-bottom: 1px solid $lightGray;
+    background-color: $white;
+    @media (min-width: 48em) {
+      padding: 2.4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 2fr) 1fr;
+      row-gap: normal;
+    }
+  }
+
+  // .table-coins-history-account__text-wrap
+
+  &__text-wrap {
+    @media (max-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .table-coins-history-account__text
+
+  &__text {
+    span {
+      color: $lightGray;
+    }
+    &.red {
+      color: $red;
+    }
+    @media (max-width: 48em) {
+      justify-self: end;
+    }
+  }
+}
