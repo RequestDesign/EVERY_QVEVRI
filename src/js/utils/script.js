@@ -66,36 +66,35 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // datepicker
+  const dp = new AirDatepicker('[data-dp]', {
+    visible: true,
+    showOtherMonths: false,
+    selectOtherMonths: false,
+    container: document.querySelector('[data-dp]').parentElement,
+    monthsField: 'months',
+    inline: true,
+    autoClose: true,
+    navTitles: {
+      days: '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+      months:
+        '<span class="air-datepicker-nav--text _active" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+      years:
+        '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text _active" data-show-years>yyyy</span>',
+    },
+    prevHtml:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14 18L6 10L14 2" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    nextHtml:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 2L14 10L6 18" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    position({ $datepicker }) {
+      $datepicker.style.top = `calc(100% + 0.8rem)`;
+    },
+    onSelect: () => {
+      document
+        .querySelector('[data-dp]')
+        .parentElement.classList.add('_filled');
+    },
+  });
   if (document.querySelector('[data-dp]')) {
-    const dp = new AirDatepicker('[data-dp]', {
-      visible: true,
-      showOtherMonths: false,
-      selectOtherMonths: false,
-      container: document.querySelector('[data-dp]').parentElement,
-      monthsField: 'months',
-      inline: true,
-      autoClose: true,
-      navTitles: {
-        days: '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
-        months:
-          '<span class="air-datepicker-nav--text _active" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
-        years:
-          '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text _active" data-show-years>yyyy</span>',
-      },
-      prevHtml:
-        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14 18L6 10L14 2" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-      nextHtml:
-        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 2L14 10L6 18" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-      position({ $datepicker }) {
-        $datepicker.style.top = `calc(100% + 0.8rem)`;
-      },
-      onSelect: () => {
-        document
-          .querySelector('[data-dp]')
-          .parentElement.classList.add('_filled');
-      },
-    });
-
     dp.$customContainer.addEventListener('click', function (e) {
       const target = e.target;
 
