@@ -8,7 +8,7 @@ import { rem } from './utils';
 // --------------------------------------------------------------------------
 
 let categoriesSlider = null;
-let catalogCategoriesSlider = null;
+let tabsSlider = null;
 
 const changeSlideNum = (swiper, pagination, target) => {
   const slides = swiper.slides;
@@ -186,8 +186,16 @@ const initSliders = () => {
         // breakpoints
         breakpoints: {
           768: {
-            slidesPerView: document.querySelector('.catalog-page') ? 5 : 4,
-            spaceBetween: document.querySelector('.catalog-page') ? 90 : 137,
+            slidesPerView:
+              document.querySelector('.catalog-page') ||
+              document.querySelector('.account-page_no-orders')
+                ? 5
+                : 4,
+            spaceBetween:
+              document.querySelector('.catalog-page') ||
+              document.querySelector('.account-page_no-orders')
+                ? 90
+                : 137,
           },
         },
 
@@ -479,8 +487,8 @@ const initSlidersOnResize = () => {
     });
   }
   if (document.querySelector('.tabs.swiper')) {
-    if (window.innerWidth <= 768 && !catalogCategoriesSlider) {
-      catalogCategoriesSlider = new Swiper('.tabs.swiper', {
+    if (window.innerWidth <= 768 && !tabsSlider) {
+      tabsSlider = new Swiper('.tabs.swiper', {
         observer: true,
         observeParents: true,
         slidesPerView: 'auto',
@@ -489,9 +497,9 @@ const initSlidersOnResize = () => {
         slideClass: 'tab',
         wrapperClass: 'tabs-wrap',
       });
-    } else if (window.innerWidth > 768 && catalogCategoriesSlider) {
-      catalogCategoriesSlider.destroy();
-      catalogCategoriesSlider = null;
+    } else if (window.innerWidth > 768 && tabsSlider) {
+      tabsSlider.destroy();
+      tabsSlider = null;
     }
   }
 };

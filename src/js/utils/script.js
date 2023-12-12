@@ -226,6 +226,21 @@ document.addEventListener('DOMContentLoaded', function () {
       '.catalog__card',
       '.menu-product-card__preview'
     );
+    relocateDOMElements(
+      document.querySelectorAll('.order-card__label'),
+      '.order-card',
+      '.order-card__group_s'
+    );
+    relocateDOMElements(
+      document.querySelectorAll('.order-product-card__quantity'),
+      '.order-product-card',
+      '.order-product-card__group'
+    );
+    relocateDOMElements(
+      document.querySelectorAll('.order-product-card__price-wrap'),
+      '.order-product-card',
+      '.order-product-card__group'
+    );
   }
 
   // show filters selections

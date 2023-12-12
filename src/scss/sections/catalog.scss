@@ -204,7 +204,6 @@
 // --------------------------------------------------------------------------
 
 .categories-catalog {
-  width: calc(100% + 2.4rem);
   &.swiper {
     padding-bottom: 2px;
   }
@@ -222,7 +221,6 @@
   // .categories-catalog__list
 
   &__list {
-    padding-right: 2.4rem;
     display: flex;
     align-items: center;
     @media (min-width: 48em) {

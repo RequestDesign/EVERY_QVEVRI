@@ -213,7 +213,8 @@ body::after {
     @media (max-width: 48em) {
       margin-bottom: 6.4rem;
       max-width: 48rem;
-      .txt-info-modal_confirm-acc-deletion & {
+      .txt-info-modal_confirm-acc-deletion &,
+      .txt-info-modal_cancel-order & {
         max-width: 57rem;
       }
     }

@@ -1,4 +1,9 @@
 .account-page {
+  margin-top: 5rem;
+  @media (max-width: 48em) {
+    margin-top: 0;
+  }
+
   // .account-page__chapter
 
   &__chapter {
@@ -20,7 +25,8 @@
     flex-direction: column;
     @media (min-width: 48em) {
       display: grid;
-      grid-template-columns: 2fr 10fr;
+      grid-template-columns: 25.3rem 1fr;
+      column-gap: 2rem;
     }
   }
 
@@ -41,6 +47,9 @@
       position: relative;
       margin-bottom: 5rem;
       width: 100%;
+      .account-page_no-orders & {
+        margin-bottom: 2rem;
+      }
       &._visible-dropdown {
         .account-page__heading::after {
           transform: rotate(180deg);
@@ -262,10 +271,10 @@
     position: absolute;
     z-index: 2;
     top: calc(100% + 2rem);
-    left: -2%;
+    left: 0;
     padding: 4rem;
     align-items: stretch;
-    width: 102%;
+    width: 100%;
     box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
     background-color: $white;
     opacity: 0;
