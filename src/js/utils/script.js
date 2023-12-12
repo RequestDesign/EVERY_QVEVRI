@@ -214,16 +214,16 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.innerWidth <= 768) {
     relocateDOMElements(
       document.querySelectorAll(
-        '.catalog__card.menu-product-card_grid-view .menu-product-card__heart-btn'
+        '.menu-product-card_grid-view .menu-product-card__heart-btn'
       ),
-      '.catalog__card',
+      '.menu-product-card_grid-view',
       '.menu-product-card__actions'
     );
     relocateDOMElements(
       document.querySelectorAll(
-        '.catalog__card.menu-product-card_grid-view .menu-product-card__badges'
+        '.menu-product-card_grid-view .menu-product-card__badges'
       ),
-      '.catalog__card',
+      '.menu-product-card_grid-view',
       '.menu-product-card__preview'
     );
     relocateDOMElements(
