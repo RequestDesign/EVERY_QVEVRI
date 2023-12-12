@@ -1,5 +1,4 @@
 // get hash
-// get hash
 export const getHash = () => {
   if (location.hash) {
     return location.hash.replace('#', '');
@@ -225,120 +224,119 @@ export const dataMediaQueries = (array, dataSetValue) => {
   }
 };
 
-// spoilers
-export const spoilers = () => {
-  const spoilersArray = document.querySelectorAll('[data-spoilers]');
-  if (spoilersArray.length > 0) {
-    // get regular spoilers
-    const spoilersRegular = Array.from(spoilersArray).filter(function (
+// accordion
+export const accordion = () => {
+  const accordionItems = document.querySelectorAll('[data-accordion]');
+
+  if (accordionItems.length) {
+    const initAccordion = (accordionItems, matchMedia = false) => {
+      accordionItems.forEach(accordionGroup => {
+        accordionGroup = matchMedia ? accordionGroup.item : accordionGroup;
+        if (matchMedia.matches || !matchMedia) {
+          accordionGroup.classList.add('_accordion-init');
+          initAccordionBody(accordionGroup);
+          accordionGroup.addEventListener('click', setAccordionActions);
+        } else {
+          accordionGroup.classList.remove('_accordion-init');
+          initAccordionBody(accordionGroup, false);
+          accordionGroup.removeEventListener('click', setAccordionActions);
+        }
+      });
+    };
+    const initAccordionBody = (accordionGroup, hideAccordionBody = true) => {
+      let titles = accordionGroup.querySelectorAll('[data-accordion-item]');
+      if (titles.length) {
+        titles = Array.from(titles).filter(
+          item => item.closest('[data-accordion]') === accordionGroup
+        );
+        titles.forEach(title => {
+          if (hideAccordionBody) {
+            title.removeAttribute('tabindex');
+            if (!title.classList.contains('_accordion-active')) {
+              title.nextElementSibling.hidden = true;
+            }
+          } else {
+            title.setAttribute('tabindex', '-1');
+            title.nextElementSibling.hidden = false;
+          }
+        });
+      }
+    };
+    const setAccordionActions = e => {
+      const target = e.target;
+      if (target.closest('[data-accordion-item]')) {
+        const title = target.closest('[data-accordion-item]');
+        const group = title.closest('[data-accordion]');
+        const isOneActiveItem = group.hasAttribute('data-accordion-one-active');
+        const accordionSpeed = group.dataset.accordionSpeed
+          ? parseInt(group.dataset.accordionSpeed)
+          : 500;
+
+        if (!group.querySelectorAll('._slide').length) {
+          if (
+            isOneActiveItem &&
+            !title.classList.contains('_accordion-active')
+          ) {
+            hideAccordionBody(group);
+          }
+          title.classList.toggle('_accordion-active');
+          _slideToggle(title.nextElementSibling, accordionSpeed);
+        }
+        e.preventDefault();
+      }
+    };
+    const hideAccordionBody = accordionGroup => {
+      const activeTitle = accordionGroup.querySelector(
+        '[data-accordion-item]._accordion-active'
+      );
+      const accordionSpeed = accordionGroup.dataset.accordionSpeed
+        ? parseInt(accordionGroup.dataset.accordionSpeed)
+        : 500;
+      if (activeTitle && !accordionGroup.querySelectorAll('._slide').length) {
+        activeTitle.classList.remove('_accordion-active');
+        _slideUp(activeTitle.nextElementSibling, accordionSpeed);
+      }
+    };
+    const accordionClose = document.querySelectorAll('[data-accordion-close]');
+    if (accordionClose.length) {
+      document.addEventListener('click', function (e) {
+        const target = e.target;
+        if (!target.closest('[data-accordion]')) {
+          accordionClose.forEach(accordionItemClose => {
+            const group = accordionItemClose.closest('[data-accordion]');
+            const speed = spollersBlock.dataset.accordionSpeed
+              ? parseInt(group.dataset.accordionSpeed)
+              : 500;
+            accordionItemClose.classList.remove('_accordion-active');
+            _slideUp(accordionItemClose.nextElementSibling, speed);
+          });
+        }
+      });
+    }
+
+    const regItems = Array.from(accordionItems).filter(function (
       item,
       index,
       self
     ) {
-      return !item.dataset.spoilers.split(',')[0];
+      return !item.dataset.accordion.split(',')[0];
     });
-    // regular spoilers initialization
-    if (spoilersRegular.length) {
-      initSpoilers(spoilersRegular);
+
+    // init regular accordion items
+    if (regItems.length) {
+      initAccordion(regItems);
     }
-    // get spoilers with media queries
-    let mdQueriesArray = dataMediaQueries(spoilersArray, 'spoilers');
+
+    // get accordion items with media queries
+    const mdQueriesArray = dataMediaQueries(accordionItems, 'accordion');
+
     if (mdQueriesArray && mdQueriesArray.length) {
       mdQueriesArray.forEach(mdQueriesItem => {
         // event
         mdQueriesItem.matchMedia.addEventListener('change', function () {
-          initSpoilers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+          initAccordion(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
-        initSpoilers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-      });
-    }
-    // initialization
-    function initSpoilers(spoilersArray, matchMedia = false) {
-      spoilersArray.forEach(spoilersBlock => {
-        spoilersBlock = matchMedia ? spoilersBlock.item : spoilersBlock;
-        if (matchMedia.matches || !matchMedia) {
-          spoilersBlock.classList.add('_spoiler-init');
-          initSpoilerBody(spoilersBlock);
-          spoilersBlock.addEventListener('click', setSpoilerAction);
-        } else {
-          spoilersBlock.classList.remove('_spoiler-init');
-          initSpoilerBody(spoilersBlock, false);
-          spoilersBlock.removeEventListener('click', setSpoilerAction);
-        }
-      });
-    }
-    // content
-    function initSpoilerBody(spoilersBlock, hideSpoilerBody = true) {
-      let spoilerTitles = spoilersBlock.querySelectorAll('[data-spoiler]');
-      if (spoilerTitles.length) {
-        spoilerTitles = Array.from(spoilerTitles).filter(
-          item => item.closest('[data-spoilers]') === spoilersBlock
-        );
-        spoilerTitles.forEach(spoilerTitle => {
-          if (hideSpoilerBody) {
-            spoilerTitle.removeAttribute('tabindex');
-            if (!spoilerTitle.classList.contains('_spoiler-active')) {
-              spoilerTitle.nextElementSibling.hidden = true;
-            }
-          } else {
-            spoilerTitle.setAttribute('tabindex', '-1');
-            spoilerTitle.nextElementSibling.hidden = false;
-          }
-        });
-      }
-    }
-    function setSpoilerAction(e) {
-      const el = e.target;
-      if (el.closest('[data-spoiler]')) {
-        const spoilerTitle = el.closest('[data-spoiler]');
-        const spoilersBlock = spoilerTitle.closest('[data-spoilers]');
-        const oneSpoiler = spoilersBlock.hasAttribute('data-one-spoiler');
-        const spoilerSpeed = spoilersBlock.dataset.spoilersSpeed
-          ? parseInt(spoilersBlock.dataset.spoilersSpeed)
-          : 500;
-        if (!spoilersBlock.querySelectorAll('._slide').length) {
-          if (
-            oneSpoiler &&
-            !spoilerTitle.classList.contains('_spoiler-active')
-          ) {
-            hideSpoilersBody(spoilersBlock);
-          }
-          spoilerTitle.classList.toggle('_spoiler-active');
-          _slideToggle(spoilerTitle.nextElementSibling, spoilerSpeed);
-        }
-        e.preventDefault();
-      }
-    }
-    function hideSpoilersBody(spoilersBlock) {
-      const spoilerActiveTitle = spoilersBlock.querySelector(
-        '[data-spoiler]._spoiler-active'
-      );
-      const spoilerSpeed = spoilersBlock.dataset.spoilersSpeed
-        ? parseInt(spoilersBlock.dataset.spoilersSpeed)
-        : 500;
-      if (
-        spoilerActiveTitle &&
-        !spoilersBlock.querySelectorAll('._slide').length
-      ) {
-        spoilerActiveTitle.classList.remove('_spoiler-active');
-        _slideUp(spoilerActiveTitle.nextElementSibling, spoilerSpeed);
-      }
-    }
-    // closing on click outside the spoiler
-    const spoilersClose = document.querySelectorAll('[data-spoiler-close]');
-    if (spoilersClose.length) {
-      document.addEventListener('click', function (e) {
-        const el = e.target;
-        if (!el.closest('[data-spoilers]')) {
-          spoilersClose.forEach(spoilerClose => {
-            const spoilersBlock = spoilerClose.closest('[data-spoilers]');
-            const spoilerSpeed = spollersBlock.dataset.spoilersSpeed
-              ? parseInt(spoilersBlock.dataset.spoilersSpeed)
-              : 500;
-            spoilerClose.classList.remove('_spoiler-active');
-            _slideUp(spoilerClose.nextElementSibling, spoilerSpeed);
-          });
-        }
+        initAccordion(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
       });
     }
   }
@@ -379,63 +377,18 @@ export const showmore = () => {
   }
 };
 
+// set hash
+export const setHash = hash => {
+  hash = hash ? `#${hash}` : window.location.href.split('#')[0];
+  history.pushState('', '', hash);
+};
+
 // tabs
 export const tabs = () => {
   const tabs = document.querySelectorAll('[data-tabs]');
   let tabsActiveHash = [];
 
-  if (tabs.length > 0) {
-    const hash = getHash();
-    if (hash && hash.startsWith('tab-')) {
-      tabsActiveHash = hash.replace('tab-', '').split('-');
-    }
-    tabs.forEach((tabsBlock, index) => {
-      tabsBlock.classList.add('_tab-init');
-      tabsBlock.setAttribute('data-tabs-index', index);
-      tabsBlock.addEventListener('click', setTabsAction);
-      initTabs(tabsBlock);
-    });
-
-    // get spoilers with media queries
-    let mdQueriesArray = dataMediaQueries(tabs, 'tabs');
-    if (mdQueriesArray && mdQueriesArray.length) {
-      mdQueriesArray.forEach(mdQueriesItem => {
-        // event
-        mdQueriesItem.matchMedia.addEventListener('change', function () {
-          setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-        });
-        setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-      });
-    }
-  }
-  // setting title positions
-  function setTitlePosition(tabsMediaArray, matchMedia) {
-    tabsMediaArray.forEach(tabsMediaItem => {
-      tabsMediaItem = tabsMediaItem.item;
-      let tabsTitles = tabsMediaItem.querySelector('[data-tabs-titles]');
-      let tabsTitleItems = tabsMediaItem.querySelectorAll('[data-tabs-title]');
-      let tabsContent = tabsMediaItem.querySelector('[data-tabs-body]');
-      let tabsContentItems = tabsMediaItem.querySelectorAll('[data-tabs-item]');
-      tabsTitleItems = Array.from(tabsTitleItems).filter(
-        item => item.closest('[data-tabs]') === tabsMediaItem
-      );
-      tabsContentItems = Array.from(tabsContentItems).filter(
-        item => item.closest('[data-tabs]') === tabsMediaItem
-      );
-      tabsContentItems.forEach((tabsContentItem, index) => {
-        if (matchMedia.matches) {
-          tabsContent.append(tabsTitleItems[index]);
-          tabsContent.append(tabsContentItem);
-          tabsMediaItem.classList.add('_tab-spoller');
-        } else {
-          tabsTitles.append(tabsTitleItems[index]);
-          tabsMediaItem.classList.remove('_tab-spoller');
-        }
-      });
-    });
-  }
-  // content
-  function initTabs(tabsBlock) {
+  const init = tabsBlock => {
     let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*');
     let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
     const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
@@ -465,20 +418,12 @@ export const tabs = () => {
           !tabsTitles[index].classList.contains('_active');
       });
     }
-  }
-  function setTabsStatus(tabsBlock) {
+  };
+  const setStatus = tabsBlock => {
     let tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
     let tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]');
     const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
-    function isTabsAnamate(tabsBlock) {
-      if (tabsBlock.hasAttribute('data-tabs-animate')) {
-        return tabsBlock.dataset.tabsAnimate > 0
-          ? Number(tabsBlock.dataset.tabsAnimate)
-          : 500;
-      }
-    }
-    const tabsBlockAnimate = isTabsAnamate(tabsBlock);
-    if (tabsContent.length > 0) {
+    if (tabsContent.length) {
       const isHash = tabsBlock.hasAttribute('data-tabs-hash');
       tabsContent = Array.from(tabsContent).filter(
         item => item.closest('[data-tabs]') === tabsBlock
@@ -488,28 +433,20 @@ export const tabs = () => {
       );
       tabsContent.forEach((tabsContentItem, index) => {
         if (tabsTitles[index].classList.contains('_active')) {
-          if (tabsBlockAnimate) {
-            _slideDown(tabsContentItem, tabsBlockAnimate);
-          } else {
-            tabsContentItem.hidden = false;
-          }
+          tabsContentItem.hidden = false;
           if (isHash && !tabsContentItem.closest('.modal')) {
             setHash(`tab-${tabsBlockIndex}-${index}`);
           }
         } else {
-          if (tabsBlockAnimate) {
-            _slideUp(tabsContentItem, tabsBlockAnimate);
-          } else {
-            tabsContentItem.hidden = true;
-          }
+          tabsContentItem.hidden = true;
         }
       });
     }
-  }
-  function setTabsAction(e) {
-    const el = e.target;
-    if (el.closest('[data-tabs-title]')) {
-      const tabTitle = el.closest('[data-tabs-title]');
+  };
+  const setActions = e => {
+    const target = e.target;
+    if (target.closest('[data-tabs-title]')) {
+      const tabTitle = target.closest('[data-tabs-title]');
       const tabsBlock = tabTitle.closest('[data-tabs]');
       if (
         !tabTitle.classList.contains('_active') &&
@@ -527,10 +464,23 @@ export const tabs = () => {
           ? tabActiveTitle[0].classList.remove('_active')
           : null;
         tabTitle.classList.add('_active');
-        setTabsStatus(tabsBlock);
+        setStatus(tabsBlock);
       }
       e.preventDefault();
     }
+  };
+
+  if (tabs.length) {
+    const hash = getHash();
+    if (hash && hash.startsWith('tab-')) {
+      tabsActiveHash = hash.replace('tab-', '').split('-');
+    }
+    tabs.forEach((tabsBlock, index) => {
+      tabsBlock.classList.add('_tab-init');
+      tabsBlock.setAttribute('data-tabs-index', index);
+      tabsBlock.addEventListener('click', setActions);
+      init(tabsBlock);
+    });
   }
 };
 

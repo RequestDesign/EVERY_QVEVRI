@@ -7,8 +7,8 @@ import * as utils from './utils/utils.js';
 // menu
 utils.menuInit();
 
-// spoilers
-utils.spoilers();
+// accordion
+utils.accordion();
 
 // showmore
 utils.showmore();

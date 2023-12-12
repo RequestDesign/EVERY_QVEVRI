@@ -66,35 +66,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // datepicker
-  const dp = new AirDatepicker('[data-dp]', {
-    visible: true,
-    showOtherMonths: false,
-    selectOtherMonths: false,
-    container: document.querySelector('[data-dp]').parentElement,
-    monthsField: 'months',
-    inline: true,
-    autoClose: true,
-    navTitles: {
-      days: '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
-      months:
-        '<span class="air-datepicker-nav--text _active" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
-      years:
-        '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text _active" data-show-years>yyyy</span>',
-    },
-    prevHtml:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14 18L6 10L14 2" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    nextHtml:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 2L14 10L6 18" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    position({ $datepicker }) {
-      $datepicker.style.top = `calc(100% + 0.8rem)`;
-    },
-    onSelect: () => {
-      document
-        .querySelector('[data-dp]')
-        .parentElement.classList.add('_filled');
-    },
-  });
-  if (dp) {
+  if (document.querySelector('[data-dp]')) {
+    const dp = new AirDatepicker('[data-dp]', {
+      visible: true,
+      showOtherMonths: false,
+      selectOtherMonths: false,
+      container: document.querySelector('[data-dp]').parentElement,
+      monthsField: 'months',
+      inline: true,
+      autoClose: true,
+      navTitles: {
+        days: '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+        months:
+          '<span class="air-datepicker-nav--text _active" data-show-months>MMMM</span> <span class="air-datepicker-nav--text" data-show-years>yyyy</span>',
+        years:
+          '<span class="air-datepicker-nav--text" data-show-months>MMMM</span> <span class="air-datepicker-nav--text _active" data-show-years>yyyy</span>',
+      },
+      prevHtml:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14 18L6 10L14 2" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      nextHtml:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 2L14 10L6 18" stroke="#303033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      position({ $datepicker }) {
+        $datepicker.style.top = `calc(100% + 0.8rem)`;
+      },
+      onSelect: () => {
+        document
+          .querySelector('[data-dp]')
+          .parentElement.classList.add('_filled');
+      },
+    });
+
     dp.$customContainer.addEventListener('click', function (e) {
       const target = e.target;
 
@@ -362,38 +363,40 @@ document.addEventListener('DOMContentLoaded', function () {
           .classList.add('_visible-dropdown');
       }
     }
+    if (document.querySelector('[data-dp]')) {
+      if (
+        (!target.closest('[data-dp-btn]') &&
+          !target.closest('.air-datepicker') &&
+          !target.closest('.air-datepicker-nav--title') &&
+          !target.closest('.air-datepicker-nav--text')) ||
+        target.closest('.air-datepicker-cell.-day-')
+      ) {
+        dp.$customContainer.classList.remove('_dp-show');
+      }
+      if (
+        !target.closest('[data-dp-parent]') &&
+        document.querySelector('[data-dp-parent]._focused')
+      ) {
+        document
+          .querySelector('[data-dp-parent]._focused')
+          .classList.remove('_focused');
+      }
+      if (target.closest('[data-show-months]')) {
+        if (dp.currentView === 'months') {
+          dp.setCurrentView('months');
+        } else {
+          dp.setCurrentView('days');
+        }
+      }
+      if (target.closest('[data-show-years]')) {
+        if (dp.currentView === 'years') {
+          dp.setCurrentView('days');
+        } else {
+          dp.setCurrentView('years');
+        }
+      }
+    }
 
-    if (target.closest('[data-show-months]')) {
-      if (dp.currentView === 'months') {
-        dp.setCurrentView('months');
-      } else {
-        dp.setCurrentView('days');
-      }
-    }
-    if (
-      (!target.closest('[data-dp-btn]') &&
-        !target.closest('.air-datepicker') &&
-        !target.closest('.air-datepicker-nav--title') &&
-        !target.closest('.air-datepicker-nav--text')) ||
-      target.closest('.air-datepicker-cell.-day-')
-    ) {
-      dp.$customContainer.classList.remove('_dp-show');
-    }
-    if (
-      !target.closest('[data-dp-parent]') &&
-      document.querySelector('[data-dp-parent]._focused')
-    ) {
-      document
-        .querySelector('[data-dp-parent]._focused')
-        .classList.remove('_focused');
-    }
-    if (target.closest('[data-show-years]')) {
-      if (dp.currentView === 'years') {
-        dp.setCurrentView('days');
-      } else {
-        dp.setCurrentView('years');
-      }
-    }
     if (target.closest('.navbar-account-page__link')) {
       removeClasses(
         document.querySelectorAll('.navbar-account-page__link'),
