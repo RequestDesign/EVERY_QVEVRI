@@ -71,7 +71,7 @@
     overflow: hidden;
     @media (max-width: 48em) {
       padding: 0;
-      width: calc(100vw - 2.4rem);
+      width: calc(100vw + 25.6rem);
     }
   }
 
@@ -99,11 +99,14 @@
   // .collections__slide
 
   &__slide {
-    &.swiper-slide {
-      transition: transform 0.6s ease, opacity 0.6s ease;
+    @media (min-width: 48em) {
+      &.swiper-slide {
+        transition: transform 0.6s ease, opacity 0.6s ease;
+      }
     }
     @media (max-width: 48em) {
       &.swiper-slide {
+        width: 42rem;
         transition: opacity 0.4s ease;
         &:not(&.swiper-slide-active) {
           opacity: 0.5;

@@ -305,17 +305,10 @@ const initSliders = () => {
       modules: [Navigation, Pagination, Mousewheel],
       speed: 600,
       loop: true,
-      slidesPerView: 1.6,
+      slidesPerView: 2,
       spaceBetween: 64,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
-      resistance: false,
-      loopPreventsSliding: true,
-      followFinger: true,
-      mousewheel: {
-        enabled: true,
-        forceToAxis: true,
-      },
 
       // navigation
       navigation: {
@@ -363,56 +356,6 @@ const initSliders = () => {
         },
       },
     });
-  }
-  if (document.querySelector('.categories__slider')) {
-    if (window.innerWidth <= 768 && !categoriesSlider) {
-      categoriesSlider = new Swiper('.categories__slider', {
-        modules: [Navigation, Pagination],
-        observer: true,
-        observeParents: true,
-        slidesPerView: 2,
-        spaceBetween: rem(0.8),
-        speed: 1000,
-        loop: true,
-
-        // navigation
-        navigation: {
-          prevEl: '.categories .sl-nav__arrow_prev',
-          nextEl: '.categories .sl-nav__arrow_next',
-        },
-
-        // pagination
-        pagination: {
-          el: '.categories .sl-pagination',
-          clickable: true,
-          renderBullet: function (index, className) {
-            return (
-              '<span class="' +
-              className +
-              '">' +
-              `${index + 1 < 10 ? '0' : ''}` +
-              (index + 1) +
-              '</span>'
-            );
-          },
-        },
-
-        // events
-        on: {
-          afterInit: swiper => {
-            setTimeout(() => {
-              initDynamicPagination(swiper);
-            }, 0);
-          },
-          slideChangeTransitionStart: swiper => {
-            initDynamicPagination(swiper);
-          },
-        },
-      });
-    } else if (window.innerWidth > 768 && categoriesSlider) {
-      categoriesSlider.destroy();
-      categoriesSlider = null;
-    }
   }
   if (document.querySelector('.reviews-product__slider')) {
     new Swiper('.reviews-product__slider', {
@@ -481,6 +424,56 @@ const initSliders = () => {
   }
 };
 const initSlidersOnResize = () => {
+  if (document.querySelector('.categories__slider')) {
+    if (window.innerWidth <= 768 && !categoriesSlider) {
+      categoriesSlider = new Swiper('.categories__slider', {
+        modules: [Navigation, Pagination],
+        observer: true,
+        observeParents: true,
+        slidesPerView: 2,
+        spaceBetween: rem(0.8),
+        speed: 1000,
+        loop: true,
+
+        // navigation
+        navigation: {
+          prevEl: '.categories .sl-nav__arrow_prev',
+          nextEl: '.categories .sl-nav__arrow_next',
+        },
+
+        // pagination
+        pagination: {
+          el: '.categories .sl-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              '">' +
+              `${index + 1 < 10 ? '0' : ''}` +
+              (index + 1) +
+              '</span>'
+            );
+          },
+        },
+
+        // events
+        on: {
+          afterInit: swiper => {
+            setTimeout(() => {
+              initDynamicPagination(swiper);
+            }, 0);
+          },
+          slideChangeTransitionStart: swiper => {
+            initDynamicPagination(swiper);
+          },
+        },
+      });
+    } else if (window.innerWidth > 768 && categoriesSlider) {
+      categoriesSlider.destroy();
+      categoriesSlider = null;
+    }
+  }
   if (document.querySelector('.search-box__slider')) {
     new Swiper('.search-box__slider', {
       modules: [Navigation, EffectFade, Mousewheel],
