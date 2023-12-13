@@ -166,6 +166,7 @@ const initSliders = () => {
         loop: true,
         longSwipes: false,
         touchRatio: 0.5,
+        followFinger: true,
         mousewheel: {
           enabled: true,
           forceToAxis: true,
@@ -244,7 +245,7 @@ const initSliders = () => {
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 30,
-      speed: 600,
+      speed: 1000,
       loop: true,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
@@ -302,8 +303,6 @@ const initSliders = () => {
   if (document.querySelector('.collections__slider')) {
     new Swiper('.collections__slider', {
       modules: [Navigation, Pagination, Mousewheel],
-      observer: true,
-      observeParents: true,
       speed: 600,
       loop: true,
       slidesPerView: 1.6,
@@ -312,6 +311,7 @@ const initSliders = () => {
       watchSlidesVisibility: true,
       resistance: false,
       loopPreventsSliding: true,
+      followFinger: true,
       mousewheel: {
         enabled: true,
         forceToAxis: true,
