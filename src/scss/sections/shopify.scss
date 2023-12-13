@@ -27,7 +27,8 @@
       grid-template-columns: 3fr 6fr 3fr;
       align-items: center;
       .catalog-page &,
-      .product-page & {
+      .product-page &,
+      .favorite-page & {
         margin-bottom: 2.4rem;
       }
     }

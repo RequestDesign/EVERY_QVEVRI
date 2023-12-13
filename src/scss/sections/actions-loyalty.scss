@@ -1,0 +1,60 @@
+.loyalty-page {
+  // .loyalty-page__actions
+
+  &__actions {
+    margin-bottom: 16rem;
+    @media (max-width: 48em) {
+      margin-bottom: 20rem;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.actions-loyalty-page {
+  // .actions-loyalty-page__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .actions-loyalty-page__title
+
+  &__title {
+    margin-bottom: 11.5rem;
+    align-self: center;
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  // .actions-loyalty-page__cards
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4.5rem;
+    }
+  }
+
+  // .actions-loyalty-page__card
+
+  &__card {
+    @media (min-width: 48em) {
+      &:first-child {
+        transform: rotate(-4deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-2deg);
+      }
+      &:last-child {
+        transform: rotate(4deg);
+      }
+    }
+  }
+}

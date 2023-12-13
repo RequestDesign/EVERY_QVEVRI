@@ -1,5 +1,37 @@
 .select {
   position: relative;
+  .sort & {
+    .select {
+      &__value {
+        &::after {
+          flex: 0 0 1.6rem;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url(@img/icons/sm-arr.svg);
+          background-size: 1.6rem;
+        }
+      }
+      &__options {
+        padding: 4rem;
+        top: calc(100% + 1.6rem);
+        width: 28rem;
+      }
+      &__option {
+        @extend .txt;
+        padding: 0;
+        color: $black;
+        &._select-selected {
+          font-weight: 500;
+          color: $red;
+        }
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+          padding-bottom: 1.6rem;
+          border-bottom: 1px solid $lightGray;
+        }
+      }
+    }
+  }
 
   // .select__body
 

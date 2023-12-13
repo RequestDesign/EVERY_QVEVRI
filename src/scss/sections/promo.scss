@@ -2,26 +2,6 @@
   position: relative;
   @media (min-width: 1920px) {
     margin-bottom: 16rem;
-    width: 104vw;
-    transform: translateX(calc((104vw - 1920px) / -2));
-    overflow: hidden;
-    &::after {
-      background-size: 100% 100%;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: calc(100% + 4rem);
-    height: 100%;
-    top: 0;
-    left: -4rem;
-    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
-    background-repeat: no-repeat;
-    @media (max-width: 48em) {
-      background-size: cover;
-    }
   }
 
   // .promo__container

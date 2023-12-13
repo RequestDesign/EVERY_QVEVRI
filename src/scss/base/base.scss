@@ -70,3 +70,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+%hintMark {
+  content: '*';
+  position: absolute;
+  top: 50%;
+  height: 1.7rem;
+  font-family: GraphikLCG;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: $red;
+  transform: translate(100%, -50%);
+  @media (max-width: 48em) {
+    height: 1.2rem;
+    font-size: 3rem;
+  }
+}

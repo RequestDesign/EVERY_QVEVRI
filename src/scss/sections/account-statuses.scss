@@ -171,22 +171,38 @@
 // --------------------------------------------------------------------------
 
 .main-statuses-account {
-  padding: 5.6rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
-  background-color: $white;
   @media (max-width: 48em) {
-    padding: 10rem 3.6rem;
+    &.loyalty-page__statuses {
+      padding: 0 2.4rem;
+    }
+  }
+
+  // .main-statuses-account__container
+
+  &__container {
+    padding: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+    background-color: $white;
+    @media (max-width: 48em) {
+      padding: 10rem 3.6rem;
+      &.container {
+        padding: 10rem 3.6rem;
+      }
+    }
   }
 
   // .main-statuses-account__head
 
   &__head {
     margin-bottom: 6.4rem;
+    display: flex;
+    .loyalty-page__statuses & {
+      justify-content: center;
+    }
     @media (min-width: 48em) {
       margin-bottom: 7.2rem;
-      display: flex;
       justify-content: space-between;
       align-items: center;
     }

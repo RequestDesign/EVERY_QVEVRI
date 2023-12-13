@@ -127,6 +127,7 @@ body {
 @import 'sections/hero';
 @import 'sections/hero-promo';
 @import 'sections/hero-product';
+@import 'sections/hero-loyalty';
 @import 'sections/categories';
 @import 'sections/shopify';
 @import 'sections/privileges';
@@ -142,7 +143,10 @@ body {
 @import 'sections/application';
 @import 'sections/account-section';
 @import 'sections/personal-data-account';
-@import 'sections/statuses-account';
+@import 'sections/account-statuses';
 @import 'sections/faqs';
 @import 'sections/account-orders';
 @import 'sections/account-coins-history';
+@import 'sections/favorite-products';
+@import 'sections/actions-loyalty';
+@import 'sections/coins-loyalty';

@@ -193,12 +193,14 @@ const initSliders = () => {
           768: {
             slidesPerView:
               document.querySelector('.catalog-page') ||
-              document.querySelector('.account-page')
+              document.querySelector('.account-page') ||
+              document.querySelector('.favorite-page')
                 ? 5
                 : 4,
             spaceBetween:
               document.querySelector('.catalog-page') ||
-              document.querySelector('.account-page')
+              document.querySelector('.account-page') ||
+              document.querySelector('.favorite-page')
                 ? 90
                 : 137,
           },

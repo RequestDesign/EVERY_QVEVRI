@@ -355,10 +355,11 @@
   // .navbar-account-page__navigation
 
   &__navigation {
+    margin-bottom: 3.6rem;
     display: flex;
     flex-direction: column;
     @media (min-width: 48em) {
-      margin-bottom: 8rem;
+      margin-bottom: 6rem;
       align-items: flex-start;
       row-gap: 2.5rem;
     }
@@ -369,9 +370,7 @@
   &__link {
     padding: 3.6rem 0;
     display: flex;
-    &:not(:last-child) {
-      border-bottom: 1px solid $lightGray;
-    }
+    border-bottom: 1px solid $lightGray;
     &._active {
       .navbar-account-page__link-txt {
         color: $red;
@@ -379,9 +378,7 @@
     }
     @media (min-width: 48em) {
       padding: 0;
-      &:not(:last-child) {
-        border: none;
-      }
+      border: none;
       &._active {
         &::before {
           margin-right: 1.6rem;
@@ -409,8 +406,5 @@
   // .navbar-account-page__logout-btn
 
   &__logout-btn {
-    @media (max-width: 48em) {
-      display: none;
-    }
   }
 }

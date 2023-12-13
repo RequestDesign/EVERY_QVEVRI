@@ -1202,6 +1202,97 @@
   }
 }
 
+.loyalty-action-card {
+  padding: 5.2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+  @media (max-width: 48em) {
+    padding: 6.4rem 4rem;
+  }
+
+  // .loyalty-action-card__head
+
+  &__head {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  // .loyalty-action-card__image-wrap
+
+  &__image-wrap,
+  &__image-mask {
+    width: 14.4rem;
+    height: 14.4rem;
+    @media (max-width: 48em) {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+  }
+
+  // .loyalty-action-card__number
+
+  &__number {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 1.6rem;
+    color: $lightGray;
+    &.txt_wide {
+      font-size: 3rem;
+    }
+    @media (min-width: 48em) {
+      &.txt_wide {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // .loyalty-action-card__image-mask
+
+  &__image-mask {
+    clip-path: url(#clip-img);
+    transform: scaleX(-1);
+  }
+
+  // .loyalty-action-card__image
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .loyalty-action-card__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .loyalty-action-card__heading
+
+  &__heading {
+    margin-bottom: 2.4rem;
+    max-width: 33.2rem;
+    @media (min-width: 48em) {
+      max-width: 26.5rem;
+    }
+  }
+
+  // .loyalty-action-card__text
+
+  &__text {
+    max-width: 42rem;
+    @media (max-width: 48em) {
+      max-width: 52.6rem;
+    }
+  }
+}
+
 .advertising {
   position: relative;
   display: flex;
@@ -1479,6 +1570,28 @@
 }
 
 // --------------------------------------------------------------------------
+
+.bg {
+  &::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 4rem);
+    height: 100%;
+    top: 0;
+    left: -4rem;
+    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
+    background-size: 101% 100%;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 1920px) {
+    width: 104vw;
+    transform: translateX(calc((104vw - 1920px) / -2));
+    overflow: hidden;
+    &::after {
+      background-size: 100% 100%;
+    }
+  }
+}
 
 .product-docked-info {
   position: fixed;
