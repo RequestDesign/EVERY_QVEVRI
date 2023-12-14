@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Тест" })
+  <body style="opacity: 0">
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="main tests-page">
+        <section class="tests-page__hero hero-tests hero-tests_result">
+          <div class="hero-tests__container container">
+            <div class="hero-tests__head">
+              <nav class="hero-tests__breadcrumbs breadcrumbs caps">
+                <a href="#" class="breadcrumbs__text">Главная</a>
+                <span class="breadcrumbs__text">как хранить вино</span>
+              </nav>
+            </div>
+            <div class="hero-tests__body">
+              <div class="hero-tests__images test-images">
+                <div
+                  class="test-images__image-wrap test-images__image-wrap_large">
+                  <div class="test-images__image-content">
+                    <img
+                      src="@img/tests/dbf594934943b6b7976f9835b2c3f79e.webp"
+                      alt=""
+                      class="test-images__image" />
+                  </div>
+                  <span class="test-images__subheading caps"
+                    >Как хранить вино</span
+                  >
+                </div>
+                <div
+                  class="test-images__image-wrap test-images__image-wrap_small">
+                  <div class="test-images__image-content">
+                    <img
+                      src="@img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp"
+                      alt=""
+                      class="test-images__image" />
+                  </div>
+                </div>
+              </div>
+              <div class="hero-tests__text-wrap">
+                <span class="hero-tests__subtitle txt txt_md">Результат</span>
+                <span class="hero-tests__heading tl1">2/5</span>
+                <p class="hero-tests__text txt">
+                  В этот раз немного не хватило до скидки. Попробуем еще раз?
+                </p>
+                <a href="#" class="hero-tests__link btn btn_round">
+                  <div class="btn__icon-wrap"></div>
+                  <span class="btn__text">пройти тест заново</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
+      @@include('html/_modal.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -1,5 +1,8 @@
 .option {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
   cursor: pointer;
   &_reversed {
     .option__text::after {
@@ -8,6 +11,38 @@
       @media (max-width: 48em) {
         top: 0;
       }
+    }
+  }
+  &_red,
+  &_green {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      right: -24.5rem;
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      @media (max-width: 48em) {
+        top: 0.4rem;
+        right: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+  &_red {
+    &::after {
+      background-image: url(@img/icons/cross-red.svg);
+    }
+  }
+  &_green {
+    &::after {
+      background-image: url(@img/icons/check-green.svg);
     }
   }
 
@@ -19,6 +54,9 @@
     opacity: 0;
     &:checked + .option__text::before {
       border: 2px solid $red;
+      .option_green & {
+        border: 2px solid $green;
+      }
     }
     &:checked + .option__text::after {
       transform: scale(0.6);
@@ -31,6 +69,18 @@
     align-items: center;
     gap: 1rem;
     cursor: pointer;
+    .option_red & {
+      color: $red;
+    }
+    .option_green & {
+      color: $green;
+      &::before {
+        border: 2px solid $green;
+      }
+      &::after {
+        background-color: $green;
+      }
+    }
     &::before {
       content: '';
       align-self: flex-start;
@@ -64,6 +114,18 @@
       }
       &::after {
         top: 4rem;
+      }
+    }
+  }
+
+  // .option__hint
+  &__hint {
+    padding-left: 4rem;
+    color: $gray;
+    @media (max-width: 48em) {
+      padding-left: 6rem;
+      &.txt {
+        font-size: 2.4rem;
       }
     }
   }

@@ -1,0 +1,143 @@
+.tests-page {
+  // .tests-page__hero
+
+  &__hero {
+    margin-top: 1rem;
+    margin-bottom: 20rem;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.hero-tests {
+  // .hero-tests__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .hero-tests__head
+
+  &__head {
+    margin-bottom: 6rem;
+  }
+
+  // .hero-tests__images
+
+  &__images {
+  }
+
+  // .hero-tests__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: 68rem 1fr;
+      column-gap: 18.7rem;
+    }
+  }
+
+  // .hero-tests__images
+
+  &__images {
+    .test-images__image-wrap {
+      box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+      &_small {
+        top: 11rem;
+        right: 2rem;
+        @media (max-width: 48em) {
+          top: 4rem;
+          right: -18rem;
+        }
+      }
+    }
+  }
+
+  // .hero-tests__text-wrap
+
+  &__text-wrap {
+    margin-bottom: 5rem;
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+      padding: 0;
+      .hero-tests_promocode & {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+
+  // .hero-tests__subtitle
+
+  &__subtitle {
+    margin-bottom: 6.4rem;
+    color: $gray;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // .hero-tests__heading
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
+
+  // .hero-tests__text
+
+  &__text {
+    margin-bottom: 5rem;
+    max-width: 70rem;
+    @media (min-width: 48em) {
+      margin-bottom: 13rem;
+      max-width: 62.8rem;
+      .hero-tests_promocode & {
+        margin-bottom: 6.4rem;
+      }
+    }
+  }
+
+  // .hero-tests__link
+
+  &__link {
+    transform: translateX(12rem);
+    @media (max-width: 48em) {
+      transform: translateX(14rem);
+    }
+  }
+
+  // .hero-tests__form
+
+  &__form {
+    padding-bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $lightGray;
+    @media (min-width: 48em) {
+      padding-bottom: 1.5rem;
+      max-width: 60.6rem;
+    }
+  }
+
+  // .hero-tests__input
+
+  &__input {
+    &.input {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  // .hero-tests__btn
+
+  &__btn {
+  }
+}

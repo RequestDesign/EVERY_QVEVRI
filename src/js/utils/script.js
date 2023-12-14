@@ -424,6 +424,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    if (target.closest('.test__option')) {
+      if (document.querySelector('.test__btn').hasAttribute('disabled')) {
+        document.querySelector('.test__btn').removeAttribute('disabled');
+      }
+    }
     if (target.closest('.navbar-account-page__link')) {
       removeClasses(
         document.querySelectorAll('.navbar-account-page__link'),

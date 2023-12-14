@@ -93,7 +93,7 @@ const revealSlides = swiper => {
       if (window.innerWidth > 768) {
         slides[index + 1] ? slides[index + 1].classList.add('_revealed') : null;
         slides[index + 2] ? slides[index + 2].classList.add('_revealed') : null;
-        if (document.querySelector('.catalog-page')) {
+        if (swiper.el.closest('.shopify-section_group')) {
           slides[index + 3]
             ? slides[index + 3].classList.add('_revealed')
             : null;
@@ -153,89 +153,6 @@ const initSliders = () => {
           initDynamicPagination(swiper);
         },
       },
-    });
-  }
-  if (document.querySelectorAll('.shopify-section').length) {
-    document.querySelectorAll('.shopify-section').forEach(section => {
-      const shopifySection = section.dataset.shopifySection;
-      new Swiper(`[data-shopify-section="${shopifySection}"] .swiper`, {
-        modules: [Navigation, Pagination, Mousewheel],
-        slidesPerView: 1.4,
-        spaceBetween: 65,
-        speed: 800,
-        loop: true,
-        longSwipes: false,
-        touchRatio: 0.5,
-        followFinger: true,
-        mousewheel: {
-          enabled: true,
-          forceToAxis: true,
-        },
-
-        // navigation
-        navigation: {
-          prevEl: `[data-shopify-section="${shopifySection}"] .sl-nav__arrow_prev`,
-          nextEl: `[data-shopify-section="${shopifySection}"] .sl-nav__arrow_next`,
-        },
-
-        // pagination
-        pagination: {
-          el: `[data-shopify-section="${shopifySection}"] .sl-pagination`,
-          clickable: true,
-          renderBullet: function (index, className) {
-            return (
-              '<span class="' + className + '">' + '0' + (index + 1) + '</span>'
-            );
-          },
-        },
-
-        // breakpoints
-        breakpoints: {
-          768: {
-            slidesPerView:
-              document.querySelector('.catalog-page') ||
-              document.querySelector('.account-page') ||
-              document.querySelector('.favorite-page')
-                ? 5
-                : 4,
-            spaceBetween:
-              document.querySelector('.catalog-page') ||
-              document.querySelector('.account-page') ||
-              document.querySelector('.favorite-page')
-                ? 90
-                : 137,
-          },
-        },
-
-        // events
-        on: {
-          afterInit: swiper => {
-            changeActiveNum(
-              swiper.pagination,
-              document.querySelector(
-                `[data-shopify-section="${shopifySection}"] .shopify-section__number`
-              )
-            );
-            initDynamicPagination(swiper);
-            revealSlides(swiper);
-          },
-          realIndexChange: swiper => {
-            changeActiveNum(
-              swiper.pagination,
-              document.querySelector(
-                `[data-shopify-section="${shopifySection}"] .shopify-section__number`
-              )
-            );
-            initDynamicPagination(swiper);
-          },
-          slideChangeTransitionStart: swiper => {
-            revealSlides(swiper);
-          },
-          touchMove: swiper => {
-            revealSlides(swiper);
-          },
-        },
-      });
     });
   }
   if (document.querySelector('.tests__slider')) {
@@ -309,6 +226,10 @@ const initSliders = () => {
       spaceBetween: 64,
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
+      },
 
       // navigation
       navigation: {
@@ -424,6 +345,85 @@ const initSliders = () => {
   }
 };
 const initSlidersOnResize = () => {
+  if (document.querySelectorAll('.shopify-section').length) {
+    document.querySelectorAll('.shopify-section').forEach(section => {
+      const shopifySection = section.dataset.shopifySection;
+      new Swiper(`[data-shopify-section="${shopifySection}"] .swiper`, {
+        modules: [Navigation, Pagination, Mousewheel],
+        slidesPerView: 1.4,
+        spaceBetween: 65,
+        speed: 800,
+        loop: true,
+        longSwipes: false,
+        touchRatio: 0.5,
+        followFinger: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        mousewheel: {
+          enabled: true,
+          forceToAxis: true,
+        },
+
+        // navigation
+        navigation: {
+          prevEl: `[data-shopify-section="${shopifySection}"] .sl-nav__arrow_prev`,
+          nextEl: `[data-shopify-section="${shopifySection}"] .sl-nav__arrow_next`,
+        },
+
+        // pagination
+        pagination: {
+          el: `[data-shopify-section="${shopifySection}"] .sl-pagination`,
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' + className + '">' + '0' + (index + 1) + '</span>'
+            );
+          },
+        },
+
+        // breakpoints
+        breakpoints: {
+          768: {
+            slidesPerView: section.classList.contains('shopify-section_group')
+              ? 5
+              : 4,
+            spaceBetween: section.classList.contains('shopify-section_group')
+              ? 90
+              : 137,
+          },
+        },
+
+        // events
+        on: {
+          afterInit: swiper => {
+            changeActiveNum(
+              swiper.pagination,
+              document.querySelector(
+                `[data-shopify-section="${shopifySection}"] .shopify-section__number`
+              )
+            );
+            initDynamicPagination(swiper);
+            revealSlides(swiper);
+          },
+          realIndexChange: swiper => {
+            changeActiveNum(
+              swiper.pagination,
+              document.querySelector(
+                `[data-shopify-section="${shopifySection}"] .shopify-section__number`
+              )
+            );
+            initDynamicPagination(swiper);
+          },
+          slideChangeTransitionStart: swiper => {
+            revealSlides(swiper);
+          },
+          touchMove: swiper => {
+            revealSlides(swiper);
+          },
+        },
+      });
+    });
+  }
   if (document.querySelector('.categories__slider')) {
     if (window.innerWidth <= 768 && !categoriesSlider) {
       categoriesSlider = new Swiper('.categories__slider', {

@@ -26,9 +26,7 @@
       margin-bottom: 7rem;
       grid-template-columns: 3fr 6fr 3fr;
       align-items: center;
-      .catalog-page &,
-      .product-page &,
-      .favorite-page & {
+      .shopify-section_group & {
         margin-bottom: 2.4rem;
       }
     }

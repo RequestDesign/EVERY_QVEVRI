@@ -7,6 +7,14 @@
     justify-content: center;
     text-align: center;
     height: 6.4rem;
+    &:disabled {
+      border: 1px solid $lightGray;
+      background-color: $lightGray;
+      pointer-events: none;
+      .btn__text {
+        color: $gray;
+      }
+    }
     @media (max-width: 48em) {
       padding: 4rem 8rem;
       height: 10rem;
@@ -52,14 +60,6 @@
   &_ol {
     border: 1px solid $gray;
     transition: border 0.3s ease, background-color 0.3s ease;
-    &:disabled {
-      border: 1px solid $lightGray;
-      background-color: $lightGray;
-      pointer-events: none;
-      .btn__text {
-        color: $gray;
-      }
-    }
     @media (any-hover: hover) {
       &:hover {
         border: 1px solid $lightGray;

@@ -8,6 +8,7 @@ $lightGray: #e9e8e8;
 $lightGray2: #f2f2f2;
 $gray: #b3b3b3;
 $backPattern: #ebe7dc;
+$green: #12822b;
 
 // ---------------------------------- fonts ---------------------------------
 
@@ -128,10 +129,10 @@ body {
 @import 'sections/hero-promo';
 @import 'sections/hero-product';
 @import 'sections/hero-loyalty';
+@import 'sections/hero-test';
 @import 'sections/categories';
 @import 'sections/shopify';
 @import 'sections/privileges';
-@import 'sections/tests';
 @import 'sections/blog';
 @import 'sections/collections';
 @import 'sections/promo';
@@ -150,3 +151,5 @@ body {
 @import 'sections/favorite-products';
 @import 'sections/actions-loyalty';
 @import 'sections/coins-loyalty';
+@import 'sections/test';
+@import 'sections/test-chapter';
