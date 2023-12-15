@@ -16,17 +16,22 @@
 
   &__title {
     margin-bottom: 10rem;
+    .address-page & {
+      margin-bottom: 4.8rem;
+    }
     span {
       color: $black;
     }
     @media (min-width: 48em) {
-      position: absolute;
-      z-index: 2;
-      top: 14.4rem;
-      left: 0;
-      margin: 0;
-      span {
-        display: block;
+      &:not(.address-page &) {
+        position: absolute;
+        z-index: 2;
+        top: 14.4rem;
+        left: 0;
+        margin: 0;
+        span {
+          display: block;
+        }
       }
     }
   }
@@ -38,9 +43,11 @@
     width: 100%;
     cursor: grab;
     @media (min-width: 48em) {
-      align-self: flex-end;
       height: 56rem;
-      width: 148.3rem;
+      &:not(.address-page &) {
+        align-self: flex-end;
+        width: 148.3rem;
+      }
     }
   }
 
@@ -50,8 +57,10 @@
     display: flex;
     justify-content: space-between;
     @media (min-width: 48em) {
-      align-self: flex-end;
-      width: 148.3rem;
+      &:not(.address-page &) {
+        align-self: flex-end;
+        width: 148.3rem;
+      }
     }
   }
 
