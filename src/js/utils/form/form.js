@@ -18,7 +18,7 @@ export function formFieldsInit(options = { viewPass: false }) {
   document.body.addEventListener('focusin', function (e) {
     const targetElement = e.target;
     if (
-      targetElement.tagName === 'INPUT' ||
+      (targetElement.tagName === 'INPUT' && targetElement.type !== 'file') ||
       targetElement.tagName === 'TEXTAREA'
     ) {
       if (targetElement.dataset.placeholder) {

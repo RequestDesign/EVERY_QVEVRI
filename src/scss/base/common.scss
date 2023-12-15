@@ -1293,6 +1293,85 @@
   }
 }
 
+.vacancy-card {
+  padding: 3.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+  background-color: $white;
+  @media (min-width: 48em) {
+    padding: 4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &._active {
+      color: $white;
+      background-color: $red;
+    }
+  }
+
+  // .vacancy-card__head
+
+  &__head {
+    margin-bottom: 3.6rem;
+    @media (min-width: 48em) {
+      margin-bottom: 2.4rem;
+      padding-bottom: 2.4rem;
+      width: 100%;
+      border-bottom: 1px solid $lightGray;
+      transition: border-bottom 0.3s ease;
+    }
+  }
+
+  // .vacancy-card__heading
+
+  &__heading {
+  }
+
+  // .vacancy-card__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (min-width: 48em) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+  }
+
+  // .vacancy-card__image-wrap
+
+  &__image-wrap {
+    width: 21.3rem;
+    height: 6.9rem;
+    clip-path: url(#clip-img-group);
+    @media (max-width: 48em) {
+      margin-bottom: 3.6rem;
+      width: 30rem;
+      height: 10rem;
+    }
+  }
+
+  // .vacancy-card__image
+
+  &__image {
+    height: 100%;
+    width: 125%;
+    object-fit: cover;
+  }
+
+  // .vacancy-card__btn
+
+  &__btn {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    ._active & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 .advertising {
   position: relative;
   display: flex;
@@ -3686,6 +3765,15 @@
 
   &_uc {
     text-transform: uppercase;
+  }
+
+  // .txt_sm
+
+  &_sm {
+    font-size: 1.4rem;
+    @media (max-width: 48em) {
+      font-size: 2.4rem;
+    }
   }
 }
 

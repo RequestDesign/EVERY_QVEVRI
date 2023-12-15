@@ -1,0 +1,190 @@
+.employment-page {
+  // .employment-page__vacancies
+
+  &__vacancies {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.vacancies-employment {
+  // .vacancies-employment__container
+
+  &__container {
+  }
+
+  // .vacancies-employment__tabs
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: 66.3rem 1fr;
+      column-gap: 2rem;
+    }
+  }
+
+  // .vacancies-employment__navigation-wrap
+
+  &__navigation-wrap {
+  }
+
+  // .vacancies-employment__navigation
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  // .vacancies-employment__card
+
+  &__card {
+    .vacancy-card__link {
+      display: none;
+    }
+    @media (max-width: 48em) {
+      .vacancy-card__btn {
+        display: none;
+      }
+      .vacancy-card__link {
+        display: inline-flex;
+      }
+    }
+  }
+
+  // .vacancies-employment__tab
+
+  &__tab {
+  }
+
+  // .vacancies-employment__tab-content
+
+  &__tab-content {
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+
+  // .vacancies-employment__tab-body
+
+  &__tab-body {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.info-vacancies-employment {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 48em) {
+    padding: 6.4rem;
+    padding-bottom: 13.1rem;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
+    background-color: $white;
+  }
+
+  // .info-vacancies-employment__head
+
+  &__head {
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (min-width: 48em) {
+      margin-bottom: 4.8rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 3rem;
+    }
+  }
+
+  // .info-vacancies-employment__heading
+
+  &__heading {
+    @media (max-width: 48em) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  // .info-vacancies-employment__btn-link
+
+  &__btn-link {
+  }
+
+  // .info-vacancies-employment__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .info-vacancies-employment__text
+
+  &__text {
+    margin-bottom: 4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  // .info-vacancies-employment__list-groups
+
+  &__list-groups {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6.4rem;
+    @media (min-width: 48em) {
+      margin-bottom: 10.7rem;
+      row-gap: 4rem;
+    }
+  }
+
+  // .info-vacancies-employment__list-group
+
+  &__list-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .info-vacancies-employment__subtitle
+
+  &__subtitle {
+    margin-bottom: 1.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  // .info-vacancies-employment__list
+
+  &__list {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.12rem;
+    list-style: unset;
+    @media (max-width: 48em) {
+      padding-left: 4rem;
+      row-gap: 0.24rem;
+    }
+  }
+
+  // .info-vacancies-employment__list-item
+
+  &__list-item {
+    list-style: unset;
+  }
+
+  // .info-vacancies-employment__link
+
+  &__link {
+    transform: translateX(12rem);
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+}

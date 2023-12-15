@@ -394,6 +394,8 @@ export const tabs = () => {
     const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
     const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
 
+    console.log(tabsBlock);
+
     if (tabsActiveHashBlock) {
       const tabsActiveTitle = tabsBlock.querySelector(
         '[data-tabs-titles]>._active'
@@ -445,7 +447,12 @@ export const tabs = () => {
   };
   const setActions = e => {
     const target = e.target;
-    if (target.closest('[data-tabs-title]')) {
+    if (
+      (target.closest('[data-tabs-title]') &&
+        !document.querySelector('[data-tab-btn]')) ||
+      (target.closest('[data-tab-btn]') &&
+        document.querySelector('[data-tab-btn]'))
+    ) {
       const tabTitle = target.closest('[data-tabs-title]');
       const tabsBlock = tabTitle.closest('[data-tabs]');
       if (
