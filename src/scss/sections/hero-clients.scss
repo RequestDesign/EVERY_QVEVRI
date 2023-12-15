@@ -1,0 +1,145 @@
+.clients-page {
+  // .clients-page__hero
+
+  &__hero {
+    margin-bottom: 30rem;
+    @media (max-width: 48em) {
+      margin-bottom: 20rem;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.hero-clients {
+  // .hero-clients__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .hero-clients__head
+
+  &__head {
+    margin-bottom: 11.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // .hero-clients__breadcrumbs
+
+  &__breadcrumbs {
+  }
+
+  // .hero-clients__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(3, 4fr);
+      column-gap: 6rem;
+    }
+  }
+
+  // .hero-clients__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &_l {
+      margin-bottom: 9rem;
+    }
+    &_r {
+      flex-direction: row;
+      align-items: center;
+      column-gap: 3.6rem;
+    }
+    @media (min-width: 48em) {
+      &_l {
+        margin: 0;
+        align-items: flex-start;
+      }
+      &_r {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  // .hero-clients__title
+
+  &__title {
+    margin-bottom: 5rem;
+    @media (min-width: 48em) {
+      margin-bottom: 14.7rem;
+      max-width: 47.8rem;
+    }
+  }
+
+  // .hero-clients__link
+
+  &__link {
+    transform: translateX(12rem);
+    @media (max-width: 48em) {
+      transform: translateX(14rem);
+    }
+  }
+
+  // .hero-clients__image-wrap
+
+  &__image-wrap {
+    margin-bottom: 12rem;
+    width: 60rem;
+    height: 50rem;
+    align-self: center;
+    @media (min-width: 48em) {
+      margin: 0;
+      align-self: stretch;
+      justify-self: center;
+      width: 59.2rem;
+      height: 50rem;
+      transform: translateX(4rem);
+    }
+  }
+
+  // .hero-clients__image
+
+  &__image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // .hero-clients__content-image-wrap
+
+  &__content-image-wrap {
+    width: 27rem;
+    height: 23rem;
+    @media (min-width: 48em) {
+      margin-bottom: 4rem;
+      width: 30.5rem;
+      height: 21.6rem;
+    }
+  }
+
+  // .hero-clients__content-image
+
+  &__content-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .hero-clients__text
+
+  &__text {
+    max-width: 39rem;
+    @media (min-width: 48em) {
+      max-width: 28rem;
+      transform: translateX(-2.5rem);
+    }
+  }
+}
