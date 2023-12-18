@@ -1,4 +1,9 @@
 .simplebar-scrollable-y {
+  &.sb_gray {
+    .simplebar-scrollbar {
+      background-color: $gray;
+    }
+  }
   .simplebar-track.simplebar-vertical {
     width: 2px;
     background-color: $lightGray;
@@ -7,5 +12,11 @@
     min-height: 3.6rem;
     width: 2px;
     background-color: $black;
+  }
+  .simplebar-track {
+    .header-cart & {
+      right: 2rem;
+      bottom: 2rem;
+    }
   }
 }

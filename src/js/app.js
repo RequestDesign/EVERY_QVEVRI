@@ -16,6 +16,20 @@ utils.showmore();
 // tabs
 utils.tabs();
 
+// --------------------------------- libs -----------------------------------
+
+// select
+import './libs/select.js';
+
+// dynamic dom
+import './libs/da.js';
+
+// modals
+import './libs/modals.js';
+
+// star rating
+import './libs/star_rating.js';
+
 // --------------------------------- scroll ---------------------------------
 
 import * as scroll from './utils/scroll.js';
@@ -39,6 +53,9 @@ forms.formSubmit();
 // quantity
 forms.formQuantity();
 
+// range slider
+import './utils/form/range_slider.js';
+
 // --------------------------------- swiper ---------------------------------
 
 import './utils/sliders.js';
@@ -55,19 +72,9 @@ import './utils/simplebar.js';
 
 import './utils/form/input_mask.js';
 
-// --------------------------------- libs -----------------------------------
+// ------------------------------ swipe detect ------------------------------
 
-// select
-import './libs/select.js';
-
-// dynamic dom
-import './libs/da.js';
-
-// modals
-import './libs/modals.js';
-
-// star rating
-import './libs/star_rating.js';
+import './utils/swipe_detect.js';
 
 // --------------------------------------------------------------------------
 

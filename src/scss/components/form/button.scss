@@ -21,20 +21,51 @@
     }
   }
 
+  // .btn_has-icon
+
+  &_has-icon {
+    column-gap: 0.8rem;
+    .btn__icon {
+      flex: 0 0 2rem;
+    }
+    .btn__icon,
+    .btn__icon-img {
+      width: 2rem;
+      height: 2rem;
+    }
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+      .btn__icon {
+        flex: 0 0 4rem;
+      }
+      .btn__icon,
+      .btn__icon-img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
   // .btn_link
 
   &_link {
     padding-bottom: 0.1rem;
-    border-bottom: 1px solid $red;
-    color: $red;
-    transition: opacity 0.3s ease;
+    .btn__text {
+      border-bottom: 1px solid $red;
+      color: $red;
+      transition: opacity 0.3s ease;
+    }
     &_black {
-      border-bottom: 1px solid $black;
-      color: $black;
+      .btn__text {
+        border-bottom: 1px solid $black;
+        color: $black;
+      }
     }
     @media (any-hover: hover) {
       &:hover {
-        opacity: 0.7;
+        .btn__text {
+          opacity: 0.7;
+        }
       }
     }
     @media (max-width: 48em) {

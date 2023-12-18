@@ -18,7 +18,11 @@ export function formFieldsInit(options = { viewPass: false }) {
   document.body.addEventListener('focusin', function (e) {
     const targetElement = e.target;
     if (
-      (targetElement.tagName === 'INPUT' && targetElement.type !== 'file') ||
+      (targetElement.tagName === 'INPUT' &&
+        targetElement.type !== 'file' &&
+        targetElement.type !== 'checkbox' &&
+        targetElement.type !== 'radio' &&
+        !targetElement.closest('.quantity')) ||
       targetElement.tagName === 'TEXTAREA'
     ) {
       if (targetElement.dataset.placeholder) {
@@ -35,7 +39,11 @@ export function formFieldsInit(options = { viewPass: false }) {
   document.body.addEventListener('focusout', function (e) {
     const targetElement = e.target;
     if (
-      targetElement.tagName === 'INPUT' ||
+      (targetElement.tagName === 'INPUT' &&
+        targetElement.type !== 'file' &&
+        targetElement.type !== 'checkbox' &&
+        targetElement.type !== 'radio' &&
+        !targetElement.closest('.quantity')) ||
       targetElement.tagName === 'TEXTAREA'
     ) {
       if (targetElement.dataset.placeholder) {

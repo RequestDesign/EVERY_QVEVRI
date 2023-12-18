@@ -47,6 +47,11 @@ body {
   flex-direction: column;
   min-height: 100%;
   max-width: 1920px;
+  &.chapter-page {
+    &::after {
+      height: 9rem;
+    }
+  }
   &::after {
     content: '';
     position: fixed;
@@ -81,6 +86,12 @@ body {
     .container {
       padding: 0 2.4rem;
     }
+
+    &.chapter-page {
+      &::after {
+        height: 13rem;
+      }
+    }
   }
 
   // press footer
@@ -96,8 +107,14 @@ body {
 // main
 .main {
   padding-top: calc(17.4rem + 4rem);
+  .chapter-page & {
+    padding-top: 9rem;
+  }
   @media (max-width: 48em) {
     padding-top: 26.6rem;
+    .chapter-page & {
+      padding-top: 13rem;
+    }
   }
 }
 
@@ -160,3 +177,4 @@ body {
 @import 'sections/employment-questionary';
 @import 'sections/clients-info';
 @import 'sections/address-info';
+@import 'sections/cart-products';

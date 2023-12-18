@@ -7,7 +7,7 @@ let addWindowScrollEvent = false;
 
 export const headerScroll = () => {
   addWindowScrollEvent = true;
-  const header = document.querySelector('header.header');
+  const header = document.querySelector('header');
   const headerShow = header.hasAttribute('data-scroll-show');
   const headerShowTimer = header.dataset.scrollShow
     ? header.dataset.scrollShow
@@ -143,7 +143,7 @@ export let gotoBlock = (
     let headerItem = '';
     let headerItemHeight = 0;
     if (noHeader) {
-      headerItem = 'header.header';
+      headerItem = 'header';
       headerItemHeight = document.querySelector(headerItem).offsetHeight;
     }
     let options = {
