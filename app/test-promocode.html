@@ -4363,31 +4363,31 @@
 			</div>
 		</div>
 
-		<div id="updatePhoneNumberModal" aria-hidden="true" class="modal update-personal-data-modal update-personal-data-modal_phone-number">
+		<div id="updatePhoneNumberModal" aria-hidden="true" class="modal account-modal account-modal_phone-number">
 			<div class="modal__wrapper">
 				<div class="modal__content">
-					<button data-da=".update-personal-data-modal_phone-number .update-personal-data-modal__content,768,first" data-close type="button" class="modal__close">
+					<button data-da=".account-modal_phone-number .account-modal__content,768,first" data-close type="button" class="modal__close">
 						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
 					</button>
 					<div class="modal__body">
-						<div class="update-personal-data-modal__inner">
-							<div class="update-personal-data-modal__content">
-								<span class="update-personal-data-modal__title tl2">Укажите Новый номер</span>
-								<p class="update-personal-data-modal__text txt">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Укажите Новый номер</span>
+								<p class="account-modal__text txt">
 									Введите новый контактный номер телефона. Вам поступит SMS с
 									кодом-паролем.
 								</p>
-								<form data-dev data-modal-message="#verifyPhoneModal" action="#" class="update-personal-data-modal__form">
-									<div class="update-personal-data-modal__input input">
+								<form data-dev data-modal-message="#verifyPhoneModal" action="#" class="account-modal__form">
+									<div class="account-modal__input input">
 										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="" class="input__field" />
 									</div>
-									<button type="submit" class="update-personal-data-modal__btn btn btn_icon">
+									<button type="submit" class="account-modal__btn btn btn_icon">
 										<span class="btn__text txt txt_md">Получить код</span>
 									</button>
 								</form>
 							</div>
-							<div class="update-personal-data-modal__image-wrap">
-								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="update-personal-data-modal__image" />
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
 							</div>
 						</div>
 					</div>
@@ -4395,31 +4395,31 @@
 			</div>
 		</div>
 
-		<div id="updateEmailModal" aria-hidden="true" class="modal update-personal-data-modal update-personal-data-modal_email">
+		<div id="updateEmailModal" aria-hidden="true" class="modal account-modal account-modal_email">
 			<div class="modal__wrapper">
 				<div class="modal__content">
-					<button data-da=".update-personal-data-modal_email .update-personal-data-modal__content,768,first" data-close type="button" class="modal__close">
+					<button data-da=".account-modal_email .account-modal__content,768,first" data-close type="button" class="modal__close">
 						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
 					</button>
 					<div class="modal__body">
-						<div class="update-personal-data-modal__inner">
-							<div class="update-personal-data-modal__content">
-								<span class="update-personal-data-modal__title tl2">Укажите <span>Новую электронную почту</span></span>
-								<p class="update-personal-data-modal__text txt">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Укажите <span>Новую электронную почту</span></span>
+								<p class="account-modal__text txt">
 									Введите новый адрес электронной почты. Вам поступит письмо с
 									кодом-паролем.
 								</p>
-								<form data-dev data-modal-message="#verifyEmailModal" action="#" class="update-personal-data-modal__form">
-									<div class="update-personal-data-modal__input input">
+								<form data-dev data-modal-message="#verifyEmailModal" action="#" class="account-modal__form">
+									<div class="account-modal__input input">
 										<input autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
 									</div>
-									<button type="submit" class="update-personal-data-modal__btn btn btn_icon">
+									<button type="submit" class="account-modal__btn btn btn_icon">
 										<span class="btn__text txt txt_md">Получить код</span>
 									</button>
 								</form>
 							</div>
-							<div class="update-personal-data-modal__image-wrap">
-								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="update-personal-data-modal__image" />
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
 							</div>
 						</div>
 					</div>
@@ -4733,6 +4733,221 @@
 									<span class="btn__text txt txt_md">Подтвердить</span>
 								</button>
 							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="loginModal" aria-hidden="true" class="modal account-modal account-modal_login">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_login .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Войдите <span>или зарегистрируйтесь</span></span>
+								<p class="account-modal__text txt">
+									Введите свой контактный номер телефона. Вам поступит SMS с
+									кодом-паролем.
+								</p>
+								<form data-modal-message="#verifyPhoneModal" data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+								<button type="button" class="account-modal__link btn btn_link">
+									<span class="btn__text txt txt_16">Войти по e-mail</span>
+								</button>
+								<div class="account-modal__login-methods">
+									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
+									<ul class="account-modal__login-methods-list">
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Google</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="regModal" aria-hidden="true" class="modal account-modal account-modal_reg">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_reg .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Войдите <span>или зарегистрируйтесь</span></span>
+								<p class="account-modal__text txt">
+									Введите свой контактный номер телефона. Вам поступит SMS с
+									кодом-паролем.
+								</p>
+								<form data-modal-message="#verifyPhoneModal" data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+								<div class="account-modal__checkboxes">
+									<div class="account-modal__checkbox">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" checked value="" name="form[]" />
+											<span class="checkbox__text txt txt_16"><span class="checkbox__txt-content">
+													Отправляя данные в эту форму «Я согласен с
+													<a href="#" class="checkbox__txt-link">условиями обработки</a>
+													и
+													<a href="#" class="checkbox__txt-link">хранения персональных данных</a>»
+												</span></span>
+										</label>
+									</div>
+									<div class="account-modal__checkbox">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" value="" name="form[]" />
+											<span class="checkbox__text txt txt_16">Я согласен на получение рекламной и информационной SMS и
+												push-рассылки от бренда Every Qvevri</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="emailLoginModal" aria-hidden="true" class="modal account-modal account-modal_email-login">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_email-login .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Вход <span>в личный кабинет</span></span>
+								<form data-dev action="#" class="account-modal__form email-login-form">
+									<div class="email-login-form__fields">
+										<div class="email-login-form__input input">
+											<input data-required data-validate autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+										</div>
+										<div class="email-login-form__input input">
+											<input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Пароль" class="input__field" />
+										</div>
+									</div>
+									<button data-modal="#restorePassModal" type="button" class="email-login-form__forgot-pass-btn btn btn_link">
+										<span class="btn__text txt txt_16">Забыли пароль?</span>
+									</button>
+									<button type="submit" class="email-login-form__btn btn btn_solid">
+										<span class="btn__text txt txt_md">Войти</span>
+									</button>
+								</form>
+								<div class="account-modal__login-methods">
+									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
+									<ul class="account-modal__login-methods-list">
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Google</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="account-modal__tel-login-btn btn btn_link">
+									<span class="btn__text txt txt_16">Войти по номеру телефона</span>
+								</button>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="restorePassModal" aria-hidden="true" class="modal account-modal account-modal_restore-pass">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_restore-pass .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Восстановление пароля</span>
+								<p class="account-modal__text txt">
+									Введите номер телефона или e-mail. Вам будет выслан новый пароль.
+								</p>
+								<form data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input input_validate">
+										<input data-validate data-required autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить пароль</span>
+									</button>
+								</form>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
 						</div>
 					</div>
 				</div>

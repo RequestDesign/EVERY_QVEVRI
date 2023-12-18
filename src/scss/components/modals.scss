@@ -245,7 +245,7 @@ body::after {
 
 // --------------------------------------------------------------------------
 
-.update-personal-data-modal,
+.account-modal,
 .verify-code-modal,
 .no-message-modal {
   @media (max-width: 48em) {
@@ -285,7 +285,7 @@ body::after {
     }
   }
 }
-.update-personal-data-modal__inner,
+.account-modal__inner,
 .verify-code-modal__inner {
   position: relative;
   padding: 6.4rem 3.4rem;
@@ -294,14 +294,14 @@ body::after {
     padding: 18rem 6.8rem 8rem 6.8rem;
   }
 }
-.update-personal-data-modal__content,
+.account-modal__content,
 .verify-code-modal__content {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
 }
-.update-personal-data-modal__image-wrap,
+.account-modal__image-wrap,
 .verify-code-modal__image-wrap {
   position: absolute;
   top: -16rem;
@@ -316,23 +316,29 @@ body::after {
   }
 }
 
-.update-personal-data-modal {
-  // .update-personal-data-modal__inner
+.account-modal {
+  // .account-modal__inner
 
   &__inner {
   }
 
-  // .update-personal-data-modal__content
+  // .account-modal__content
 
   &__content {
   }
 
-  // .update-personal-data-modal__title
+  // .account-modal__title
 
   &__title {
     margin-bottom: 2.4rem;
     max-width: 20.7rem;
-    .update-personal-data-modal_email & {
+    .account-modal_email-login & {
+      margin-bottom: 5.6rem;
+    }
+    .account-modal_email &,
+    .account-modal_login &,
+    .account-modal_reg &,
+    .account-modal_email-login & {
       max-width: none;
       span {
         display: block;
@@ -344,37 +350,62 @@ body::after {
     }
   }
 
-  // .update-personal-data-modal__text
+  // .account-modal__text
 
   &__text {
     margin-bottom: 10rem;
     max-width: 70rem;
-    .update-personal-data-modal_email & {
+    .account-modal_email & {
       max-width: 66rem;
+    }
+    .account-modal_restore-pass & {
+      max-width: 58rem;
     }
     @media (min-width: 48em) {
       margin-bottom: 5.6rem;
       max-width: 42.2rem;
-      .update-personal-data-modal_email & {
+      .account-modal_email & {
         max-width: 40rem;
+      }
+      .account-modal_login &,
+      .account-modal_reg & {
+        max-width: 41rem;
+      }
+      .account-modal_restore-pass & {
+        max-width: 35rem;
       }
     }
   }
 
-  // .update-personal-data-modal__form
+  // .account-modal__form
 
   &__form {
     padding-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid var(--borderColor);
+    .account-modal_login & {
+      margin-bottom: 2.4rem;
+    }
+    .account-modal_reg &,
+    .account-modal_email-login & {
+      margin-bottom: 5.6rem;
+    }
+    .account-modal_email-login & {
+      padding: 0;
+      border: none;
+    }
     @media (max-width: 48em) {
       padding-bottom: 2.4rem;
+      .account-modal_reg &,
+      .account-modal_email-login & {
+        margin-bottom: 10rem;
+      }
     }
   }
 
-  // .update-personal-data-modal__input
+  // .account-modal__input
 
   &__input {
     flex: 1 1 auto;
@@ -388,7 +419,7 @@ body::after {
     }
   }
 
-  // .update-personal-data-modal__btn
+  // .account-modal__btn
 
   &__btn {
     .btn__text {
@@ -396,16 +427,119 @@ body::after {
     }
   }
 
-  // .update-personal-data-modal__image-wrap
+  // .account-modal__image-wrap
 
   &__image-wrap {
   }
 
-  // .update-personal-data-modal__image
+  // .account-modal__image
 
   &__image {
     height: 100%;
     object-fit: contain;
+  }
+
+  // .account-modal__login-methods
+
+  &__login-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .account-modal_email-login & {
+      margin-bottom: 3.2rem;
+      @media (max-width: 48em) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  // .account-modal__login-methods-txt
+
+  &__login-methods-txt {
+    margin-bottom: 3.2rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    white-space: nowrap;
+    &::before,
+    &::after {
+      content: '';
+      flex: 0 0 1.6rem;
+      width: 1.6rem;
+      height: 1px;
+      background-color: $black;
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+      column-gap: 1.6rem;
+      &::before,
+      &::after {
+        flex: 0 0 3.6rem;
+        width: 3.6rem;
+      }
+    }
+  }
+
+  // .account-modal__login-methods-list
+
+  &__login-methods-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+    @media (max-width: 48em) {
+      column-gap: 2.4rem;
+    }
+  }
+
+  // .account-modal__login-method
+
+  &__login-method {
+  }
+
+  // .account-modal__link
+
+  &__link {
+    .account-modal_login & {
+      margin-bottom: 3.2rem;
+      @media (max-width: 48em) {
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+  // .account-modal__checkboxes
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    .checkbox__text {
+      column-gap: 3.4rem;
+    }
+    @media (min-width: 48em) {
+      row-gap: 2.4rem;
+
+      .checkbox__text {
+        column-gap: 1.6rem;
+        &::before {
+          flex: 0 0 2.4rem;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+        &::after {
+          top: 0.5rem;
+          left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // .email-login-form__tel-login-btn
+
+  &__tel-login-btn {
+    .account-modal_email-login & {
+      align-self: center;
+    }
   }
 }
 

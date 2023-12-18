@@ -158,6 +158,45 @@
   }
 }
 
+.email-login-form {
+  display: flex;
+  flex-direction: column;
+
+  // .email-login-form__fields
+
+  &__fields {
+    margin-bottom: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+      row-gap: 5rem;
+    }
+  }
+
+  // .email-login-form__input
+
+  &__input {
+  }
+
+  // .email-login-form__forgot-pass-btn
+
+  &__forgot-pass-btn {
+    margin-bottom: 2.4rem;
+    align-self: flex-start;
+    @media (max-width: 48em) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  // .email-login-form__btn
+
+  &__btn {
+    width: 100%;
+  }
+}
+
 // --------------------------------------------------------------------------
 
 // input

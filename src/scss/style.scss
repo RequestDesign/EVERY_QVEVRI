@@ -10,6 +10,10 @@ $gray: #b3b3b3;
 $backPattern: #ebe7dc;
 $green: #12822b;
 
+html {
+  --borderColor: #e9e8e8;
+}
+
 // ---------------------------------- fonts ---------------------------------
 
 // google fonts
@@ -162,6 +166,7 @@ body {
 @import 'sections/tags-product';
 @import 'sections/application';
 @import 'sections/account-section';
+@import 'sections/account-login';
 @import 'sections/personal-data-account';
 @import 'sections/account-statuses';
 @import 'sections/faqs';

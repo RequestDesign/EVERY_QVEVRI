@@ -474,7 +474,14 @@
           }
         }
       }
-
+      &_account {
+        &:hover {
+          .header-login {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
       &_cart {
         &:hover {
           .header-cart {
@@ -1717,6 +1724,38 @@
   }
 
   // .header-cart__btn
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.header-login {
+  position: absolute;
+  top: calc(100% + 2rem);
+  right: -11.6rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 44rem;
+  box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
+  background-color: $white;
+  background-image: url(@img/bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  // .header-login__text
+
+  &__text {
+    margin-bottom: 2.8rem;
+  }
+
+  // .header-login__btn
 
   &__btn {
     width: 100%;

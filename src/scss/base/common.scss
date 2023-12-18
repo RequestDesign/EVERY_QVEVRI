@@ -4376,6 +4376,53 @@
   }
 }
 
+.login-method {
+  padding: 0.8rem 1.6rem;
+  display: inline-flex;
+  border: 1px solid $gray;
+  @media (max-width: 48em) {
+    padding: 1.6rem 8rem;
+    height: 10rem;
+  }
+
+  // .login-method__inner
+
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    height: 100%;
+  }
+
+  // .login-method__icon-wrap
+
+  &__icon-wrap {
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    @media (max-width: 48em) {
+      flex: 0 0 4rem;
+      width: 4rem;
+    }
+  }
+
+  // .login-method__icon
+
+  &__icon {
+    object-fit: contain;
+  }
+
+  // .login-method__text
+
+  &__text {
+    white-space: nowrap;
+    @media (max-width: 48em) {
+      &.desktop-only {
+        display: none;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------------------------------
 
 .big-num {

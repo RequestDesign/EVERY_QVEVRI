@@ -99,6 +99,14 @@ input:disabled {
       }
     }
   }
+  &_validate {
+    .form-error {
+      top: calc(100% + 1.5rem);
+      @media (max-width: 48em) {
+        top: calc(100% + 3.5rem);
+      }
+    }
+  }
   &._verified {
     &::after {
       content: '';

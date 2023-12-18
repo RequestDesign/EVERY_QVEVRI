@@ -68,4 +68,11 @@
       }
     }
   }
+
+  // .checkbox__txt-link
+
+  &__txt-link {
+    color: $red;
+    text-decoration: underline;
+  }
 }

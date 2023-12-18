@@ -1,5 +1,4 @@
 import { modules } from '../../modules.js';
-import { initCountdown } from '../utils.js';
 
 // --------------------------------------------------------------------------
 
@@ -136,6 +135,7 @@ export let formValidate = {
     return error;
   },
   addError(formRequiredItem) {
+    document.documentElement.style = '--borderColor: #eb5749';
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
     let inputError =
@@ -149,6 +149,7 @@ export let formValidate = {
     }
   },
   removeError(formRequiredItem) {
+    document.documentElement.style = '--borderColor: #e9e8e8';
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
     if (formRequiredItem.parentElement.querySelector('.form-error')) {
@@ -247,16 +248,6 @@ export function formSubmit(options = { validate: true }) {
       if (modules.modal) {
         const modal = form.dataset.modalMessage;
         modal ? modules.modal.open(modal) : null;
-        if (form.closest('#updatePhoneNumberModal')) {
-          initCountdown(
-            document.querySelector('#verifyPhoneModal [data-countdown]')
-          );
-        }
-        if (form.closest('#updateEmailModal')) {
-          initCountdown(
-            document.querySelector('#verifyEmailModal [data-countdown]')
-          );
-        }
       }
     }, 0);
 

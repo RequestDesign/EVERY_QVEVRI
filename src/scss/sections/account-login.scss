@@ -1,0 +1,44 @@
+.account-page {
+  // .account-page__login
+
+  &__login {
+    margin-bottom: 20rem;
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.login-account {
+  display: flex;
+  flex-direction: column;
+
+  // .login-account__title
+
+  &__title {
+    margin-bottom: 5rem;
+    @media (min-width: 48em) {
+      max-width: 45rem;
+    }
+  }
+
+  // .login-account__text
+
+  &__text {
+    margin-bottom: 8rem;
+    @media (min-width: 48em) {
+      margin-bottom: 4rem;
+      max-width: 43rem;
+    }
+  }
+
+  // .login-account__btn
+
+  &__btn {
+    width: 100%;
+    @media (min-width: 48em) {
+      align-self: flex-start;
+      width: auto;
+      min-width: 41rem;
+    }
+  }
+}

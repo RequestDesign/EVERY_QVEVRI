@@ -242,16 +242,6 @@ document.addEventListener('DOMContentLoaded', function () {
       '.order-product-card',
       '.order-product-card__group'
     );
-    // relocateDOMElements(
-    //   document.querySelectorAll('.cart-item__quantity'),
-    //   '.cart-item',
-    //   '.cart-item__actions'
-    // );
-    // relocateDOMElements(
-    //   document.querySelectorAll('.cart-item__actions'),
-    //   '.cart-item',
-    //   '.cart-item__footer'
-    // );
   }
 
   // replace dom elements
