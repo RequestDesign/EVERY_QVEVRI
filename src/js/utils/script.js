@@ -213,20 +213,20 @@ document.addEventListener('DOMContentLoaded', function () {
     '.menu-product-card__preview'
   );
   if (window.innerWidth <= 768) {
-    relocateDOMElements(
-      document.querySelectorAll(
-        '.menu-product-card_grid-view .menu-product-card__heart-btn'
-      ),
-      '.menu-product-card_grid-view',
-      '.menu-product-card__actions'
-    );
-    relocateDOMElements(
-      document.querySelectorAll(
-        '.menu-product-card_grid-view .menu-product-card__badges'
-      ),
-      '.menu-product-card_grid-view',
-      '.menu-product-card__preview'
-    );
+    // relocateDOMElements(
+    //   document.querySelectorAll(
+    //     '.menu-product-card_grid-view .menu-product-card__heart-btn'
+    //   ),
+    //   '.menu-product-card_grid-view',
+    //   '.menu-product-card__actions'
+    // );
+    // relocateDOMElements(
+    //   document.querySelectorAll(
+    //     '.menu-product-card_grid-view .menu-product-card__badges'
+    //   ),
+    //   '.menu-product-card_grid-view',
+    //   '.menu-product-card__preview'
+    // );
     relocateDOMElements(
       document.querySelectorAll('.order-card__label'),
       '.order-card',
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
           } else {
             document.documentElement.classList.remove('_show-catalog');
             document
-              .querySelector('.header-catalog__advertising')
+              .querySelector('.header .header-catalog__stock-card')
               .classList.remove('_hidden');
             removeActiveClasses();
           }
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
               )
               .classList.add('_active');
             document
-              .querySelector('.header-catalog__advertising')
+              .querySelector('.header .header-catalog__stock-card')
               .classList.add('_hidden');
           }
         });

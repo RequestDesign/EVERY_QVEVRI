@@ -1,5 +1,13 @@
 .hero-promo {
   margin-bottom: 4.8rem;
+  &_has-text-content {
+    .hero-promo__stock-card {
+      margin-bottom: 4.8rem;
+      @media (max-width: 48em) {
+        margin-bottom: 6.4rem;
+      }
+    }
+  }
   @media (max-width: 48em) {
     margin-bottom: 5.6rem;
     padding-top: 6.4rem;
@@ -19,5 +27,59 @@
     @media (max-width: 48em) {
       margin-bottom: 5.6rem;
     }
+  }
+
+  // .hero-promo__text-content
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @media (min-width: 48em) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13.7rem;
+    }
+  }
+
+  // .hero-promo__text
+
+  &__text {
+    line-height: 160%;
+  }
+
+  // .hero-promo__list-wrap
+
+  &__list-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .hero-promo__list-subtitle
+
+  &__list-subtitle {
+    margin-bottom: 2.4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  // .hero-promo__list
+
+  &__list {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    list-style: decimal;
+    @media (max-width: 48em) {
+      row-gap: 3.2rem;
+    }
+  }
+
+  // .hero-promo__list-item
+
+  &__list-item {
+    list-style: decimal;
   }
 }

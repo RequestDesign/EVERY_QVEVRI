@@ -754,6 +754,9 @@
     @media (max-width: 48em) {
       &:not(.mainpage__shopify-section &) {
         transform: translate(2rem, -1.5rem);
+        .catalog & {
+          transform: translate(-1rem, -0.5rem);
+        }
       }
     }
   }
@@ -1545,16 +1548,64 @@
   }
 }
 
-.advertising {
+.stock-card {
   position: relative;
   display: flex;
   justify-content: space-between;
   background-color: $white;
   overflow: hidden;
+  &_sm {
+    &::after {
+      width: 35rem;
+      height: 35rem;
+      transform: translate(16.7rem, 24.5rem);
+    }
+    .stock-card {
+      &__content {
+        padding: 4rem;
+        padding-bottom: 0;
+        padding-right: 0;
+        @media (max-width: 48em) {
+          padding-bottom: 4rem;
+        }
+      }
+      &__bg {
+        position: relative;
+        flex: 0 0 28rem;
+        width: 31rem;
+      }
+      &__bg-image {
+        @media (max-width: 48em) {
+          position: absolute;
+          left: 0;
+          width: auto;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__text {
+        max-width: 33rem;
+        @media (max-width: 48em) {
+          max-width: 42.4rem;
+        }
+      }
+      &__link {
+        @media (min-width: 48em) {
+          margin-bottom: 8rem;
+        }
+      }
+      &__subtitle {
+        @media (max-width: 48em) {
+          color: $black;
+        }
+      }
+    }
+  }
+
   &.red {
     color: $white;
     background-color: $red;
-    .advertising__link {
+    .stock-card__link {
       &::after {
         background-image: url(@img/icons/arr.svg);
       }
@@ -1573,7 +1624,7 @@
       transform: translate(27.7rem, 18.5rem);
     }
 
-    .advertising {
+    .stock-card {
       &__content {
         padding: 4.8rem 3rem 8rem 5.5rem;
         @media (max-width: 48em) {
@@ -1631,8 +1682,8 @@
   }
 
   @media (min-width: 48em) {
-    &:not(&_hero, &_vertical, .header__catalog &) {
-      .advertising {
+    &:not(&_hero, &_vertical, &_sm, .header__catalog &) {
+      .stock-card {
         &__content {
           padding: 5.5rem 3rem 9.7rem 7.2rem;
         }
@@ -1642,7 +1693,7 @@
       color: $black;
       background-color: $white;
 
-      .advertising {
+      .stock-card {
         &__link {
           &::after {
             background-image: url(@img/icons/btn-arr.svg);
@@ -1650,7 +1701,7 @@
         }
       }
     }
-    &:not(&_hero, .header__catalog &) {
+    &:not(&_hero, .header__catalog &, &_sm) {
       &::after {
         width: 35rem;
         height: 35rem;
@@ -1673,7 +1724,7 @@
       flex-direction: column-reverse;
       color: $white;
 
-      .advertising {
+      .stock-card {
         &__content {
           padding: 0 2.4rem 4rem 2.4rem;
         }
@@ -1708,20 +1759,20 @@
     }
   }
 
-  // .advertising__content
+  // .stock-card__content
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     @media (max-width: 48em) {
-      &:not(&_hero) {
+      &:not(&_hero, .stock-card_sm &) {
         padding: 4rem 3.4rem;
       }
     }
   }
 
-  // .advertising__subtitle
+  // .stock-card__subtitle
 
   &__subtitle {
     margin-bottom: 2.4rem;
@@ -1732,7 +1783,7 @@
     }
   }
 
-  // .advertising__title
+  // .stock-card__title
 
   &__title {
     margin-bottom: 2.4rem;
@@ -1741,7 +1792,7 @@
     }
   }
 
-  // .advertising__text
+  // .stock-card__text
 
   &__text {
     margin-bottom: 4rem;
@@ -1751,27 +1802,35 @@
     }
   }
 
-  // .advertising__link
+  // .stock-card__link
 
   &__link {
   }
 
-  // .advertising__bg
+  // .stock-card__bg
 
   &__bg {
     position: relative;
     @media (max-width: 48em) {
-      &:not(.advertising_hero &) {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+      &:not(.stock-card_hero &, .stock-card_sm &) {
         flex: 0 0 24.6rem;
       }
     }
     @media (min-width: 48em) {
-      &:not(.advertising_hero &, .advertising_vertical &) {
+      &:not(.stock-card_hero &, .stock-card_vertical &, .stock-card_sm &) {
         flex: 0 0 40rem;
       }
+    }
+  }
+
+  // .stock-card__bg-image
+
+  &__bg-image {
+    height: 100%;
+    object-fit: cover;
+    &:not(.stock-card_hero &, .stock-page &) {
+      height: auto;
+      object-fit: contain;
     }
   }
 
@@ -1784,7 +1843,22 @@
     transform: translate(7.5rem, 4.5rem);
     @media (max-width: 48em) {
       width: 11.4rem;
-      transform: translateY(-2rem);
+      transform: translate(6rem, 12rem);
+      .stock-card_hero & {
+        transform: translate(-4rem, 15.5rem);
+        .catalog-page & {
+          transform: translate(-4rem, -0.5rem);
+        }
+      }
+    }
+    @media (min-width: 48em) {
+      &:not(.catalog-page &, .header &) {
+        width: 15.5rem;
+        transform: translate(-5rem, 10.5rem);
+        .stock-card_hero & {
+          transform: translate(-5rem, 16.5rem);
+        }
+      }
     }
   }
 
@@ -1810,14 +1884,10 @@
       height: 36rem;
       border-radius: 0 0 0 100rem;
       transform: none;
+      &:not(.catalog-page &) {
+        transform: rotate(-302deg) translate(10rem, -36rem);
+      }
     }
-  }
-
-  // .advertising__bg-image
-
-  &__bg-image {
-    height: 100%;
-    object-fit: cover;
   }
 }
 

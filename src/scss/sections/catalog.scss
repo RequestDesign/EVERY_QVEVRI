@@ -34,6 +34,9 @@
     margin-bottom: 3.2rem;
     @media (max-width: 48em) {
       margin-bottom: 6.4rem;
+      .stock-page & {
+        margin: 0;
+      }
     }
   }
 
@@ -53,6 +56,11 @@
     grid-template-columns: 5fr 2fr 5fr;
     align-items: center;
     border-bottom: 1px solid $lightGray;
+
+    .stock-page & {
+      padding: 3.2rem 0;
+      border-top: 1px solid $lightGray;
+    }
     @media (max-width: 48em) {
       display: none;
     }
