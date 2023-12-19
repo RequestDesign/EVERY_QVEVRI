@@ -65,16 +65,26 @@ input:disabled {
       }
     }
   }
-  &_search {
+  &_search,
+  &_location {
     &::before {
       content: '';
       flex: 0 0 2.4rem;
       width: 2.4rem;
       height: 2.4rem;
-      background-image: url('@img/icons/search.svg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+  &_search {
+    &::before {
+      background-image: url('@img/icons/search.svg');
+    }
+  }
+  &_location {
+    &::before {
+      background-image: url('@img/icons/location-red.svg');
     }
   }
   &_required {

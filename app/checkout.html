@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Оформление заказа</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<script src="https://api-maps.yandex.ru/v3/?apikey=b7cf4cd0-2979-4477-8bcc-4e507aa2b3e7&lang=ru_RU"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<noscript>
+		<style>
+			/**
+      * reinstate scrolling for non-JS clients
+      */
+			.simplebar-content-wrapper {
+				scrollbar-width: auto;
+				-ms-overflow-style: auto;
+			}
+
+			.simplebar-content-wrapper::-webkit-scrollbar,
+			.simplebar-hide-scrollbar::-webkit-scrollbar {
+				display: initial;
+				width: initial;
+				height: initial;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body style="opacity: 0">
+	<div class="wrapper chapter-page">
+		<header data-scroll="50" data-scroll-show class="chapter-header">
+			<div class="chapter-header__container container">
+				<a href="#" class="chapter-header__link arr-link"><span class="arr-link__text txt txt_md">Назад к покупкам</span></a>
+				<a href="#" class="chapter-header__logo"><img src="img/logo.svg" alt="" class="chapter-header__logo-image" /></a>
+				<div class="chapter-header__group">
+					<a href="tel:88003010790" class="chapter-header__tel"><span class="chapter-header__tel-txt txt txt_md">8 800 301 07 90</span></a>
+					<ul class="chapter-header__socials socials">
+						<li class="socials__item">
+							<a href="#" target="_blank" class="socials__link"><img src="img/icons/tg.svg" alt="" class="socials__icon" /></a>
+						</li>
+						<li class="socials__item">
+							<a href="#" target="_blank" class="socials__link"><img src="img/icons/yt.svg" alt="" class="socials__icon" /></a>
+						</li>
+						<li class="socials__item">
+							<a href="#" target="_blank" class="socials__link"><img src="img/icons/vk.svg" alt="" class="socials__icon" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main class="main checkout-page">
+			<section class="checkout-page__purchase purchase-checkout">
+				<div class="purchase-checkout__container container">
+					<div class="purchase-checkout__head">
+						<span class="purchase-checkout__title tl1">оформление покупки</span>
+						<span class="purchase-checkout__quantity txt">3 товара</span>
+					</div>
+					<div class="purchase-checkout__body">
+						<form data-modal-message="#orderMadeModal" data-dev action="#" class="purchase-checkout__form">
+							<div class="purchase-checkout__steps">
+								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_data">
+									<span class="step-purchase-checkout__heading tl2">Ваши данные</span>
+									<div class="step-purchase-checkout__fields">
+										<div class="step-purchase-checkout__input input input_required">
+											<input data-validate data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field" />
+										</div>
+										<div class="step-purchase-checkout__input input input_required">
+											<input data-validate data-required autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field" />
+										</div>
+										<div class="step-purchase-checkout__input input input_required">
+											<input data-phone-mask data-validate data-required autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Телефон" class="input__field" />
+										</div>
+										<div class="step-purchase-checkout__input input input_required">
+											<input data-validate data-required autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+										</div>
+									</div>
+								</div>
+								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_shipping">
+									<span class="step-purchase-checkout__heading tl2">самовывоз из магазина</span>
+									<div class="step-purchase-checkout__input-wrap">
+										<div class="step-purchase-checkout__input input input_location">
+											<input disabled value="г. Москва, б-р Смоленский, д. 7/9" autocomplete="off" type="text" name="form[]" data-error placeholder="" class="input__field" />
+										</div>
+										<button type="button" class="step-purchase-checkout__edit-btn">
+											<div class="step-purchase-checkout__edit-icon-wrap">
+												<img src="img/icons/edit-black.svg" alt="" class="step-purchase-checkout__edit-icon" />
+											</div>
+										</button>
+									</div>
+								</div>
+								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_date">
+									<span class="step-purchase-checkout__heading tl2">заберу с</span>
+									<div class="step-purchase-checkout__input input input_date">
+										<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" maxlength="10" class="input__field" />
+										<button data-dp-btn type="button" class="input__calendar-btn">
+											<img src="img/icons/calendar.svg" alt="" class="input__calendar-btn-icon" />
+										</button>
+									</div>
+								</div>
+								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_payment">
+									<span class="step-purchase-checkout__heading tl2">Способ оплаты</span>
+									<p class="step-purchase-checkout__text txt">
+										Оплата при получении
+									</p>
+									<div class="step-purchase-checkout__options">
+										<label class="step-purchase-checkout__option option option_reversed">
+											<input checked hidden class="option__input" type="radio" value="1" name="option" />
+											<span class="option__text caps">Наличными</span>
+										</label>
+										<label class="step-purchase-checkout__option option option_reversed">
+											<input hidden class="option__input" type="radio" value="2" name="option" />
+											<span class="option__text caps">оплата картой</span>
+										</label>
+									</div>
+								</div>
+								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_comment">
+									<span class="step-purchase-checkout__heading tl2">Комментарий</span>
+									<div class="step-purchase-checkout__text-input text-input">
+										<textarea autocomplete="off" name="form[]" placeholder="Ваш комментарий..." data-error class="text-input__field"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="purchase-checkout__info info-purchase-checkout">
+								<div class="info-purchase-checkout__order-info order-info order-info_items">
+									<div class="order-info__head">
+										<span class="order-info__subtitle caps caps_md">ваш заказ</span>
+										<span class="order-info__quantity caps">(9 товаров)</span>
+									</div>
+									<div class="order-info__body">
+										<div class="order-info__items-wrap swiper">
+											<div class="order-info__items swiper-wrapper">
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/a17e1729c72a1aa26335e0dd875f6eae.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/a17e1729c72a1aa26335e0dd875f6eae.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/a17e1729c72a1aa26335e0dd875f6eae.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+												<div class="order-info__item swiper-slide">
+													<span class="order-info__count txt txt_sm">1</span>
+													<div class="order-info__item-img-wrap">
+														<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="order-info__item-image" />
+													</div>
+												</div>
+											</div>
+											<button type="button" class="order-info__nav-btn">
+												<div class="order-info__nav-btn-icon">
+													<img src="img/icons/sm-arr.svg" alt="" class="order-info__nav-btn-icon-img" />
+												</div>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div data-accordion class="info-purchase-checkout__order-info order-info">
+									<div class="order-info__head">
+										<span class="order-info__subtitle caps caps_md">сумма к оплате</span>
+									</div>
+									<div class="order-info__body">
+										<div class="order-info__group caps">
+											<span class="order-info__subtitle">Товары на сумму</span>
+											<span class="order-info__value">3 600₽</span>
+										</div>
+										<button type="button" data-accordion-item class="order-info__group order-info__group_has-sublist caps">
+											<span class="order-info__subtitle">Выгода</span>
+											<span class="order-info__value">-1 200₽</span>
+										</button>
+
+										<div class="order-info__sublist-body">
+											<div class="order-info__sublist">
+												<div class="order-info__group">
+													<span class="order-info__subtitle txt">Скидка</span>
+													<span class="order-info__value caps">-600₽</span>
+												</div>
+												<div class="order-info__group">
+													<span class="order-info__subtitle txt">Сезонная распродажа</span>
+													<span class="order-info__value caps">-600₽</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="order-info__footer">
+										<span class="order-info__subtitle caps caps_md">Итого</span>
+										<span class="order-info__price txt txt_wide">2400₽</span>
+									</div>
+								</div>
+								<p class="info-purchase-checkout__policy-txt txt txt_sm">
+									Вы подтверждаете согласие с
+									<a href="#" class="info-purchase-checkout__policy-txt-link">условиями заказа</a>
+									и
+									<a href="#" class="info-purchase-checkout__policy-txt-link">политики конфиденциальности</a>
+								</p>
+								<button type="submit" class="info-purchase-checkout__btn btn btn_solid">
+									<span class="btn__text txt txt_md">Заказать</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="checkout-page__location location">
+				<div class="location__container container">
+					<span class="location__title tl1">мы <span>на карте</span></span>
+					<div id="map" class="location__map"></div>
+					<div class="location__info">
+						<p data-da=".location__panel,768,last" class="location__text txt">
+							Находимся рядом с метро Чкаловская и Петроградская
+						</p>
+						<div class="location__panel">
+							<div class="location__image-wrap desktop-only">
+								<img src="img/bg/8dd172f1ddf93591e4cc3534560fd673.webp" class="location__image" />
+							</div>
+							<div class="location__text-wrap">
+								<span class="location__address"><span class="location__address-txt txt"><span>Санкт-Петербург, </span> Левашовский пр. 13а</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__top mobile-only"></div>
+				<div class="footer__main">
+					<div data-da=".footer__top,768,first" class="footer__logo-group">
+						<a href="#" class="footer__logo-wrap"><img src="img/logo.svg" alt="" class="footer__logo" /></a>
+						<a href="#" class="footer__logo-wrap footer__logo-wrap_mks"><img src="img/logos/mks.webp" alt="" class="footer__logo" /></a>
+					</div>
+					<nav data-accordion="768,max" class="footer__nav">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<ul class="footer__subnav caps caps_md">
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">акции</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">белые вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">розовые вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">красные вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">квеври вина</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">крепкий алкоголь</a>
+									</li>
+									<li class="footer__subnav-item">
+										<a href="#" class="footer__subnav-link">сувениры и подарки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer__item footer__item_app"></li>
+							<li class="footer__item footer__item_md">
+								<button type="button" data-accordion-item class="footer__accordion-title caps caps_md">покупателям</button>
+								<div class="footer__accordion-body">
+									<ul class="footer__subnav">
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">адреса магазинов</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">контактная информация</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">о компании</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">блог</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">новости</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">бонусная программа</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="footer__item footer__item_md">
+								<button type="button" data-accordion-item class="footer__accordion-title caps caps_md">партнерам</button>
+								<div class="footer__accordion-body">
+									<ul class="footer__subnav">
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">корпоративные продажи</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">поставщикам</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">связаться с нами</a>
+										</li>
+										<li class="footer__subnav-item">
+											<a href="#" class="footer__subnav-link">работа у нас</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div data-da=".footer__item_app,768,first" class="footer__app">
+						<span class="footer__heading caps caps_md">мобильное приложение</span>
+						<div class="footer__group">
+							<a href="#" class="footer__group-item"><img src="img/promo/app-store-footer.svg" alt="" class="footer__group-item-img" /></a>
+							<a href="#" class="footer__group-item"><img src="img/promo/google-play-footer.svg" alt="" class="footer__group-item-img" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__row">
+					<ul data-da=".footer__top,768,last" class="footer__socials socials">
+						<li class="socials__item">
+							<a target="_blank" href="#" class="socials__link"><img src="img/icons/tg.svg" alt="" class="socials__icon" /></a>
+						</li>
+						<li class="socials__item">
+							<a target="_blank" href="#" class="socials__link"><img src="img/icons/yt.svg" alt="" class="socials__icon" /></a>
+						</li>
+						<li class="socials__item">
+							<a target="_blank" href="#" class="socials__link"><img src="img/icons/vk.svg" alt="" class="socials__icon" /></a>
+						</li>
+					</ul>
+					<div class="footer__newsletter newsletter-footer">
+						<span class="newsletter-footer__heading caps caps_md">Винные истории, акции и бонусы. Один клик — и у вас на почте</span>
+						<form data-dev action="#" class="newsletter-footer__form">
+							<div class="newsletter-footer__input input">
+								<input autocomplete="off" type="email" name="form[]" data-error placeholder="E-mail" class="input__field txt" />
+							</div>
+							<button type="submit" class="newsletter-footer__btn btn btn_icon">
+								<span class="btn__text txt txt_md">Отправить</span>
+								</butto>
+						</form>
+					</div>
+				</div>
+				<div class="footer__text-wrap">
+					<p class="footer__text txt">
+						Продажа алкогольной продукции Согласно ФЗ РФ N 171 О госрегулировании
+						алкогольного рынка от 22.11.1995 (ред. от 31.12.2014) продажа
+						алкогольных напитков через интернет признана дистанционным способом
+						распространения продукции и попадает под запрет. ««EveryQvevri»
+						соблюдает законодательство, поэтому все алкогольные напитки реализуются
+						в магазинах путём самовывоза.
+					</p>
+					<p class="footer__text txt txt_uc">
+						18+ МИНЗДРАВ ПРЕДУПРЕЖДАЕТ: ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ
+						ВАШЕМУ ЗДОРОВЬЮ
+					</p>
+					<p class="footer__text txt txt_uc">
+						ЦЕНЫ, ХАРАКТЕРИСТИКИ И ВНЕШНИЙ ВИД ТОВАРА В МАГАЗИНАХ МОГУТ ОТЛИЧАТЬСЯ
+						ОТ УКАЗАННЫХ НА САЙТЕ. НА АКЦИОННЫЕ ТОВАРЫ И ТОВАРЫ, ОТМЕЧЕННЫЕ «*» НА
+						ЦЕННИКАХ В ТОРГОВЫХ ЗАЛАХ МАГАЗИНОВ, СКИДКА ПО ДИСКОНТНЫМ КАРТАМ НЕ
+						РАСПРОСТРАНЯЕТСЯ. МАГАЗИНЫ ««EveryQvevri» НЕ ОСУЩЕСТВЛЯЮТ ДИСТАНЦИОННУЮ
+						ТОРГОВЛЮ, ДОСТАВКА ТОВАРА НЕ ПРОИЗВОДИТСЯ, ОПЛАТА ТОВАРА ПРОИСХОДИТ
+						НЕПОСРЕДСТВЕННО В МАГАЗИНАХ «EveryQvevri» В СООТВЕТСТВИИ С ДЕЙСТВУЮЩИМ
+						ЗАКОНОДАТЕЛЬСТВОМ РФ И РЕЖИМОМ РАБОТЫ МАГАЗИНОВ, КРУГЛОСУТОЧНАЯ И
+						ДИСТАНЦИОННАЯ ПРОДАЖА АЛКОГОЛЬНОЙ ПРОДУКЦИИ НЕ ОСУЩЕСТВЛЯЕТСЯ.
+						ИНФОРМАЦИЯ О ТОВАРАХ, РАЗМЕЩЕННАЯ НА САЙТЕ НОСИТ ОЗНАКОМИТЕЛЬНЫЙ
+						ХАРАКТЕР, ПОДРОБНОСТИ О ПРИОБРЕТЕНИИ ТОВАРОВ УТОЧНЯЙТЕ В МАГАЗИНАХ
+					</p>
+				</div>
+				<div class="footer__copyright">
+					<span class="footer__copyright-text txt">«EveryQvevri» © Все права защищены 2023</span>
+					<a href="#" class="footer__copyright-text txt">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+
+		<div class="account-section">
+			<div class="account-section__head">
+				<div class="account-section__head-row">
+					<span class="account-section__head-heading txt txt_md">Аккаунт</span>
+					<button data-close-account-menu class="account-section__head-close-btn">
+						<img src="img/icons/cross-gray.svg" alt="" class="header-catalog__head-close-btn-icon" />
+					</button>
+				</div>
+				<div class="account-section__head-group">
+					<div class="account-section__user-avatar">
+						<img src="img/icons/avatar.svg" alt="" class="account-section__user-avatar-image" />
+					</div>
+					<span class="account-section__user-name txt txt_md">Константин Константинопольский</span>
+					<div class="account-section__user-cashback user-cashback">
+						<span class="user-cashback__value caps caps_md">5%</span>
+						<div class="user-cashback__hint">
+							<span class="user-cashback__text txt">Ваш статус — Новичок</span>
+							<span class="user-cashback__text txt"><span class="user-cashback__text-content">Кэшбек <span class="cashback-value">5%</span> на все
+									товары</span>
+								<span class="user-cashback__subtext">* кроме акционных</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="account-section__user-sum user-sum">
+					<div class="user-sum__track">
+						<span class="user-sum__inner-track"></span>
+					</div>
+					<div class="user-sum__row">
+						<span class="user-sum__current">
+							<span class="user-sum__text txt">Сумма покупок:</span>
+							<span class="user-sum__current-value txt">1 200₽</span>
+						</span>
+						<span class="user-sum__total-value txt">5 000₽</span>
+					</div>
+				</div>
+			</div>
+			<div class="account-section__body">
+				<ul class="account-section__list">
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Личные данные</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Мои заказы</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Вы заказывали</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Статусы</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">История баллов</a>
+					</li>
+					<li class="account-section__link-item">
+						<a href="#" class="account-section__link txt txt_md">Избранные товары</a>
+					</li>
+				</ul>
+			</div>
+			<div class="account-section__footer">
+				<a href="#" class="account-section__logout-btn logout-btn txt txt_md">Выйти</a>
+			</div>
+		</div>
+		<div style="height: 0; position: absolute">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
+				<clipPath id="clip-img-mobile">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern0)" />
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern1)" />
+					<defs>
+						<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+							<use xlink:href="#image0_803_3857" transform="translate(0 -0.126109) scale(0.0017762)" />
+						</pattern>
+						<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+							<use xlink:href="#image1_803_3857" transform="matrix(0 -0.00108225 0.00108225 0 0 1.01299)" />
+						</pattern>
+					</defs>
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
+				<clipPath id="clip-img" clipPathUnits="objectBoundingBox">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
+				<clipPath id="clip-bottle" clipPathUnits="objectBoundingBox">
+					<path d="M0.331,0.129 L0.328,0.259 L0.308,0.27 C0.285,0.282,0.285,0.282,0.179,0.318 C0.086,0.35,0.038,0.37,0.017,0.388 L0,0.401 V0.683 V0.966 L0.018,0.975 C0.039,0.987,0.061,0.994,0.093,0.997 C0.129,1,0.871,1,0.907,0.997 C0.939,0.994,0.961,0.987,0.982,0.975 L1,0.966 V0.683 V0.401 L0.983,0.388 C0.961,0.37,0.913,0.35,0.806,0.313 C0.758,0.297,0.708,0.278,0.695,0.271 L0.672,0.259 L0.669,0.129 L0.668,0.032 H0.699 L0.699,0 H0.5 H0.301 L0.301,0.032 H0.332 L0.331,0.129 M0.401,0.323 C0.331,0.348,0.256,0.384,0.237,0.401 C0.222,0.414,0.222,0.412,0.232,0.525 C0.243,0.646,0.229,0.792,0.198,0.894 C0.181,0.95,0.177,0.954,0.166,0.923 C0.135,0.838,0.125,0.777,0.121,0.649 C0.117,0.535,0.126,0.431,0.142,0.412 C0.153,0.399,0.189,0.38,0.231,0.364 C0.278,0.346,0.441,0.301,0.458,0.301 C0.46,0.301,0.434,0.311,0.401,0.323"></path>
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none" fill="none">
+				<clipPath id="clip-img-group" clipPathUnits="objectBoundingBox">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.16,0 L0.272,0.144 L0.319,0.493 L0.272,0.841 L0.16,0.986 L0.047,0.841 L0,0.493 L0.047,0.144 L0.16,0 M0.498,0 L0.611,0.144 L0.657,0.493 L0.611,0.841 L0.498,0.986 L0.385,0.841 L0.338,0.493 L0.385,0.144 L0.498,0 M0.953,0.159 L0.84,0.014 L0.728,0.159 L0.681,0.507 L0.728,0.856 L0.84,1 L0.953,0.856 L1,0.507 L0.953,0.159" />
+				</clipPath>
+			</svg>
+		</div>
+
+		<div id="reviewSentModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_review-sent">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Ваш отзыв успешно отправлен</span>
+							<p class="txt-info-modal__text txt">
+								Отзыв будет опубликован после проверки модератором
+							</p>
+							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Понятно</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="writeReviewModal" aria-hidden="true" class="modal write-review-modal">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<form data-dev action="#" class="write-review-modal__form">
+							<span class="write-review-modal__title tl2">оставьте отзыв</span>
+							<div class="write-review-modal__rate">
+								<span class="write-review-modal__rate-txt txt">Ваша оценка</span>
+								<select class="write-review-modal__rating star-rating">
+									<option value="5"></option>
+									<option value="4"></option>
+									<option value="3"></option>
+									<option value="2"></option>
+									<option value="1"></option>
+								</select>
+							</div>
+							<div class="write-review-modal__input input">
+								<input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field" />
+							</div>
+							<div class="write-review-modal__text-input text-input">
+								<textarea maxlength="500" autocomplete="off" name="form[]" placeholder="Ваше мнение о продукте..." data-error class="text-input__field"></textarea>
+								<span class="text-input__hint txt txt_16">Максимальное количество символов — 500</span>
+							</div>
+							<button data-modal="#reviewSentModal" type="submit" class="write-review-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Оправить</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="confirmAccDeletionModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-acc-deletion">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Подтверждение удаления</span>
+							<p class="txt-info-modal__text txt">
+								Вы точно хотите удалить аккаунт? Изменить действие будет невозможно
+							</p>
+							<a href="#" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Удалить аккаунт</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="updatePhoneNumberModal" aria-hidden="true" class="modal account-modal account-modal_phone-number">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_phone-number .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Укажите Новый номер</span>
+								<p class="account-modal__text txt">
+									Введите новый контактный номер телефона. Вам поступит SMS с
+									кодом-паролем.
+								</p>
+								<form data-dev data-modal-message="#verifyPhoneModal" action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="updateEmailModal" aria-hidden="true" class="modal account-modal account-modal_email">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_email .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Укажите <span>Новую электронную почту</span></span>
+								<p class="account-modal__text txt">
+									Введите новый адрес электронной почты. Вам поступит письмо с
+									кодом-паролем.
+								</p>
+								<form data-dev data-modal-message="#verifyEmailModal" action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="verifyPhoneModal" aria-hidden="true" class="modal verify-code-modal verify-code-modal_phone-number">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".verify-code-modal_phone-number .verify-code-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="verify-code-modal__inner">
+							<div class="verify-code-modal__content">
+								<span class="verify-code-modal__title tl2">Введите код</span>
+								<p class="verify-code-modal__text txt">
+									Укажите код из SMS на номер
+									<span class="verify-code-modal__text-number txt_md">+7 (999) 999 99-99</span>
+								</p>
+								<a href="#" class="verify-code-modal__link btn btn_link">
+									<span class="btn__text txt txt_16">Изменить номер</span>
+								</a>
+								<form data-dev action="#" class="verify-code-modal__form">
+									<div class="verify-code-modal__input-wrap input-row">
+										<div class="input-row__group">
+											<div class="input-row__input input">
+												<input data-index="1" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="2" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="3" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="4" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+										</div>
+										<div class="input-row__hint txt txt_16">Ошибка</div>
+									</div>
+								</form>
+								<button type="button" disabled class="verify-code-modal__btn btn btn_ol">
+									<span class="btn__text txt txt_md">Запросить код повторно через
+										<span data-countdown="1">01:00</span></span>
+									<span hidden class="btn__text txt txt_md">Запросить код повторно</span>
+								</button>
+								<button type="button" data-modal="#noPhoneMessageModal" class="verify-code-modal__message-btn btn btn_link">
+									<span class="btn__text txt txt_16">Не приходит SMS с кодом?</span>
+								</button>
+							</div>
+							<div class="verify-code-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="verify-code-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="verifyEmailModal" aria-hidden="true" class="modal verify-code-modal verify-code-modal_email">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".verify-code-modal_email .verify-code-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="verify-code-modal__inner">
+							<div class="verify-code-modal__content">
+								<span class="verify-code-modal__title tl2">Введите код</span>
+								<p class="verify-code-modal__text txt">
+									Укажите код из письма на адрес электронной почты
+									<span class="verify-code-modal__text-email txt_md">example@gmail.com</span>
+								</p>
+								<a href="#" class="verify-code-modal__link btn btn_link">
+									<span class="btn__text txt txt_16">Изменить почту</span>
+								</a>
+								<form data-dev action="#" class="verify-code-modal__form">
+									<div class="verify-code-modal__input-wrap input-row">
+										<div class="input-row__group">
+											<div class="input-row__input input">
+												<input data-index="1" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="2" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="3" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+											<div class="input-row__input input">
+												<input data-index="4" data-numbers-only maxlength="1" autocomplete="off" type="text" name="form[]" class="input__field" />
+											</div>
+										</div>
+										<div class="input-row__hint txt txt_16">Ошибка</div>
+									</div>
+								</form>
+								<button type="button" disabled class="verify-code-modal__btn btn btn_ol">
+									<span class="btn__text txt txt_md">Запросить код повторно через
+										<span data-countdown="1">01:00</span></span>
+									<span hidden class="btn__text txt txt_md">Запросить код повторно</span>
+								</button>
+								<button type="button" data-modal="#noEmailMessageModal" class="verify-code-modal__message-btn btn btn_link">
+									<span class="btn__text txt txt_16">Не приходит письмо с кодом?</span>
+								</button>
+							</div>
+							<div class="verify-code-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="verify-code-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="noPhoneMessageModal" aria-hidden="true" class="modal no-message-modal no-message-modal_phone-number">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".no-message-modal_phone-number .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="no-message-modal__inner">
+							<span class="no-message-modal__title tl2">Не поступает SMS с кодом</span>
+							<p class="no-message-modal__head-text txt">
+								Если вы столкнулись с проблемой неполучения SMS-кода, есть несколько
+								шагов, которые можно предпринять:
+							</p>
+							<ul class="no-message-modal__list">
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Проверьте правильность номера телефона.</span>
+										Убедитесь, что вы указали правильный номер телефона в настройках
+										вашего профиля.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Проверьте соединение с сетью.</span>
+										Убедитесь, что у вас хорошее соединение с мобильной сетью, так
+										как плохая связь может привести к задержкам в доставке SMS.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
+										Иногда SMS-коды могут попадать в папку со спамом. Пожалуйста,
+										проверьте эту папку в вашем мобильном устройстве.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Попробуйте еще раз.</span>
+										В случае отсутствия SMS-кода,
+										<a href="#" class="no-message-modal__link">попробуйте запросить его повторно</a>.
+									</span>
+								</li>
+							</ul>
+							<p class="no-message-modal__text txt">
+								Если проблема сохраняется, свяжитесь с нашей
+								<a href="#" class="no-message-modal__link">службой поддержки</a>, и
+								мы постараемся помочь вам как можно быстрее.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="noEmailMessageModal" aria-hidden="true" class="modal no-message-modal no-message-modal_email">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".no-message-modal_email .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="no-message-modal__inner">
+							<span class="no-message-modal__title tl2">Не поступает письмо с кодом</span>
+							<p class="no-message-modal__head-text txt">
+								Если вы не получили письмо с кодом на ваш адрес электронной почты,
+								рекомендуем выполнить следующие шаги:
+							</p>
+							<ul class="no-message-modal__list">
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
+										Иногда письма могут попадать в папку со спамом. Пожалуйста,
+										проверьте эту папку в вашем почтовом ящике.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Проверьте правильность адреса.</span>
+										Убедитесь, что вы ввели правильный адрес электронной почты при
+										регистрации или оформлении заказа.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Повторите запрос.</span>
+										Если письмо не поступило,
+										<span class="no-message-modal__link">попробуйте повторно запросить код</span>.
+									</span>
+								</li>
+								<li class="no-message-modal__list-item txt">
+									<span class="no-message-modal__list-text">
+										<span class="no-message-modal__list-subtitle txt_md">Белый список.</span>
+										Добавьте наш адрес электронной почты в белый список вашего
+										почтового клиента, чтобы гарантировать доставку.
+									</span>
+								</li>
+							</ul>
+							<p class="no-message-modal__text txt">
+								Если проблема сохраняется, свяжитесь с нашей
+								<a href="#" class="no-message-modal__link">службой поддержки</a>, и
+								мы постараемся помочь вам как можно быстрее.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cancelOrderModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_cancel-order">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Отмена заказа</span>
+							<p class="txt-info-modal__text txt">
+								Вы точно хотите отменить заказ? Изменить действие будет невозможно
+							</p>
+							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Отменить заказ</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="confirmEmailLetter" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-email-letter">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Подтвердите почту и получите скидку</span>
+							<p class="txt-info-modal__text txt">
+								Отправили письмо на example@gmail.com. Пожалуйста, подтвердите адрес
+								электронной почты. После этого пришлем вам промокод на скидку
+							</p>
+							<a href="#" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">В каталог</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="requestSentModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_request-sent">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">ваша заявка упешно отправлена</span>
+							<p class="txt-info-modal__text txt">
+								Мы внимательно ознакомимся с вашей анкетой и свяжемся с вами в
+								течение 5 дней.
+							</p>
+							<button type="button" data-close class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Понятно</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="pointsPayModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_points-pay">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Оплата баллами</span>
+							<p class="txt-info-modal__text txt">
+								У вас 48 852 балла. Вы можете оплатить ими до 50% суммы заказа.
+							</p>
+							<form data-dev action="#" class="txt-info-modal__range-form range-form-modal">
+								<div class="range-form-modal__input input">
+									<input id="range-input" data-numbers-only autocomplete="off" type="text" name="form[]" data-error placeholder="Введите количество баллов" class="input__field" />
+								</div>
+								<div id="range-slider" class="range-form-modal__range-slider range-slider"></div>
+								<div class="range-form-modal__values">
+									<span class="range-form-modal__value caps">0₽</span>
+									<span class="range-form-modal__value caps">1 200₽</span>
+								</div>
+								<button type="submit" class="range-form-modal__btn btn btn_ol">
+									<span class="btn__text txt txt_md">Подтвердить</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="loginModal" aria-hidden="true" class="modal account-modal account-modal_login">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_login .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Войдите <span>или зарегистрируйтесь</span></span>
+								<p class="account-modal__text txt">
+									Введите свой контактный номер телефона. Вам поступит SMS с
+									кодом-паролем.
+								</p>
+								<form data-modal-message="#verifyPhoneModal" data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+								<button type="button" class="account-modal__link btn btn_link">
+									<span class="btn__text txt txt_16">Войти по e-mail</span>
+								</button>
+								<div class="account-modal__login-methods">
+									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
+									<ul class="account-modal__login-methods-list">
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Google</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="regModal" aria-hidden="true" class="modal account-modal account-modal_reg">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_reg .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Войдите <span>или зарегистрируйтесь</span></span>
+								<p class="account-modal__text txt">
+									Введите свой контактный номер телефона. Вам поступит SMS с
+									кодом-паролем.
+								</p>
+								<form data-modal-message="#verifyPhoneModal" data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input">
+										<input data-phone-mask autocomplete="off" type="tel" name="form[]" data-error="Заполните поле" placeholder="Номер телефона" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить код</span>
+									</button>
+								</form>
+								<div class="account-modal__checkboxes">
+									<div class="account-modal__checkbox">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" checked value="" name="form[]" />
+											<span class="checkbox__text txt txt_16"><span class="checkbox__txt-content">
+													Отправляя данные в эту форму «Я согласен с
+													<a href="#" class="checkbox__txt-link">условиями обработки</a>
+													и
+													<a href="#" class="checkbox__txt-link">хранения персональных данных</a>»
+												</span></span>
+										</label>
+									</div>
+									<div class="account-modal__checkbox">
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" value="" name="form[]" />
+											<span class="checkbox__text txt txt_16">Я согласен на получение рекламной и информационной SMS и
+												push-рассылки от бренда Every Qvevri</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="emailLoginModal" aria-hidden="true" class="modal account-modal account-modal_email-login">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_email-login .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Вход <span>в личный кабинет</span></span>
+								<form data-dev action="#" class="account-modal__form email-login-form">
+									<div class="email-login-form__fields">
+										<div class="email-login-form__input input">
+											<input data-required data-validate autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+										</div>
+										<div class="email-login-form__input input">
+											<input data-required data-validate autocomplete="off" type="password" name="form[]" data-error="Заполните поле" placeholder="Пароль" class="input__field" />
+										</div>
+									</div>
+									<button data-modal="#restorePassModal" type="button" class="email-login-form__forgot-pass-btn btn btn_link">
+										<span class="btn__text txt txt_16">Забыли пароль?</span>
+									</button>
+									<button type="submit" class="email-login-form__btn btn btn_solid">
+										<span class="btn__text txt txt_md">Войти</span>
+									</button>
+								</form>
+								<div class="account-modal__login-methods">
+									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
+									<ul class="account-modal__login-methods-list">
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
+											</button>
+										</li>
+										<li class="account-modal__login-method login-method">
+											<button type="button" class="login-method__inner">
+												<div class="login-method__icon-wrap">
+													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
+												</div>
+												<span class="login-method__text txt txt_md desktop-only">Google</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="account-modal__tel-login-btn btn btn_link">
+									<span class="btn__text txt txt_16">Войти по номеру телефона</span>
+								</button>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="restorePassModal" aria-hidden="true" class="modal account-modal account-modal_restore-pass">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".account-modal_restore-pass .account-modal__content,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="account-modal__inner">
+							<div class="account-modal__content">
+								<span class="account-modal__title tl2">Восстановление пароля</span>
+								<p class="account-modal__text txt">
+									Введите номер телефона или e-mail. Вам будет выслан новый пароль.
+								</p>
+								<form data-dev action="#" class="account-modal__form">
+									<div class="account-modal__input input input_validate">
+										<input data-validate data-required autocomplete="off" type="email" name="form[]" data-error="Заполните поле" placeholder="E-mail" class="input__field" />
+									</div>
+									<button type="submit" class="account-modal__btn btn btn_icon">
+										<span class="btn__text txt txt_md">Получить пароль</span>
+									</button>
+								</form>
+							</div>
+							<div class="account-modal__image-wrap">
+								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="orderMadeModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_order-made">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">генацвале, спасибо за ваш заказ!</span>
+							<p class="txt-info-modal__text caps">номер вашего заказа — 0435</p>
+							<ul class="txt-info-modal__list list-txt-info-modal">
+								<li class="list-txt-info-modal__item">
+									<div class="list-txt-info-modal__icon-wrap">
+										<img src="img/icons/location-red.svg" alt="" class="list-txt-info-modal__icon" />
+									</div>
+									<span class="list-txt-info-modal__text caps">г. Москва, б-р Смоленский, д. 7/9</span>
+								</li>
+								<li class="list-txt-info-modal__item">
+									<div class="list-txt-info-modal__icon-wrap">
+										<img src="img/icons/clock-red.svg" alt="" class="list-txt-info-modal__icon" />
+									</div>
+									<span class="list-txt-info-modal__text caps">срок хранения — 5 дней</span>
+								</li>
+							</ul>
+							<a href="#" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">В каталог</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="docked-info mobile-only">
+			<div class="docked-info__container container">
+				<div class="docked-info__text-content">
+					<span class="docked-info__quantity txt">3 товара</span>
+					<span class="docked-info__price txt txt_wide">2400₽</span>
+				</div>
+				<a href="#" class="docked-info__btn btn btn_solid"><span class="btn__text txt txt_md">Оформить заказ</span></a>
+			</div>
+		</div>
+		<div class="menu-bar mobile-only">
+			<ul class="menu-bar__list">
+				<li class="menu-bar__item">
+					<a href="#" class="menu-bar__link">
+						<div class="menu-bar__icon">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.18674 11.16L13.4267 3.75996C14.8401 2.62663 17.1467 2.62663 18.5734 3.7733L27.8134 11.16C28.8401 11.9866 29.5067 13.7333 29.2934 15.04L27.5201 25.6533C27.2001 27.5333 25.3734 29.08 23.4667 29.08H19.2V24.64C19.2 23.4006 18.3424 22.4 17.28 22.4H14.72C13.6576 22.4 12.8 23.4006 12.8 24.64V29.08H8.5334C6.6134 29.08 4.80007 27.5466 4.48007 25.6533L2.70674 15.04C2.48007 13.7333 3.14674 11.9866 4.18674 11.16Z" fill="#B3B3B3" />
+							</svg>
+						</div>
+						<span class="menu-bar__text caps caps_md">Главная</span>
+					</a>
+				</li>
+				<li class="menu-bar__item">
+					<a href="#" class="menu-bar__link">
+						<div class="menu-bar__icon">
+							<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22.1751 11.3248C19.9626 11.3248 18.1626 9.5248 18.1626 7.3123C18.1626 5.0998 19.9626 3.2998 22.1751 3.2998C24.3876 3.2998 26.1876 5.0998 26.1876 7.3123C26.1876 9.5248 24.3876 11.3248 22.1751 11.3248ZM22.1751 5.1623C21.0001 5.1623 20.0376 6.1248 20.0376 7.2998C20.0376 8.4748 21.0001 9.4373 22.1751 9.4373C23.3501 9.4373 24.3126 8.4748 24.3126 7.2998C24.3126 6.1248 23.3501 5.1623 22.1751 5.1623Z" fill="#B3B3B3" />
+								<path d="M8.32501 11.3248C6.11251 11.3248 4.3125 9.5248 4.3125 7.3123C4.3125 5.0998 6.11251 3.2998 8.32501 3.2998C10.5375 3.2998 12.3375 5.0998 12.3375 7.3123C12.3375 9.5248 10.5375 11.3248 8.32501 11.3248ZM8.32501 5.1623C7.15001 5.1623 6.1875 6.1248 6.1875 7.2998C6.1875 8.4748 7.15001 9.4373 8.32501 9.4373C9.50001 9.4373 10.4625 8.4748 10.4625 7.2998C10.4625 6.1248 9.51251 5.1623 8.32501 5.1623Z" fill="#B3B3B3" />
+								<path d="M22.1751 26.7125C19.9626 26.7125 18.1626 24.9125 18.1626 22.7C18.1626 20.4875 19.9626 18.6875 22.1751 18.6875C24.3876 18.6875 26.1876 20.4875 26.1876 22.7C26.1876 24.9125 24.3876 26.7125 22.1751 26.7125ZM22.1751 20.55C21.0001 20.55 20.0376 21.5125 20.0376 22.6875C20.0376 23.8625 21.0001 24.825 22.1751 24.825C23.3501 24.825 24.3126 23.8625 24.3126 22.6875C24.3126 21.5125 23.3501 20.55 22.1751 20.55Z" fill="#B3B3B3" />
+								<path d="M8.32501 26.7125C6.11251 26.7125 4.3125 24.9125 4.3125 22.7C4.3125 20.4875 6.11251 18.6875 8.32501 18.6875C10.5375 18.6875 12.3375 20.4875 12.3375 22.7C12.3375 24.9125 10.5375 26.7125 8.32501 26.7125ZM8.32501 20.55C7.15001 20.55 6.1875 21.5125 6.1875 22.6875C6.1875 23.8625 7.15001 24.825 8.32501 24.825C9.50001 24.825 10.4625 23.8625 10.4625 22.6875C10.4625 21.5125 9.51251 20.55 8.32501 20.55Z" fill="#B3B3B3" />
+							</svg>
+						</div>
+						<span class="menu-bar__text caps caps_md">Каталог</span>
+					</a>
+				</li>
+				<li class="menu-bar__item">
+					<button data-open-account-menu type="button" class="menu-bar__link">
+						<div class="menu-bar__icon">
+							<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.651 12.3636C15.5568 12.3542 15.4438 12.3542 15.3402 12.3636C13.0986 12.2882 11.3185 10.4495 11.3185 8.18653C11.3185 5.8764 13.1833 4 15.5003 4C17.8078 4 19.6821 5.8764 19.6821 8.18653C19.6727 10.4495 17.8926 12.2882 15.651 12.3636Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M9.36253 18.2095C6.39478 20.1737 6.39478 23.3747 9.36253 25.3267C12.735 27.5577 18.2658 27.5577 21.6382 25.3267C24.6059 23.3625 24.6059 20.1616 21.6382 18.2095C18.278 15.9907 12.7472 15.9907 9.36253 18.2095Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<span class="menu-bar__text caps caps_md">Аккаунт</span>
+					</button>
+				</li>
+				<li class="menu-bar__item">
+					<a href="#" class="menu-bar__link">
+						<div class="menu-bar__icon">
+							<svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.494 24.8938C16.086 25.0354 15.414 25.0354 15.006 24.8938C11.526 23.7258 3.75 18.8534 3.75 10.5949C3.75 6.94944 6.738 4 10.422 4C12.606 4 14.538 5.95125 15.75 7.55574C16.962 5.95125 18.906 4 21.078 4C24.762 4 27.75 6.94944 27.75 10.5949C27.75 18.8534 19.974 23.7258 16.494 24.8938Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+
+						<span class="menu-bar__text caps caps_md">Избранное</span>
+					</a>
+				</li>
+				<li class="menu-bar__item menu-bar__item_cart _active">
+					<a href="#" class="menu-bar__link">
+						<div class="menu-bar__icon">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 9.7508V8.65135C10 6.10107 12.0111 3.59613 14.5111 3.3581C17.4889 3.0634 20 5.455 20 8.43599V10.0002" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M11.5717 26.6668H18.4283C23.0221 26.6668 23.8449 24.846 24.0849 22.6293L24.9419 15.8436C25.2505 13.0841 24.4506 10.8335 19.571 10.8335H10.429C5.54944 10.8335 4.74951 13.0841 5.05806 15.8436L5.91512 22.6293C6.1551 24.846 6.97788 26.6668 11.5717 26.6668Z" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M18.6411 15.0003H18.6504" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M11.3484 15.0003H11.3577" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<span class="menu-bar__text caps caps_md">Корзина</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -9,6 +9,7 @@ import { rem } from './utils';
 
 let categoriesSlider = null;
 let tabsSlider = null;
+let purchaseItemsSlider = null;
 
 const changeSlideNum = (swiper, pagination, target) => {
   const slides = swiper.slides;
@@ -104,6 +105,57 @@ const revealSlides = swiper => {
 };
 
 const initSliders = () => {
+  if (document.querySelector('.order-info__items-wrap.swiper')) {
+    if (
+      document.querySelectorAll('.order-info__item').length > 5 &&
+      !purchaseItemsSlider
+    ) {
+      purchaseItemsSlider = new Swiper('.order-info__items-wrap.swiper', {
+        modules: [Navigation, Mousewheel],
+        slidesPerView: 'auto',
+        slideClass: 'order-info__item',
+        wrapperClass: 'order-info__items',
+        freeMode: true,
+        mousewheel: {
+          enabled: true,
+          forceToAxis: true,
+        },
+
+        // navigation
+        navigation: {
+          nextEl: '.order-info__nav-btn',
+        },
+
+        // breakpoints
+        breakpoints: {
+          768: {
+            spaceBetween: rem(0.8),
+          },
+        },
+
+        // events
+        on: {
+          slideChange: swiper => {
+            if (swiper.isEnd) {
+              document
+                .querySelector('.order-info__nav-btn')
+                .classList.add('_hidden');
+            } else {
+              document
+                .querySelector('.order-info__nav-btn')
+                .classList.remove('_hidden');
+            }
+          },
+        },
+      });
+    } else if (
+      document.querySelectorAll('.order-info__item').length <= 5 &&
+      purchaseItemsSlider
+    ) {
+      purchaseItemsSlider.destroy();
+      purchaseItemsSlider = null;
+    }
+  }
   if (document.querySelector('.hero__slider')) {
     new Swiper('.hero__slider', {
       modules: [Navigation, Pagination],

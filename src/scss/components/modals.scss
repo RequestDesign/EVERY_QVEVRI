@@ -208,6 +208,9 @@ body::after {
       .txt-info-modal_confirm-email-letter & {
         max-width: 32rem;
       }
+      .txt-info-modal_order-made & {
+        margin-bottom: 4rem;
+      }
     }
   }
 
@@ -217,9 +220,16 @@ body::after {
     margin-bottom: 4.8rem;
     max-width: 42.7rem;
     text-align: center;
+
+    .txt-info-modal_order-made & {
+      margin-bottom: 2.4rem;
+    }
     @media (max-width: 48em) {
       margin-bottom: 6.4rem;
       max-width: 48rem;
+      .txt-info-modal_order-made & {
+        margin-bottom: 4rem;
+      }
       .txt-info-modal_confirm-acc-deletion &,
       .txt-info-modal_cancel-order & {
         max-width: 57rem;
@@ -240,6 +250,58 @@ body::after {
 
   &__btn {
     width: 100%;
+  }
+
+  // .txt-info-modal__list
+
+  &__list {
+    margin-bottom: 4.8rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+.list-txt-info-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.4rem;
+  @media (max-width: 48em) {
+    row-gap: 4rem;
+  }
+
+  // .list-txt-info-modal__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+    }
+  }
+
+  // .list-txt-info-modal__icon-wrap
+
+  &__icon-wrap {
+    flex: 0 0 2rem;
+    width: 2rem;
+    @media (max-width: 48em) {
+      flex: 0 0 4rem;
+      width: 4rem;
+    }
+  }
+
+  // .list-txt-info-modal__icon
+
+  &__icon {
+    object-fit: contain;
+  }
+
+  // .list-txt-info-modal__text
+
+  &__text {
   }
 }
 
