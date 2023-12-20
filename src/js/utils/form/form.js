@@ -31,8 +31,10 @@ export function formFieldsInit(options = { viewPass: false }) {
         targetElement.classList.add('_form-focus');
         targetElement.parentElement.classList.add('_form-focus');
       }
-      targetElement.closest('.input').classList.remove('_filled');
-      formValidate.removeError(targetElement);
+      if (targetElement.closest('.input')) {
+        targetElement.closest('.input').classList.remove('_filled');
+        formValidate.removeError(targetElement);
+      }
     }
   });
   document.body.addEventListener('focusout', function (e) {

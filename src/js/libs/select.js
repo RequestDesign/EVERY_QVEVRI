@@ -112,10 +112,18 @@ class Select {
         );
       }
     }
-    select.insertAdjacentHTML(
-      'beforeend',
-      `<div class="${this.classes.body}"><div hidden class="${this.classes.options}"></div></div>`
-    );
+    if (relativeSel.dataset.speed !== '0') {
+      select.insertAdjacentHTML(
+        'beforeend',
+        `<div class="${this.classes.body}"><div hidden class="${this.classes.options}"></div></div>`
+      );
+    } else {
+      select.insertAdjacentHTML(
+        'beforeend',
+        `<div class="${this.classes.body}"><div class="${this.classes.options}"></div></div>`
+      );
+    }
+
     this.build(relativeSel);
 
     relativeSel.dataset.speed = relativeSel.dataset.speed
@@ -128,6 +136,7 @@ class Select {
   // select build
   build(relativeSel) {
     const select = relativeSel.parentElement;
+    const selObj = this;
 
     // set id
     select.dataset.selId = relativeSel.dataset.selId;
@@ -164,6 +173,17 @@ class Select {
       );
     }
 
+    // validate select
+    if (relativeSel.closest('form')) {
+      relativeSel.closest('form').addEventListener('submit', function () {
+        if (!select.classList.contains(selObj.classes.filled)) {
+          selObj.addErr(relativeSel, select);
+        } else {
+          selObj.removeErr(relativeSel, select);
+        }
+      });
+    }
+
     // show / hide selection from select title
     if (relativeSel.hasAttribute('data-show-val')) {
       select.classList.add('_select-show-val');
@@ -185,11 +205,17 @@ class Select {
   // set twin select options
   setOptions(select, relativeSel) {
     const options = this.getSelect(select, this.classes.options).twinSel;
+    const relativeSelOptions = this.getSelect(
+      select,
+      this.classes.options
+    ).relativeSel;
 
     options.innerHTML = this.getOptions(relativeSel);
-    options
-      .querySelector(`.${this.classes.option}`)
-      .classList.add(this.classes.selected);
+    if (relativeSelOptions.querySelector('[selected]')) {
+      options
+        .querySelector(`.${this.classes.option}`)
+        .classList.add(this.classes.selected);
+    }
   }
   // disable select
   disableSelect(select, relativeSel) {
@@ -221,6 +247,7 @@ class Select {
             }"]`
           );
       const relativeSel = this.getSelect(select).relativeSel;
+
       if (type === 'click') {
         if (!relativeSel.disabled) {
           if (target.closest(this.getClass(this.classes.list))) {
@@ -272,7 +299,9 @@ class Select {
 
     if (!selOptions.classList.contains('_slide')) {
       select.classList.toggle(this.classes.opened);
-      _slideToggle(selOptions, relativeSel.dataset.speed);
+      if (relativeSel.dataset.speed !== '0') {
+        _slideToggle(selOptions, relativeSel.dataset.speed);
+      }
       if (
         select.classList.contains(this.classes.opened) &&
         relativeSel.hasAttribute('data-validate') &&
@@ -301,7 +330,9 @@ class Select {
 
     if (!selOptions.classList.contains('_slide')) {
       select.classList.remove(this.classes.opened);
-      _slideUp(selOptions, relativeSel.dataset.speed);
+      if (relativeSel.dataset.speed !== '0') {
+        _slideUp(selOptions, relativeSel.dataset.speed);
+      }
     }
   }
   // set single option actions
@@ -493,7 +524,9 @@ class Select {
       ? `data-simplebar`
       : '';
     let selScrollHeight = relativeSel.dataset.selScroll
-      ? `style="max-height:${relativeSel.dataset.selScroll}px"`
+      ? `style="max-height:${
+          window.innerWidth > 768 ? relativeSel.dataset.selScroll : 22
+        }rem"`
       : '';
     let selOptions = Array.from(relativeSel.options);
 

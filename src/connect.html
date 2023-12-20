@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Связаться с нами" })
+  <body style="opacity: 0"> 
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="main contacts-page contacts-page_connect">
+        <section class="contacts-page__contacts-section contacts-section">
+            <div class="contacts-section__container container">
+                  <div class="contacts-section__head">
+                    <nav class="contacts-section__breadcrumbs breadcrumbs caps">
+                        <a href="#" class="breadcrumbs__text">Главная</a>
+                        <span class="breadcrumbs__text">связаться с нами</span>
+                      </nav>
+
+                  </div>
+                  <div class="contacts-section__body">
+                    <div class="contacts-section__text-content">
+                        <span class="contacts-section__title tl1">связаться с нами</span>
+                        <p class="contacts-section__text txt">Мы всегда открыты к сотрудничеству. Если у вас есть вопросы или предложения, свяжитесь с нами по указанным реквизитам либо оставьте заявку.</p>
+                    </div>
+                    <div class="contacts-section__info-content">
+                        <div class="contacts-section__groups">
+                            <div class="contacts-section__group group-contact">
+                                <span class="group-contact__subtitle tl2">Номер телефона</span>
+                                <a href="tel:88003010790" class="group-contact__text tl2">8 800 301 07 90</a>
+                            </div>
+                            <div class="contacts-section__group group-contact">
+                                <span class="group-contact__subtitle tl2">E-mail</span>
+                                <a href="mailto:EveryQvevri@gmail.com" class="group-contact__text tl2">EveryQvevri@gmail.com</a>
+                            </div>
+                            <div class="contacts-section__group group-contact">
+                                <span class="group-contact__subtitle tl2">Соцсети</span>
+                                <ul class="group-contact__socials socials">
+                                    <li class="socials__item">
+                                        <a href="#" target="_blank" class="socials__link"><img src="img/icons/tg.svg" alt="" class="socials__icon" /></a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a href="#" target="_blank" class="socials__link"><img src="img/icons/yt.svg" alt="" class="socials__icon" /></a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a href="#" target="_blank" class="socials__link"><img src="img/icons/vk.svg" alt="" class="socials__icon" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contacts-section__newsletter newsletter">
+                            <span class="newsletter__heading caps caps_md"
+                              >Винные истории, акции и бонусы. Один клик — и у вас на почте</span
+                            >
+                            <form data-dev action="#" class="newsletter__form">
+                              <div class="newsletter__input input">
+                                <input
+                                  autocomplete="off"
+                                  type="email"
+                                  name="form[]"
+                                  data-error
+                                  placeholder="E-mail"
+                                  class="input__field txt" />
+                              </div>
+                              <button type="submit" class="newsletter__btn btn btn_icon">
+                                <span class="btn__text txt txt_md">Отправить</span>
+                              </butto>
+                            </form>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="contacts-page__questionary questionary questionary_request">
+          <div class="questionary__container container">
+            <div
+              data-da=".questionary__head,768,first"
+              class="questionary__image-wrap questionary__image-wrap_large">
+              <img
+                src="@img/bg/3bbcbce7cd83ef112eb1e4e3564cabbf.webp"
+                alt=""
+                class="questionary__image" />
+            </div>
+            <div class="questionary__content">
+              <div class="questionary__head">
+                <span class="questionary__title tl1"
+                  >связаться</span
+                >
+              </div>
+              <form
+                data-modal-message="#requestSentModal"
+                data-dev
+                action="#"
+                class="questionary__form">
+                <div class="questionary__fields">
+                  <div
+                    class="questionary__input input input_required">
+                    <input
+                      data-required
+                      data-validate
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      data-error="Заполните поле"
+                      placeholder="Имя"
+                      class="input__field" />
+                  </div>
+                  <div
+                    class="questionary__input input input_required">
+                    <input
+                      data-phone-mask
+                      data-required
+                      data-validate
+                      autocomplete="off"
+                      type="tel"
+                      name="form[]"
+                      data-error="Заполните поле"
+                      placeholder="Телефон"
+                      class="input__field" />
+                  </div>
+                  <div
+                    class="questionary__input input input_required">
+                    <input
+                      data-required
+                      data-validate
+                      autocomplete="off"
+                      type="text"
+                      name="form[]"
+                      data-error="Заполните поле"
+                      placeholder="Фамилия"
+                      class="input__field" />
+                  </div>
+                  <div
+                    class="questionary__input input input_required">
+                    <input
+                      data-required
+                      data-validate
+                      autocomplete="off"
+                      type="email"
+                      name="form[]"
+                      data-error="Заполните поле"
+                      placeholder="E-mail"
+                      class="input__field" />
+                  </div>
+                  <div
+                  class="questionary__input input input_required">
+                  <input
+                    data-required
+                    data-validate
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Заполните поле"
+                    placeholder="Компания"
+                    class="input__field" />
+                </div>
+                <div
+                class="questionary__input input input_required">
+                <input
+                data-numbers-only
+                  data-required
+                  data-validate
+                  autocomplete="off"
+                  type="text"
+                  name="form[]"
+                  data-error="Заполните поле"
+                  placeholder="ИНН"
+                  class="input__field" />
+              </div>
+                 <div class="questionary__text-input text-input">
+                  <textarea autocomplete="off" name="form[]" placeholder="Текст сообщения..." class="text-input__field"></textarea>
+                 </div>
+                </div>
+                <div class="questionary__footer">
+                  <button
+                    type="submit"
+                    class="questionary__link btn btn_round">
+                    <div class="btn__icon-wrap"></div>
+                    <span class="btn__text">отправить</span>
+                  </button>
+                  <p class="questionary__text txt txt_sm">
+                    Отправляя анкету, вы даете согласие на обработку
+                    <a href="#" class="questionary__txt-link"
+                      >персональных данных</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div
+              class="questionary__image-wrap questionary__image-wrap_small">
+              <img
+                src="@img/bg/b82f3cd92511e9fe12041d9853403aa7.webp"
+                alt=""
+                class="questionary__image" />
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
+      @@include('html/_modal.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

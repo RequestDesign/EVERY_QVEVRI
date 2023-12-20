@@ -1,0 +1,148 @@
+.contacts-page {
+  // .contacts-page__contacts-section
+
+  &__contacts-section {
+    margin-bottom: 16rem;
+    @media (max-width: 48em) {
+      margin-bottom: 20rem;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.contacts-section {
+  // .contacts-section__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .contacts-section__head
+
+  &__head {
+    margin-bottom: 1.6rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // .contacts-section__breadcrumbs
+
+  &__breadcrumbs {
+  }
+
+  // .contacts-section__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      flex-direction: row;
+      column-gap: 27.3rem;
+    }
+  }
+
+  // .contacts-section__text-content
+
+  &__text-content {
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      margin: 0;
+    }
+  }
+
+  // .contacts-section__title
+
+  &__title {
+    margin-bottom: 2.4rem;
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  // .contacts-section__text
+
+  &__text {
+    @media (min-width: 48em) {
+      max-width: 41rem;
+    }
+  }
+
+  // .contacts-section__info-content
+
+  &__info-content {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 48em) {
+      flex: 1 1 auto;
+    }
+  }
+
+  // .contacts-section__groups
+
+  &__groups {
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .contacts-section__group
+
+  &__group {
+  }
+
+  // .contacts-section__newsletter
+
+  &__newsletter {
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.group-contact {
+  padding: 3.6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid $lightGray;
+  &:first-child {
+    padding-top: 0;
+  }
+  @media (min-width: 48em) {
+    padding: 2.8rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child {
+      padding-top: 1.5rem;
+    }
+  }
+
+  // .group-contact__subtitle
+
+  &__subtitle {
+    color: $lightGray;
+    @media (max-width: 48em) {
+      margin-bottom: 1.6rem;
+      font-family: 'GraphicLCG';
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      color: $gray;
+    }
+  }
+
+  // .group-contact__text
+
+  &__text {
+  }
+
+  // .group-contact__socials
+
+  &__socials {
+  }
+}

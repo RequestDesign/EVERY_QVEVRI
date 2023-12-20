@@ -2467,6 +2467,52 @@
 
 // --------------------------------------------------------------------------
 
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  @media (max-width: 48em) {
+    row-gap: 5rem;
+  }
+
+  // .newsletter__heading
+
+  &__heading {
+    @media (max-width: 48em) {
+      max-width: 55rem;
+    }
+  }
+
+  // .newsletter__form
+
+  &__form {
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $lightGray;
+    @media (max-width: 48em) {
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  // .newsletter__input
+
+  &__input {
+    &.input {
+      padding: 0;
+      padding-right: 2rem;
+      border: none;
+    }
+  }
+
+  // .newsletter__btn
+
+  &__btn {
+  }
+}
+
 .remove-item-btn {
   display: flex;
   align-items: center;
