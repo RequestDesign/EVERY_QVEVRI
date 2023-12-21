@@ -443,7 +443,7 @@ const initSlidersOnResize = () => {
               : 4,
             spaceBetween:
               section.classList.contains('shopify-section_group') &&
-              !section.classList.contains('shopify-section_group')
+              !section.classList.contains('blog-page__shopify-section')
                 ? 90
                 : section.classList.contains('blog-page__shopify-section')
                 ? 20

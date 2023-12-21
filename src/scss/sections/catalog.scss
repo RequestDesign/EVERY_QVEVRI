@@ -334,6 +334,9 @@
     }
   }
   @media (min-width: 48em) {
+    .favorite-page & {
+      display: none;
+    }
     &__scrollable-list {
       .filters__options {
         max-height: 22rem;
@@ -492,6 +495,13 @@
     margin-bottom: -0.8rem;
     @media (max-width: 48em) {
       margin-bottom: -4rem;
+      .favorite-page & {
+        .option {
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+      }
     }
   }
 
@@ -577,6 +587,9 @@
 
   &__submit-btn {
     margin-bottom: 1.6rem;
+    .favorite-page & {
+      margin: 0;
+    }
     @media (min-width: 48em) {
       display: none;
     }
@@ -683,8 +696,10 @@
     padding: 6.4rem 2.4rem 45rem 2.4rem;
     display: flex;
     flex-direction: column;
-    transform: translateX(110vw);
-    transition: transform 0.3s ease;
+    &:not(.favorite-page &) {
+      transform: translateX(110vw);
+      transition: transform 0.3s ease;
+    }
     ._sublist-opened & {
       transform: translateX(0);
     }

@@ -555,7 +555,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 0);
       bodyUnlock();
     }
-    if (target.closest('.sublist-filters__options .option__input')) {
+    if (
+      target.closest('.sublist-filters__options .option__input') &&
+      !document.querySelector('.favorite-page')
+    ) {
       const targetEl = document.querySelector('.filters__sort-btn');
       targetEl.innerHTML = target.closest(
         '.sublist-filters__options .option__input'
@@ -571,7 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.classList.add('_filters-visible');
       bodyLock();
     }
-    if (target.closest('#close-filters-btn')) {
+    if (target.closest('[data-close-filters-btn]')) {
       document.documentElement.classList.remove('_filters-visible');
       bodyUnlock();
     }

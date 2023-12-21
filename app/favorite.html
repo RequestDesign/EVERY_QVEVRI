@@ -4002,14 +4002,14 @@
 		</header>
 
 		<main class="main favorite-page">
-			<section class="favorite-page__products products-favorite-page">
-				<div class="products-favorite-page__container container">
-					<div class="products-favorite-page__head">
-						<div class="products-favorite-page__heading-wrap">
-							<span class="products-favorite-page__heading tl1">избранное</span>
-							<span class="products-favorite-page__quantity txt txt_md">6 товаров</span>
+			<section class="favorite-page__products products-favorite">
+				<div class="products-favorite__container container">
+					<div class="products-favorite__head">
+						<div class="products-favorite__heading-wrap">
+							<span class="products-favorite__heading tl1">избранное</span>
+							<span class="products-favorite__quantity txt txt_md">6 товаров</span>
 						</div>
-						<div class="products-favorite-page__sort sort">
+						<div class="products-favorite__sort sort">
 							<select data-show-selection name="form[]">
 								<option value="1" selected>Сначала новые</option>
 								<option value="2">Сначала старые</option>
@@ -4019,10 +4019,10 @@
 							</select>
 						</div>
 					</div>
-					<div class="products-favorite-page__body">
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+					<div class="products-favorite__body">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4033,9 +4033,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4104,9 +4105,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4117,9 +4118,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4188,9 +4190,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4201,9 +4203,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4272,9 +4275,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4285,9 +4288,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4356,9 +4360,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4369,9 +4373,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4440,9 +4445,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="products-favorite-page__card menu-product-card menu-product-card_grid-view">
+						<div class="products-favorite__card menu-product-card menu-product-card_grid-view">
 							<div class="menu-product-card__head">
-								<div class="menu-product-card__badges">
+								<div data-dom-replace=".menu-product-card__head,.menu-product-card__preview,.menu-product-card" class="menu-product-card__badges">
 									<div class="menu-product-card__badge badge">
 										<span class="badge__text txt txt_16">-25%</span>
 									</div>
@@ -4453,9 +4458,10 @@
 										<span class="badge__text txt txt_16">Эксклюзив</span>
 									</div>
 								</div>
-								<button type="button" class="menu-product-card__heart-btn heart-btn">
-									<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-										<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
+								<button type="button" class="menu-product-card__remove-btn">
+									<svg class="menu-product-card__remove-btn-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M30 30L18.0003 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M18 30L29.9997 18.1688" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</button>
 							</div>
@@ -4524,6 +4530,43 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="products-favorite__filters filters">
+						<form data-dev action="#" class="filters__sublist-wrap">
+							<div class="filters__head">
+								<button data-close-filters-btn type="button" class="filters__close-btn"><img src="img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+								<span class="filters__title tl2">Сортировка</span>
+							</div>
+							<div class="filters__sublist sublist-filters">
+								<div class="sublist-filters__options">
+									<label class="options__option option">
+										<input hidden class="option__input" checked type="radio" value name="option">
+										<span class="option__text caps caps_md">Сначала новые</span>
+									</label>
+									<label class="options__option option">
+										<input hidden class="option__input" type="radio" value name="option">
+										<span class="option__text caps caps_md">Сначала старые</span>
+									</label>
+									<label class="options__option option">
+										<input hidden class="option__input" type="radio" value name="option">
+										<span class="option__text caps caps_md">По возрастанию цены</span>
+									</label>
+									<label class="options__option option">
+										<input hidden class="option__input" type="radio" value name="option">
+										<span class="option__text caps caps_md">По убыванию цены</span>
+									</label>
+									<label class="options__option option">
+										<input hidden class="option__input" type="radio" value name="option">
+										<span class="option__text caps caps_md">Высокий рейтинг</span>
+									</label>
+								</div>
+							</div>
+							<div class="filters__footer">
+								<button data-close-filters-btn type="submit" class="filters__submit-btn btn btn_solid">
+									<span class="btn__text txt">Показать</span>
+								</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -6082,6 +6125,8 @@
 				</li>
 			</ul>
 		</div>
+		<button type="button" id="open-filters-btn" class="filters-btn mobile-only"><img src="img/icons/sort.svg" alt="" class="filters-btn__icon"></button>
+
 	</div>
 	<script src="js/app.js"></script>
 
