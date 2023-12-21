@@ -10,6 +10,7 @@ import { rem } from './utils';
 let categoriesSlider = null;
 let tabsSlider = null;
 let purchaseItemsSlider = null;
+let productsListSlider = null;
 
 const changeSlideNum = (swiper, pagination, target) => {
   const slides = swiper.slides;
@@ -411,6 +412,7 @@ const initSlidersOnResize = () => {
         followFinger: true,
         watchSlidesProgress: true,
         watchSlidesVisibility: true,
+        updateOnWindowResize: true,
         mousewheel: {
           enabled: true,
           forceToAxis: true,
@@ -439,9 +441,13 @@ const initSlidersOnResize = () => {
             slidesPerView: section.classList.contains('shopify-section_group')
               ? 5
               : 4,
-            spaceBetween: section.classList.contains('shopify-section_group')
-              ? 90
-              : 137,
+            spaceBetween:
+              section.classList.contains('shopify-section_group') &&
+              !section.classList.contains('shopify-section_group')
+                ? 90
+                : section.classList.contains('blog-page__shopify-section')
+                ? 20
+                : 137,
           },
         },
 
@@ -570,6 +576,39 @@ const initSlidersOnResize = () => {
     } else if (window.innerWidth > 768 && tabsSlider) {
       tabsSlider.destroy();
       tabsSlider = null;
+    }
+  }
+  if (document.querySelector('.article-blog__products-list.swiper')) {
+    if (window.innerWidth <= 768 && !productsListSlider) {
+      productsListSlider = new Swiper('.article-blog__products-list.swiper', {
+        modules: [Mousewheel],
+        speed: 600,
+        loop: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        slidesPerView: 1.4,
+        spaceBetween: 65,
+        mousewheel: {
+          enabled: true,
+          forceToAxis: true,
+        },
+
+        // events
+        on: {
+          afterInit: swiper => {
+            revealSlides(swiper);
+          },
+          slideChangeTransitionStart: swiper => {
+            revealSlides(swiper);
+          },
+          touchMove: swiper => {
+            revealSlides(swiper);
+          },
+        },
+      });
+    } else if (window.innerWidth > 768 && productsListSlider) {
+      productsListSlider.destroy();
+      productsListSlider = null;
     }
   }
 };

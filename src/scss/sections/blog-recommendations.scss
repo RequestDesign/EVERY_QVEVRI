@@ -1,0 +1,66 @@
+.blog-page {
+  // .blog-page__recommendations
+
+  &__recommendations {
+    margin-bottom: 20rem;
+    @media (min-width: 48em) {
+      display: none;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+
+.recommendations-blog {
+  // .recommendations-blog__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .recommendations-blog__head
+
+  &__head {
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .recommendations-blog__title
+
+  &__title {
+    margin-bottom: 5rem;
+  }
+
+  // .recommendations-blog__text
+
+  &__text {
+  }
+
+  // .recommendations-blog__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .recommendations-blog__cards
+
+  &__cards {
+    margin-bottom: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  // .recommendations-blog__blog-card
+
+  &__blog-card {
+  }
+
+  // .recommendations-blog__pagination
+
+  &__pagination {
+  }
+}
