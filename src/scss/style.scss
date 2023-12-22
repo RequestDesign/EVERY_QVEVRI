@@ -38,6 +38,7 @@ html.lock body {
 body {
   overflow-x: hidden;
   background-image: url('@img/bg.webp');
+  background-attachment: fixed;
   background-size: cover;
   // site is loaded
   .loaded & {
@@ -63,7 +64,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20.2rem;
+    height: 14.5rem;
     box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.2);
     background-color: $white;
     background-image: url(@img/bg.webp);
@@ -87,6 +88,9 @@ body {
   }
   @media (max-width: 48em) {
     overflow: hidden;
+    &::after {
+      height: 20.4rem;
+    }
     .container {
       padding: 0 2.4rem;
     }
@@ -115,7 +119,7 @@ body {
     padding-top: 9rem;
   }
   @media (max-width: 48em) {
-    padding-top: 26.6rem;
+    padding-top: 20.4rem;
     .chapter-page & {
       padding-top: 13rem;
     }
@@ -156,6 +160,7 @@ body {
 @import 'sections/hero-about';
 @import 'sections/hero-blog';
 @import 'sections/hero-no-products';
+@import 'sections/hero-error';
 @import 'sections/categories';
 @import 'sections/shopify';
 @import 'sections/privileges';

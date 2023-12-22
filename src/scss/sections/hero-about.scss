@@ -3,6 +3,9 @@
 
   &__hero {
     margin-bottom: 10rem;
+    @media (max-width: 48em) {
+      margin-top: 6.4rem;
+    }
   }
 }
 

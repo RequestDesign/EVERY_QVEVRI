@@ -1,7 +1,22 @@
 .reviews-product {
-  margin-bottom: 26rem;
-  @media (max-width: 48em) {
-    margin-bottom: 20rem;
+  position: relative;
+  margin-bottom: 20rem;
+  @media (min-width: 48em) {
+    margin-bottom: 26rem;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 50%;
+      width: 230.5rem;
+      height: 35rem;
+      background-image: url(@img/bg/txt.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -3rem);
+    }
   }
 
   // .reviews-product__container
@@ -123,7 +138,7 @@
 
   &__active-number {
     @media (min-width: 48em) {
-      margin-right: 83rem;
+      margin-right: 81rem;
       font-size: 2rem;
       font-weight: 900;
       user-select: none;
@@ -178,22 +193,11 @@
     &.swiper-slide {
       min-width: fit-content;
       transition: transform 0.3s ease;
-      &.swiper-slide-visible {
-        &:not(
-            &.swiper-slide-next,
-            &.swiper-slide-active,
-            &.swiper-slide-fully-visible
-          ) {
-          transform: translateX(-9rem);
-        }
+      &.swiper-slide-next + .swiper-slide {
+        transform: translateX(-4rem);
       }
-      &:not(&.swiper-slide-next, &.swiper-slide-active) {
-        &.swiper-slide-fully-visible {
-          transform: translateX(-4.6rem);
-        }
-      }
-      .slide-reviews-product__body {
-        width: 34.4rem;
+      &.swiper-slide-next + .swiper-slide + .swiper-slide {
+        transform: translateX(-8rem);
       }
       &.swiper-slide-prev,
       &:not(&.swiper-slide-visible) {
@@ -213,6 +217,7 @@
     &.swiper-slide-active {
       .slide-reviews-product__body {
         width: 52.7rem;
+        height: 42.2rem;
       }
     }
   }
@@ -227,7 +232,8 @@
     background-color: $white;
     @media (min-width: 48em) {
       padding: 3.2rem;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
+      width: 35rem;
+      transition: width 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
   }
 
@@ -279,8 +285,12 @@
 
   &__text {
     @media (min-width: 48em) {
-      display: -webkit-box;
       -webkit-box-orient: vertical;
+      display: -webkit-box;
+      width: 27.4rem;
+      .swiper-slide-active & {
+        width: 45rem;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Главная" })
   <body style="opacity: 0">
-    <div class="wrapper">
+    <div class="wrapper mainpage mainpage_not-logged-in">
       <header data-scroll="50" data-scroll-show class="header">
         <div class="header__container container">
           <div class="header__top">
@@ -60,28 +60,36 @@
                     </li>
                     <li class="menu__item">
                       <button
-                        data-open-account-menu
+                        data-modal="#loginModal"
                         type="button"
                         class="menu__link menu__link_profile txt">
                         Аккаунт
                       </button>
                     </li>
                     <li class="menu__item">
-                      <a href="#" class="menu__link menu__link_liked txt"
-                        >Избранное</a
-                      >
+                      <button
+                        type="button"
+                        data-modal="#loginModal"
+                        class="menu__link menu__link_liked txt">
+                        Избранное
+                      </button>
                     </li>
                     <li class="menu__item">
-                      <a href="#" class="menu__link menu__link_cart txt"
-                        >Корзина</a
-                      >
+                      <button
+                        type="button"
+                        data-modal="#loginModal"
+                        class="menu__link menu__link_cart txt">
+                        Корзина
+                      </button>
                     </li>
                   </ul>
                 </nav>
-                <div class="menu__tel-wrap">
-                  <a href="tel:88003010790" class="menu__tel txt txt_md"
-                    >8 800 301 07 90</a
-                  >
+                <div class="menu__group">
+                  <div class="menu__tel-wrap">
+                    <a href="tel:88003010790" class="menu__tel txt txt_md"
+                      >8 800 301 07 90</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -3982,6 +3990,20 @@
                       >3</span
                     ></a
                   >
+                  <div class="actions-header__header-login header-login">
+                    <p class="header-login__text txt">
+                      Войдите, чтобы получить доступ к персональным ценам,
+                      сохранять товары и отслеживать статус заказов
+                    </p>
+                    <button
+                      data-modal="#loginModal"
+                      type="button"
+                      class="header-login__btn btn btn_ol">
+                      <span class="btn__text txt txt_md"
+                        >Войти или зарегистрироваться</span
+                      >
+                    </button>
+                  </div>
                 </li>
                 <li class="actions-header__item actions-header__item_cart">
                   <a href="#" class="actions-header__icon-wrap"
@@ -4023,284 +4045,19 @@
                       >3</span
                     ></a
                   >
-                  <div class="actions-header__cart header-cart">
-                    <div class="header-cart__head">
-                      <span class="header-cart__title tl2">Корзина</span>
-                      <span class="header-cart__quantity txt">7 товаров</span>
-                    </div>
-                    <div
-                      data-simplebar
-                      data-simplebar-auto-hide="false"
-                      class="header-cart__body sb_gray">
-                      <div class="header-cart__inner">
-                        <div class="header-cart__item item-header-cart">
-                          <div class="item-header-cart__image-wrap">
-                            <img
-                              src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                              alt=""
-                              class="item-header-cart__image" />
-                          </div>
-                          <div class="item-header-cart__info">
-                            <span class="item-header-cart__title subtitle"
-                              >Вино Saperavi Binekhi</span
-                            >
-                            <ul
-                              class="item-header-cart__features product-features">
-                              <li class="product-features__item txt txt_16">
-                                Россия
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Красное
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Сухое
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                0.75 л
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="item-header-cart__pricing">
-                            <div
-                              class="item-header-cart__price price txt txt_wide">
-                              <span class="price__value">1 200₽</span>
-                              <span class="price__value price__value_old"
-                                >1 700₽</span
-                              >
-                            </div>
-                            <div class="item-header-cart__coins coins">
-                              <span class="coins__value txt">16</span>
-                            </div>
-                            <div class="item-header-cart__quantity quantity">
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input
-                                  type="number"
-                                  autocomplete="off"
-                                  type="text"
-                                  name="form[]"
-                                  value="1" />
-                              </div>
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            class="item-header-cart__remove-btn">
-                            <img
-                              src="@img/icons/sm-cross-gray.svg"
-                              alt=""
-                              class="item-header-cart__remove-btn-icon" />
-                          </button>
-                        </div>
-                        <div class="header-cart__item item-header-cart">
-                          <div class="item-header-cart__image-wrap">
-                            <img
-                              src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                              alt=""
-                              class="item-header-cart__image" />
-                          </div>
-                          <div class="item-header-cart__info">
-                            <span class="item-header-cart__title subtitle"
-                              >Вино Saperavi Binekhi Saperavi BinekhiSaperavi
-                              Binekhi</span
-                            >
-                            <ul
-                              class="item-header-cart__features product-features">
-                              <li class="product-features__item txt txt_16">
-                                Россия
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Красное
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Сухое
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                0.75 л
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="item-header-cart__pricing">
-                            <div
-                              class="item-header-cart__price price txt txt_wide">
-                              <span class="price__value">1 200₽</span>
-                            </div>
-                            <div class="item-header-cart__coins coins">
-                              <span class="coins__value txt">16</span>
-                            </div>
-                            <div class="item-header-cart__quantity quantity">
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input
-                                  type="number"
-                                  autocomplete="off"
-                                  type="text"
-                                  name="form[]"
-                                  value="1" />
-                              </div>
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            class="item-header-cart__remove-btn">
-                            <img
-                              src="@img/icons/sm-cross-gray.svg"
-                              alt=""
-                              class="item-header-cart__remove-btn-icon" />
-                          </button>
-                        </div>
-                        <div class="header-cart__item item-header-cart">
-                          <div class="item-header-cart__image-wrap">
-                            <img
-                              src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                              alt=""
-                              class="item-header-cart__image" />
-                          </div>
-                          <div class="item-header-cart__info">
-                            <span class="item-header-cart__title subtitle"
-                              >Вино Saperavi Binekhi</span
-                            >
-                            <ul
-                              class="item-header-cart__features product-features">
-                              <li class="product-features__item txt txt_16">
-                                Россия
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Красное
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Сухое
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                0.75 л
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="item-header-cart__pricing">
-                            <div
-                              class="item-header-cart__price price txt txt_wide">
-                              <span class="price__value">1 200₽</span>
-                              <span class="price__value price__value_old"
-                                >1 700₽</span
-                              >
-                            </div>
-                            <div class="item-header-cart__coins coins">
-                              <span class="coins__value txt">16</span>
-                            </div>
-                            <div class="item-header-cart__quantity quantity">
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input
-                                  type="number"
-                                  autocomplete="off"
-                                  type="text"
-                                  name="form[]"
-                                  value="1" />
-                              </div>
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            class="item-header-cart__remove-btn">
-                            <img
-                              src="@img/icons/sm-cross-gray.svg"
-                              alt=""
-                              class="item-header-cart__remove-btn-icon" />
-                          </button>
-                        </div>
-                        <div class="header-cart__item item-header-cart">
-                          <div class="item-header-cart__image-wrap">
-                            <img
-                              src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                              alt=""
-                              class="item-header-cart__image" />
-                          </div>
-                          <div class="item-header-cart__info">
-                            <span class="item-header-cart__title subtitle"
-                              >Вино Saperavi Binekhi</span
-                            >
-                            <ul
-                              class="item-header-cart__features product-features">
-                              <li class="product-features__item txt txt_16">
-                                Россия
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Красное
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                Сухое
-                              </li>
-                              <li class="product-features__item txt txt_16">
-                                0.75 л
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="item-header-cart__pricing">
-                            <div
-                              class="item-header-cart__price price txt txt_wide">
-                              <span class="price__value">1 200₽</span>
-                            </div>
-                            <div class="item-header-cart__coins coins">
-                              <span class="coins__value txt">16</span>
-                            </div>
-                            <div class="item-header-cart__quantity quantity">
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_minus"></button>
-                              <div class="quantity__input">
-                                <input
-                                  type="number"
-                                  autocomplete="off"
-                                  type="text"
-                                  name="form[]"
-                                  value="1" />
-                              </div>
-                              <button
-                                type="button"
-                                class="quantity__button quantity__button_plus"></button>
-                            </div>
-                          </div>
-                          <button
-                            type="button"
-                            class="item-header-cart__remove-btn">
-                            <img
-                              src="@img/icons/sm-cross-gray.svg"
-                              alt=""
-                              class="item-header-cart__remove-btn-icon" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="header-cart__footer">
-                      <div class="header-cart__total">
-                        <span class="header-cart__subtitle txt txt_md"
-                          >Итого:</span
-                        >
-                        <span class="header-cart__price txt txt_wide"
-                          >24 000 ₽</span
-                        >
-                      </div>
-                      <a href="#" class="header-cart__btn btn btn_ol"
-                        ><span class="btn__text txt txt_md"
-                          >Перейти в корзину</span
-                        ></a
+                  <div class="actions-header__header-login header-login">
+                    <p class="header-login__text txt">
+                      Войдите, чтобы получить доступ к персональным ценам,
+                      сохранять товары и отслеживать статус заказов
+                    </p>
+                    <button
+                      data-modal="#loginModal"
+                      type="button"
+                      class="header-login__btn btn btn_ol">
+                      <span class="btn__text txt txt_md"
+                        >Войти или зарегистрироваться</span
                       >
-                    </div>
+                    </button>
                   </div>
                 </li>
               </ul>
@@ -6325,7 +6082,9 @@
                   >8 800 301 07 90</span
                 >
               </a>
-              <ul class="header__socials socials">
+              <ul
+                data-da=".menu__group,768,last"
+                class="header__socials socials">
                 <li class="socials__item">
                   <a href="#" target="_blank" class="socials__link"
                     ><img src="@img/icons/tg.svg" alt="" class="socials__icon"
@@ -6347,7 +6106,7 @@
         </div>
       </header>
 
-      <main class="main mainpage">
+      <main class="main">
         <section class="mainpage__hero hero">
           <div class="hero__container container">
             <div class="hero__head">
@@ -6593,7 +6352,7 @@
         </section>
         <section
           data-shopify-section="1"
-          class="mainpage__shopify-section shopify-section">
+          class="mainpage__shopify-section shopify-section shopify-section_recommendations">
           <div class="shopify-section__container container">
             <div class="shopify-section__head">
               <span
@@ -6910,7 +6669,7 @@
             </div>
           </div>
         </section>
-        <section class="mainpage__privileges privileges">
+        <section class="mainpage__privileges privileges bg-section">
           <div class="privileges__container container">
             <span class="privileges__title tl1">Наши преимущества</span>
             <div class="privileges__group">
@@ -7187,7 +6946,7 @@
             </div>
           </div>
         </section>
-        <section class="mainpage__blog blog">
+        <section class="mainpage__blog blog bg-section">
           <div class="blog__container container">
             <span class="blog__title tl1">Блог every qvevri</span>
             <a href="#" class="blog__link btn btn_icon">
@@ -7548,31 +7307,11 @@
             </div>
           </div>
         </section>
-        <section class="mainpage__promo promo bg">
+        <section class="mainpage__promo promo bg-section">
           <div class="promo__container container">
             <a href="#" class="promo__ambassadors ambassadors-promo">
               <div class="ambassadors-promo__head">
                 <span class="ambassadors-promo__title tl1">лица бренда</span>
-                <svg
-                  class="ambassadors-promo__arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none">
-                  <path
-                    d="M9.85686 24L38.1411 24"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path
-                    d="M23.999 9.85782L38.1411 24L23.999 38.1421"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
               </div>
               <div class="ambassadors-promo__body">
                 <div class="ambassadors-promo__card">
@@ -7637,7 +7376,7 @@
         <section class="mainpage__location location">
           <div class="location__container container">
             <span class="location__title tl1">мы <span>на карте</span></span>
-            <div id="map" class="location__map"></div>
+            <div data-map class="location__map"></div>
             <div class="location__info">
               <p data-da=".location__panel,768,last" class="location__text txt">
                 Находимся рядом с метро Чкаловская и Петроградская
@@ -7660,8 +7399,7 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
-      @@include('html/_modal.htm',{})
+      @@include('html/_footer.htm',{})
       <div class="menu-bar mobile-only">
         <ul class="menu-bar__list">
           <li class="menu-bar__item _active">
@@ -7710,7 +7448,10 @@
             </a>
           </li>
           <li class="menu-bar__item">
-            <button type="button" class="menu-bar__link">
+            <button
+              data-modal="#loginModal"
+              type="button"
+              class="menu-bar__link">
               <div class="menu-bar__icon">
                 <svg
                   width="31"
@@ -7737,7 +7478,10 @@
             </button>
           </li>
           <li class="menu-bar__item">
-            <a href="#" class="menu-bar__link">
+            <button
+              type="button"
+              data-modal="#loginModal"
+              class="menu-bar__link">
               <div class="menu-bar__icon">
                 <svg
                   width="31"
@@ -7755,10 +7499,13 @@
               </div>
 
               <span class="menu-bar__text caps caps_md">Избранное</span>
-            </a>
+            </button>
           </li>
           <li class="menu-bar__item menu-bar__item_cart">
-            <a href="#" class="menu-bar__link">
+            <button
+              type="button"
+              data-modal="#loginModal"
+              class="menu-bar__link">
               <div class="menu-bar__icon">
                 <svg
                   width="30"
@@ -7795,10 +7542,11 @@
                 </svg>
               </div>
               <span class="menu-bar__text caps caps_md">Корзина</span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
+      @@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

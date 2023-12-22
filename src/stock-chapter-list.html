@@ -2,18 +2,20 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Детальная акции" })
   <body style="opacity: 0">
-    <div class="wrapper">
+    <div class="wrapper stock-page stock-page_chapter chapter">
       @@include('html/_header.htm',{})
-      <main class="main stock-page stock-page_chapter">
+      <main class="main">
         <section
-          class="catalog-page__hero-promo hero-promo hero-promo_has-text-content">
+          class="stock-page__hero-promo hero-promo hero-promo_has-text-content">
           <div class="hero-promo__container container">
             <nav class="hero-promo__breadcrumbs breadcrumbs caps">
               <a href="#" class="breadcrumbs__text">Главная</a>
               <a href="#" class="breadcrumbs__text">акции</a>
               <span class="breadcrumbs__text">дополнительная скидка -33% </span>
             </nav>
-            <div class="hero-promo__stock-card stock-card stock-card_hero">
+            <a
+              href="#"
+              class="hero-promo__stock-card stock-card stock-card_hero">
               <div class="stock-card__content">
                 <span class="stock-card__subtitle caps caps_md"
                   >25 октября - 7 ноября</span
@@ -24,9 +26,9 @@
                 <p class="stock-card__text txt">
                   На напитки из подборки при покупке от 3 бутылок
                 </p>
-                <a href="#" class="stock-card__link btn btn_icon">
+                <button type="button" class="stock-card__link btn btn_icon">
                   <span class="btn__text txt txt_md">Подробнее</span>
-                </a>
+                </button>
               </div>
               <div class="stock-card__bg">
                 <div class="stock-card__image-wrap">
@@ -42,7 +44,7 @@
                     class="stock-card__bg-image" />
                 </div>
               </div>
-            </div>
+            </a>
             <div class="hero-promo__text-content">
               <p class="hero-promo__text caps">
                 Радуйте себя и своих близких идеальным сочетанием вкуса и
@@ -1384,7 +1386,8 @@
                   <div class="tags-catalog__list"></div>
                 </div>
                 <div class="catalog__products">
-                  <div
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -1392,33 +1395,18 @@
                           <span class="badge__text txt txt_16">-25%</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1494,10 +1482,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -1508,33 +1512,18 @@
                           <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1606,10 +1595,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -1620,33 +1625,18 @@
                           <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1722,10 +1712,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -1736,33 +1742,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1838,10 +1829,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -1852,33 +1859,18 @@
                           <span class="badge__text txt txt_16">Суперцена</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1950,126 +1942,58 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="catalog__card menu-product-card menu-product-card_list-view">
-                    <div class="menu-product-card__head">
-                      <div class="menu-product-card__badges">
-                        <div class="menu-product-card__badge badge">
-                          <span class="badge__text txt txt_16">-25%</span>
-                        </div>
-                        <div class="menu-product-card__badge badge">
-                          <span class="badge__text txt txt_16">Эксклюзив</span>
-                        </div>
-                      </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <a href="#" class="menu-product-card__preview">
-                      <div class="menu-product-card__image-wrap">
-                        <img
-                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                          alt=""
-                          class="menu-product-card__image" />
-                      </div>
-                    </a>
-                    <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
-                      >
-                      <div class="menu-product-card__reviews">
-                        <div class="menu-product-card__grade grade">
-                          <span class="grade__text txt txt_md">4.5</span>
-                        </div>
-                        <span class="menu-product-card__reviews-text txt"
-                          >(12 отзывов)</span
-                        >
-                      </div>
-                      <ul class="menu-product-card__features txt txt_16">
-                        <li class="menu-product-card__feature">Россия</li>
-                        <li class="menu-product-card__feature">Красное</li>
-                        <li class="menu-product-card__feature">Сухое</li>
-                        <li class="menu-product-card__feature">0.75 л</li>
-                      </ul>
-                      <div
-                        class="menu-product-card__characteristics characteristics">
-                        <ul class="characteristics__list">
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Вино:</span>
-                            <span class="characteristics__text"
-                              >Полусухое, белое
-                            </span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Объем:</span>
-                            <span class="characteristics__text">0.75 л</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Крепость:</span
-                            >
-                            <span class="characteristics__text">12.5%</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Страна, регион:</span
-                            >
-                            <span class="characteristics__text"
-                              >Грузия, Кахетия</span
-                            >
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Бренд:</span>
-                            <span class="characteristics__text">Binekhi</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Производитель:</span
-                            >
-                            <span class="characteristics__text">Vasi+</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="menu-product-card__group">
-                      <div class="menu-product-card__price-wrap">
-                        <div class="menu-product-card__price price">
-                          <span class="price__value txt txt_wide">1 200₽</span>
-                          <span
-                            class="price__value price__value_old txt txt_wide"
-                            >1 700₽</span
-                          >
-                        </div>
-                        <div class="menu-product-card__coins coins">
-                          <span class="coins__value txt">16</span>
-                        </div>
-                      </div>
-                      <div class="menu-product-card__actions">
-                        <button class="menu-product-card__cart-btn cart-btn">
-                          <img
-                            src="@img/icons/bag-white.svg"
-                            alt=""
-                            class="cart-btn__icon" />
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a href="#" class="catalog__stock-card stock-card black">
+                    <div class="stock-card__content">
+                      <span class="stock-card__subtitle caps caps_md"
+                        >26 - 31 октября</span
+                      >
+                      <span class="stock-card__title tl2"
+                        >Дополнительная скидка -33%</span
+                      >
+                      <p class="stock-card__text txt">
+                        На напитки из подборки при покупке от 3 бутылок
+                      </p>
+                      <button
+                        type="button"
+                        class="stock-card__link btn btn_icon">
+                        <span class="btn__text txt txt_md">Подробнее</span>
+                      </button>
+                    </div>
+                    <div class="stock-card__bg">
+                      <div class="stock-card__image-wrap">
+                        <img
+                          src="@img/products/a17e1729c72a1aa26335e0dd875f6eae.webp"
+                          alt=""
+                          class="stock-card__image" />
+                      </div>
+                      <div class="stock-card__bg-wrap">
+                        <img
+                          src="@img/bg/40b22574f78a005d283b4ca924b64947.webp"
+                          alt=""
+                          class="stock-card__bg-image" />
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2083,33 +2007,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2186,40 +2095,41 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges"></div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/c4f191d740ecdc8e5437c11e253bdffb404da0f4.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2291,10 +2201,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2308,33 +2234,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2411,126 +2322,58 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="catalog__card menu-product-card menu-product-card_list-view">
-                    <div class="menu-product-card__head">
-                      <div class="menu-product-card__badges">
-                        <div class="menu-product-card__badge badge">
-                          <span class="badge__text txt txt_16">-25%</span>
-                        </div>
-                        <div class="menu-product-card__badge badge">
-                          <span class="badge__text txt txt_16">Эксклюзив</span>
-                        </div>
-                      </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <a href="#" class="menu-product-card__preview">
-                      <div class="menu-product-card__image-wrap">
-                        <img
-                          src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
-                          alt=""
-                          class="menu-product-card__image" />
-                      </div>
-                    </a>
-                    <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
-                      >
-                      <div class="menu-product-card__reviews">
-                        <div class="menu-product-card__grade grade">
-                          <span class="grade__text txt txt_md">4.5</span>
-                        </div>
-                        <span class="menu-product-card__reviews-text txt"
-                          >(12 отзывов)</span
-                        >
-                      </div>
-                      <ul class="menu-product-card__features txt txt_16">
-                        <li class="menu-product-card__feature">Россия</li>
-                        <li class="menu-product-card__feature">Красное</li>
-                        <li class="menu-product-card__feature">Сухое</li>
-                        <li class="menu-product-card__feature">0.75 л</li>
-                      </ul>
-                      <div
-                        class="menu-product-card__characteristics characteristics">
-                        <ul class="characteristics__list">
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Вино:</span>
-                            <span class="characteristics__text"
-                              >Полусухое, белое
-                            </span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Объем:</span>
-                            <span class="characteristics__text">0.75 л</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Крепость:</span
-                            >
-                            <span class="characteristics__text">12.5%</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Страна, регион:</span
-                            >
-                            <span class="characteristics__text"
-                              >Грузия, Кахетия</span
-                            >
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label">Бренд:</span>
-                            <span class="characteristics__text">Binekhi</span>
-                          </li>
-                          <li class="characteristics__item txt">
-                            <span class="characteristics__label"
-                              >Производитель:</span
-                            >
-                            <span class="characteristics__text">Vasi+</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="menu-product-card__group">
-                      <div class="menu-product-card__price-wrap">
-                        <div class="menu-product-card__price price">
-                          <span class="price__value txt txt_wide">1 200₽</span>
-                          <span
-                            class="price__value price__value_old txt txt_wide"
-                            >1 700₽</span
-                          >
-                        </div>
-                        <div class="menu-product-card__coins coins">
-                          <span class="coins__value txt">16</span>
-                        </div>
-                      </div>
-                      <div class="menu-product-card__actions">
-                        <button class="menu-product-card__cart-btn cart-btn">
-                          <img
-                            src="@img/icons/bag-white.svg"
-                            alt=""
-                            class="cart-btn__icon" />
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a href="#" class="catalog__stock-card stock-card red">
+                    <div class="stock-card__content">
+                      <span class="stock-card__subtitle caps caps_md"
+                        >26 - 31 октября</span
+                      >
+                      <span class="stock-card__title tl2"
+                        >Дополнительная скидка -33%</span
+                      >
+                      <p class="stock-card__text txt">
+                        На напитки из подборки при покупке от 3 бутылок
+                      </p>
+                      <button
+                        type="button"
+                        class="stock-card__link btn btn_icon">
+                        <span class="btn__text txt txt_md">Подробнее</span>
+                      </button>
+                    </div>
+                    <div class="stock-card__bg">
+                      <div class="stock-card__image-wrap">
+                        <img
+                          src="@img/products/a17e1729c72a1aa26335e0dd875f6eae.webp"
+                          alt=""
+                          class="stock-card__image" />
+                      </div>
+                      <div class="stock-card__bg-wrap">
+                        <img
+                          src="@img/bg/40b22574f78a005d283b4ca924b64947.webp"
+                          alt=""
+                          class="stock-card__bg-image" />
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2544,33 +2387,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2642,10 +2470,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2659,33 +2503,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2762,10 +2591,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2779,33 +2624,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2882,10 +2712,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -2899,33 +2745,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2997,10 +2828,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -3014,33 +2861,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3117,10 +2949,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -3134,33 +2982,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3232,10 +3065,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -3249,33 +3098,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3352,10 +3186,26 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div
+                  </a>
+                  <a
+                    href="#"
                     class="catalog__card menu-product-card menu-product-card_list-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
@@ -3369,33 +3219,18 @@
                           <span class="badge__text txt txt_16">Эксклюзив</span>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        class="menu-product-card__heart-btn heart-btn">
-                        <svg
-                          class="heart-btn__icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none">
-                          <path
-                            d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
-                            fill="#E9E8E8"></path>
-                        </svg>
-                      </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
-                        >Вино Saperavi Binekhi</a
+                      <span class="menu-product-card__heading tl2"
+                        >Вино Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3472,9 +3307,24 @@
                             alt=""
                             class="cart-btn__icon" />
                         </button>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <a href="#" class="catalog__show-all-btn btn btn_icon">
                   <span class="btn__text txt txt_md">Показать еще</span>
@@ -3547,7 +3397,7 @@
         <section class="stock-page__location location">
           <div class="location__container container">
             <span class="location__title tl1">мы <span>на карте</span></span>
-            <div id="map" class="location__map"></div>
+            <div data-map class="location__map"></div>
             <div class="location__info">
               <p data-da=".location__panel,768,last" class="location__text txt">
                 Находимся рядом с метро Чкаловская и Петроградская
@@ -3570,8 +3420,100 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
-      @@include('html/_modal.htm',{})
+      @@include('html/_footer.htm',{})
+      <div class="account-section">
+        <div class="account-section__head">
+          <div class="account-section__head-row">
+            <span class="account-section__head-heading txt txt_md"
+              >Аккаунт</span
+            >
+            <button
+              data-close-account-menu
+              class="account-section__head-close-btn">
+              <img
+                src="@img/icons/cross-gray.svg"
+                alt=""
+                class="header-catalog__head-close-btn-icon" />
+            </button>
+          </div>
+          <div class="account-section__head-group">
+            <div class="account-section__user-avatar">
+              <img
+                src="@img/icons/avatar.svg"
+                alt=""
+                class="account-section__user-avatar-image" />
+            </div>
+            <span class="account-section__user-name txt txt_md"
+              >Константин Константинопольский</span
+            >
+            <div class="account-section__user-cashback user-cashback">
+              <span class="user-cashback__value caps caps_md">5%</span>
+              <div class="user-cashback__hint">
+                <span class="user-cashback__text txt"
+                  >Ваш статус — Новичок</span
+                >
+                <span class="user-cashback__text txt"
+                  ><span class="user-cashback__text-content"
+                    >Кэшбек <span class="cashback-value">5%</span> на все
+                    товары</span
+                  >
+                  <span class="user-cashback__subtext">* кроме акционных</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="account-section__user-sum user-sum">
+            <div class="user-sum__track">
+              <span class="user-sum__inner-track"></span>
+            </div>
+            <div class="user-sum__row">
+              <span class="user-sum__current">
+                <span class="user-sum__text txt">Сумма покупок:</span>
+                <span class="user-sum__current-value txt">1 200₽</span>
+              </span>
+              <span class="user-sum__total-value txt">5 000₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-section__body">
+          <ul class="account-section__list">
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Личные данные</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Мои заказы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Вы заказывали</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md">Статусы</a>
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >История баллов</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Избранные товары</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account-section__footer">
+          <a href="#" class="account-section__logout-btn logout-btn txt txt_md"
+            >Выйти</a
+          >
+        </div>
+      </div>
+      @@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

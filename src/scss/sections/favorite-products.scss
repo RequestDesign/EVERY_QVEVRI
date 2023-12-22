@@ -29,6 +29,14 @@
     flex-direction: column;
   }
 
+  // .products-favorite__hero
+
+  &__hero {
+    @media (min-width: 48em) {
+      align-self: center;
+    }
+  }
+
   // .products-favorite__head
 
   &__head {

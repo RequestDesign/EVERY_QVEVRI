@@ -2,22 +2,6 @@
   position: relative;
   @media (min-width: 1920px) {
     margin-bottom: 14rem;
-    width: 104vw;
-    transform: translateX(calc((104vw - 1920px) / -2));
-    overflow: hidden;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   // .privileges__container
@@ -33,7 +17,7 @@
     }
     @media (max-width: 48em) {
       &.container {
-        padding: 21rem 2.4rem 22rem 2.4rem;
+        padding: 33rem 2.4rem 22rem 2.4rem;
       }
     }
   }

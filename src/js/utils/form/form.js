@@ -34,6 +34,9 @@ export function formFieldsInit(options = { viewPass: false }) {
       if (targetElement.closest('.input')) {
         targetElement.closest('.input').classList.remove('_filled');
         formValidate.removeError(targetElement);
+      } else if (targetElement.closest('.text-input')) {
+        targetElement.closest('.text-input').classList.remove('_filled');
+        formValidate.removeError(targetElement);
       }
     }
   });
@@ -70,7 +73,12 @@ export function formFieldsInit(options = { viewPass: false }) {
         }
       } else {
         if (targetElement.value.length) {
-          targetElement.closest('.input').classList.add('_filled');
+          if (targetElement.closest('.input')) {
+            targetElement.closest('.input').classList.add('_filled');
+          } else if (targetElement.closest('.text-input')) {
+            targetElement.closest('.text-input').classList.remove('_filled');
+            formValidate.removeError(targetElement);
+          }
         }
       }
     }
@@ -161,23 +169,25 @@ export let formValidate = {
     }
   },
   formClean(form) {
-    form.reset();
-    setTimeout(() => {
-      let inputs = form.querySelectorAll('input,textarea');
-      for (let index = 0; index < inputs.length; index++) {
-        const el = inputs[index];
-        el.parentElement.classList.remove('_form-focus');
-        el.classList.remove('_form-focus');
-        formValidate.removeError(el);
-      }
-      let checkboxes = form.querySelectorAll('.checkbox__input');
-      if (checkboxes.length > 0) {
-        for (let index = 0; index < checkboxes.length; index++) {
-          const checkbox = checkboxes[index];
-          checkbox.checked = false;
+    if (!form.hasAttribute('data-save-fields')) {
+      form.reset();
+      setTimeout(() => {
+        let inputs = form.querySelectorAll('input,textarea');
+        for (let index = 0; index < inputs.length; index++) {
+          const el = inputs[index];
+          el.parentElement.classList.remove('_form-focus');
+          el.classList.remove('_form-focus');
+          formValidate.removeError(el);
         }
-      }
-    }, 0);
+        let checkboxes = form.querySelectorAll('.checkbox__input');
+        if (checkboxes.length > 0) {
+          for (let index = 0; index < checkboxes.length; index++) {
+            const checkbox = checkboxes[index];
+            checkbox.checked = false;
+          }
+        }
+      }, 0);
+    }
   },
   emailTest(formRequiredItem) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(

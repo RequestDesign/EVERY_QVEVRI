@@ -345,7 +345,7 @@ export const accordion = () => {
 // showmore
 export const showmore = () => {
   const elements = document.querySelectorAll('[data-original-height]');
-  if (elements.length && window.innerWidth > 768) {
+  if (elements.length) {
     elements.forEach(element => {
       const visibleHeight = element.dataset.visibleHeight;
       const showmoreBtn = element.parentElement.querySelector(
@@ -353,10 +353,13 @@ export const showmore = () => {
       );
 
       const setHeight = () => {
-        element.dataset.originalHeight = `${element.offsetHeight}px`;
-        visibleHeight
-          ? (element.style.height = element.dataset.visibleHeight)
-          : null;
+        if (window.innerWidth > 768) {
+          element.parentElement.classList.remove('_show-all');
+          element.dataset.originalHeight = `${element.offsetHeight}px`;
+          visibleHeight
+            ? (element.style.height = element.dataset.visibleHeight)
+            : null;
+        }
       };
       setHeight();
 

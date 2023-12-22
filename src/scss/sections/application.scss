@@ -70,6 +70,8 @@
 
   &__text {
     margin-bottom: 6.4rem;
+    max-width: 60rem;
+
     @media (min-width: 48em) {
       margin-bottom: 7rem;
       margin-left: 41rem;

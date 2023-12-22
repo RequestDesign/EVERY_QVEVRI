@@ -15,6 +15,9 @@
   position: relative;
   padding: 20rem 0;
   color: $white;
+  @media (max-width: 48em) {
+    padding-top: 25rem;
+  }
 
   // .coins-loyalty-page__container
 

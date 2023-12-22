@@ -1,3 +1,4 @@
+<!-- отзыв оставлен -->
 <div
   id="reviewSentModal"
   aria-hidden="true"
@@ -30,6 +31,7 @@
   </div>
 </div>
 
+<!-- оставить отзыв -->
 <div id="writeReviewModal" aria-hidden="true" class="modal write-review-modal">
   <div class="modal__wrapper">
     <div class="modal__content">
@@ -40,7 +42,11 @@
           class="modal__close-icon" />
       </button>
       <div class="modal__body">
-        <form data-dev action="#" class="write-review-modal__form">
+        <form
+          data-modal-message="#reviewSentModal"
+          data-dev
+          action="#"
+          class="write-review-modal__form">
           <span class="write-review-modal__title tl2">оставьте отзыв</span>
           <div class="write-review-modal__rate">
             <span class="write-review-modal__rate-txt txt">Ваша оценка</span>
@@ -54,29 +60,28 @@
           </div>
           <div class="write-review-modal__input input">
             <input
+              data-validate
+              data-required
               autocomplete="off"
               type="text"
               name="form[]"
-              data-error
               placeholder="Имя"
               class="input__field" />
           </div>
           <div class="write-review-modal__text-input text-input">
             <textarea
+              data-validate
+              data-required
               maxlength="500"
               autocomplete="off"
               name="form[]"
               placeholder="Ваше мнение о продукте..."
-              data-error
               class="text-input__field"></textarea>
             <span class="text-input__hint txt txt_16"
               >Максимальное количество символов — 500</span
             >
           </div>
-          <button
-            data-modal="#reviewSentModal"
-            type="submit"
-            class="write-review-modal__btn btn btn_ol">
+          <button type="submit" class="write-review-modal__btn btn btn_ol">
             <span class="btn__text txt txt_md">Оправить</span>
           </button>
         </form>
@@ -85,6 +90,7 @@
   </div>
 </div>
 
+<!-- подтвердить удаление аккаунта -->
 <div
   id="confirmAccDeletionModal"
   aria-hidden="true"
@@ -112,10 +118,11 @@
   </div>
 </div>
 
+<!-- обновить номер телефона -->
 <div
   id="updatePhoneNumberModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_phone-number">
+  class="modal modal_fs account-modal account-modal_phone-number">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -168,10 +175,11 @@
   </div>
 </div>
 
+<!-- обновить email -->
 <div
   id="updateEmailModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_email">
+  class="modal modal_fs account-modal account-modal_email">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -225,10 +233,11 @@
   </div>
 </div>
 
+<!-- подтвердить изменение номера телефона -->
 <div
   id="verifyPhoneModal"
   aria-hidden="true"
-  class="modal verify-code-modal verify-code-modal_phone-number">
+  class="modal modal_fs verify-code-modal verify-code-modal_phone-number">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -332,10 +341,11 @@
   </div>
 </div>
 
+<!-- подтвердить изменение email -->
 <div
   id="verifyEmailModal"
   aria-hidden="true"
-  class="modal verify-code-modal verify-code-modal_email">
+  class="modal modal_fs verify-code-modal verify-code-modal_email">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -441,10 +451,11 @@
   </div>
 </div>
 
+<!-- не приходит смс -->
 <div
   id="noPhoneMessageModal"
   aria-hidden="true"
-  class="modal no-message-modal no-message-modal_phone-number">
+  class="modal modal_fs no-message-modal no-message-modal_phone-number">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -517,10 +528,11 @@
   </div>
 </div>
 
+<!-- не приходит письмо -->
 <div
   id="noEmailMessageModal"
   aria-hidden="true"
-  class="modal no-message-modal no-message-modal_email">
+  class="modal modal_fs no-message-modal no-message-modal_email">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -593,6 +605,7 @@
   </div>
 </div>
 
+<!-- отмена заказа -->
 <div
   id="cancelOrderModal"
   aria-hidden="true"
@@ -623,6 +636,7 @@
   </div>
 </div>
 
+<!-- отправлено письмо с подтверждением -->
 <div
   id="confirmEmailLetter"
   aria-hidden="true"
@@ -653,6 +667,7 @@
   </div>
 </div>
 
+<!-- заявка отправлена -->
 <div
   id="requestSentModal"
   aria-hidden="true"
@@ -686,6 +701,7 @@
   </div>
 </div>
 
+<!-- оплата баллами -->
 <div
   id="pointsPayModal"
   aria-hidden="true"
@@ -719,14 +735,17 @@
                 placeholder="Введите количество баллов"
                 class="input__field" />
             </div>
-            <div
-              id="range-slider"
-              class="range-form-modal__range-slider range-slider"></div>
             <div class="range-form-modal__values">
               <span class="range-form-modal__value caps">0₽</span>
               <span class="range-form-modal__value caps">1 200₽</span>
             </div>
-            <button type="submit" class="range-form-modal__btn btn btn_ol">
+            <div
+              id="range-slider"
+              class="range-form-modal__range-slider range-slider"></div>
+            <button
+              data-close
+              type="submit"
+              class="range-form-modal__btn btn btn_ol">
               <span class="btn__text txt txt_md">Подтвердить</span>
             </button>
           </form>
@@ -736,10 +755,11 @@
   </div>
 </div>
 
+<!-- войти или зарегистрироваться -->
 <div
   id="loginModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_login">
+  class="modal modal_fs account-modal account-modal_login">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -843,10 +863,11 @@
   </div>
 </div>
 
+<!-- регистрация с помощью телефона -->
 <div
   id="regModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_reg">
+  class="modal modal_fs account-modal account-modal_reg">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -938,10 +959,11 @@
   </div>
 </div>
 
+<!-- войти с помощью email -->
 <div
   id="emailLoginModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_email-login">
+  class="modal modal_fs account-modal account-modal_email-login">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -1062,10 +1084,11 @@
   </div>
 </div>
 
+<!-- восстановление пароля -->
 <div
   id="restorePassModal"
   aria-hidden="true"
-  class="modal account-modal account-modal_restore-pass">
+  class="modal modal_fs account-modal account-modal_restore-pass">
   <div class="modal__wrapper">
     <div class="modal__content">
       <button
@@ -1114,6 +1137,7 @@
   </div>
 </div>
 
+<!-- заказ оформлен -->
 <div
   id="orderMadeModal"
   aria-hidden="true"
@@ -1159,6 +1183,161 @@
           <a href="#" class="txt-info-modal__btn btn btn_ol">
             <span class="btn__text txt txt_md">В каталог</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- выбрать магазин -->
+<div id="chooseStoreModal" aria-hidden="true" class="modal choose-store-modal">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="choose-store-modal__inner">
+          <span class="choose-store-modal__title tl2">выберите магазин</span>
+          <div data-map class="choose-store-modal__map"></div>
+          <div class="choose-store-modal__options">
+            <label
+              data-opt-txt="Санкт-Петербург, Левашовский пр.
+            13а"
+              class="choose-store-modal__option option option_reversed">
+              <input
+                hidden
+                class="option__input"
+                type="radio"
+                value="1"
+                name="option" />
+              <div class="option__icon-wrap">
+                <svg
+                  class="option__icon"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.9998 17.9059C18.2973 17.9059 20.1598 16.0434 20.1598 13.7459C20.1598 11.4484 18.2973 9.58594 15.9998 9.58594C13.7023 9.58594 11.8398 11.4484 11.8398 13.7459C11.8398 16.0434 13.7023 17.9059 15.9998 17.9059Z"
+                    stroke="#303033"
+                    stroke-width="2" />
+                  <path
+                    d="M4.82758 11.3213C7.45425 -0.225362 24.5609 -0.212028 27.1742 11.3346C28.7076 18.108 24.4942 23.8413 20.8009 27.388C18.1209 29.9746 13.8809 29.9746 11.1876 27.388C7.50758 23.8413 3.29425 18.0946 4.82758 11.3213Z"
+                    stroke="#303033"
+                    stroke-width="2" />
+                </svg>
+              </div>
+              <span class="option__text txt"
+                ><span class="txt_md">Санкт-Петербург,</span> Левашовский пр.
+                13а</span
+              >
+            </label>
+            <label
+              data-opt-txt="г. Москва, б-р Смоленский, д.
+            7/9"
+              class="choose-store-modal__option option option_reversed">
+              <input
+                hidden
+                class="option__input"
+                type="radio"
+                value="2"
+                name="option" />
+              <div class="option__icon-wrap">
+                <svg
+                  class="option__icon"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.9998 17.9059C18.2973 17.9059 20.1598 16.0434 20.1598 13.7459C20.1598 11.4484 18.2973 9.58594 15.9998 9.58594C13.7023 9.58594 11.8398 11.4484 11.8398 13.7459C11.8398 16.0434 13.7023 17.9059 15.9998 17.9059Z"
+                    stroke="#303033"
+                    stroke-width="2" />
+                  <path
+                    d="M4.82758 11.3213C7.45425 -0.225362 24.5609 -0.212028 27.1742 11.3346C28.7076 18.108 24.4942 23.8413 20.8009 27.388C18.1209 29.9746 13.8809 29.9746 11.1876 27.388C7.50758 23.8413 3.29425 18.0946 4.82758 11.3213Z"
+                    stroke="#303033"
+                    stroke-width="2" />
+                </svg>
+              </div>
+              <span class="option__text txt"
+                ><span class="txt_md">г. Москва,</span>б-р Смоленский, д.
+                7/9</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- подтвердить возраст -->
+<div
+  id="confirmAgeModal"
+  aria-hidden="true"
+  class="modal txt-info-modal txt-info-modal_confirm-age">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="txt-info-modal__inner">
+          <span class="txt-info-modal__title tl2">подтвердите возраст</span>
+          <p class="txt-info-modal__text txt">
+            Информация на сайте не предназначена для лиц, моложе 18 лет.
+            Сведения, размещенные на сайте, не являются рекламой, носят
+            исключительно информационный характер, и предназначены только для
+            личного использования.
+          </p>
+          <div class="txt-info-modal__buttons">
+            <button
+              id="confirm-age-btn"
+              type="button"
+              class="txt-info-modal__btn btn btn_solid">
+              <span class="btn__text txt txt_md">Есть 18 лет</span>
+            </button>
+            <button
+              data-modal="#unconfirmedAgeModal"
+              type="button"
+              class="txt-info-modal__btn btn btn_ol">
+              <span class="btn__text txt txt_md">Нет 18 лет</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- возраст не подтвержден -->
+<div
+  id="unconfirmedAgeModal"
+  aria-hidden="true"
+  class="modal txt-info-modal txt-info-modal_unconfirmed-age">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <button data-close type="button" class="modal__close">
+        <img
+          src="@img/icons/cross-white.svg"
+          alt=""
+          class="modal__close-icon" />
+      </button>
+      <div class="modal__body">
+        <div class="txt-info-modal__inner">
+          <p class="txt-info-modal__text txt">
+            К сожалению, информация на сайте не предназначена для лиц, моложе 18
+            лет
+          </p>
         </div>
       </div>
     </div>

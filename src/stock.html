@@ -2,9 +2,9 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Акции" })
   <body style="opacity: 0">
-    <div class="wrapper">
+    <div class="wrapper stock-page chapter">
       @@include('html/_header.htm',{})
-      <main class="main stock-page">
+      <main class="main">
         <section class="stock-page__stock stock-section">
           <div class="stock-section__container container">
             <div class="stock-section__head">
@@ -16,7 +16,9 @@
             </div>
             <div class="stock-section__body">
               <div class="stock-section__cards">
-                <div class="catalog__stock-card stock-card stock-card_sm">
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
                   <div class="stock-card__content">
                     <span class="stock-card__subtitle caps caps_md"
                       >26 - 31 октября</span
@@ -27,140 +29,28 @@
                     <p class="stock-card__text txt">
                       На напитки из подборки при покупке от 3 бутылок
                     </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
+                    <button type="button" class="stock-card__link btn btn_icon">
                       <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
+                    </button>
                   </div>
                   <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/40b22574f78a0b64947.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/a17e1729c72a1aa26335e0dd875f6eae.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/40b22574f78a005d283b4ca924b64947.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
                   </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2">скидки до 50%</span>
-                    <p class="stock-card__text txt">
-                      На крепкие напитки для любого повода и события
-                    </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/f8b3f5820808f54e3f38cede1cf05a31.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2">Для любого повода</span>
-                    <p class="stock-card__text txt">
-                      На напитки из подборки при покупке от 3 бутылок
-                    </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/8958d0006c6f1c0a08a8875b9802ffd0f67cc66a.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2"
-                      >Дополнительная скидка -33%</span
-                    >
-                    <p class="stock-card__text txt">На напитки из подборки</p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/6e99b8a5fd19083ec6a8.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2">скидки до 50%</span>
-                    <p class="stock-card__text txt">
-                      На крепкие напитки для любого повода и события
-                    </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/f8b3f5820808f54e3f38cede1cf05a31.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2">Для любого повода</span>
-                    <p class="stock-card__text txt">
-                      На напитки из подборки при покупке от 3 бутылок
-                    </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/8958d0006c6f1c0a08a8875b9802ffd0f67cc66a.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
-                  <div class="stock-card__content">
-                    <span class="stock-card__subtitle caps caps_md"
-                      >26 - 31 октября</span
-                    >
-                    <span class="stock-card__title tl2"
-                      >Дополнительная скидка на красные вина</span
-                    >
-                    <p class="stock-card__text txt">
-                      На напитки из подборки при покупке от 3 бутылок
-                    </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
-                      <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
-                  </div>
-                  <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/6e99b8a5fd19083ec6a8.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
-                  </div>
-                </div>
-                <div class="catalog__stock-card stock-card stock-card_sm">
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
                   <div class="stock-card__content">
                     <span class="stock-card__subtitle caps caps_md"
                       >26 - 31 октября</span
@@ -171,17 +61,217 @@
                     <p class="stock-card__text txt">
                       На напитки из подборки при покупке от 3 бутылок
                     </p>
-                    <a href="#" class="stock-card__link btn btn_icon">
+                    <button type="button" class="stock-card__link btn btn_icon">
                       <span class="btn__text txt txt_md">Подробнее</span>
-                    </a>
+                    </button>
                   </div>
                   <div class="stock-card__bg">
-                    <img
-                      src="@img/bg/6e99b8a5fd19ac4af13cec6a8.webp"
-                      alt=""
-                      class="stock-card__bg-image" />
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/f8b3f5820808f54e3f38cede1cf05a31.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
                   </div>
-                </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/6c6f1c0a08a8875b9802ffd0f67cc66a.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/6e99b8a5fd19ac4af13c143ec6a8.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/f8b3f5820808f54e3f38cede1cf05a31.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/6c6f1c0a08a8875b9802ffd0f67cc66a.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/a17e1729c72a1aa26335e0dd875f6eae.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/6e99b8a5fd19ac4af13c143ec6a8.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="catalog__stock-card stock-card stock-card_sm">
+                  <div class="stock-card__content">
+                    <span class="stock-card__subtitle caps caps_md"
+                      >26 - 31 октября</span
+                    >
+                    <span class="stock-card__title tl2"
+                      >Дополнительная скидка -33%</span
+                    >
+                    <p class="stock-card__text txt">
+                      На напитки из подборки при покупке от 3 бутылок
+                    </p>
+                    <button type="button" class="stock-card__link btn btn_icon">
+                      <span class="btn__text txt txt_md">Подробнее</span>
+                    </button>
+                  </div>
+                  <div class="stock-card__bg">
+                    <div class="stock-card__image-wrap">
+                      <img
+                        src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                        alt=""
+                        class="stock-card__image" />
+                    </div>
+                    <div class="stock-card__bg-wrap">
+                      <img
+                        src="@img/bg/40b22574f78a005d283b4ca924b64947.webp"
+                        alt=""
+                        class="stock-card__bg-image" />
+                    </div>
+                  </div>
+                </a>
               </div>
               <a href="#" class="stock-section__show-all-btn btn btn_icon">
                 <span class="btn__text txt txt_md">Показать еще</span>
@@ -221,8 +311,100 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
-      @@include('html/_modal.htm',{})
+      @@include('html/_footer.htm',{})
+      <div class="account-section">
+        <div class="account-section__head">
+          <div class="account-section__head-row">
+            <span class="account-section__head-heading txt txt_md"
+              >Аккаунт</span
+            >
+            <button
+              data-close-account-menu
+              class="account-section__head-close-btn">
+              <img
+                src="@img/icons/cross-gray.svg"
+                alt=""
+                class="header-catalog__head-close-btn-icon" />
+            </button>
+          </div>
+          <div class="account-section__head-group">
+            <div class="account-section__user-avatar">
+              <img
+                src="@img/icons/avatar.svg"
+                alt=""
+                class="account-section__user-avatar-image" />
+            </div>
+            <span class="account-section__user-name txt txt_md"
+              >Константин Константинопольский</span
+            >
+            <div class="account-section__user-cashback user-cashback">
+              <span class="user-cashback__value caps caps_md">5%</span>
+              <div class="user-cashback__hint">
+                <span class="user-cashback__text txt"
+                  >Ваш статус — Новичок</span
+                >
+                <span class="user-cashback__text txt"
+                  ><span class="user-cashback__text-content"
+                    >Кэшбек <span class="cashback-value">5%</span> на все
+                    товары</span
+                  >
+                  <span class="user-cashback__subtext">* кроме акционных</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="account-section__user-sum user-sum">
+            <div class="user-sum__track">
+              <span class="user-sum__inner-track"></span>
+            </div>
+            <div class="user-sum__row">
+              <span class="user-sum__current">
+                <span class="user-sum__text txt">Сумма покупок:</span>
+                <span class="user-sum__current-value txt">1 200₽</span>
+              </span>
+              <span class="user-sum__total-value txt">5 000₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-section__body">
+          <ul class="account-section__list">
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Личные данные</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Мои заказы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Вы заказывали</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md">Статусы</a>
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >История баллов</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Избранные товары</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account-section__footer">
+          <a href="#" class="account-section__logout-btn logout-btn txt txt_md"
+            >Выйти</a
+          >
+        </div>
+      </div>
+      @@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

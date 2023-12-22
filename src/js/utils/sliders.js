@@ -334,8 +334,6 @@ const initSliders = () => {
   if (document.querySelector('.reviews-product__slider')) {
     new Swiper('.reviews-product__slider', {
       modules: [Navigation, Pagination, Mousewheel],
-      observer: true,
-      observeParents: true,
       slidesPerView: 1,
       spaceBetween: rem(2),
       speed: 700,
@@ -461,7 +459,7 @@ const initSlidersOnResize = () => {
               )
             );
             initDynamicPagination(swiper);
-            revealSlides(swiper);
+            // revealSlides(swiper);
           },
           realIndexChange: swiper => {
             changeActiveNum(
@@ -473,10 +471,10 @@ const initSlidersOnResize = () => {
             initDynamicPagination(swiper);
           },
           slideChangeTransitionStart: swiper => {
-            revealSlides(swiper);
+            // revealSlides(swiper);
           },
           touchMove: swiper => {
-            revealSlides(swiper);
+            // revealSlides(swiper);
           },
         },
       });
@@ -490,7 +488,7 @@ const initSlidersOnResize = () => {
         observeParents: true,
         slidesPerView: 2,
         spaceBetween: rem(0.8),
-        speed: 1000,
+        speed: 700,
         loop: true,
 
         // navigation
@@ -534,10 +532,7 @@ const initSlidersOnResize = () => {
   }
   if (document.querySelector('.search-box__slider')) {
     new Swiper('.search-box__slider', {
-      modules: [Navigation, EffectFade, Mousewheel],
-      observer: true,
-      observeParents: true,
-      observeSlideChildren: true,
+      modules: [Navigation, Mousewheel],
       slidesPerView: 1.5,
       spaceBetween: 50,
       speed: 700,
@@ -557,7 +552,6 @@ const initSlidersOnResize = () => {
       breakpoints: {
         768: {
           slidesPerView: 1,
-          effect: 'fade',
         },
       },
     });

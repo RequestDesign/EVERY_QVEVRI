@@ -2,9 +2,9 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Новости" })
   <body style="opacity: 0">
-    <div class="wrapper">
+    <div class="wrapper blog-page blog-page_news chapter">
       @@include('html/_header.htm',{})
-      <main class="main blog-page blog-page_news">
+      <main class="main">
         <section class="blog-page__blog-section blog-section">
           <div class="blog-section__container container">
             <div class="blog-section__head">
@@ -718,8 +718,100 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{})
-      @@include('html/_modal.htm',{})
+      @@include('html/_footer.htm',{})
+      <div class="account-section">
+        <div class="account-section__head">
+          <div class="account-section__head-row">
+            <span class="account-section__head-heading txt txt_md"
+              >Аккаунт</span
+            >
+            <button
+              data-close-account-menu
+              class="account-section__head-close-btn">
+              <img
+                src="@img/icons/cross-gray.svg"
+                alt=""
+                class="header-catalog__head-close-btn-icon" />
+            </button>
+          </div>
+          <div class="account-section__head-group">
+            <div class="account-section__user-avatar">
+              <img
+                src="@img/icons/avatar.svg"
+                alt=""
+                class="account-section__user-avatar-image" />
+            </div>
+            <span class="account-section__user-name txt txt_md"
+              >Константин Константинопольский</span
+            >
+            <div class="account-section__user-cashback user-cashback">
+              <span class="user-cashback__value caps caps_md">5%</span>
+              <div class="user-cashback__hint">
+                <span class="user-cashback__text txt"
+                  >Ваш статус — Новичок</span
+                >
+                <span class="user-cashback__text txt"
+                  ><span class="user-cashback__text-content"
+                    >Кэшбек <span class="cashback-value">5%</span> на все
+                    товары</span
+                  >
+                  <span class="user-cashback__subtext">* кроме акционных</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="account-section__user-sum user-sum">
+            <div class="user-sum__track">
+              <span class="user-sum__inner-track"></span>
+            </div>
+            <div class="user-sum__row">
+              <span class="user-sum__current">
+                <span class="user-sum__text txt">Сумма покупок:</span>
+                <span class="user-sum__current-value txt">1 200₽</span>
+              </span>
+              <span class="user-sum__total-value txt">5 000₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-section__body">
+          <ul class="account-section__list">
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Личные данные</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Мои заказы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Вы заказывали</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md">Статусы</a>
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >История баллов</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Избранные товары</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account-section__footer">
+          <a href="#" class="account-section__logout-btn logout-btn txt txt_md"
+            >Выйти</a
+          >
+        </div>
+      </div>
+      @@include('html/_modal.htm',{}) @@include('html/_svg.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

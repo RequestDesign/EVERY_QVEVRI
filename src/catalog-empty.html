@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Каталог" })
+  <body style="opacity: 0;">
+    <div class="wrapper catalog-page catalog-page_empty">
+      @@include('html/_header.htm',{})
+      <main class="main">
+        <section class="catalog-page__hero-promo hero-promo">
+          <div class="hero-promo__container container">
+            <nav class="hero-promo__breadcrumbs breadcrumbs caps">
+              <a href="#" class="breadcrumbs__text">Главная</a>
+              <a href="#" class="breadcrumbs__text">Вино</a>
+              <span class="breadcrumbs__text">Белые вина</span>
+            </nav>
+            <a href="#" class="hero-promo__stock-card stock-card stock-card_hero">
+              <div class="stock-card__content">
+                <span class="stock-card__subtitle caps caps_md"
+                  >25 октября - 7 ноября</span
+                >
+                <span class="stock-card__title tl2"
+                  >Скидки до 50%</span
+                >
+                <p class="stock-card__text txt">
+                  На крепкие напитки для любого повода и события
+                </p>
+                <button type="button"
+ class="stock-card__link btn btn_icon">
+                  <span class="btn__text txt txt_md">Подробнее</span>
+                </button>
+              </div>
+              <div class="stock-card__bg">
+                <div class="stock-card__image-wrap">
+                  <img
+                    src="@img/bg/1184.webp"
+                    alt=""
+                    class="stock-card__image" />
+                </div>
+                <div class="stock-card__bg-wrap">
+                  <img
+                    src="@img/bg/19249.webp"
+                    alt=""
+                    class="stock-card__bg-image" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section class="catalog-page__catalog catalog">
+          <div class="catalog__container container">
+            <div class="catalog__title-wrap"><span class="catalog__title tl1">Белые вина</span></div>
+            <div class="catalog__head">
+              <div class="catalog__categories categories-catalog tabs swiper">
+                <ul data-original-height  data-visible-height="5rem"
+                  class="categories-catalog__list tabs-wrap txt txt_md">
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text">Все</a>
+                  </li>
+                  <li class="categories-catalog__item tab _active">
+                    <a href="#" class="tab__text ">Белые вина</a>
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >Игристые вина</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >Розовые вина</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >Крепкий алкоголь</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >Красные вина</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >Крепкий алкоголь</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >сувениры и подарки</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text ">в подарок</a>
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >наш рейтинг вин</a
+                    >
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text ">новинки</a>
+                  </li>
+                  <li class="categories-catalog__item tab">
+                    <a href="#" class="tab__text "
+                      >для вечеринки</a
+                    >
+                  </li>
+                </ul>
+                <button
+                  data-showmore-btn
+                  type="button"
+                  class="categories-catalog__show-all-btn desktop-only">
+                  <span>Все</span><span>Скрыть</span>
+                </button>
+              </div>
+              <div class="catalog__row">
+                <span data-da=".catalog__title-wrap,768,last" class="catalog__count txt">
+                  <span class="catalog__count-value">0</span>
+                  <span class="catalog__count-text">товаров</span>
+                </span>
+                <div class="catalog__sort sort txt">
+                  <select data-show-selection name="form[]">
+                    <option value="1" selected>По популярности</option>
+                    <option value="2">По возрастанию цены</option>
+                    <option value="3">По убыванию цены</option>
+                    <option value="4">Высокий рейтинг</option>
+                    <option value="5">Новинки</option>
+                  </select>
+                </div>
+                <div class="catalog__view view-catalog">
+                  <span class="view-catalog__text txt">Вид каталога</span>
+                  <div class="view-catalog__btns">
+                    <a href="#" class="view-catalog__btn">
+                      <svg
+                        class="view-catalog__btn-icon"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="3" fill="#E9E8E8" />
+                        <circle cx="22" cy="10" r="3" fill="#E9E8E8" />
+                        <circle cx="10" cy="22" r="3" fill="#E9E8E8" />
+                        <circle cx="22" cy="22" r="3" fill="#E9E8E8" />
+                      </svg>
+                    </a>
+                    <a href="#" class="view-catalog__btn _active">
+                      <svg
+                      class="view-catalog__btn-icon"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect
+                          x="6"
+                          y="8"
+                          width="20"
+                          height="4"
+                          rx="2"
+                          fill="#E9E8E8" />
+                        <rect
+                          x="6"
+                          y="20"
+                          width="20"
+                          height="4"
+                          rx="2"
+                          fill="#E9E8E8" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__body">
+              <div class="catalog__filters filters">
+                <div class="filters__head mobile-only">
+                  <span class="filters__title tl2">Сортировка и фильтры</span>
+                  <button data-close-filters-btn type="button" class="filters__close-btn"><img src="@img/icons/cross.svg" alt="" class="filters__close-btn-icon"></button>
+                </div>
+                <div data-sl-parent class="filters__sort mobile-only">
+                  <span class="filters__sort-title caps">Сортировка</span>
+                  <button data-sl-btn type="button" class="filters__sort-btn caps caps_md">По популярности</button>
+                  <div class="filters__sublist-wrap">
+                    <div class="filters__head">
+                      <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                      <span class="filters__title tl2">Сортировка</span>
+                    </div>
+                    <div class="filters__sublist sublist-filters">
+                      <div class="sublist-filters__options">
+                        <label class="options__option option">
+                          <input hidden class="option__input" checked type="radio" value name="option">
+                          <span class="option__text caps caps_md">По популярности</span>
+                        </label>
+                          <label class="options__option option">
+                            <input hidden class="option__input" type="radio" value name="option">
+                            <span class="option__text caps caps_md">По возрастанию цены</span>
+                          </label>
+                          <label class="options__option option">
+                            <input hidden class="option__input" type="radio" value name="option">
+                            <span class="option__text caps caps_md">По убыванию цены</span>
+                          </label>
+                          <label class="options__option option">
+                            <input hidden class="option__input" type="radio" value name="option">
+                            <span class="option__text caps caps_md">Высокий рейтинг</span>
+                          </label>
+                          <label class="options__option option">
+                            <input hidden class="option__input" type="radio" value name="option">
+                            <span class="option__text caps caps_md">Новинки</span>
+                          </label>
+                        </div>
+                        </div>
+                  </div>
+              </div>
+                <span class="filters__heading tl2">фильтры</span>
+                <form data-dev action="#" class="filters__form">
+                  <div class="filters__body">
+                    <div class="filters__list">
+                      <div class="filters__group">
+                        <span class="filters__subtitle caps caps_md">Акции</span>
+                        <div class="filters__options">
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">2 + 1</span>
+                            </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="filters__checkbox filters__checkbox_hint">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt"
+                                >Выгодная цена</span
+                              >
+                            </label>
+                            <div class="filters__hint hint">
+                              <button type="button" class="hint__icon-wrap"><img src="@img/icons/hint.svg" alt="" class="hint__icon"></button>
+                              <div class="hint__body">
+                                <p class="hint__text txt txt_16">Выберите 2 товара и получите третий в подарок!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group">
+                        <span class="filters__subtitle caps caps_md"
+                          >цена (₽)</span
+                        >
+                        <div class="filters__fields">
+                          <div class="filters__field input txt">
+                            <input
+                              autocomplete="off"
+                              data-numbers-only
+                              type="text"
+                              name="form[]"
+                              placeholder="от"
+                              class="input__field" />
+                          </div>
+                          <div class="filters__field input txt">
+                            <input
+                              autocomplete="off"
+                              data-numbers-only
+                              type="text"
+                              name="form[]"
+                              placeholder="до"
+                              class="input__field" />
+                          </div>
+                        </div>
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]"
+                                checked />
+                              <span class="checkbox__text txt">500 — 1500</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">1600 — 2500</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">2600 — 3500</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Более 3500</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group">
+                        <span class="filters__subtitle caps caps_md">Цвет</span>
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Красное</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Белое</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Розовое</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Оранжевое</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group">
+                        <span class="filters__subtitle caps caps_md">Тип</span>
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt"
+                                >Безалкогольные вина</span
+                              >
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Вермут</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Херес</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Портвейн</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group">
+                        <span class="filters__subtitle caps caps_md">Страна</span>
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Грузия</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Россия</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Армения</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group desktop-only">
+                        <span class="filters__subtitle caps caps_md">регион</span>
+                          <div class="filters__options">
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Кубань</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Венетто</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]"
+                                  checked />
+                                <span class="checkbox__text txt">Бордо</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Тоскана</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Крым</span>
+                              </label>
+                            </div>
+                          </div>
+                          <button type="button" class="filters__showmore-btn">
+                            <span>Показать все</span><span>Скрыть</span>
+                          </button>
+                      </div>
+                      <div class="filters__group _show-all-options desktop-only">
+                        <span class="filters__subtitle caps caps_md">бренд</span>
+                        <div class="filters__search-input input input_search">
+                          <input
+                            autocomplete="off"
+                            type="search"
+                            name="form[]"
+                            placeholder="Я ищу..."
+                            class="input__field" />
+                        </div>
+                        <div class="filters__scrollable-list">
+                          <div
+                            data-simplebar
+                            data-simplebar-auto-hide="false"
+                            class="filters__options">
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Adega de Favaios</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Africa's Pride</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Bisci</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Botter</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Duffour</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Adega de Favaios</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Africa's Pride</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Bisci</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Botter</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Duffour</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="filters__showmore-btn">
+                          <span>Показать все</span><span>Скрыть</span>
+                        </button>
+                      </div>
+                      <div class="filters__group _hidden _show-all-options desktop-only">
+                        <span class="filters__subtitle caps caps_md"
+                          >производитель</span
+                        >
+                        <div class="filters__search-input input input_search">
+                          <input
+                            autocomplete="off"
+                            type="search"
+                            name="form[]"
+                            placeholder="Я ищу..."
+                            class="filters__search-field input__field" />
+                        </div>
+                        <div class="filters__scrollable-list">
+                          <div
+                            data-simplebar
+                            data-simplebar-auto-hide="false"
+                            class="filters__options">
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Adega de Favaios</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Africa's Pride</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Bisci</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Botter</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Duffour</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Adega de Favaios</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt"
+                                  >Africa's Pride</span
+                                >
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Bisci</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Botter</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Duffour</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="filters__showmore-btn">
+                          <span>Показать все</span><span>Скрыть</span>
+                        </button>
+                      </div>
+                      <div class="filters__group _hidden desktop-only">
+                        <span class="filters__subtitle caps caps_md"
+                          >Объем бутылки</span
+                        >
+                          <div class="filters__options">
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.1 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.2 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.25 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.35 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.5 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.1 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.2 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.25 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.35 л</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">0.5 л</span>
+                              </label>
+                            </div>
+                          </div>
+                          <button type="button" class="filters__showmore-btn">
+                            <span>Показать все</span><span>Скрыть</span>
+                          </button>
+
+                      </div>
+                      <div class="filters__group _hidden">
+                        <span class="filters__subtitle caps caps_md"
+                          >Содержание сахара</span
+                        >
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Сухое</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Полусухое</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt"
+                                >Полусладкое</span
+                              >
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Сладкое</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Брют</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__group _hidden desktop-only">
+                        <span class="filters__subtitle caps caps_md"
+                          >Сорт винограда</span
+                        >
+                          <div class="filters__options">
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 1</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 2</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 3</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 4</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 5</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 1</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 2</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 3</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 4</span>
+                              </label>
+                            </div>
+                            <div class="filters__checkbox _hidden">
+                              <label class="checkbox">
+                                <input
+                                  class="checkbox__input"
+                                  type="checkbox"
+                                  value=""
+                                  name="form[]" />
+                                <span class="checkbox__text txt">Сорт 5</span>
+                              </label>
+                            </div>
+                          </div>
+                          <button type="button" class="filters__showmore-btn">
+                            <span>Показать все</span><span>Скрыть</span>
+                          </button>
+                      </div>
+                      <div class="filters__group _hidden">
+                        <span class="filters__subtitle caps caps_md"
+                          >крепость</span
+                        >
+                        <div class="filters__fields">
+                          <div class="filters__field input txt">
+                            <input
+                              autocomplete="off"
+                              data-numbers-only
+                              type="text"
+                              name="form[]"
+                              placeholder="от"
+                              class="input__field" />
+                          </div>
+                          <div class="filters__field input txt">
+                            <input
+                              autocomplete="off"
+                              data-numbers-only
+                              type="text"
+                              name="form[]"
+                              placeholder="до"
+                              class="input__field" />
+                          </div>
+                        </div>
+                        <div class="filters__options">
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]"
+                                 />
+                              <span class="checkbox__text txt">0 — 5</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">6 — 10</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">11 — 14</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">15 — 20</span>
+                            </label>
+                          </div>
+                          <div class="filters__checkbox">
+                            <label class="checkbox">
+                              <input
+                                class="checkbox__input"
+                                type="checkbox"
+                                value=""
+                                name="form[]" />
+                              <span class="checkbox__text txt">Более 20</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="filters__nav-list mobile-only">
+                      <div data-sl-parent class="filters__nav-item">
+                        <button data-sl-btn type="button" class="filters__nav-btn caps caps_md">Регион</button>
+                        <div class="filters__sublist-wrap">
+                          <div class="filters__head">
+                            <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                            <span class="filters__title tl2">Регион</span>
+                          </div>
+                          <div class="filters__sublist sublist-filters">
+                              <div class="sublist-filters__input input input_search txt">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Я ищу..." class="input__field">
+                              </div>
+                              <div class="sublist-filters__groups">
+
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">Популярные</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Кубань</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Венетто</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Бордо</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">А</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Абруццо</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Альманса</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">Б</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Бордо</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">В</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Венетто</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                        <div data-sl-parent class="filters__nav-item">
+                          <button data-sl-btn type="button" class="filters__nav-btn caps caps_md">Бренд</button>
+                          <div class="filters__sublist-wrap">
+                            <div class="filters__head">
+                              <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                              <span class="filters__title tl2">Бренд</span>
+                            </div>
+                            <div class="filters__sublist sublist-filters">
+                                <div class="sublist-filters__input input input_search txt">
+                                  <input autocomplete="off" type="text" name="form[]" placeholder="Я ищу..." class="input__field">
+                                </div>
+                                <div class="sublist-filters__groups">
+
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Популярные</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Кубань</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">А</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Абруццо</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Альманса</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Б</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">В</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-sl-parent class="filters__nav-item">
+                          <button data-sl-btn type="button" class="filters__nav-btn caps caps_md">Производитель</button>
+                          <div class="filters__sublist-wrap">
+                            <div class="filters__head">
+                              <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                              <span class="filters__title tl2">Производитель</span>
+                            </div>
+                            <div class="filters__sublist sublist-filters">
+                                <div class="sublist-filters__input input input_search txt">
+                                  <input autocomplete="off" type="text" name="form[]" placeholder="Я ищу..." class="input__field">
+                                </div>
+                                <div class="sublist-filters__groups">
+
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Популярные</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Кубань</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">А</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Абруццо</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Альманса</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Б</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">В</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-sl-parent class="filters__nav-item">
+                          <button data-sl-btn type="button" class="filters__nav-btn caps caps_md">Объем бутылки</button>
+                          <div class="filters__sublist-wrap">
+                            <div class="filters__head">
+                              <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                              <span class="filters__title tl2">Объем бутылки</span>
+                            </div>
+                            <div class="filters__sublist sublist-filters">
+                                <div class="sublist-filters__input input input_search txt">
+                                  <input autocomplete="off" type="text" name="form[]" placeholder="Я ищу..." class="input__field">
+                                </div>
+                                <div class="sublist-filters__groups">
+
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Популярные</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Кубань</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">А</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Абруццо</span>
+                                        </label>
+                                      </div>
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Альманса</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">Б</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Бордо</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sublist-filters__group">
+                                    <span class="sublist-filters__heading subtitle">В</span>
+                                    <div class="sublist-filters__options">
+                                      <div class="sublist-filters__checkbox">
+                                        <label class="checkbox">
+                                          <input class="checkbox__input" type="checkbox" value name="form[]">
+                                          <span class="checkbox__text caps caps_md">Венетто</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      <div data-sl-parent class="filters__nav-item">
+                        <button data-sl-btn type="button" class="filters__nav-btn caps caps_md">Сорт винограда</button>
+                        <div class="filters__sublist-wrap">
+                          <div class="filters__head">
+                            <button data-close-sl-btn type="button" class="filters__close-btn"><img src="@img/icons/sm-arr.svg" alt="" class="filters__close-btn-icon"></button>
+                            <span class="filters__title tl2">Сорт винограда</span>
+                          </div>
+                          <div class="filters__sublist sublist-filters">
+                              <div class="sublist-filters__input input input_search txt">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Я ищу..." class="input__field">
+                              </div>
+                              <div class="sublist-filters__groups">
+
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">Популярные</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Кубань</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Венетто</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Бордо</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">А</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Абруццо</span>
+                                      </label>
+                                    </div>
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Альманса</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">Б</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Бордо</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sublist-filters__group">
+                                  <span class="sublist-filters__heading subtitle">В</span>
+                                  <div class="sublist-filters__options">
+                                    <div class="sublist-filters__checkbox">
+                                      <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value name="form[]">
+                                        <span class="checkbox__text caps caps_md">Венетто</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__footer">
+                    <button type="button" class="filters__submit-btn btn btn_solid">
+                      <span class="btn__text txt">Показать 1 021 товар </span>
+                    </button>
+                    <button type="button" class="filters__show-all-btn btn_ol">
+                      <span class="btn__text txt txt_md">Все фильтры</span
+                      ><span class="btn__text txt txt_md">Скрыть фильтры</span>
+                    </button>
+                    <button
+                      data-clean-form-btn
+                      type="button"
+                      class="filters__clean-form-btn txt">
+                      Очистить фильтр
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="catalog__content">
+                <div data-da=".filters__footer,768,first" class="catalog__tags tags-catalog">
+                    <div class="tags-catalog__list"></div>
+                  </div>
+                <div class="catalog__message message-catalog">
+                    <span class="message-catalog__title tl2">Ничего не найдено</span>
+                    <p class="message-catalog__text txt">Попробуйте сформулировать запрос по‑другому или изменить значения в фильтрах.</p>
+                </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section data-shopify-section="1" class="catalog-page__shopify-section shopify-section shopify-section_group">
+          <div class="shopify-section__container container">
+            <div class="shopify-section__head">
+              <span
+                class="shopify-section__number txt txt_wide desktop-only"></span>
+              <span class="shopify-section__title tl1"
+                >рекомендуем</span
+              >
+              <div
+                class="shopify-section__sl-control sl-control sl-control_reversed desktop-only">
+                <div class="sl-control__nav sl-nav">
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_next">
+                    <img
+                      src="@img/icons/sl-arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                  <button
+                    type="button"
+                    class="sl-nav__arrow sl-nav__arrow_prev">
+                    <img
+                      src="@img/icons/sl-arr.svg"
+                      alt=""
+                      class="sl-nav__arrow-icon" />
+                  </button>
+                </div>
+                <div class="sl-control__pagination-wrap">
+                  <div
+                    class="sl-control__pagination sl-pagination txt txt_wide"></div>
+                </div>
+              </div>
+            </div>
+            <p class="shopify-section__text txt txt_md">Рекомендации на основе просмотренного</p>
+            <div class="shopify-section__body">
+              <div class="shopify-section__carousel">
+                <div class="shopify-section__slider swiper">
+                  <div class="shopify-section__wrapper swiper-wrapper">
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/c4f191d740ecdc8e5437c11e253bdffb404da0f4.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
+                      <div class="menu-product-card__head">
+                        <div class="menu-product-card__badges">
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">-25%</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Суперцена</span>
+                          </div>
+                          <div class="menu-product-card__badge badge">
+                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="menu-product-card__heart-btn heart-btn">
+                          <svg
+                            class="heart-btn__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none">
+                            <path
+                              d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z"
+                              fill="#E9E8E8"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="menu-product-card__preview">
+                        <div class="menu-product-card__image-wrap">
+                          <img
+                            src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
+                            alt=""
+                            class="menu-product-card__image" />
+                        </div>
+                      </div>
+                      <div class="menu-product-card__info">
+                        <span class="menu-product-card__heading tl2"
+                        >Вино
+                        Saperavi Binekhi</span
+                      >
+                      <div class="menu-product-card__reviews">
+                        <div class="menu-product-card__grade grade">
+                          <span class="grade__text txt txt_md">4.5</span>
+                        </div>
+                      </div>
+                        <ul class="menu-product-card__features txt txt_16">
+                          <li class="menu-product-card__feature">Россия</li>
+                          <li class="menu-product-card__feature">Красное</li>
+                          <li class="menu-product-card__feature">Сухое</li>
+                          <li class="menu-product-card__feature">0.75 л</li>
+                        </ul>
+                        <div
+                        class="menu-product-card__characteristics characteristics">
+                        <ul class="characteristics__list">
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Вино:</span>
+                            <span class="characteristics__text"
+                              >Полусухое, белое
+                            </span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Объем:</span>
+                            <span class="characteristics__text">0.75 л</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Крепость:</span
+                            >
+                            <span class="characteristics__text">12.5%</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Страна, регион:</span
+                            >
+                            <span class="characteristics__text"
+                              >Грузия, Кахетия</span
+                            >
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label">Бренд:</span>
+                            <span class="characteristics__text">Binekhi</span>
+                          </li>
+                          <li class="characteristics__item txt">
+                            <span class="characteristics__label"
+                              >Производитель:</span
+                            >
+                            <span class="characteristics__text">Vasi+</span>
+                          </li>
+                        </ul>
+                      </div>
+                      </div>
+                      <div class="menu-product-card__group">
+                        <div class="menu-product-card__price-wrap">
+                          <div class="menu-product-card__price price">
+                            <span class="price__value txt txt_wide">1 200₽</span>
+                            <span
+                            class="price__value price__value_old txt txt_wide"
+                            >1 700₽</span
+                          >
+                          </div>
+                          <div class="menu-product-card__coins coins">
+                            <span class="coins__value txt">16</span>
+                          </div>
+                        </div>
+                        <div class="menu-product-card__actions">
+                          <button
+                          class="menu-product-card__cart-btn cart-btn">
+                          <img
+                            src="@img/icons/bag-white.svg"
+                            alt=""
+                            class="cart-btn__icon" />
+                        </button>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-page__location location">
+          <div class="location__container container">
+            <span class="location__title tl1">мы <span>на карте</span></span>
+            <div data-map class="location__map"></div>
+            <div class="location__info">
+              <p data-da=".location__panel,768,last" class="location__text txt">
+                Находимся рядом с метро Чкаловская и Петроградская
+              </p>
+              <div class="location__panel">
+                <div class="location__image-wrap desktop-only">
+                  <img
+                    src="@img/bg/8dd172f1ddf93591e4cc3534560fd673.webp"
+                    class="location__image" />
+                </div>
+                <div class="location__text-wrap">
+                  <span class="location__address"
+                    ><span class="location__address-txt txt"
+                      ><span>Санкт-Петербург, </span> Левашовский пр. 13а</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+      <div class="menu-bar mobile-only">
+        <ul class="menu-bar__list">
+          <li class="menu-bar__item">
+            <a href="#" class="menu-bar__link">
+              <div class="menu-bar__icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.18674 11.16L13.4267 3.75996C14.8401 2.62663 17.1467 2.62663 18.5734 3.7733L27.8134 11.16C28.8401 11.9866 29.5067 13.7333 29.2934 15.04L27.5201 25.6533C27.2001 27.5333 25.3734 29.08 23.4667 29.08H19.2V24.64C19.2 23.4006 18.3424 22.4 17.28 22.4H14.72C13.6576 22.4 12.8 23.4006 12.8 24.64V29.08H8.5334C6.6134 29.08 4.80007 27.5466 4.48007 25.6533L2.70674 15.04C2.48007 13.7333 3.14674 11.9866 4.18674 11.16Z"
+                    fill="#B3B3B3" />
+                </svg>
+              </div>
+              <span class="menu-bar__text caps caps_md">Главная</span>
+            </a>
+          </li>
+          <li class="menu-bar__item _active">
+            <a href="#" class="menu-bar__link">
+              <div class="menu-bar__icon">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.1751 11.3248C19.9626 11.3248 18.1626 9.5248 18.1626 7.3123C18.1626 5.0998 19.9626 3.2998 22.1751 3.2998C24.3876 3.2998 26.1876 5.0998 26.1876 7.3123C26.1876 9.5248 24.3876 11.3248 22.1751 11.3248ZM22.1751 5.1623C21.0001 5.1623 20.0376 6.1248 20.0376 7.2998C20.0376 8.4748 21.0001 9.4373 22.1751 9.4373C23.3501 9.4373 24.3126 8.4748 24.3126 7.2998C24.3126 6.1248 23.3501 5.1623 22.1751 5.1623Z"
+                    fill="#B3B3B3" />
+                  <path
+                    d="M8.32501 11.3248C6.11251 11.3248 4.3125 9.5248 4.3125 7.3123C4.3125 5.0998 6.11251 3.2998 8.32501 3.2998C10.5375 3.2998 12.3375 5.0998 12.3375 7.3123C12.3375 9.5248 10.5375 11.3248 8.32501 11.3248ZM8.32501 5.1623C7.15001 5.1623 6.1875 6.1248 6.1875 7.2998C6.1875 8.4748 7.15001 9.4373 8.32501 9.4373C9.50001 9.4373 10.4625 8.4748 10.4625 7.2998C10.4625 6.1248 9.51251 5.1623 8.32501 5.1623Z"
+                    fill="#B3B3B3" />
+                  <path
+                    d="M22.1751 26.7125C19.9626 26.7125 18.1626 24.9125 18.1626 22.7C18.1626 20.4875 19.9626 18.6875 22.1751 18.6875C24.3876 18.6875 26.1876 20.4875 26.1876 22.7C26.1876 24.9125 24.3876 26.7125 22.1751 26.7125ZM22.1751 20.55C21.0001 20.55 20.0376 21.5125 20.0376 22.6875C20.0376 23.8625 21.0001 24.825 22.1751 24.825C23.3501 24.825 24.3126 23.8625 24.3126 22.6875C24.3126 21.5125 23.3501 20.55 22.1751 20.55Z"
+                    fill="#B3B3B3" />
+                  <path
+                    d="M8.32501 26.7125C6.11251 26.7125 4.3125 24.9125 4.3125 22.7C4.3125 20.4875 6.11251 18.6875 8.32501 18.6875C10.5375 18.6875 12.3375 20.4875 12.3375 22.7C12.3375 24.9125 10.5375 26.7125 8.32501 26.7125ZM8.32501 20.55C7.15001 20.55 6.1875 21.5125 6.1875 22.6875C6.1875 23.8625 7.15001 24.825 8.32501 24.825C9.50001 24.825 10.4625 23.8625 10.4625 22.6875C10.4625 21.5125 9.51251 20.55 8.32501 20.55Z"
+                    fill="#B3B3B3" />
+                </svg>
+              </div>
+              <span class="menu-bar__text caps caps_md">Каталог</span>
+            </a>
+          </li>
+          <li class="menu-bar__item">
+            <button data-open-account-menu type="button" class="menu-bar__link">
+              <div class="menu-bar__icon">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.651 12.3636C15.5568 12.3542 15.4438 12.3542 15.3402 12.3636C13.0986 12.2882 11.3185 10.4495 11.3185 8.18653C11.3185 5.8764 13.1833 4 15.5003 4C17.8078 4 19.6821 5.8764 19.6821 8.18653C19.6727 10.4495 17.8926 12.2882 15.651 12.3636Z"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M9.36253 18.2095C6.39478 20.1737 6.39478 23.3747 9.36253 25.3267C12.735 27.5577 18.2658 27.5577 21.6382 25.3267C24.6059 23.3625 24.6059 20.1616 21.6382 18.2095C18.278 15.9907 12.7472 15.9907 9.36253 18.2095Z"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+
+              <span class="menu-bar__text caps caps_md">Аккаунт</span>
+            </button>
+          </li>
+          <li class="menu-bar__item">
+            <a href="#" class="menu-bar__link">
+              <div class="menu-bar__icon">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.494 24.8938C16.086 25.0354 15.414 25.0354 15.006 24.8938C11.526 23.7258 3.75 18.8534 3.75 10.5949C3.75 6.94944 6.738 4 10.422 4C12.606 4 14.538 5.95125 15.75 7.55574C16.962 5.95125 18.906 4 21.078 4C24.762 4 27.75 6.94944 27.75 10.5949C27.75 18.8534 19.974 23.7258 16.494 24.8938Z"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+
+              <span class="menu-bar__text caps caps_md">Избранное</span>
+            </a>
+          </li>
+          <li class="menu-bar__item menu-bar__item_cart">
+            <a href="#" class="menu-bar__link">
+              <div class="menu-bar__icon">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 9.7508V8.65135C10 6.10107 12.0111 3.59613 14.5111 3.3581C17.4889 3.0634 20 5.455 20 8.43599V10.0002"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M11.5717 26.6668H18.4283C23.0221 26.6668 23.8449 24.846 24.0849 22.6293L24.9419 15.8436C25.2505 13.0841 24.4506 10.8335 19.571 10.8335H10.429C5.54944 10.8335 4.74951 13.0841 5.05806 15.8436L5.91512 22.6293C6.1551 24.846 6.97788 26.6668 11.5717 26.6668Z"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M18.6411 15.0003H18.6504"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M11.3484 15.0003H11.3577"
+                    stroke="#B3B3B3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="menu-bar__text caps caps_md">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="account-section">
+        <div class="account-section__head">
+          <div class="account-section__head-row">
+            <span class="account-section__head-heading txt txt_md">Аккаунт</span>
+            <button data-close-account-menu class="account-section__head-close-btn">
+              <img
+                src="@img/icons/cross-gray.svg"
+                alt=""
+                class="header-catalog__head-close-btn-icon" />
+            </button>
+          </div>
+          <div class="account-section__head-group">
+            <div class="account-section__user-avatar">
+              <img
+                src="@img/icons/avatar.svg"
+                alt=""
+                class="account-section__user-avatar-image" />
+            </div>
+            <span class="account-section__user-name txt txt_md"
+              >Константин Константинопольский</span
+            >
+            <div class="account-section__user-cashback user-cashback">
+              <span class="user-cashback__value caps caps_md">5%</span>
+              <div class="user-cashback__hint">
+                <span class="user-cashback__text txt"
+                  >Ваш статус — Новичок</span
+                >
+                <span class="user-cashback__text txt"
+                  ><span class="user-cashback__text-content"
+                    >Кэшбек <span class="cashback-value">5%</span> на все
+                    товары</span
+                  >
+                  <span class="user-cashback__subtext"
+                    >* кроме акционных</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="account-section__user-sum user-sum">
+            <div class="user-sum__track">
+              <span class="user-sum__inner-track"></span>
+            </div>
+            <div class="user-sum__row">
+              <span class="user-sum__current">
+                <span class="user-sum__text txt">Сумма покупок:</span>
+                <span class="user-sum__current-value txt">1 200₽</span>
+              </span>
+              <span class="user-sum__total-value txt">5 000₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-section__body">
+          <ul class="account-section__list">
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Личные данные</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Мои заказы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Вы заказывали</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Статусы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >История баллов</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Избранные товары</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account-section__footer">
+          <a
+            href="#"
+            class="account-section__logout-btn logout-btn txt txt_md"
+            >Выйти</a
+          >
+        </div>
+      </div>
+      <button type="button" id="open-filters-btn" class="filters-btn mobile-only"><img src="@img/icons/filter.svg" alt="" class="filters-btn__icon"></button>
+      @@include('html/_svg.htm',{}) @@include('html/_modal.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

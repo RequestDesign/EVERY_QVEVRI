@@ -45,9 +45,9 @@
           <nav class="menu__nav">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link menu__link_catalog txt"
-                  >Каталог</a
-                >
+                <button type="button" class="menu__link menu__link_catalog txt">
+                  Каталог
+                </button>
               </li>
               <li class="menu__item">
                 <button
@@ -58,7 +58,10 @@
                 </button>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link menu__link_liked txt"
+                <a
+                  href="#"
+                  data-modal="#loginModal"
+                  class="menu__link menu__link_liked txt"
                   >Избранное</a
                 >
               </li>
@@ -67,10 +70,12 @@
               </li>
             </ul>
           </nav>
-          <div class="menu__tel-wrap">
-            <a href="tel:88003010790" class="menu__tel txt txt_md"
-              >8 800 301 07 90</a
-            >
+          <div class="menu__group">
+            <div class="menu__tel-wrap">
+              <a href="tel:88003010790" class="menu__tel txt txt_md"
+                >8 800 301 07 90</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -590,9 +595,10 @@
                     </div>
                   </div>
                 </div>
-                <div
+                <a
+                  href="#"
                   class="header-catalog__product-card menu-product-card menu-product-card_list-view">
-                  <a href="#" class="menu-product-card__preview">
+                  <div class="menu-product-card__preview">
                     <div class="menu-product-card__image-wrap">
                       <img
                         src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
@@ -610,10 +616,10 @@
                         <span class="badge__text txt txt_16">Эксклюзив</span>
                       </div>
                     </div>
-                  </a>
+                  </div>
                   <div class="menu-product-card__info">
-                    <a href="#" class="menu-product-card__heading tl2"
-                      >Вино Saperavi Binekhi</a
+                    <span class="menu-product-card__heading tl2"
+                      >Вино Saperavi Binekhi</span
                     >
                     <div class="menu-product-card__reviews">
                       <div class="menu-product-card__grade grade">
@@ -666,7 +672,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div data-subnav-index="1" class="header-catalog__subnav">
                 <div class="header-catalog__head">
@@ -3262,7 +3268,8 @@
                   </div>
                 </div>
               </div>
-              <div
+              <a
+                href="#"
                 data-da=".header-catalog__menubar,768,last"
                 class="header-catalog__stock-card stock-card">
                 <div class="stock-card__content">
@@ -3275,9 +3282,9 @@
                   <p class="stock-card__text txt">
                     На напитки из подборки при покупке от 3 бутылок
                   </p>
-                  <a href="#" class="stock-card__link btn btn_icon">
+                  <button type="button" class="stock-card__link btn btn_icon">
                     <span class="btn__text txt txt_md">Подробнее</span>
-                  </a>
+                  </button>
                 </div>
                 <div class="stock-card__bg">
                   <div class="stock-card__image-wrap">
@@ -3293,7 +3300,7 @@
                       class="stock-card__bg-image" />
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -3439,8 +3446,10 @@
             <div class="search-box__carousel">
               <div class="search-box__slider swiper">
                 <div class="search-box__wrapper swiper-wrapper">
-                  <div class="search-box__slide menu-product-card swiper-slide">
-                    <div href="#" class="menu-product-card__inner">
+                  <a
+                    href="#"
+                    class="search-box__slide menu-product-card swiper-slide">
+                    <div class="menu-product-card__inner">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3473,7 +3482,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -3483,7 +3492,7 @@
                         <span class="menu-product-card__heading tl2"
                           >вино Kartuli Vazi Akhasheni</span
                         >
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
                         <div class="menu-product-card__grade grade">
                           <span class="grade__text txt txt_md">4.5</span>
@@ -3518,9 +3527,11 @@
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="search-box__slide menu-product-card swiper-slide">
-                    <div href="#" class="menu-product-card__inner">
+                  </a>
+                  <a
+                    href="#"
+                    class="search-box__slide menu-product-card swiper-slide">
+                    <div class="menu-product-card__inner">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3553,7 +3564,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -3563,7 +3574,7 @@
                         <span class="menu-product-card__heading tl2"
                           >вино Kartuli Vazi Akhasheni</span
                         >
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
                         <div class="menu-product-card__grade grade">
                           <span class="grade__text txt txt_md">4.5</span>
@@ -3598,9 +3609,11 @@
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="search-box__slide menu-product-card swiper-slide">
-                    <div href="#" class="menu-product-card__inner">
+                  </a>
+                  <a
+                    href="#"
+                    class="search-box__slide menu-product-card swiper-slide">
+                    <div class="menu-product-card__inner">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3633,7 +3646,7 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -3643,7 +3656,7 @@
                         <span class="menu-product-card__heading tl2"
                           >вино Kartuli Vazi Akhasheni</span
                         >
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
                         <div class="menu-product-card__grade grade">
                           <span class="grade__text txt txt_md">4.5</span>
@@ -3678,7 +3691,7 @@
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div class="search-box__slider-nav">
@@ -3854,12 +3867,12 @@
                 class="header-cart__body sb_gray">
                 <div class="header-cart__inner">
                   <div class="header-cart__item item-header-cart">
-                    <div class="item-header-cart__image-wrap">
+                    <a href="#" class="item-header-cart__image-wrap">
                       <img
                         src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                         alt=""
                         class="item-header-cart__image" />
-                    </div>
+                    </a>
                     <div class="item-header-cart__info">
                       <span class="item-header-cart__title subtitle"
                         >Вино Saperavi Binekhi</span
@@ -3912,12 +3925,12 @@
                     </button>
                   </div>
                   <div class="header-cart__item item-header-cart">
-                    <div class="item-header-cart__image-wrap">
+                    <a href="#" class="item-header-cart__image-wrap">
                       <img
                         src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                         alt=""
                         class="item-header-cart__image" />
-                    </div>
+                    </a>
                     <div class="item-header-cart__info">
                       <span class="item-header-cart__title subtitle"
                         >Вино Saperavi Binekhi Saperavi BinekhiSaperavi
@@ -3968,12 +3981,12 @@
                     </button>
                   </div>
                   <div class="header-cart__item item-header-cart">
-                    <div class="item-header-cart__image-wrap">
+                    <a href="#" class="item-header-cart__image-wrap">
                       <img
                         src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                         alt=""
                         class="item-header-cart__image" />
-                    </div>
+                    </a>
                     <div class="item-header-cart__info">
                       <span class="item-header-cart__title subtitle"
                         >Вино Saperavi Binekhi</span
@@ -4026,12 +4039,12 @@
                     </button>
                   </div>
                   <div class="header-cart__item item-header-cart">
-                    <div class="item-header-cart__image-wrap">
+                    <a href="#" class="item-header-cart__image-wrap">
                       <img
                         src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                         alt=""
                         class="item-header-cart__image" />
-                    </div>
+                    </a>
                     <div class="item-header-cart__info">
                       <span class="item-header-cart__title subtitle"
                         >Вино Saperavi Binekhi</span
@@ -4287,8 +4300,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -4317,7 +4332,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -4327,7 +4342,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -4360,7 +4375,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -4550,8 +4565,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -4580,7 +4597,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -4590,7 +4607,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -4623,7 +4640,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -4813,8 +4830,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -4843,7 +4863,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -4853,7 +4873,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -4886,7 +4906,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -5076,8 +5096,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -5106,7 +5129,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -5116,7 +5139,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -5149,7 +5172,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -5339,8 +5362,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -5369,7 +5395,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -5379,7 +5405,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -5412,7 +5438,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -5602,8 +5628,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -5632,7 +5661,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -5642,7 +5671,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -5675,7 +5704,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -5865,8 +5894,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-subnav__product-card menu-product-card">
-                  <div href="#" class="menu-product-card__inner">
+
+                <a
+                  href="#"
+                  class="header-subnav__product-card menu-product-card">
+                  <div class="menu-product-card__inner">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -5895,7 +5927,7 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
@@ -5905,7 +5937,7 @@
                       <span class="menu-product-card__heading tl2"
                         >вино Kartuli Vazi Akhasheni</span
                       >
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
                       <div class="menu-product-card__grade grade">
                         <span class="grade__text txt txt_md">4.5</span>
@@ -5938,7 +5970,7 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </li>
@@ -5959,7 +5991,7 @@
             >8 800 301 07 90</span
           >
         </a>
-        <ul class="header__socials socials">
+        <ul data-da=".menu__group,768,last" class="header__socials socials">
           <li class="socials__item">
             <a href="#" target="_blank" class="socials__link"
               ><img src="@img/icons/tg.svg" alt="" class="socials__icon"

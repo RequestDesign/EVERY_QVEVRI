@@ -32,7 +32,7 @@
 </head>
 
 <body style="opacity: 0">
-	<div class="wrapper">
+	<div class="wrapper tests-page chapter">
 		<header data-scroll="50" data-scroll-show class="header">
 			<div class="header__container container">
 				<div class="header__top">
@@ -75,7 +75,9 @@
 							<nav class="menu__nav">
 								<ul class="menu__list">
 									<li class="menu__item">
-										<a href="#" class="menu__link menu__link_catalog txt">Каталог</a>
+										<button type="button" class="menu__link menu__link_catalog txt">
+											Каталог
+										</button>
 									</li>
 									<li class="menu__item">
 										<button data-open-account-menu type="button" class="menu__link menu__link_profile txt">
@@ -83,15 +85,17 @@
 										</button>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link menu__link_liked txt">Избранное</a>
+										<a href="#" data-modal="#loginModal" class="menu__link menu__link_liked txt">Избранное</a>
 									</li>
 									<li class="menu__item">
 										<a href="#" class="menu__link menu__link_cart txt">Корзина</a>
 									</li>
 								</ul>
 							</nav>
-							<div class="menu__tel-wrap">
-								<a href="tel:88003010790" class="menu__tel txt txt_md">8 800 301 07 90</a>
+							<div class="menu__group">
+								<div class="menu__tel-wrap">
+									<a href="tel:88003010790" class="menu__tel txt txt_md">8 800 301 07 90</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -330,8 +334,8 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-catalog__product-card menu-product-card menu-product-card_list-view">
-											<a href="#" class="menu-product-card__preview">
+										<a href="#" class="header-catalog__product-card menu-product-card menu-product-card_list-view">
+											<div class="menu-product-card__preview">
 												<div class="menu-product-card__image-wrap">
 													<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="menu-product-card__image" />
 												</div>
@@ -346,9 +350,9 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
-											</a>
+											</div>
 											<div class="menu-product-card__info">
-												<a href="#" class="menu-product-card__heading tl2">Вино Saperavi Binekhi</a>
+												<span class="menu-product-card__heading tl2">Вино Saperavi Binekhi</span>
 												<div class="menu-product-card__reviews">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -383,7 +387,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 									<div data-subnav-index="1" class="header-catalog__subnav">
 										<div class="header-catalog__head">
@@ -2131,16 +2135,16 @@
 											</div>
 										</div>
 									</div>
-									<div data-da=".header-catalog__menubar,768,last" class="header-catalog__stock-card stock-card">
+									<a href="#" data-da=".header-catalog__menubar,768,last" class="header-catalog__stock-card stock-card">
 										<div class="stock-card__content">
 											<span class="stock-card__subtitle caps caps_md">26 - 31 октября</span>
 											<span class="stock-card__title tl2">Дополнительная скидка -33%</span>
 											<p class="stock-card__text txt">
 												На напитки из подборки при покупке от 3 бутылок
 											</p>
-											<a href="#" class="stock-card__link btn btn_icon">
+											<button type="button" class="stock-card__link btn btn_icon">
 												<span class="btn__text txt txt_md">Подробнее</span>
-											</a>
+											</button>
 										</div>
 										<div class="stock-card__bg">
 											<div class="stock-card__image-wrap">
@@ -2150,7 +2154,7 @@
 												<img src="img/bg/40b22574f78a005d283b4ca924b64947.webp" alt="" class="stock-card__bg-image" />
 											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -2263,8 +2267,8 @@
 								<div class="search-box__carousel">
 									<div class="search-box__slider swiper">
 										<div class="search-box__wrapper swiper-wrapper">
-											<div class="search-box__slide menu-product-card swiper-slide">
-												<div href="#" class="menu-product-card__inner">
+											<a href="#" class="search-box__slide menu-product-card swiper-slide">
+												<div class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__badges">
 															<div class="menu-product-card__badge badge">
@@ -2283,12 +2287,12 @@
 															</svg>
 														</button>
 													</div>
-													<a href="#" class="menu-product-card__preview">
+													<div class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</a>
+													</div>
 													<div class="menu-product-card__info">
 														<div class="menu-product-card__grade grade">
 															<span class="grade__text txt txt_md">4.5</span>
@@ -2315,9 +2319,9 @@
 														</button>
 													</div>
 												</div>
-											</div>
-											<div class="search-box__slide menu-product-card swiper-slide">
-												<div href="#" class="menu-product-card__inner">
+											</a>
+											<a href="#" class="search-box__slide menu-product-card swiper-slide">
+												<div class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__badges">
 															<div class="menu-product-card__badge badge">
@@ -2336,12 +2340,12 @@
 															</svg>
 														</button>
 													</div>
-													<a href="#" class="menu-product-card__preview">
+													<div class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</a>
+													</div>
 													<div class="menu-product-card__info">
 														<div class="menu-product-card__grade grade">
 															<span class="grade__text txt txt_md">4.5</span>
@@ -2368,9 +2372,9 @@
 														</button>
 													</div>
 												</div>
-											</div>
-											<div class="search-box__slide menu-product-card swiper-slide">
-												<div href="#" class="menu-product-card__inner">
+											</a>
+											<a href="#" class="search-box__slide menu-product-card swiper-slide">
+												<div class="menu-product-card__inner">
 													<div class="menu-product-card__head">
 														<div class="menu-product-card__badges">
 															<div class="menu-product-card__badge badge">
@@ -2389,12 +2393,12 @@
 															</svg>
 														</button>
 													</div>
-													<a href="#" class="menu-product-card__preview">
+													<div class="menu-product-card__preview">
 														<div class="menu-product-card__image-wrap">
 															<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 														</div>
 														<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-													</a>
+													</div>
 													<div class="menu-product-card__info">
 														<div class="menu-product-card__grade grade">
 															<span class="grade__text txt txt_md">4.5</span>
@@ -2421,7 +2425,7 @@
 														</button>
 													</div>
 												</div>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="search-box__slider-nav">
@@ -2503,9 +2507,9 @@
 									<div data-simplebar data-simplebar-auto-hide="false" class="header-cart__body sb_gray">
 										<div class="header-cart__inner">
 											<div class="header-cart__item item-header-cart">
-												<div class="item-header-cart__image-wrap">
+												<a href="#" class="item-header-cart__image-wrap">
 													<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="item-header-cart__image" />
-												</div>
+												</a>
 												<div class="item-header-cart__info">
 													<span class="item-header-cart__title subtitle">Вино Saperavi Binekhi</span>
 													<ul class="item-header-cart__features product-features">
@@ -2542,9 +2546,9 @@
 												</button>
 											</div>
 											<div class="header-cart__item item-header-cart">
-												<div class="item-header-cart__image-wrap">
+												<a href="#" class="item-header-cart__image-wrap">
 													<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="item-header-cart__image" />
-												</div>
+												</a>
 												<div class="item-header-cart__info">
 													<span class="item-header-cart__title subtitle">Вино Saperavi Binekhi Saperavi BinekhiSaperavi
 														Binekhi</span>
@@ -2581,9 +2585,9 @@
 												</button>
 											</div>
 											<div class="header-cart__item item-header-cart">
-												<div class="item-header-cart__image-wrap">
+												<a href="#" class="item-header-cart__image-wrap">
 													<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="item-header-cart__image" />
-												</div>
+												</a>
 												<div class="item-header-cart__info">
 													<span class="item-header-cart__title subtitle">Вино Saperavi Binekhi</span>
 													<ul class="item-header-cart__features product-features">
@@ -2620,9 +2624,9 @@
 												</button>
 											</div>
 											<div class="header-cart__item item-header-cart">
-												<div class="item-header-cart__image-wrap">
+												<a href="#" class="item-header-cart__image-wrap">
 													<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="item-header-cart__image" />
-												</div>
+												</a>
 												<div class="item-header-cart__info">
 													<span class="item-header-cart__title subtitle">Вино Saperavi Binekhi</span>
 													<ul class="item-header-cart__features product-features">
@@ -2804,8 +2808,8 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -2824,12 +2828,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -2856,7 +2860,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -2990,8 +2994,8 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3010,12 +3014,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3042,7 +3046,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3176,8 +3180,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3196,12 +3201,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3228,7 +3233,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3362,8 +3367,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3382,12 +3388,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3414,7 +3420,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3548,8 +3554,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3568,12 +3575,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3600,7 +3607,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3734,8 +3741,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3754,12 +3762,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3786,7 +3794,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3920,8 +3928,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="header-subnav__product-card menu-product-card">
-											<div href="#" class="menu-product-card__inner">
+
+										<a href="#" class="header-subnav__product-card menu-product-card">
+											<div class="menu-product-card__inner">
 												<div class="menu-product-card__head">
 													<div class="menu-product-card__badges">
 														<div class="menu-product-card__badge badge">
@@ -3940,12 +3949,12 @@
 														</svg>
 													</button>
 												</div>
-												<a href="#" class="menu-product-card__preview">
+												<div class="menu-product-card__preview">
 													<div class="menu-product-card__image-wrap">
 														<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
 													</div>
 													<span class="menu-product-card__heading tl2">вино Kartuli Vazi Akhasheni</span>
-												</a>
+												</div>
 												<div class="menu-product-card__info">
 													<div class="menu-product-card__grade grade">
 														<span class="grade__text txt txt_md">4.5</span>
@@ -3972,7 +3981,7 @@
 													</button>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 							</li>
@@ -3985,7 +3994,7 @@
 							</div>
 							<span class="header__tel-txt txt txt_md desktop-only">8 800 301 07 90</span>
 						</a>
-						<ul class="header__socials socials">
+						<ul data-da=".menu__group,768,last" class="header__socials socials">
 							<li class="socials__item">
 								<a href="#" target="_blank" class="socials__link"><img src="img/icons/tg.svg" alt="" class="socials__icon" /></a>
 							</li>
@@ -4001,7 +4010,7 @@
 			</div>
 		</header>
 
-		<main class="main tests-page">
+		<main class="main">
 			<section class="tests-page__hero hero-tests">
 				<div class="hero-tests__container container">
 					<div class="hero-tests__head">
@@ -4188,6 +4197,8 @@
 			</div>
 		</footer>
 
+
+
 		<div class="account-section">
 			<div class="account-section__head">
 				<div class="account-section__head-row">
@@ -4251,44 +4262,7 @@
 				<a href="#" class="account-section__logout-btn logout-btn txt txt_md">Выйти</a>
 			</div>
 		</div>
-		<div style="height: 0; position: absolute">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
-				<clipPath id="clip-img-mobile">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern0)" />
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern1)" />
-					<defs>
-						<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-							<use xlink:href="#image0_803_3857" transform="translate(0 -0.126109) scale(0.0017762)" />
-						</pattern>
-						<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-							<use xlink:href="#image1_803_3857" transform="matrix(0 -0.00108225 0.00108225 0 0 1.01299)" />
-						</pattern>
-					</defs>
-				</clipPath>
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
-				<clipPath id="clip-img" clipPathUnits="objectBoundingBox">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
-				</clipPath>
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
-				<clipPath id="clip-bottle" clipPathUnits="objectBoundingBox">
-					<path d="M0.331,0.129 L0.328,0.259 L0.308,0.27 C0.285,0.282,0.285,0.282,0.179,0.318 C0.086,0.35,0.038,0.37,0.017,0.388 L0,0.401 V0.683 V0.966 L0.018,0.975 C0.039,0.987,0.061,0.994,0.093,0.997 C0.129,1,0.871,1,0.907,0.997 C0.939,0.994,0.961,0.987,0.982,0.975 L1,0.966 V0.683 V0.401 L0.983,0.388 C0.961,0.37,0.913,0.35,0.806,0.313 C0.758,0.297,0.708,0.278,0.695,0.271 L0.672,0.259 L0.669,0.129 L0.668,0.032 H0.699 L0.699,0 H0.5 H0.301 L0.301,0.032 H0.332 L0.331,0.129 M0.401,0.323 C0.331,0.348,0.256,0.384,0.237,0.401 C0.222,0.414,0.222,0.412,0.232,0.525 C0.243,0.646,0.229,0.792,0.198,0.894 C0.181,0.95,0.177,0.954,0.166,0.923 C0.135,0.838,0.125,0.777,0.121,0.649 C0.117,0.535,0.126,0.431,0.142,0.412 C0.153,0.399,0.189,0.38,0.231,0.364 C0.278,0.346,0.441,0.301,0.458,0.301 C0.46,0.301,0.434,0.311,0.401,0.323"></path>
-				</clipPath>
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none" fill="none">
-				<clipPath id="clip-img-group" clipPathUnits="objectBoundingBox">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.16,0 L0.272,0.144 L0.319,0.493 L0.272,0.841 L0.16,0.986 L0.047,0.841 L0,0.493 L0.047,0.144 L0.16,0 M0.498,0 L0.611,0.144 L0.657,0.493 L0.611,0.841 L0.498,0.986 L0.385,0.841 L0.338,0.493 L0.385,0.144 L0.498,0 M0.953,0.159 L0.84,0.014 L0.728,0.159 L0.681,0.507 L0.728,0.856 L0.84,1 L0.953,0.856 L1,0.507 L0.953,0.159" />
-				</clipPath>
-			</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none" fill="none">
-				<clipPath id="clip-bg" clipPathUnits="objectBoundingBox">
-					<path d="M-0.07,1 C-0.07,1,-0.072,0.886,-0.074,0.53 C-0.075,0.211,-0.076,0.117,-0.076,0.1 C-0.076,0.098,-0.076,0.097,-0.075,0.096 C-0.075,0.096,-0.075,0.096,-0.075,0.096 L-0.073,0.095 C-0.072,0.095,-0.069,0.093,-0.067,0.092 C-0.065,0.091,-0.062,0.089,-0.06,0.089 C-0.059,0.089,-0.053,0.088,-0.048,0.087 C-0.043,0.086,-0.025,0.084,-0.009,0.081 C0.011,0.079,0.028,0.077,0.043,0.076 C0.063,0.075,0.068,0.074,0.077,0.072 C0.088,0.069,0.089,0.069,0.092,0.07 C0.093,0.071,0.098,0.072,0.103,0.073 C0.107,0.074,0.113,0.075,0.115,0.075 C0.117,0.075,0.121,0.074,0.123,0.073 C0.126,0.072,0.132,0.071,0.136,0.071 C0.139,0.071,0.145,0.07,0.147,0.069 C0.149,0.069,0.153,0.067,0.156,0.066 C0.158,0.065,0.164,0.063,0.167,0.062 C0.171,0.061,0.176,0.06,0.178,0.059 C0.181,0.059,0.186,0.058,0.19,0.058 L0.19,0.058 C0.195,0.057,0.2,0.056,0.203,0.056 C0.206,0.056,0.209,0.056,0.211,0.057 C0.214,0.057,0.218,0.056,0.223,0.055 C0.228,0.054,0.235,0.053,0.24,0.052 C0.247,0.051,0.248,0.051,0.25,0.053 C0.253,0.055,0.254,0.055,0.266,0.054 C0.274,0.054,0.283,0.054,0.289,0.055 C0.296,0.055,0.301,0.055,0.304,0.055 C0.307,0.054,0.316,0.052,0.323,0.05 C0.33,0.049,0.34,0.047,0.345,0.046 C0.35,0.045,0.357,0.044,0.36,0.043 C0.365,0.042,0.369,0.041,0.373,0.038 C0.379,0.036,0.382,0.035,0.387,0.034 C0.391,0.033,0.4,0.031,0.407,0.029 C0.414,0.028,0.424,0.026,0.428,0.025 C0.434,0.025,0.437,0.025,0.44,0.026 C0.444,0.026,0.449,0.026,0.466,0.025 C0.479,0.024,0.488,0.023,0.489,0.023 C0.49,0.022,0.496,0.021,0.503,0.02 C0.511,0.019,0.515,0.019,0.517,0.02 C0.518,0.021,0.523,0.021,0.536,0.021 C0.537,0.021,0.537,0.021,0.538,0.022 L0.542,0.025 C0.546,0.028,0.547,0.029,0.549,0.029 C0.551,0.029,0.556,0.027,0.561,0.026 C0.567,0.025,0.573,0.024,0.578,0.023 C0.582,0.023,0.588,0.023,0.59,0.024 C0.594,0.024,0.594,0.025,0.596,0.027 C0.597,0.029,0.598,0.03,0.6,0.031 C0.602,0.032,0.607,0.032,0.613,0.032 C0.619,0.032,0.626,0.033,0.628,0.033 C0.631,0.033,0.636,0.034,0.639,0.035 C0.642,0.035,0.645,0.036,0.645,0.036 C0.645,0.037,0.652,0.037,0.661,0.036 C0.669,0.036,0.679,0.035,0.683,0.035 C0.688,0.035,0.69,0.035,0.693,0.033 C0.694,0.032,0.698,0.031,0.7,0.031 C0.703,0.03,0.707,0.03,0.71,0.031 C0.712,0.031,0.716,0.032,0.718,0.032 C0.72,0.032,0.726,0.031,0.733,0.029 C0.739,0.028,0.747,0.026,0.75,0.025 C0.753,0.024,0.759,0.022,0.762,0.021 C0.766,0.02,0.773,0.016,0.779,0.014 C0.785,0.011,0.792,0.008,0.795,0.006 C0.798,0.005,0.803,0.003,0.806,0.003 C0.81,0.001,0.812,0.001,0.821,0.003 C0.829,0.004,0.833,0.004,0.84,0.003 C0.844,0.002,0.851,0.001,0.855,0.001 C0.861,0,0.863,0,0.867,0.002 C0.87,0.002,0.873,0.003,0.875,0.003 C0.876,0.003,0.881,0.003,0.884,0.004 C0.888,0.005,0.895,0.006,0.9,0.006 C0.905,0.006,0.911,0.007,0.913,0.007 C0.916,0.008,0.919,0.016,0.919,0.026 L0.924,0.907 C0.924,0.91,0.923,0.913,0.922,0.914 C0.921,0.914,0.918,0.915,0.914,0.915 C0.911,0.916,0.907,0.916,0.905,0.916 C0.903,0.915,0.897,0.915,0.89,0.915 C0.884,0.916,0.875,0.916,0.87,0.917 C0.865,0.917,0.857,0.919,0.853,0.92 C0.848,0.921,0.84,0.922,0.835,0.923 C0.83,0.924,0.821,0.925,0.815,0.926 C0.81,0.927,0.802,0.928,0.798,0.929 C0.794,0.93,0.787,0.931,0.782,0.932 C0.777,0.933,0.77,0.934,0.759,0.933 C0.758,0.933,0.757,0.934,0.757,0.934 L0.752,0.937 C0.747,0.94,0.744,0.942,0.738,0.944 C0.733,0.945,0.728,0.947,0.725,0.948 C0.722,0.949,0.72,0.95,0.715,0.95 C0.712,0.95,0.707,0.951,0.705,0.951 C0.702,0.952,0.695,0.953,0.685,0.954 C0.676,0.955,0.666,0.956,0.663,0.956 C0.66,0.957,0.654,0.958,0.65,0.959 C0.645,0.96,0.637,0.961,0.631,0.962 L0.629,0.962 C0.622,0.963,0.606,0.965,0.592,0.967 C0.576,0.969,0.558,0.972,0.553,0.972 C0.544,0.973,0.543,0.973,0.542,0.971 C0.541,0.97,0.538,0.969,0.536,0.968 C0.534,0.967,0.531,0.966,0.528,0.966 C0.524,0.965,0.523,0.965,0.518,0.968 C0.513,0.97,0.511,0.971,0.505,0.972 C0.499,0.972,0.496,0.972,0.49,0.971 C0.483,0.97,0.479,0.969,0.462,0.97 L0.447,0.978 C0.445,0.979,0.444,0.978,0.443,0.978 L0.441,0.976 C0.439,0.975,0.436,0.973,0.434,0.972 C0.432,0.971,0.428,0.97,0.425,0.969 C0.422,0.969,0.419,0.969,0.418,0.968 C0.417,0.968,0.413,0.967,0.41,0.967 C0.405,0.966,0.399,0.966,0.392,0.967 C0.384,0.968,0.379,0.968,0.375,0.967 C0.372,0.967,0.369,0.967,0.367,0.967 C0.366,0.967,0.363,0.967,0.361,0.968 C0.359,0.969,0.355,0.97,0.353,0.97 C0.35,0.97,0.344,0.971,0.338,0.972 C0.329,0.974,0.328,0.974,0.322,0.973 C0.319,0.973,0.315,0.972,0.312,0.972 C0.31,0.973,0.307,0.973,0.306,0.974 C0.305,0.974,0.301,0.977,0.297,0.98 C0.293,0.983,0.289,0.986,0.287,0.987 C0.285,0.987,0.281,0.988,0.28,0.989 C0.277,0.99,0.276,0.989,0.275,0.987 C0.274,0.985,0.272,0.984,0.269,0.982 C0.267,0.981,0.263,0.98,0.26,0.978 C0.256,0.977,0.254,0.976,0.25,0.977 C0.247,0.977,0.242,0.978,0.229,0.982 C0.228,0.982,0.228,0.982,0.227,0.982 L0.224,0.981 C0.221,0.979,0.219,0.979,0.218,0.979 C0.217,0.979,0.214,0.98,0.21,0.981 C0.205,0.984,0.204,0.984,0.2,0.983 C0.198,0.983,0.193,0.983,0.19,0.983 C0.185,0.983,0.184,0.983,0.177,0.989 C0.176,0.99,0.176,0.99,0.175,0.99 L0.167,0.991 C0.16,0.991,0.156,0.992,0.153,0.993 C0.151,0.994,0.146,0.995,0.135,0.998 C0.135,0.998,0.134,0.998,0.134,0.997 L0.116,0.99 C0.098,0.982,0.097,0.982,0.09,0.982 C0.087,0.982,0.083,0.981,0.081,0.981 C0.079,0.98,0.079,0.981,0.077,0.983 C0.074,0.986,0.074,0.986,0.071,0.985 C0.07,0.985,0.067,0.985,0.064,0.985 C0.061,0.986,0.058,0.987,0.049,0.992 C0.048,0.993,0.048,0.993,0.047,0.993 L0.04,0.993 C0.034,0.993,0.032,0.993,0.027,0.995 C0.022,0.997,0.019,0.997,0.013,0.997 C0.006,0.997,0.005,0.997,0,0.994 C-0.004,0.993,-0.009,0.991,-0.012,0.991 C-0.015,0.99,-0.02,0.99,-0.031,0.991 C-0.039,0.992,-0.048,0.993,-0.05,0.993 C-0.053,0.994,-0.058,0.996,-0.061,0.998 C-0.065,1,-0.066,1,-0.07,1" />
-				</clipPath>
-			</svg>
-		</div>
-
+		<!-- отзыв оставлен -->
 		<div id="reviewSentModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_review-sent">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4310,6 +4284,7 @@
 			</div>
 		</div>
 
+		<!-- оставить отзыв -->
 		<div id="writeReviewModal" aria-hidden="true" class="modal write-review-modal">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4317,7 +4292,7 @@
 						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
 					</button>
 					<div class="modal__body">
-						<form data-dev action="#" class="write-review-modal__form">
+						<form data-modal-message="#reviewSentModal" data-dev action="#" class="write-review-modal__form">
 							<span class="write-review-modal__title tl2">оставьте отзыв</span>
 							<div class="write-review-modal__rate">
 								<span class="write-review-modal__rate-txt txt">Ваша оценка</span>
@@ -4330,13 +4305,13 @@
 								</select>
 							</div>
 							<div class="write-review-modal__input input">
-								<input autocomplete="off" type="text" name="form[]" data-error placeholder="Имя" class="input__field" />
+								<input data-validate data-required autocomplete="off" type="text" name="form[]" placeholder="Имя" class="input__field" />
 							</div>
 							<div class="write-review-modal__text-input text-input">
-								<textarea maxlength="500" autocomplete="off" name="form[]" placeholder="Ваше мнение о продукте..." data-error class="text-input__field"></textarea>
+								<textarea data-validate data-required maxlength="500" autocomplete="off" name="form[]" placeholder="Ваше мнение о продукте..." class="text-input__field"></textarea>
 								<span class="text-input__hint txt txt_16">Максимальное количество символов — 500</span>
 							</div>
-							<button data-modal="#reviewSentModal" type="submit" class="write-review-modal__btn btn btn_ol">
+							<button type="submit" class="write-review-modal__btn btn btn_ol">
 								<span class="btn__text txt txt_md">Оправить</span>
 							</button>
 						</form>
@@ -4345,6 +4320,7 @@
 			</div>
 		</div>
 
+		<!-- подтвердить удаление аккаунта -->
 		<div id="confirmAccDeletionModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-acc-deletion">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4366,7 +4342,8 @@
 			</div>
 		</div>
 
-		<div id="updatePhoneNumberModal" aria-hidden="true" class="modal account-modal account-modal_phone-number">
+		<!-- обновить номер телефона -->
+		<div id="updatePhoneNumberModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_phone-number">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_phone-number .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4398,7 +4375,8 @@
 			</div>
 		</div>
 
-		<div id="updateEmailModal" aria-hidden="true" class="modal account-modal account-modal_email">
+		<!-- обновить email -->
+		<div id="updateEmailModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_email">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_email .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4430,7 +4408,8 @@
 			</div>
 		</div>
 
-		<div id="verifyPhoneModal" aria-hidden="true" class="modal verify-code-modal verify-code-modal_phone-number">
+		<!-- подтвердить изменение номера телефона -->
+		<div id="verifyPhoneModal" aria-hidden="true" class="modal modal_fs verify-code-modal verify-code-modal_phone-number">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".verify-code-modal_phone-number .verify-code-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4484,7 +4463,8 @@
 			</div>
 		</div>
 
-		<div id="verifyEmailModal" aria-hidden="true" class="modal verify-code-modal verify-code-modal_email">
+		<!-- подтвердить изменение email -->
+		<div id="verifyEmailModal" aria-hidden="true" class="modal modal_fs verify-code-modal verify-code-modal_email">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".verify-code-modal_email .verify-code-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4538,7 +4518,8 @@
 			</div>
 		</div>
 
-		<div id="noPhoneMessageModal" aria-hidden="true" class="modal no-message-modal no-message-modal_phone-number">
+		<!-- не приходит смс -->
+		<div id="noPhoneMessageModal" aria-hidden="true" class="modal modal_fs no-message-modal no-message-modal_phone-number">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".no-message-modal_phone-number .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
@@ -4592,7 +4573,8 @@
 			</div>
 		</div>
 
-		<div id="noEmailMessageModal" aria-hidden="true" class="modal no-message-modal no-message-modal_email">
+		<!-- не приходит письмо -->
+		<div id="noEmailMessageModal" aria-hidden="true" class="modal modal_fs no-message-modal no-message-modal_email">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".no-message-modal_email .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
@@ -4646,6 +4628,7 @@
 			</div>
 		</div>
 
+		<!-- отмена заказа -->
 		<div id="cancelOrderModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_cancel-order">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4667,6 +4650,7 @@
 			</div>
 		</div>
 
+		<!-- отправлено письмо с подтверждением -->
 		<div id="confirmEmailLetter" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-email-letter">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4689,6 +4673,7 @@
 			</div>
 		</div>
 
+		<!-- заявка отправлена -->
 		<div id="requestSentModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_request-sent">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4711,6 +4696,7 @@
 			</div>
 		</div>
 
+		<!-- оплата баллами -->
 		<div id="pointsPayModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_points-pay">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4727,12 +4713,12 @@
 								<div class="range-form-modal__input input">
 									<input id="range-input" data-numbers-only autocomplete="off" type="text" name="form[]" data-error placeholder="Введите количество баллов" class="input__field" />
 								</div>
-								<div id="range-slider" class="range-form-modal__range-slider range-slider"></div>
 								<div class="range-form-modal__values">
 									<span class="range-form-modal__value caps">0₽</span>
 									<span class="range-form-modal__value caps">1 200₽</span>
 								</div>
-								<button type="submit" class="range-form-modal__btn btn btn_ol">
+								<div id="range-slider" class="range-form-modal__range-slider range-slider"></div>
+								<button data-close type="submit" class="range-form-modal__btn btn btn_ol">
 									<span class="btn__text txt txt_md">Подтвердить</span>
 								</button>
 							</form>
@@ -4742,7 +4728,8 @@
 			</div>
 		</div>
 
-		<div id="loginModal" aria-hidden="true" class="modal account-modal account-modal_login">
+		<!-- войти или зарегистрироваться -->
+		<div id="loginModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_login">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_login .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4806,7 +4793,8 @@
 			</div>
 		</div>
 
-		<div id="regModal" aria-hidden="true" class="modal account-modal account-modal_reg">
+		<!-- регистрация с помощью телефона -->
+		<div id="regModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_reg">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_reg .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4858,7 +4846,8 @@
 			</div>
 		</div>
 
-		<div id="emailLoginModal" aria-hidden="true" class="modal account-modal account-modal_email-login">
+		<!-- войти с помощью email -->
+		<div id="emailLoginModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_email-login">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_email-login .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4926,7 +4915,8 @@
 			</div>
 		</div>
 
-		<div id="restorePassModal" aria-hidden="true" class="modal account-modal account-modal_restore-pass">
+		<!-- восстановление пароля -->
+		<div id="restorePassModal" aria-hidden="true" class="modal modal_fs account-modal account-modal_restore-pass">
 			<div class="modal__wrapper">
 				<div class="modal__content">
 					<button data-da=".account-modal_restore-pass .account-modal__content,768,first" data-close type="button" class="modal__close">
@@ -4957,6 +4947,7 @@
 			</div>
 		</div>
 
+		<!-- заказ оформлен -->
 		<div id="orderMadeModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_order-made">
 			<div class="modal__wrapper">
 				<div class="modal__content">
@@ -4988,6 +4979,135 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- выбрать магазин -->
+		<div id="chooseStoreModal" aria-hidden="true" class="modal choose-store-modal">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="choose-store-modal__inner">
+							<span class="choose-store-modal__title tl2">выберите магазин</span>
+							<div data-map class="choose-store-modal__map"></div>
+							<div class="choose-store-modal__options">
+								<label data-opt-txt="Санкт-Петербург, Левашовский пр.
+            13а" class="choose-store-modal__option option option_reversed">
+									<input hidden class="option__input" type="radio" value="1" name="option" />
+									<div class="option__icon-wrap">
+										<svg class="option__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.9998 17.9059C18.2973 17.9059 20.1598 16.0434 20.1598 13.7459C20.1598 11.4484 18.2973 9.58594 15.9998 9.58594C13.7023 9.58594 11.8398 11.4484 11.8398 13.7459C11.8398 16.0434 13.7023 17.9059 15.9998 17.9059Z" stroke="#303033" stroke-width="2" />
+											<path d="M4.82758 11.3213C7.45425 -0.225362 24.5609 -0.212028 27.1742 11.3346C28.7076 18.108 24.4942 23.8413 20.8009 27.388C18.1209 29.9746 13.8809 29.9746 11.1876 27.388C7.50758 23.8413 3.29425 18.0946 4.82758 11.3213Z" stroke="#303033" stroke-width="2" />
+										</svg>
+									</div>
+									<span class="option__text txt"><span class="txt_md">Санкт-Петербург,</span> Левашовский пр.
+										13а</span>
+								</label>
+								<label data-opt-txt="г. Москва, б-р Смоленский, д.
+            7/9" class="choose-store-modal__option option option_reversed">
+									<input hidden class="option__input" type="radio" value="2" name="option" />
+									<div class="option__icon-wrap">
+										<svg class="option__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15.9998 17.9059C18.2973 17.9059 20.1598 16.0434 20.1598 13.7459C20.1598 11.4484 18.2973 9.58594 15.9998 9.58594C13.7023 9.58594 11.8398 11.4484 11.8398 13.7459C11.8398 16.0434 13.7023 17.9059 15.9998 17.9059Z" stroke="#303033" stroke-width="2" />
+											<path d="M4.82758 11.3213C7.45425 -0.225362 24.5609 -0.212028 27.1742 11.3346C28.7076 18.108 24.4942 23.8413 20.8009 27.388C18.1209 29.9746 13.8809 29.9746 11.1876 27.388C7.50758 23.8413 3.29425 18.0946 4.82758 11.3213Z" stroke="#303033" stroke-width="2" />
+										</svg>
+									</div>
+									<span class="option__text txt"><span class="txt_md">г. Москва,</span>б-р Смоленский, д.
+										7/9</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- подтвердить возраст -->
+		<div id="confirmAgeModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-age">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">подтвердите возраст</span>
+							<p class="txt-info-modal__text txt">
+								Информация на сайте не предназначена для лиц, моложе 18 лет.
+								Сведения, размещенные на сайте, не являются рекламой, носят
+								исключительно информационный характер, и предназначены только для
+								личного использования.
+							</p>
+							<div class="txt-info-modal__buttons">
+								<button id="confirm-age-btn" type="button" class="txt-info-modal__btn btn btn_solid">
+									<span class="btn__text txt txt_md">Есть 18 лет</span>
+								</button>
+								<button data-modal="#unconfirmedAgeModal" type="button" class="txt-info-modal__btn btn btn_ol">
+									<span class="btn__text txt txt_md">Нет 18 лет</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- возраст не подтвержден -->
+		<div id="unconfirmedAgeModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_unconfirmed-age">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<p class="txt-info-modal__text txt">
+								К сожалению, информация на сайте не предназначена для лиц, моложе 18
+								лет
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 0; position: absolute">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
+				<clipPath id="clip-img-mobile">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern0)" />
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern1)" />
+					<defs>
+						<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+							<use xlink:href="#image0_803_3857" transform="translate(0 -0.126109) scale(0.0017762)" />
+						</pattern>
+						<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+							<use xlink:href="#image1_803_3857" transform="matrix(0 -0.00108225 0.00108225 0 0 1.01299)" />
+						</pattern>
+					</defs>
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
+				<clipPath id="clip-img" clipPathUnits="objectBoundingBox">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.932,0.07 L0.769,0.002 L0.606,0.07 L0.538,0.233 L0.606,0.396 L0.769,0.464 L0.932,0.396 L1,0.233 L0.932,0.07 M0.231,0.002 L0.394,0.07 L0.462,0.233 L0.394,0.396 L0.231,0.464 L0.068,0.396 L0,0.233 L0.068,0.07 L0.231,0.002 M0.231,0.541 L0.394,0.608 L0.462,0.772 L0.394,0.935 L0.231,1 L0.068,0.935 L0,0.772 L0.068,0.608 L0.231,0.541" />
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none">
+				<clipPath id="clip-bottle" clipPathUnits="objectBoundingBox">
+					<path d="M0.331,0.129 L0.328,0.259 L0.308,0.27 C0.285,0.282,0.285,0.282,0.179,0.318 C0.086,0.35,0.038,0.37,0.017,0.388 L0,0.401 V0.683 V0.966 L0.018,0.975 C0.039,0.987,0.061,0.994,0.093,0.997 C0.129,1,0.871,1,0.907,0.997 C0.939,0.994,0.961,0.987,0.982,0.975 L1,0.966 V0.683 V0.401 L0.983,0.388 C0.961,0.37,0.913,0.35,0.806,0.313 C0.758,0.297,0.708,0.278,0.695,0.271 L0.672,0.259 L0.669,0.129 L0.668,0.032 H0.699 L0.699,0 H0.5 H0.301 L0.301,0.032 H0.332 L0.331,0.129 M0.401,0.323 C0.331,0.348,0.256,0.384,0.237,0.401 C0.222,0.414,0.222,0.412,0.232,0.525 C0.243,0.646,0.229,0.792,0.198,0.894 C0.181,0.95,0.177,0.954,0.166,0.923 C0.135,0.838,0.125,0.777,0.121,0.649 C0.117,0.535,0.126,0.431,0.142,0.412 C0.153,0.399,0.189,0.38,0.231,0.364 C0.278,0.346,0.441,0.301,0.458,0.301 C0.46,0.301,0.434,0.311,0.401,0.323"></path>
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none" fill="none">
+				<clipPath id="clip-img-group" clipPathUnits="objectBoundingBox">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.16,0 L0.272,0.144 L0.319,0.493 L0.272,0.841 L0.16,0.986 L0.047,0.841 L0,0.493 L0.047,0.144 L0.16,0 M0.498,0 L0.611,0.144 L0.657,0.493 L0.611,0.841 L0.498,0.986 L0.385,0.841 L0.338,0.493 L0.385,0.144 L0.498,0 M0.953,0.159 L0.84,0.014 L0.728,0.159 L0.681,0.507 L0.728,0.856 L0.84,1 L0.953,0.856 L1,0.507 L0.953,0.159" />
+				</clipPath>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1 1" fill="none" preserveAspectRatio="none" fill="none">
+				<clipPath id="clip-bg" clipPathUnits="objectBoundingBox">
+					<path d="M-0.07,1 C-0.07,1,-0.072,0.886,-0.074,0.53 C-0.075,0.211,-0.076,0.117,-0.076,0.1 C-0.076,0.098,-0.076,0.097,-0.075,0.096 C-0.075,0.096,-0.075,0.096,-0.075,0.096 L-0.073,0.095 C-0.072,0.095,-0.069,0.093,-0.067,0.092 C-0.065,0.091,-0.062,0.089,-0.06,0.089 C-0.059,0.089,-0.053,0.088,-0.048,0.087 C-0.043,0.086,-0.025,0.084,-0.009,0.081 C0.011,0.079,0.028,0.077,0.043,0.076 C0.063,0.075,0.068,0.074,0.077,0.072 C0.088,0.069,0.089,0.069,0.092,0.07 C0.093,0.071,0.098,0.072,0.103,0.073 C0.107,0.074,0.113,0.075,0.115,0.075 C0.117,0.075,0.121,0.074,0.123,0.073 C0.126,0.072,0.132,0.071,0.136,0.071 C0.139,0.071,0.145,0.07,0.147,0.069 C0.149,0.069,0.153,0.067,0.156,0.066 C0.158,0.065,0.164,0.063,0.167,0.062 C0.171,0.061,0.176,0.06,0.178,0.059 C0.181,0.059,0.186,0.058,0.19,0.058 L0.19,0.058 C0.195,0.057,0.2,0.056,0.203,0.056 C0.206,0.056,0.209,0.056,0.211,0.057 C0.214,0.057,0.218,0.056,0.223,0.055 C0.228,0.054,0.235,0.053,0.24,0.052 C0.247,0.051,0.248,0.051,0.25,0.053 C0.253,0.055,0.254,0.055,0.266,0.054 C0.274,0.054,0.283,0.054,0.289,0.055 C0.296,0.055,0.301,0.055,0.304,0.055 C0.307,0.054,0.316,0.052,0.323,0.05 C0.33,0.049,0.34,0.047,0.345,0.046 C0.35,0.045,0.357,0.044,0.36,0.043 C0.365,0.042,0.369,0.041,0.373,0.038 C0.379,0.036,0.382,0.035,0.387,0.034 C0.391,0.033,0.4,0.031,0.407,0.029 C0.414,0.028,0.424,0.026,0.428,0.025 C0.434,0.025,0.437,0.025,0.44,0.026 C0.444,0.026,0.449,0.026,0.466,0.025 C0.479,0.024,0.488,0.023,0.489,0.023 C0.49,0.022,0.496,0.021,0.503,0.02 C0.511,0.019,0.515,0.019,0.517,0.02 C0.518,0.021,0.523,0.021,0.536,0.021 C0.537,0.021,0.537,0.021,0.538,0.022 L0.542,0.025 C0.546,0.028,0.547,0.029,0.549,0.029 C0.551,0.029,0.556,0.027,0.561,0.026 C0.567,0.025,0.573,0.024,0.578,0.023 C0.582,0.023,0.588,0.023,0.59,0.024 C0.594,0.024,0.594,0.025,0.596,0.027 C0.597,0.029,0.598,0.03,0.6,0.031 C0.602,0.032,0.607,0.032,0.613,0.032 C0.619,0.032,0.626,0.033,0.628,0.033 C0.631,0.033,0.636,0.034,0.639,0.035 C0.642,0.035,0.645,0.036,0.645,0.036 C0.645,0.037,0.652,0.037,0.661,0.036 C0.669,0.036,0.679,0.035,0.683,0.035 C0.688,0.035,0.69,0.035,0.693,0.033 C0.694,0.032,0.698,0.031,0.7,0.031 C0.703,0.03,0.707,0.03,0.71,0.031 C0.712,0.031,0.716,0.032,0.718,0.032 C0.72,0.032,0.726,0.031,0.733,0.029 C0.739,0.028,0.747,0.026,0.75,0.025 C0.753,0.024,0.759,0.022,0.762,0.021 C0.766,0.02,0.773,0.016,0.779,0.014 C0.785,0.011,0.792,0.008,0.795,0.006 C0.798,0.005,0.803,0.003,0.806,0.003 C0.81,0.001,0.812,0.001,0.821,0.003 C0.829,0.004,0.833,0.004,0.84,0.003 C0.844,0.002,0.851,0.001,0.855,0.001 C0.861,0,0.863,0,0.867,0.002 C0.87,0.002,0.873,0.003,0.875,0.003 C0.876,0.003,0.881,0.003,0.884,0.004 C0.888,0.005,0.895,0.006,0.9,0.006 C0.905,0.006,0.911,0.007,0.913,0.007 C0.916,0.008,0.919,0.016,0.919,0.026 L0.924,0.907 C0.924,0.91,0.923,0.913,0.922,0.914 C0.921,0.914,0.918,0.915,0.914,0.915 C0.911,0.916,0.907,0.916,0.905,0.916 C0.903,0.915,0.897,0.915,0.89,0.915 C0.884,0.916,0.875,0.916,0.87,0.917 C0.865,0.917,0.857,0.919,0.853,0.92 C0.848,0.921,0.84,0.922,0.835,0.923 C0.83,0.924,0.821,0.925,0.815,0.926 C0.81,0.927,0.802,0.928,0.798,0.929 C0.794,0.93,0.787,0.931,0.782,0.932 C0.777,0.933,0.77,0.934,0.759,0.933 C0.758,0.933,0.757,0.934,0.757,0.934 L0.752,0.937 C0.747,0.94,0.744,0.942,0.738,0.944 C0.733,0.945,0.728,0.947,0.725,0.948 C0.722,0.949,0.72,0.95,0.715,0.95 C0.712,0.95,0.707,0.951,0.705,0.951 C0.702,0.952,0.695,0.953,0.685,0.954 C0.676,0.955,0.666,0.956,0.663,0.956 C0.66,0.957,0.654,0.958,0.65,0.959 C0.645,0.96,0.637,0.961,0.631,0.962 L0.629,0.962 C0.622,0.963,0.606,0.965,0.592,0.967 C0.576,0.969,0.558,0.972,0.553,0.972 C0.544,0.973,0.543,0.973,0.542,0.971 C0.541,0.97,0.538,0.969,0.536,0.968 C0.534,0.967,0.531,0.966,0.528,0.966 C0.524,0.965,0.523,0.965,0.518,0.968 C0.513,0.97,0.511,0.971,0.505,0.972 C0.499,0.972,0.496,0.972,0.49,0.971 C0.483,0.97,0.479,0.969,0.462,0.97 L0.447,0.978 C0.445,0.979,0.444,0.978,0.443,0.978 L0.441,0.976 C0.439,0.975,0.436,0.973,0.434,0.972 C0.432,0.971,0.428,0.97,0.425,0.969 C0.422,0.969,0.419,0.969,0.418,0.968 C0.417,0.968,0.413,0.967,0.41,0.967 C0.405,0.966,0.399,0.966,0.392,0.967 C0.384,0.968,0.379,0.968,0.375,0.967 C0.372,0.967,0.369,0.967,0.367,0.967 C0.366,0.967,0.363,0.967,0.361,0.968 C0.359,0.969,0.355,0.97,0.353,0.97 C0.35,0.97,0.344,0.971,0.338,0.972 C0.329,0.974,0.328,0.974,0.322,0.973 C0.319,0.973,0.315,0.972,0.312,0.972 C0.31,0.973,0.307,0.973,0.306,0.974 C0.305,0.974,0.301,0.977,0.297,0.98 C0.293,0.983,0.289,0.986,0.287,0.987 C0.285,0.987,0.281,0.988,0.28,0.989 C0.277,0.99,0.276,0.989,0.275,0.987 C0.274,0.985,0.272,0.984,0.269,0.982 C0.267,0.981,0.263,0.98,0.26,0.978 C0.256,0.977,0.254,0.976,0.25,0.977 C0.247,0.977,0.242,0.978,0.229,0.982 C0.228,0.982,0.228,0.982,0.227,0.982 L0.224,0.981 C0.221,0.979,0.219,0.979,0.218,0.979 C0.217,0.979,0.214,0.98,0.21,0.981 C0.205,0.984,0.204,0.984,0.2,0.983 C0.198,0.983,0.193,0.983,0.19,0.983 C0.185,0.983,0.184,0.983,0.177,0.989 C0.176,0.99,0.176,0.99,0.175,0.99 L0.167,0.991 C0.16,0.991,0.156,0.992,0.153,0.993 C0.151,0.994,0.146,0.995,0.135,0.998 C0.135,0.998,0.134,0.998,0.134,0.997 L0.116,0.99 C0.098,0.982,0.097,0.982,0.09,0.982 C0.087,0.982,0.083,0.981,0.081,0.981 C0.079,0.98,0.079,0.981,0.077,0.983 C0.074,0.986,0.074,0.986,0.071,0.985 C0.07,0.985,0.067,0.985,0.064,0.985 C0.061,0.986,0.058,0.987,0.049,0.992 C0.048,0.993,0.048,0.993,0.047,0.993 L0.04,0.993 C0.034,0.993,0.032,0.993,0.027,0.995 C0.022,0.997,0.019,0.997,0.013,0.997 C0.006,0.997,0.005,0.997,0,0.994 C-0.004,0.993,-0.009,0.991,-0.012,0.991 C-0.015,0.99,-0.02,0.99,-0.031,0.991 C-0.039,0.992,-0.048,0.993,-0.05,0.993 C-0.053,0.994,-0.058,0.996,-0.061,0.998 C-0.065,1,-0.066,1,-0.07,1" />
+				</clipPath>
+			</svg>
 		</div>
 
 	</div>

@@ -1,6 +1,7 @@
 .hero-product {
   margin-bottom: 31rem;
   @media (max-width: 48em) {
+    margin-top: 6.4rem;
     margin-bottom: 20rem;
   }
 
@@ -82,7 +83,7 @@
     @media (max-width: 48em) {
       position: absolute;
       top: 2rem;
-      right: 2.4rem;
+      right: 3.4rem;
     }
   }
 
@@ -172,6 +173,10 @@
         font-weight: 400;
         color: $gray;
         transform: translateY(-50%);
+        @media (max-width: 48em) {
+          right: -2.5rem;
+          font-size: 2rem;
+        }
       }
     }
   }

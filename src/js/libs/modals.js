@@ -125,9 +125,11 @@ class Modal {
           `[${this.options.attributeCloseButton}]`
         );
         if (
-          buttonClose ||
-          (!e.target.closest(`.${this.options.classes.modalContent}`) &&
-            this.isOpen)
+          !e.target.closest('#unconfirmedAgeModal') &&
+          !e.target.closest('#confirmAgeModal') &&
+          (buttonClose ||
+            (!e.target.closest(`.${this.options.classes.modalContent}`) &&
+              this.isOpen))
         ) {
           e.preventDefault();
           this.close();
@@ -395,3 +397,11 @@ class Modal {
 }
 
 modules.modal = new Modal({});
+
+if (document.querySelector('.mainpage')) {
+  const confirmAgeBtn = document.getElementById('confirm-age-btn');
+  modules.modal.open('#confirmAgeModal');
+  confirmAgeBtn.addEventListener('click', function () {
+    modules.modal.close('#confirmAgeModal');
+  });
+}

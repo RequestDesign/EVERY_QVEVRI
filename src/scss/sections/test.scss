@@ -98,6 +98,7 @@
 // --------------------------------------------------------------------------
 
 .slide-tests {
+  user-select: none;
   &.swiper-slide {
     display: flex;
     flex-direction: column;
@@ -117,6 +118,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   // .slide-tests__subtitle

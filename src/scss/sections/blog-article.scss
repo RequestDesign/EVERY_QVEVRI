@@ -176,6 +176,11 @@
     }
     @media (max-width: 48em) {
       &.swiper-slide {
+        opacity: 0.4;
+        transition: opacity 0.4s ease;
+        &.swiper-slide-active {
+          opacity: 1;
+        }
         .menu-product-card__head {
           .menu-product-card__heart-btn {
             transform: translate(1rem, -1.5rem);

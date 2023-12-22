@@ -571,6 +571,7 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
+  user-select: none;
 
   &:not(.swiper &) {
     &::before {
@@ -631,8 +632,8 @@
         }
         &__badges {
           position: absolute;
-          left: 0;
-          bottom: 0;
+          left: 4rem;
+          bottom: 2.6rem;
           transform: translateY(-1.4rem);
         }
         &__info {
@@ -655,7 +656,10 @@
           width: auto;
         }
         &__head {
-          display: none;
+          width: 0;
+          height: 0;
+          margin: 0;
+          flex: 0 0 auto;
         }
         &__grade {
           margin: 0;
@@ -707,12 +711,15 @@
 
       .menu-product-card {
         &__head {
-          display: none;
+          margin: 0;
         }
         &__badges {
           position: absolute;
-          bottom: 0rem;
-          left: 0rem;
+          z-index: 2;
+          bottom: 2.4rem;
+          left: 2.4rem;
+          flex-direction: column;
+          align-items: flex-start;
           gap: 0.8rem;
         }
         &__actions {
@@ -726,7 +733,7 @@
         &__heart-btn {
           position: absolute;
           top: 1.6rem;
-          right: 1.6rem;
+          right: 3rem;
           transform: none;
         }
         &__preview {
@@ -852,11 +859,12 @@
   &__heart-btn {
     transform: translate(1rem, -1rem);
     @media (max-width: 48em) {
-      &:not(.mainpage__shopify-section &) {
-        transform: translate(2rem, -1.5rem);
-        .catalog & {
-          transform: translate(-1rem, -0.5rem);
-        }
+      transform: translate(-0.5rem, -1.5rem);
+      .shopify-section_recommendations & {
+        transform: translate(-2rem, -1.5rem);
+      }
+      .catalog & {
+        transform: translate(-1rem, -0.5rem);
       }
     }
   }
@@ -1212,10 +1220,12 @@
 
   &__image-wrap {
     margin-right: 11rem;
+    flex: 0 0 5.5rem;
     width: 5.5rem;
     transform: translateY(-1rem);
     @media (max-width: 48em) {
-      width: 6rem;
+      flex: 0 0 7rem;
+      width: 7rem;
       transform: translateY(4rem);
     }
   }
@@ -1536,6 +1546,7 @@
 
   &__heading {
     margin-bottom: 2.4rem;
+    margin-right: auto;
     width: 40rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1674,15 +1685,6 @@
         flex: 0 0 28rem;
         width: 31rem;
       }
-      &__bg-image {
-        @media (max-width: 48em) {
-          position: absolute;
-          left: 0;
-          width: auto;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
       &__text {
         max-width: 33rem;
         @media (max-width: 48em) {
@@ -1698,6 +1700,12 @@
         @media (max-width: 48em) {
           color: $black;
         }
+      }
+      &__image-wrap {
+        height: 34.4rem;
+      }
+      &__image {
+        height: 100%;
       }
     }
   }
@@ -1934,7 +1942,7 @@
     }
   }
 
-  // .advertising__image-wrap
+  // .stock-card__image-wrap
 
   &__image-wrap {
     position: relative;
@@ -1944,6 +1952,10 @@
     @media (max-width: 48em) {
       width: 11.4rem;
       transform: translate(6rem, 12rem);
+      .stock-page__hero-promo & {
+        width: 14.4rem;
+        transform: translate(-4rem, 7.5rem);
+      }
       .stock-card_hero & {
         transform: translate(-4rem, 15.5rem);
         .catalog-page & {
@@ -1952,9 +1964,17 @@
       }
     }
     @media (min-width: 48em) {
-      &:not(.catalog-page &, .header &) {
+      .stock-page__hero-promo & {
+        width: 14rem;
+        transform: translate(-1rem, 12rem);
+      }
+      &:not(.catalog-page &, .header &, .stock-page &) {
         width: 15.5rem;
         transform: translate(-5rem, 10.5rem);
+        .stock-card_sm & {
+          width: 10.4rem;
+          transform: translate(1rem, 2.5rem);
+        }
         .stock-card_hero & {
           transform: translate(-5rem, 16.5rem);
         }
@@ -1962,13 +1982,13 @@
     }
   }
 
-  // .advertising__image
+  // .stock-card__image
 
   &__image {
     object-fit: contain;
   }
 
-  // .advertising__bg-wrap
+  // .stock-card__bg-wrap
 
   &__bg-wrap {
     position: absolute;
@@ -1979,12 +1999,28 @@
     overflow: hidden;
     border-radius: 0 0 0 50rem;
     transform: translateY(-2rem);
+    .header-catalog & {
+      width: 31.5rem;
+      height: 28.9rem;
+    }
+    .stock-card_sm & {
+      width: 31.5rem;
+      height: 28.4rem;
+    }
     @media (max-width: 48em) {
-      width: 24.6rem;
-      height: 36rem;
+      width: 31.6rem;
+      height: 32rem;
       border-radius: 0 0 0 100rem;
       transform: none;
-      &:not(.catalog-page &) {
+      .stock-page__hero-promo & {
+        transform: rotate(-302deg) translate(3rem, -36rem);
+      }
+      &:not(
+          .catalog-page &,
+          .header-catalog &,
+          .stock-card_sm &,
+          .stock-page &
+        ) {
         transform: rotate(-302deg) translate(10rem, -36rem);
       }
     }
@@ -2896,6 +2932,12 @@
   &__reviews-text {
     margin-right: 2rem;
     color: $gray;
+    transition: color 0.3s ease;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $red;
+      }
+    }
   }
 
   // .docked-info__characteristics-link
@@ -3147,13 +3189,14 @@
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      transform: translateY(-0.5rem);
+      transform: translateY(1.5rem);
     }
     @media (max-width: 48em) {
       &::before {
         flex: 0 0 4rem;
         width: 4rem;
         height: 4rem;
+        transform: none;
       }
     }
   }
@@ -3185,14 +3228,26 @@
   &__btn-txt {
     padding-bottom: 0.4rem;
     border-bottom: 1px solid $black;
-    white-space: nowrap;
+    &.txt {
+      line-height: 144%;
+    }
+    @media (min-width: 48em) {
+      &.txt {
+        font-size: 1.7rem;
+        line-height: 157.222%;
+      }
+    }
   }
 
   // .select-store__text
 
   &__text {
     padding-left: 5.6rem;
+    display: none;
     color: $red;
+    ._choosen & {
+      display: block;
+    }
     @media (min-width: 48em) {
       padding-left: 3.6rem;
     }
@@ -3292,7 +3347,8 @@
     transform: translateX(-50%);
     ._search-box-opened &,
     ._menu-opened &,
-    ._show-catalog & {
+    ._show-catalog &,
+    ._show-account-menu & {
       opacity: 0;
       visibility: hidden;
     }
@@ -3664,6 +3720,9 @@
   height: 6.4rem;
   background-color: $black;
   transition: background-color 0.3s ease;
+  &._active {
+    background-color: $red;
+  }
   @media (any-hover: hover) {
     &:hover {
       background-color: $red;
@@ -3864,7 +3923,8 @@
   ._menu-opened &,
   ._search-box-opened &,
   ._show-catalog &,
-  ._show-account-menu & {
+  ._show-account-menu &,
+  .modal-show & {
     opacity: 0;
     transform: translateY(110%);
   }
@@ -4211,6 +4271,8 @@
   justify-content: space-between;
   color: $white;
   background-color: $black;
+
+  user-select: none;
   @media (max-width: 48em) {
     padding: 4rem;
   }
@@ -4375,6 +4437,7 @@
   align-items: center;
   box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.05);
   background-color: $white;
+  user-select: none;
   @media (max-width: 48em) {
     padding: 4rem;
   }
@@ -4785,6 +4848,29 @@
       &.desktop-only {
         display: none;
       }
+    }
+  }
+}
+
+.bg-section {
+  position: relative;
+  overflow: visible;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw;
+    height: 100%;
+    clip-path: url(#clip-bg);
+    background-image: url(@img/bg/black-bg.webp);
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 48em) {
+      width: 110vw;
+    }
+    @media (min-width: 1920px) {
+      left: calc((100vw - 1920px) / -2);
     }
   }
 }

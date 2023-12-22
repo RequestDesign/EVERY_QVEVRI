@@ -2,9 +2,9 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Каталог" })
   <body style="opacity: 0">
-    <div class="wrapper">
+    <div class="wrapper catalog-page catalog-page_grid-view">
       @@include('html/_header.htm',{})
-      <main class="main catalog-page">
+      <main class="main">
         <section class="catalog-page__hero-promo hero-promo">
           <div class="hero-promo__container container">
             <nav class="hero-promo__breadcrumbs breadcrumbs caps">
@@ -12,7 +12,7 @@
               <a href="#" class="breadcrumbs__text">Вино</a>
               <span class="breadcrumbs__text">Белые вина</span>
             </nav>
-            <div class="hero-promo__stock-card stock-card stock-card_hero">
+            <a href="#" class="hero-promo__stock-card stock-card stock-card_hero">
               <div class="stock-card__content">
                 <span class="stock-card__subtitle caps caps_md"
                   >25 октября - 7 ноября</span
@@ -23,9 +23,10 @@
                 <p class="stock-card__text txt">
                   На крепкие напитки для любого повода и события
                 </p>
-                <a href="#" class="stock-card__link btn btn_icon">
+                <button type="button"
+ class="stock-card__link btn btn_icon">
                   <span class="btn__text txt txt_md">Подробнее</span>
-                </a>
+                </button>
               </div>
               <div class="stock-card__bg">
                 <div class="stock-card__image-wrap">
@@ -41,12 +42,12 @@
                     class="stock-card__bg-image" />
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
         <section class="catalog-page__catalog catalog">
           <div class="catalog__container container">
-            <div class="catalog__title-wrap"><span class="catalog__title tl1">Вино</span></div>
+            <div class="catalog__title-wrap"><span class="catalog__title tl1">Белые вина</span></div>
             <div class="catalog__head">
               <div class="catalog__categories categories-catalog tabs swiper">
                 <ul data-original-height  data-visible-height="3rem"
@@ -1243,7 +1244,7 @@
                   <div class="tags-catalog__list"></div>
                 </div>
                 <div class="catalog__products catalog__products_grid-view">
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                     <div class="menu-product-card__head">
                       <div class="menu-product-card__badges">
                         <div class="menu-product-card__badge badge">
@@ -1266,18 +1267,18 @@
                         </svg>
                       </button>
                     </div>
-                    <a href="#" class="menu-product-card__preview">
+                    <div class="menu-product-card__preview">
                       <div class="menu-product-card__image-wrap">
                         <img
                           src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                           alt=""
                           class="menu-product-card__image" />
                       </div>
-                    </a>
+                    </div>
                     <div class="menu-product-card__info">
-                      <a href="#" class="menu-product-card__heading tl2"
+                      <span class="menu-product-card__heading tl2"
                       >Вино
-                      Saperavi Binekhi</a
+                      Saperavi Binekhi</span
                     >
                     <div class="menu-product-card__reviews">
                       <div class="menu-product-card__grade grade">
@@ -1356,8 +1357,8 @@
                       </button>
                       </div>
                     </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -1383,18 +1384,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1469,8 +1470,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -1496,18 +1497,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1586,8 +1587,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                           <div class="menu-product-card__badges">
                             <div class="menu-product-card__badge badge">
@@ -1613,18 +1614,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1703,8 +1704,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -1730,18 +1731,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1816,8 +1817,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__stock-card stock-card stock-card_vertical black">
+                    </a>
+                    <a href="#" class="catalog__stock-card stock-card stock-card_vertical black">
                     <div class="stock-card__content">
                       <span class="stock-card__subtitle caps caps_md"
                         >26 - 31 октября</span
@@ -1828,9 +1829,9 @@
                       <p class="stock-card__text txt">
                         На напитки из подборки при покупке от 3 бутылок
                       </p>
-                      <a href="#" class="stock-card__link btn btn_icon">
+                      <button type="button" class="stock-card__link btn btn_icon">
                         <span class="btn__text txt txt_md">Подробнее</span>
-                      </a>
+                      </button>
                     </div>
                     <div class="stock-card__bg">
                       <div class="stock-card__image-wrap">
@@ -1846,8 +1847,8 @@
                           class="stock-card__bg-image" />
                       </div>
                     </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -1876,18 +1877,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -1967,8 +1968,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                         </div>
@@ -1988,18 +1989,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/c4f191d740ecdc8e5437c11e253bdffb404da0f4.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2074,8 +2075,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2104,18 +2105,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2195,8 +2196,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__stock-card stock-card stock-card_vertical red">
+                    </a>
+                    <a href="#" class="catalog__stock-card stock-card stock-card_vertical red">
                         <div class="stock-card__content">
                           <span class="stock-card__subtitle caps caps_md"
                             >26 - 31 октября</span
@@ -2207,9 +2208,9 @@
                           <p class="stock-card__text txt">
                             На напитки из подборки при покупке от 3 бутылок
                           </p>
-                          <a href="#" class="stock-card__link btn btn_icon">
+                          <button type="button" class="stock-card__link btn btn_icon">
                             <span class="btn__text txt txt_md">Подробнее</span>
-                          </a>
+                          </button>
                         </div>
                         <div class="stock-card__bg">
                           <div class="stock-card__image-wrap">
@@ -2225,8 +2226,8 @@
                               class="stock-card__bg-image" />
                           </div>
                         </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2255,18 +2256,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2341,8 +2342,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2371,18 +2372,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2462,8 +2463,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2492,18 +2493,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2583,8 +2584,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2613,18 +2614,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2699,8 +2700,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2729,18 +2730,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2820,8 +2821,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2850,18 +2851,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -2936,8 +2937,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -2966,18 +2967,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3057,8 +3058,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="catalog__card menu-product-card menu-product-card_grid-view">
+                    </a>
+                    <a href="#" class="catalog__card menu-product-card menu-product-card_grid-view">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3087,18 +3088,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3178,7 +3179,7 @@
                         </button>
                         </div>
                       </div>
-                    </div>
+                    </a>
 
                 </div>
                 <a href="#" class="catalog__show-all-btn btn btn_icon">
@@ -3288,7 +3289,7 @@
               <div class="shopify-section__carousel">
                 <div class="shopify-section__slider swiper">
                   <div class="shopify-section__wrapper swiper-wrapper">
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3317,18 +3318,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3404,8 +3405,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3434,18 +3435,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/f451401b1af808c4a81312eac1d7ff15.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3521,8 +3522,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3551,18 +3552,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/6c8e6103ef45b935d19aad65e5724.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3638,8 +3639,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3668,18 +3669,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/c4f191d740ecdc8e5437c11e253bdffb404da0f4.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3755,8 +3756,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3785,18 +3786,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3872,8 +3873,8 @@
                         </button>
                         </div>
                       </div>
-                    </div>
-                    <div class="shopify-section__slide menu-product-card swiper-slide">
+                    </a>
+                    <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
                         <div class="menu-product-card__badges">
                           <div class="menu-product-card__badge badge">
@@ -3902,18 +3903,18 @@
                           </svg>
                         </button>
                       </div>
-                      <a href="#" class="menu-product-card__preview">
+                      <div class="menu-product-card__preview">
                         <div class="menu-product-card__image-wrap">
                           <img
                             src="@img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp"
                             alt=""
                             class="menu-product-card__image" />
                         </div>
-                      </a>
+                      </div>
                       <div class="menu-product-card__info">
-                        <a href="#" class="menu-product-card__heading tl2"
+                        <span class="menu-product-card__heading tl2"
                         >Вино
-                        Saperavi Binekhi</a
+                        Saperavi Binekhi</span
                       >
                       <div class="menu-product-card__reviews">
                         <div class="menu-product-card__grade grade">
@@ -3989,7 +3990,7 @@
                         </button>
                         </div>
                       </div>
-                    </div>
+                    </a>
                 </div>
               </div>
             </div>
@@ -3998,7 +3999,7 @@
         <section class="catalog-page__location location">
           <div class="location__container container">
             <span class="location__title tl1">мы <span>на карте</span></span>
-            <div id="map" class="location__map"></div>
+            <div data-map class="location__map"></div>
             <div class="location__info">
               <p data-da=".location__panel,768,last" class="location__text txt">
                 Находимся рядом с метро Чкаловская и Петроградская
@@ -4021,7 +4022,7 @@
           </div>
         </section>
       </main>
-      @@include('html/_footer.htm',{}) @@include('html/_svg.htm',{}) @@include('html/_modal.htm',{})
+      @@include('html/_footer.htm',{})
       <div class="menu-bar mobile-only">
         <ul class="menu-bar__list">
           <li class="menu-bar__item">
@@ -4159,7 +4160,102 @@
           </li>
         </ul>
       </div>
+      <div class="account-section">
+        <div class="account-section__head">
+          <div class="account-section__head-row">
+            <span class="account-section__head-heading txt txt_md">Аккаунт</span>
+            <button data-close-account-menu class="account-section__head-close-btn">
+              <img
+                src="@img/icons/cross-gray.svg"
+                alt=""
+                class="header-catalog__head-close-btn-icon" />
+            </button>
+          </div>
+          <div class="account-section__head-group">
+            <div class="account-section__user-avatar">
+              <img
+                src="@img/icons/avatar.svg"
+                alt=""
+                class="account-section__user-avatar-image" />
+            </div>
+            <span class="account-section__user-name txt txt_md"
+              >Константин Константинопольский</span
+            >
+            <div class="account-section__user-cashback user-cashback">
+              <span class="user-cashback__value caps caps_md">5%</span>
+              <div class="user-cashback__hint">
+                <span class="user-cashback__text txt"
+                  >Ваш статус — Новичок</span
+                >
+                <span class="user-cashback__text txt"
+                  ><span class="user-cashback__text-content"
+                    >Кэшбек <span class="cashback-value">5%</span> на все
+                    товары</span
+                  >
+                  <span class="user-cashback__subtext"
+                    >* кроме акционных</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="account-section__user-sum user-sum">
+            <div class="user-sum__track">
+              <span class="user-sum__inner-track"></span>
+            </div>
+            <div class="user-sum__row">
+              <span class="user-sum__current">
+                <span class="user-sum__text txt">Сумма покупок:</span>
+                <span class="user-sum__current-value txt">1 200₽</span>
+              </span>
+              <span class="user-sum__total-value txt">5 000₽</span>
+            </div>
+          </div>
+        </div>
+        <div class="account-section__body">
+          <ul class="account-section__list">
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Личные данные</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Мои заказы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Вы заказывали</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Статусы</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >История баллов</a
+              >
+            </li>
+            <li class="account-section__link-item">
+              <a href="#" class="account-section__link txt txt_md"
+                >Избранные товары</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="account-section__footer">
+          <a
+            href="#"
+            class="account-section__logout-btn logout-btn txt txt_md"
+            >Выйти</a
+          >
+        </div>
+      </div>
       <button type="button" id="open-filters-btn" class="filters-btn mobile-only"><img src="@img/icons/filter.svg" alt="" class="filters-btn__icon"></button>
+      @@include('html/_svg.htm',{}) @@include('html/_modal.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>

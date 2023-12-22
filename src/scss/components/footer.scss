@@ -1,6 +1,9 @@
 .footer {
   @media (max-width: 48em) {
     margin-bottom: 18rem;
+    .chapter & {
+      margin: 0;
+    }
   }
 
   // .footer__container

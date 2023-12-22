@@ -18,6 +18,9 @@
     align-items: flex-start;
     @media (min-width: 48em) {
       padding: 11.3rem 9rem 0 0;
+      .account-page_no-orders & {
+        padding: 11.3rem 20rem 0 0;
+      }
     }
   }
 
