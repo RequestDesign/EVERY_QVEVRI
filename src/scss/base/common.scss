@@ -4877,6 +4877,17 @@
 
 // --------------------------------------------------------------------------
 
+.dec-txt {
+  font-family: 'Noto Serif Georgian';
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.2rem;
+  text-transform: lowercase;
+  color: $backPattern;
+  opacity: 0.5;
+}
+
 .big-num {
   font-family: DrukWideCyr;
   font-size: 3rem;

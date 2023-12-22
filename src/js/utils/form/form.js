@@ -72,7 +72,7 @@ export function formFieldsInit(options = { viewPass: false }) {
           targetElement.value = targetElement.dataset.value;
         }
       } else {
-        if (targetElement.value.length) {
+        if (!targetElement.parentElement.classList.contains('_form-error')) {
           if (targetElement.closest('.input')) {
             targetElement.closest('.input').classList.add('_filled');
           } else if (targetElement.closest('.text-input')) {
@@ -120,6 +120,7 @@ export let formValidate = {
   },
   validateInput(formRequiredItem) {
     let error = 0;
+
     if (formRequiredItem.dataset.required === 'email') {
       formRequiredItem.value = formRequiredItem.value.replace(' ', '');
       if (this.emailTest(formRequiredItem)) {
@@ -136,8 +137,16 @@ export let formValidate = {
       error++;
     } else {
       if (!formRequiredItem.value.trim()) {
+        formRequiredItem.dataset.error = 'Заполните поле';
         this.addError(formRequiredItem);
         error++;
+      } else if (formRequiredItem.dataset.validate === 'letters-only') {
+        const pattern = /[0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        if (pattern.test(formRequiredItem.value)) {
+          formRequiredItem.dataset.error = ``;
+          this.addError(formRequiredItem);
+          error++;
+        }
       } else {
         this.removeError(formRequiredItem);
       }
@@ -148,6 +157,8 @@ export let formValidate = {
     document.documentElement.style = '--borderColor: #eb5749';
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
+    formRequiredItem.parentElement.classList.remove('_filled');
+    console.log(formRequiredItem);
     let inputError =
       formRequiredItem.parentElement.querySelector('.form-error');
     if (inputError) formRequiredItem.parentElement.removeChild(inputError);
@@ -162,6 +173,7 @@ export let formValidate = {
     document.documentElement.style = '--borderColor: #e9e8e8';
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
+    formRequiredItem.parentElement.classList.add('_filled');
     if (formRequiredItem.parentElement.querySelector('.form-error')) {
       formRequiredItem.parentElement.removeChild(
         formRequiredItem.parentElement.querySelector('.form-error')

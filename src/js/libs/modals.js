@@ -398,9 +398,10 @@ class Modal {
 
 modules.modal = new Modal({});
 
+// show age modal
 if (document.querySelector('.mainpage')) {
   const confirmAgeBtn = document.getElementById('confirm-age-btn');
-  modules.modal.open('#confirmAgeModal');
+  // modules.modal.open('#confirmAgeModal');
   confirmAgeBtn.addEventListener('click', function () {
     modules.modal.close('#confirmAgeModal');
   });

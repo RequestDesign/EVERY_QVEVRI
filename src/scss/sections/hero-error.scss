@@ -59,6 +59,16 @@
   &__text {
   }
 
+  // .hero-404__dec-text
+
+  &__dec-text {
+    margin-top: auto;
+    max-width: 25.3rem;
+    @media (max-width: 48em) {
+      display: none;
+    }
+  }
+
   // .hero-404__link
 
   &__link {

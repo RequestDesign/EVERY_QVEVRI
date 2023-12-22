@@ -30,15 +30,17 @@ body::after {
     visibility: visible;
     overflow: auto;
     pointer-events: auto;
-    &.modal_fs {
-      .modal__content {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
     .modal__content {
       visibility: visible;
       transform: scale(1);
+    }
+    @media (max-width: 48em) {
+      &.modal_fs {
+        .modal__content {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
     }
   }
 
@@ -64,14 +66,16 @@ body::after {
     visibility: hidden;
     transform: scale(0);
     transition: transform 0.3s ease 0s;
-    .modal_fs & {
-      opacity: 0;
-      transform: translateX(110vw);
-      transition: opacity 0.3s ease, visibility 0.3s ease,
-        transform 0.3s ease 0s;
-    }
     .lock & {
       visibility: visible;
+    }
+    @media (max-width: 48em) {
+      .modal_fs & {
+        opacity: 0;
+        transform: translateX(110vw);
+        transition: opacity 0.3s ease, visibility 0.3s ease,
+          transform 0.3s ease 0s;
+      }
     }
   }
 

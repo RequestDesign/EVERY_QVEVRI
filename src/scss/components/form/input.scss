@@ -164,6 +164,40 @@ input:disabled {
       color: $black;
     }
   }
+
+  // .input__edit-btn
+
+  &__edit-btn {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    @media (any-hover: hover) {
+      &:hover {
+        path {
+          stroke: $red;
+        }
+      }
+    }
+    @media (max-width: 48em) {
+      flex: 0 0 4rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  // .input__edit-btn-icon
+
+  &__edit-btn-icon {
+    width: 2rem;
+    height: 2rem;
+    path {
+      transition: stroke 0.3s ease;
+    }
+    @media (max-width: 48em) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
 }
 
 .text-input {
