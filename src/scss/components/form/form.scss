@@ -46,9 +46,26 @@ form._error {
   &__group {
     display: flex;
     flex-direction: column;
-
+    &_pass {
+      .account-page_personal-data-edit-reg & {
+        .form-personal-data-account__heading {
+          margin-bottom: 3.6rem;
+        }
+        .form-personal-data-account__text {
+          margin-bottom: 5rem;
+        }
+      }
+    }
     @media (min-width: 48em) {
       &_pass {
+        .account-page_personal-data-edit-reg & {
+          .form-personal-data-account__heading {
+            margin-bottom: 2.4rem;
+          }
+          .form-personal-data-account__text {
+            margin-bottom: 4rem;
+          }
+        }
         .form-personal-data-account__input {
           grid-column: 1/2;
           &._verified {

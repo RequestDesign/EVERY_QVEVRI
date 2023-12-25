@@ -2848,28 +2848,6 @@
   }
 }
 
-.bg {
-  &::after {
-    content: '';
-    position: absolute;
-    width: calc(100% + 4rem);
-    height: 100%;
-    top: 0;
-    left: -4rem;
-    background-image: url(@img/bg/bffabb6a1187159308cf61dac3363771.webp);
-    background-size: 101% 100%;
-    background-repeat: no-repeat;
-  }
-  @media (min-width: 1920px) {
-    width: 104vw;
-    transform: translateX(calc((104vw - 1920px) / -2));
-    overflow: hidden;
-    &::after {
-      background-size: 100% 100%;
-    }
-  }
-}
-
 .docked-info {
   position: fixed;
   z-index: 41;
@@ -3983,7 +3961,8 @@
   ._search-box-opened &,
   ._show-catalog &,
   ._show-account-menu &,
-  .modal-show & {
+  .modal-show &,
+  ._fullscreen-image & {
     opacity: 0;
     transform: translateY(110%);
   }
@@ -4913,14 +4892,70 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  @media (max-width: 48em){
+  @media (max-width: 48em) {
     padding-top: 1.6rem;
-     column-gap: 0.8rem;
-     &::after {
+    column-gap: 0.8rem;
+    &::after {
       flex: 0 0 4rem;
       width: 4rem;
       height: 4rem;
-     }
+    }
+  }
+}
+
+.fullscreen-image {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 4rem;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(@img/bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $white;
+  overflow: auto;
+  @media (max-width: 48em) {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    ._fullscreen-image & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .fullscreen-image__close-btn
+
+  &__close-btn {
+    margin-bottom: 29.4rem;
+    margin-left: auto;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  // .fullscreen-image__close-btn-icon
+
+  &__close-btn-icon {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // .fullscreen-image__wrap
+
+  &__wrap {
+    align-self: center;
+    width: 26rem;
+  }
+
+  // .fullscreen-image__image
+
+  &__image {
+    object-fit: contain;
   }
 }
 

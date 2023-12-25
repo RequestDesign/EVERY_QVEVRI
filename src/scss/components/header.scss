@@ -495,7 +495,8 @@
         pointer-events: none;
       }
       &:hover {
-        .mainpage_not-logged-in & {
+        .mainpage_not-logged-in &,
+        .account-page_personal-data-edit-reg & {
           .header-login {
             opacity: 1;
             visibility: visible;
@@ -1811,6 +1812,7 @@
   padding: 4rem;
   display: flex;
   flex-direction: column;
+  row-gap: 2.8rem;
   width: 44rem;
   box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
   background-color: $white;
@@ -1820,16 +1822,25 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  &_reg {
+    row-gap: 2rem;
+    width: 36.2rem;
+  }
 
   // .header-login__text
 
   &__text {
-    margin-bottom: 2.8rem;
   }
 
   // .header-login__btn
 
   &__btn {
     width: 100%;
+  }
+
+  // .header-login__subtitle
+
+  &__subtitle {
+    color: $red;
   }
 }

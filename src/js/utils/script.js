@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
       magnifier.parentElement.classList.remove('_show-magnifier');
     };
     if (item && asideItem && magnifier) {
-      magnifier.parentElement.classList.remove('_show-magnifier');
       item.addEventListener('mousemove', handleMousemove, false);
       item.addEventListener('mouseleave', handleMouseleave);
     }
@@ -435,13 +434,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.log(target);
 
     if (window.innerWidth <= 768) {
-      // if (target.closest('.ambassadors-promo__card')) {
-      //   removeClasses(
-      //     document.querySelectorAll('.ambassadors-promo__card'),
-      //     '_active'
-      //   );
-      //   target.closest('.ambassadors-promo__card').classList.add('_active');
-      // }
+      if (bodyLockStatus && target.closest('.hero-product__image-wrap')) {
+        document.documentElement.classList.add('_fullscreen-image');
+        bodyLock();
+      }
+      if (bodyLockStatus && target.closest('.fullscreen-image__close-btn')) {
+        document.documentElement.classList.remove('_fullscreen-image');
+        bodyUnlock();
+      }
       if (
         target.closest(
           '.mainpage_not-logged-in .header__menu .menu__link_profile'
@@ -808,6 +808,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.classList.contains('_filters-visible')
       ) {
         document.documentElement.classList.remove('_filters-visible');
+        bodyUnlock();
+      }
+      if (
+        bodyLockStatus &&
+        document.documentElement.classList.contains('_fullscreen-image')
+      ) {
+        document.documentElement.classList.remove('_fullscreen-image');
         bodyUnlock();
       }
     }
