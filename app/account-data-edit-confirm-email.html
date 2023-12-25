@@ -32,7 +32,7 @@
 </head>
 
 <body style="opacity: 0">
-	<div class="wrapper account-page account-page_orders">
+	<div class="wrapper account-page account-page_personal-data-edit">
 		<header data-scroll="50" data-scroll-show class="header">
 			<div class="header__container container">
 				<div class="header__top">
@@ -3984,12 +3984,12 @@
 					<div class="account-page__inner">
 						<div class="account-page__group">
 							<button id="show-navbar-btn" type="button" class="account-page__heading tl2">
-								Мои заказы
+								Личные данные
 							</button>
 							<div class="account-page__navbar navbar-account-page">
 								<nav class="navbar-account-page__navigation">
-									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
-									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">Мои заказы</span></a>
+									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Мои заказы</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Вы заказывали</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Статусы</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">История баллов</span></a>
@@ -3999,96 +3999,170 @@
 							</div>
 						</div>
 						<div class="account-page__content">
-							<div class="account-page__orders orders-account">
-								<div class="orders-account__navigation navigation-orders-account tabs swiper">
-									<ul class="navigation-orders-account__list tabs-wrap">
-										<li class="navigation-orders-account__item tab _active">
-											<a href="#" class="navigation-orders-account__link">Все</a>
-										</li>
-										<li class="navigation-orders-account__item tab">
-											<a href="#" class="navigation-orders-account__link">Активные</a>
-										</li>
-										<li class="navigation-orders-account__item tab">
-											<a href="#" class="navigation-orders-account__link">Полученные</a>
-										</li>
-										<li class="navigation-orders-account__item tab">
-											<a href="#" class="navigation-orders-account__link">Отмененные</a>
-										</li>
-									</ul>
-								</div>
-								<div class="orders-account__main">
-									<div class="orders-account__order order-card">
-										<a href="#" class="order-card__body">
-											<div class="order-card__group order-card__group_f">
-												<span class="order-card__heading tl2">Заказ №288.172.259 от 20.11</span>
-												<p class="order-card__text txt">
-													Срок хранения до 26 ноября включительно
-												</p>
-												<div data-dom-replace=".order-card__group_f,.order-card__group_s,.order-card" class="order-card__label label label_active">
-													<span class="label__text caps caps_md">Активен</span>
+							<div class="account-page__personal-data personal-data-account">
+								<div class="personal-data-account__main-content">
+									<form data-save-fields data-dev action="#" class="personal-data-account__form form-personal-data-account">
+										<div class="form-personal-data-account__head">
+											<div class="personal-data-account__head-inner">
+												<div class="personal-data-account__user-avatar user-avatar">
+													<label class="user-avatar__inner">
+														<input type="file" class="user-avatar__input" />
+														<div class="user-avatar__wrap">
+															<div class="user-avatar__image-wrap">
+																<img src="img/icons/avatar.svg" alt="" class="user-avatar__image" />
+															</div>
+															<div class="user-avatar__caption">
+																<img src="img/icons/avatar-upload.svg" alt="" class="user-avatar__caption-icon" />
+															</div>
+														</div>
+														<div class="user-avatar__dropdown">
+															<ul class="user-avatar__dropdown-list">
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt">
+																		Медиатека
+																	</button>
+																</li>
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt">
+																		Сделать снимок
+																	</button>
+																</li>
+																<li class="user-avatar__dropdown-item">
+																	<button type="button" class="user-avatar__dropdown-item-content txt txt_red">
+																		Удалить фото
+																	</button>
+																</li>
+															</ul>
+														</div>
+														<button type="button" class="user-avatar__close-btn">
+															<img src="img/icons/cross-white.svg" alt="" class="user-avatar__close-btn-icon" />
+														</button>
+													</label>
+												</div>
+												<div class="personal-data-account__head-info">
+													<span class="personal-data-account__heading tl2">константин Константинопольский</span>
+													<p data-da=".form-personal-data-account__head,768,last" class="personal-data-account__head-text txt txt_16">
+														Загрузите фото и получите
+														<span class="txt txt_md">100</span> приветственных
+														баллов
+													</p>
 												</div>
 											</div>
-											<div class="order-card__group order-card__group_s">
-												<span class="order-card__heading tl2">1 200₽</span>
-												<p class="order-card__text txt desktop-only">
-													3 товара
-												</p>
+										</div>
+										<div class="form-personal-data-account__body">
+											<div class="form-personal-data-account__group">
+												<span class="form-personal-data-account__heading subtitle">Личные данные</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__input input input_required">
+														<input data-required data-validate="letters-only" value="Константинопольский" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input input_date input_required">
+														<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" maxlength="10" class="input__field" />
+														<button data-dp-btn type="button" class="input__calendar-btn">
+															<img src="img/icons/calendar.svg" alt="" class="input__calendar-btn-icon" />
+														</button>
+													</div>
+													<div class="form-personal-data-account__input input input_required">
+														<input data-required data-validate="letters-only" value="Константин" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__options">
+														<label class="form-personal-data-account__option option option_reversed">
+															<input hidden class="option__input" checked type="radio" value="1" name="option" />
+															<span class="option__text txt">Муж</span>
+														</label>
+														<label class="form-personal-data-account__option option option_reversed">
+															<input hidden class="option__input" type="radio" value="2" name="option" />
+															<span class="option__text txt">Жен</span>
+														</label>
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input data-validate="letters-only" autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field" />
+													</div>
+												</div>
 											</div>
-										</a>
-										<div class="order-card__footer">
-											<span class="order-card__address txt">Санкт-Петербург, Левашовский пр. 13а</span>
-											<button data-modal="#cancelOrderModal" type="button" class="order-card__btn-link txt txt_md">
-												Отменить заказ
+											<div class="form-personal-data-account__group">
+												<span class="form-personal-data-account__heading subtitle">Контактные данные</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__field">
+														<div class="form-personal-data-account__input input input_edit">
+															<input disabled data-value="constantinopolitan.konstantin@gmail.com" value="constantinopolitan.konstantin@gmail.com" autocomplete="off" type="email" name="form[]" data-error placeholder="E-mail" class="input__field" />
+														</div>
+														<div class="form-personal-data-account__warning warning txt txt_sm">
+															Требует подтверждения
+														</div>
+													</div>
+													<div class="form-personal-data-account__field">
+														<div class="form-personal-data-account__input input input_edit">
+															<input disabled data-value="+7 (999) 999 99-99" value="+7 (999) 999 99-99" autocomplete="off" type="tel" name="form[]" data-error placeholder="Телефон" class="input__field" />
+															<button data-modal="#updatePhoneNumberModal" type="button" class="input__edit-btn">
+																<svg class="input__edit-btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.0475 3.00002L4.20585 10.2417C3.94752 10.5167 3.69752 11.0584 3.64752 11.4334L3.33918 14.1333C3.23085 15.1083 3.93085 15.775 4.89752 15.6084L7.58085 15.15C7.95585 15.0834 8.48085 14.8084 8.73918 14.525L15.5809 7.28335C16.7642 6.03335 17.2975 4.60835 15.4558 2.86668C13.6225 1.14168 12.2308 1.75002 11.0475 3.00002Z" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+																	<path d="M9.90625 4.20801C10.2646 6.50801 12.1312 8.26634 14.4479 8.49967" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+																	<path d="M2.5 18.333H17.5" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+																</svg>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-personal-data-account__group form-personal-data-account__group_pass">
+												<span class="form-personal-data-account__heading subtitle">Смена пароля</span>
+												<div class="form-personal-data-account__fields">
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Введите пароль" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Новый пароль" class="input__field" />
+													</div>
+													<div class="form-personal-data-account__input input">
+														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Повторите пароль" class="input__field" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<button type="submit" class="form-personal-data-account__btn btn btn_ol">
+											<span class="btn__text txt txt_md">Сохранить изменения</span>
+										</button>
+									</form>
+								</div>
+								<div class="personal-data-account__aside-content">
+									<a href="#" class="personal-data-account__status-banner status-banner">
+										<div class="status-banner__text-content">
+											<span class="status-banner__heading tl2">новичок</span>
+											<p class="status-banner__text txt">
+												<span class="status-banner__txt-content">
+													Кэшбек 5%
+													<span class="desktop-only"> на все товары </span>
+												</span>
+												<span class="status-banner__txt-content txt_16">*кроме акционных</span>
+											</p>
+											<button type="button" class="status-banner__link btn btn_icon">
+												<span class="btn__text txt txt_md">Подробнее</span>
 											</button>
 										</div>
-									</div>
-									<div class="orders-account__order order-card">
-										<a href="#" class="order-card__body">
-											<div class="order-card__group order-card__group_f">
-												<span class="order-card__heading tl2">Заказ №288.172.259 от 20.11</span>
-												<p class="order-card__text txt">
-													Срок хранения до 26 ноября включительно
-												</p>
-												<div data-dom-replace=".order-card__group_f,.order-card__group_s,.order-card" class="order-card__label label label_received">
-													<span class="label__text caps caps_md">Получен</span>
+										<div class="status-banner__track">
+											<span data-cash-sum="1200" class="status-banner__current-value txt txt_wide"></span>
+											<div class="status-banner__track-image-wrap">
+												<div class="status-banner__track-image"></div>
+												<div class="status-banner__clip-path-container">
+													<div class="status-banner__track-image status-banner__track-image_red"></div>
 												</div>
 											</div>
-											<div class="order-card__group order-card__group_s">
-												<span class="order-card__heading tl2">1 200₽</span>
-												<p class="order-card__text txt desktop-only">
-													3 товара
-												</p>
+											<div class="status-banner__range">
+												<span data-total-cash-sum="5000" class="status-banner__range-value txt txt_16"></span>
+												<span class="status-banner__range-value txt txt_16">0</span>
 											</div>
-										</a>
-										<div class="order-card__footer">
-											<span class="order-card__address txt">Санкт-Петербург, Левашовский пр. 13а</span>
-											<a href="#" type="button" class="order-card__btn-link txt txt_md">
-												Повторить заказ
-											</a>
 										</div>
-									</div>
-									<div class="orders-account__order order-card">
-										<a href="#" class="order-card__body">
-											<div class="order-card__group order-card__group_f">
-												<span class="order-card__heading tl2">Заказ №288.172.259 от 20.11</span>
-												<p class="order-card__text txt">
-													Срок хранения до 26 ноября включительно
-												</p>
-												<div data-dom-replace=".order-card__group_f,.order-card__group_s,.order-card" class="order-card__label label label_canceled">
-													<span class="label__text caps caps_md">отменен</span>
-												</div>
-											</div>
-											<div class="order-card__group order-card__group_s">
-												<span class="order-card__heading tl2">1 200₽</span>
-												<p class="order-card__text txt desktop-only">
-													3 товара
-												</p>
-											</div>
-										</a>
-										<div class="order-card__footer">
-											<span class="order-card__address txt">Санкт-Петербург, Левашовский пр. 13а</span>
+									</a>
+									<a href="#" class="personal-data-account__coins-history-banner coins-history-banner">
+										<div class="coins-history-banner__text-content">
+											<span class="coins-history-banner__heading tl2">1200</span>
+											<span class="coins-history-banner__text txt txt_16">Баллов на счёте</span>
 										</div>
-									</div>
+										<button type="button" class="coins-history-banner__link btn btn_icon">
+											<span class="btn__text txt txt_md">История баллов</span>
+										</button>
+									</a>
 								</div>
 							</div>
 						</div>

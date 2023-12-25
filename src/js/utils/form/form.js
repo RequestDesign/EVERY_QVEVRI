@@ -38,6 +38,8 @@ export function formFieldsInit(options = { viewPass: false }) {
         targetElement.closest('.text-input').classList.remove('_filled');
         formValidate.removeError(targetElement);
       }
+      if (targetElement.closest('.input-row'))
+        targetElement.closest('.input-row').classList.remove('_error');
     }
   });
   document.body.addEventListener('focusout', function (e) {
@@ -73,7 +75,10 @@ export function formFieldsInit(options = { viewPass: false }) {
         }
       } else {
         if (!targetElement.parentElement.classList.contains('_form-error')) {
-          if (targetElement.closest('.input')) {
+          if (
+            targetElement.closest('.input') &&
+            !targetElement.closest('.input-row')
+          ) {
             targetElement.closest('.input').classList.add('_filled');
           } else if (targetElement.closest('.text-input')) {
             targetElement.closest('.text-input').classList.remove('_filled');
@@ -158,7 +163,6 @@ export let formValidate = {
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
     formRequiredItem.parentElement.classList.remove('_filled');
-    console.log(formRequiredItem);
     let inputError =
       formRequiredItem.parentElement.querySelector('.form-error');
     if (inputError) formRequiredItem.parentElement.removeChild(inputError);
@@ -168,16 +172,23 @@ export let formValidate = {
         `<div class="form-error txt txt_16">${formRequiredItem.dataset.error}</div>`
       );
     }
+    if (formRequiredItem.closest('.input_validate')) {
+      formRequiredItem.closest('form').classList.add('_error');
+    }
   },
   removeError(formRequiredItem) {
-    document.documentElement.style = '--borderColor: #e9e8e8';
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
-    formRequiredItem.parentElement.classList.add('_filled');
+    if (!formRequiredItem.closest('.input-row')) {
+      formRequiredItem.parentElement.classList.add('_filled');
+    }
     if (formRequiredItem.parentElement.querySelector('.form-error')) {
       formRequiredItem.parentElement.removeChild(
         formRequiredItem.parentElement.querySelector('.form-error')
       );
+    }
+    if (formRequiredItem.closest('.input_validate')) {
+      formRequiredItem.closest('form').classList.remove('_error');
     }
   },
   formClean(form) {

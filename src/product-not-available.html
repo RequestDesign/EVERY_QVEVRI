@@ -92,16 +92,19 @@
                 <span class="hero-product__title tl1"
                   >Вино Saperavi Binekhi</span
                 >
-                <div class="hero-product__reviews">
-                  <div class="hero-product__grade grade">
-                    <span class="grade__text txt txt_md">4.5</span>
+                <div class="hero-product__info-group">
+                  <div class="hero-product__reviews">
+                    <div class="hero-product__grade grade">
+                      <span class="grade__text txt txt_md">4.5</span>
+                    </div>
+                    <span data-goto-top="300" data-goto=".product-page__reviews" class="hero-product__reviews-text txt"
+                      >(12 отзывов)</span
+                    >
                   </div>
-                  <span data-goto-top="300" data-goto=".product-page__reviews" class="hero-product__reviews-text txt"
-                    >(12 отзывов)</span
-                  >
-                  <div class="hero-product__coins coins">
-                    <span class="coins__value txt">16</span>
+                  <div class="hero-product__organic organic txt">
+                    Органика
                   </div>
+
                 </div>
                 <div class="hero-product__characteristics characteristics">
                   <ul class="characteristics__list">
@@ -300,6 +303,58 @@
                   </div>
                   <div
                     class="info-product__tab-body info-product-characteristics">
+                    <div class="info-product-characteristics__taste taste-info-product-characteristics">
+                      <div class="taste-info-product-characteristics__item">
+                        <div class="taste-info-product-characteristics__dots">
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                        </div>
+                        <span class="taste-info-product-characteristics__subtitle subtitle">Сладость</span>
+                      </div>
+                      <div class="taste-info-product-characteristics__item">
+                        <div class="taste-info-product-characteristics__dots">
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                        </div>
+                        <span class="taste-info-product-characteristics__subtitle subtitle">Тело</span>
+                      </div>
+                      <div class="taste-info-product-characteristics__item">
+                        <div class="taste-info-product-characteristics__dots">
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                        </div>
+                        <span class="taste-info-product-characteristics__subtitle subtitle">кислотность</span>
+                      </div>
+                      <div class="taste-info-product-characteristics__item">
+                        <div class="taste-info-product-characteristics__dots">
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                        </div>
+                        <span class="taste-info-product-characteristics__subtitle subtitle">танины</span>
+                      </div>
+                      <div class="taste-info-product-characteristics__item">
+                        <div class="taste-info-product-characteristics__dots">
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot _active"></span>
+                          <span class="taste-info-product-characteristics__dot"></span>
+                        </div>
+                        <span class="taste-info-product-characteristics__subtitle subtitle">Ароматичность</span>
+                      </div>
+                    </div>
                     <ul class="info-product-characteristics__list">
                       <li class="info-product-characteristics__item">
                         <span class="info-product-characteristics__heading tl2"
@@ -355,6 +410,14 @@
                         >
                         <span class="info-product-characteristics__text txt"
                           >10-11 °С</span
+                        >
+                      </li>
+                      <li class="info-product-characteristics__item _hidden">
+                        <span class="info-product-characteristics__heading tl2"
+                          >Выдержка в емкости</span
+                        >
+                        <span class="info-product-characteristics__text txt"
+                          >Нейтральная емкость</span
                         >
                       </li>
                     </ul>
@@ -845,16 +908,18 @@
                   <div class="shopify-section__wrapper swiper-wrapper">
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
-                          </div>
+                          <div class="menu-product-card__head-group">
+                            <div class="menu-product-card__badges">
+                              <div class="menu-product-card__badge badge">
+                                <span class="badge__text txt txt_16">-25%</span>
+                              </div>
+                              <div class="menu-product-card__badge badge">
+                                <span class="badge__text txt txt_16">Суперцена</span>
+                              </div>
+                              <div class="menu-product-card__badge badge">
+                                <span class="badge__text txt txt_16">Эксклюзив</span>
+                              </div>
+                            </div>
                         </div>
                         <button
                           type="button"
@@ -904,9 +969,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -922,15 +984,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -981,9 +1045,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -999,15 +1060,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1058,9 +1121,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -1076,15 +1136,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1135,9 +1197,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -1153,15 +1212,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1212,9 +1273,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -1230,15 +1288,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1289,9 +1349,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">
@@ -1351,15 +1408,17 @@
                   <div class="shopify-section__wrapper swiper-wrapper">
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1412,9 +1471,6 @@
                             >1 700₽</span
                           >
                           </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
                         </div>
                         <div class="menu-product-card__actions">
                           <button
@@ -1429,15 +1485,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1490,9 +1548,6 @@
                             >1 700₽</span
                           >
                           </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
                         </div>
                         <div class="menu-product-card__actions">
                           <button
@@ -1507,15 +1562,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1568,9 +1625,6 @@
                             >1 700₽</span
                           >
                           </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
                         </div>
                         <div class="menu-product-card__actions">
                           <button
@@ -1585,15 +1639,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1646,9 +1702,6 @@
                             >1 700₽</span
                           >
                           </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
                         </div>
                         <div class="menu-product-card__actions">
                           <button
@@ -1663,15 +1716,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1724,9 +1779,6 @@
                             >1 700₽</span
                           >
                           </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
-                          </div>
                         </div>
                         <div class="menu-product-card__actions">
                           <button
@@ -1741,15 +1793,17 @@
                     </a>
                     <a href="#" class="shopify-section__slide menu-product-card swiper-slide">
                       <div class="menu-product-card__head">
-                        <div class="menu-product-card__badges">
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">-25%</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Суперцена</span>
-                          </div>
-                          <div class="menu-product-card__badge badge">
-                            <span class="badge__text txt txt_16">Эксклюзив</span>
+                        <div class="menu-product-card__head-group">
+                          <div class="menu-product-card__badges">
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">-25%</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Суперцена</span>
+                            </div>
+                            <div class="menu-product-card__badge badge">
+                              <span class="badge__text txt txt_16">Эксклюзив</span>
+                            </div>
                           </div>
                         </div>
                         <button
@@ -1801,9 +1855,6 @@
                             class="price__value price__value_old txt txt_wide"
                             >1 700₽</span
                           >
-                          </div>
-                          <div class="menu-product-card__coins coins">
-                            <span class="coins__value txt">16</span>
                           </div>
                         </div>
                         <div class="menu-product-card__actions">

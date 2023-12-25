@@ -181,6 +181,62 @@
     }
   }
 
+  // .hero-product__aside-image-wrap
+
+  &__aside-image-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36rem;
+    height: 36rem;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
+    overflow: hidden;
+    background-color: $white;
+    opacity: 0;
+    transform: translate(8rem, 13rem);
+    @media (min-width: 48em) {
+      transition: opacity 0.3s ease;
+      ._show-magnifier & {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .hero-product__magnifier
+
+  &__magnifier {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    border: 1px solid $red;
+    box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translate(-100%, -150%);
+    @media (min-width: 48em) {
+      transition: opacity 0.3s ease;
+      ._show-magnifier & {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .hero-product__aside-image
+
+  &__aside-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250%;
+    height: 250%;
+    transform: translate(-50%, -50%);
+  }
+
   // .hero-product__title
 
   &__title {
@@ -195,12 +251,10 @@
   // .hero-product__reviews
 
   &__reviews {
-    margin-bottom: 2.6rem;
     display: flex;
     align-items: center;
-    @media (max-width: 48em) {
-      margin-bottom: 6.4rem;
-      padding: 0 2.4rem;
+    @media (min-width: 48em) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -363,6 +417,26 @@
       margin: 0 2.4rem;
       margin-bottom: 6.4rem;
       width: auto;
+    }
+  }
+
+  // .hero-product__organic
+
+  &__organic {
+  }
+
+  // .hero-product__info-group
+
+  &__info-group {
+    margin-bottom: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 48em) {
+      margin-bottom: 6.4rem;
+      padding: 0 2.4rem;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 5rem;
     }
   }
 }

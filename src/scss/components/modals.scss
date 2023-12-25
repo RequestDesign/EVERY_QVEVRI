@@ -452,7 +452,8 @@ body::after {
     .account-modal_email &,
     .account-modal_login &,
     .account-modal_reg &,
-    .account-modal_email-login & {
+    .account-modal_email-login &,
+    .account-modal_changed-data & {
       max-width: none;
       span {
         display: block;
@@ -475,11 +476,23 @@ body::after {
     .account-modal_restore-pass & {
       max-width: 58rem;
     }
+    .account-modal_changed-data_mobile & {
+      max-width: 56.2rem;
+    }
+    .account-modal_changed-data_email & {
+      max-width: 72rem;
+    }
     @media (min-width: 48em) {
       margin-bottom: 5.6rem;
       max-width: 42.2rem;
       .account-modal_email & {
         max-width: 40rem;
+      }
+      .account-modal_changed-data_email & {
+        max-width: 49rem;
+      }
+      .account-modal_changed-data_mobile & {
+        max-width: 35.2rem;
       }
       .account-modal_login &,
       .account-modal_reg & {
@@ -498,7 +511,7 @@ body::after {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid $lightGray;
     .account-modal_login & {
       margin-bottom: 2.4rem;
     }

@@ -59,11 +59,11 @@
   // .ambassadors-promo__head
 
   &__head {
-    margin-bottom: 12.8rem;
+    margin-bottom: 10rem;
     display: flex;
     justify-content: center;
-    @media (max-width: 48em) {
-      margin-bottom: 5rem;
+    @media (min-width: 48em) {
+      margin-bottom: 12.8rem;
       align-items: center;
     }
   }
@@ -78,31 +78,54 @@
 
   &__body {
     position: relative;
+    height: 37rem;
   }
 
   // .ambassadors-promo__card
 
   &__card {
-    padding: 1.2rem 1.2rem 2rem 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     width: 42.4rem;
     background-color: $white;
-    &_rotated {
-      position: absolute;
+    user-select: none;
+    transition: transform 0.5s ease, padding-bottom 0.5s ease,
+      box-shadow 0.5s ease;
+    &:last-child._active {
+      transform: rotate(3deg) translateY(5rem) translateX(-100%);
+    }
+    &:first-child._active {
+      transform: rotate(-3deg) translateY(3rem);
+    }
+    &:last-child {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+    &._active {
       z-index: 2;
-      bottom: 0;
-      right: 0;
-      padding: 1.2rem 1.2rem 4.8rem 1.2rem;
+      padding-bottom: 8rem;
       box-shadow: 1.4rem 2rem 16rem 0 rgba(51, 52, 54, 0.18);
-      transform: rotate(3deg) translateY(1rem);
     }
     @media (max-width: 48em) {
-      padding: 2.4rem 2.4rem 8rem 2.4rem;
+      padding: 2.4rem;
+      padding-bottom: 8rem;
       width: 38rem;
-      &_rotated {
-        padding: 2.4rem 2.4rem 8rem 2.4rem;
-        transform: rotate(6deg) translate(-2rem, 4rem);
+      &:first-child {
+        transform: translateY(5rem);
+      }
+      &:last-child {
+        transform: translateY(8rem) translateX(-100%);
+      }
+      &:first-child._active {
+        transform: rotate(-6deg) translateY(5rem);
+      }
+      &:last-child._active {
+        transform: rotate(6deg) translateY(12rem) translateX(-100%);
       }
     }
   }
@@ -110,17 +133,18 @@
   // .ambassadors-promo__image-wrap
 
   &__image-wrap {
-    margin-bottom: 2.8rem;
-    height: 20.8rem;
+    margin-bottom: 3.4rem;
     width: 100%;
-    .ambassadors-promo__card_rotated & {
-      height: 24rem;
+    height: 19rem;
+    ._active & {
+      height: 17rem;
     }
-    @media (max-width: 48em) {
-      margin-bottom: 3.4rem;
-      height: 19rem;
-      .ambassadors-promo__card_rotated & {
-        height: 17rem;
+    @media (min-width: 48em) {
+      margin-bottom: 2.8rem;
+      height: 20.8rem;
+      transition: height 0.3s ease;
+      ._active & {
+        height: 24rem;
       }
     }
   }
@@ -157,6 +181,13 @@
   user-select: none;
   @media (max-width: 48em) {
     padding: 5rem 3.4rem 0 3.4rem;
+    height: 61rem;
+  }
+
+  // .app-promo__subtitle
+
+  &__subtitle {
+    color: $red;
   }
 
   // .app-promo__text-wrap
@@ -235,6 +266,7 @@
   // .app-promo__image
 
   &__image {
+    opacity: 0.2;
     object-fit: contain;
   }
 }

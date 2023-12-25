@@ -16,23 +16,50 @@ import { formValidate } from './form/form.js';
 // --------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
+  // magnifier
+  const initMagnifier = () => {
+    const magnifier = document.getElementById('magnifier');
+    const item = document.getElementById('magnifier-el');
+    const asideItem = document.getElementById('magnifier-img');
+    const handleMousemove = e => {
+      let { width, height } = item.getBoundingClientRect();
+      let xAxis = (e.offsetX / width) * 100;
+      let yAxis = (e.offsetY / height) * 100;
+      magnifier.style.top = `${e.clientY - magnifier.offsetHeight / 2}px`;
+      magnifier.style.left = `${e.clientX - magnifier.offsetWidth / 2}px`;
+      asideItem.style.transform = `translate(-${xAxis}%, -${yAxis}%)`;
+      magnifier.parentElement.classList.add('_show-magnifier');
+    };
+    const handleMouseleave = () => {
+      magnifier.parentElement.classList.remove('_show-magnifier');
+    };
+    if (item && asideItem && magnifier) {
+      magnifier.parentElement.classList.remove('_show-magnifier');
+      item.addEventListener('mousemove', handleMousemove, false);
+      item.addEventListener('mouseleave', handleMouseleave);
+    }
+  };
+  initMagnifier();
+
   // row input
-  const rowInput = document.querySelector('.input-row');
-  if (rowInput) {
-    const inputs = rowInput.querySelectorAll('input');
+  const rowInputs = document.querySelectorAll('.input-row');
+  if (rowInputs.length) {
+    rowInputs.forEach(rowInput => {
+      const inputs = rowInput.querySelectorAll('input');
 
-    inputs.forEach((input, index) => {
-      input.addEventListener('keyup', function () {
-        const value = input.value;
-        const curIndex = Number(input.dataset.index);
-        const nextIndex = curIndex + 1;
-        const prevIndex = curIndex - 1;
+      inputs.forEach((input, index) => {
+        input.addEventListener('keyup', function () {
+          const value = input.value;
+          const curIndex = Number(input.dataset.index);
+          const nextIndex = curIndex + 1;
+          const prevIndex = curIndex - 1;
 
-        if (value.length === 1 && nextIndex !== inputs.length + 1) {
-          rowInput.querySelector(`[data-index="${nextIndex}"]`).focus();
-        } else if (!value.length && prevIndex !== 0) {
-          rowInput.querySelector(`[data-index="${prevIndex}"]`).focus();
-        }
+          if (value.length === 1 && nextIndex !== inputs.length + 1) {
+            rowInput.querySelector(`[data-index="${nextIndex}"]`).focus();
+          } else if (!value.length && prevIndex !== 0) {
+            rowInput.querySelector(`[data-index="${prevIndex}"]`).focus();
+          }
+        });
       });
     });
   }
@@ -408,6 +435,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.log(target);
 
     if (window.innerWidth <= 768) {
+      // if (target.closest('.ambassadors-promo__card')) {
+      //   removeClasses(
+      //     document.querySelectorAll('.ambassadors-promo__card'),
+      //     '_active'
+      //   );
+      //   target.closest('.ambassadors-promo__card').classList.add('_active');
+      // }
       if (
         target.closest(
           '.mainpage_not-logged-in .header__menu .menu__link_profile'
@@ -508,6 +542,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    if (target.closest('[data-verify-btn]')) {
+      const parent = target.closest('[data-modal-parent]');
+      const inputs = parent.querySelectorAll('.input-row__input input');
+      const values = [];
+
+      if (inputs.length) {
+        inputs.forEach(input => {
+          if (input.value.length) values.push(input.value);
+        });
+      }
+      if (values.length < 4)
+        parent.querySelector('.input-row').classList.add('_error');
+    }
     if (target.closest('#remove-checked-items')) {
       if (
         document.querySelectorAll('.cart-item__checkbox input:checked').length
@@ -699,6 +746,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const onMouseOverHandler = e => {
     const target = e.target;
 
+    // if (window.innerWidth > 768) {
+    //   if (target.closest('.ambassadors-promo__card')) {
+    //     removeClasses(
+    //       document.querySelectorAll('.ambassadors-promo__card'),
+    //       '_active'
+    //     );
+    //     target.closest('.ambassadors-promo__card').classList.add('_active');
+    //   }
+    // }
+
     if (target.closest('.header-subnav__sublink')) {
       removeClasses(
         document.querySelectorAll('.header-subnav__sublink'),
@@ -744,6 +801,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.classList.contains('_show-catalog')
       ) {
         document.documentElement.classList.remove('_show-catalog');
+        bodyUnlock();
+      }
+      if (
+        bodyLockStatus &&
+        document.documentElement.classList.contains('_filters-visible')
+      ) {
+        document.documentElement.classList.remove('_filters-visible');
         bodyUnlock();
       }
     }

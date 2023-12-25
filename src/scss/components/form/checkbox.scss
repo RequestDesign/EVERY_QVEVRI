@@ -1,6 +1,28 @@
 .checkbox {
   position: relative;
   display: flex;
+  &_rating {
+    align-items: center;
+    column-gap: 0.8rem;
+    .checkbox__text {
+      flex: 1 1 auto;
+    }
+    &::after {
+      content: '';
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(@img/icons/star-black.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media (max-width: 48em) {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
 
   // .checkbox__input
 

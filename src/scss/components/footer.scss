@@ -252,6 +252,11 @@
   // .footer__newsletter
 
   &__newsletter {
+    @media (min-width: 48em) {
+      .form-error {
+        top: calc(100% + 2rem);
+      }
+    }
   }
 
   // .footer__text-wrap

@@ -200,6 +200,68 @@ input:disabled {
   }
 }
 
+.input-row {
+  position: relative;
+  &._error {
+    .input-row__hint {
+      display: block;
+    }
+    .input {
+      border: 1px solid $red;
+    }
+  }
+
+  // .input-row__group
+
+  &__group {
+    display: flex;
+    column-gap: 1.6rem;
+    @media (max-width: 48em) {
+      column-gap: 2.4rem;
+    }
+  }
+
+  // .input-row__hint
+
+  &__hint {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 50%;
+    display: none;
+    color: $red;
+    transform: translateX(-50%);
+    @media (max-width: 48em) {
+      top: calc(100% + 0.8rem);
+    }
+  }
+
+  .input {
+    padding: 0;
+    flex: 0 0 6rem;
+    width: 6rem;
+    height: 8rem;
+    border: 1px solid $gray;
+    transition: border 0.3s ease;
+    .input__field {
+      @extend .txt_wide;
+      height: 100%;
+      font-size: 2rem;
+      text-align: center;
+    }
+    &._form-focus {
+      border: 1px solid $black;
+    }
+    @media (max-width: 48em) {
+      flex: 0 0 10rem;
+      width: 10rem;
+      height: 12rem;
+      .input__field {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
 .text-input {
   display: flex;
   flex-direction: column;

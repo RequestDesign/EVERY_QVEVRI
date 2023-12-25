@@ -478,6 +478,9 @@
       padding-bottom: 6rem;
       row-gap: 6.4rem;
       border-bottom: 1px solid $lightGray;
+      &_rating {
+        order: 1;
+      }
       &.desktop-only {
         display: none;
       }
@@ -493,6 +496,9 @@
 
   &__options {
     margin-bottom: -0.8rem;
+    .filters__group_rating & {
+      margin-right: auto;
+    }
     @media (max-width: 48em) {
       margin-bottom: -4rem;
       .favorite-page & {
