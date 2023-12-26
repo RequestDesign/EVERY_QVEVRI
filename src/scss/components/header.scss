@@ -477,6 +477,7 @@
 
   &__list {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 2.6rem;
     @media (min-width: 48em) {
