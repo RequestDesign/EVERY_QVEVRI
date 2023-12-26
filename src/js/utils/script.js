@@ -380,25 +380,47 @@ document.addEventListener('DOMContentLoaded', function () {
     bodyUnlock();
   };
 
-  // cart
-  if (document.getElementById('check-all-items')) {
-    const checkAllChx = document.querySelector('#check-all-items input');
-
-    checkAllChx.addEventListener('change', function () {
-      const checkboxes = document.querySelectorAll(
-        '.cart-item__checkbox input'
-      );
-
-      if (checkboxes.length) {
-        checkboxes.forEach(checkbox => {
-          if (checkAllChx.checked) {
-            checkboxes.forEach(checkbox => (checkbox.checked = true));
-          } else {
-            checkboxes.forEach(checkbox => (checkbox.checked = false));
-          }
-        });
-      }
+  // cart checkboxes
+  if (
+    document.querySelectorAll('.products-cart__body .checkbox__input').length
+  ) {
+    const checkboxes = document.querySelectorAll(
+      '.cart-item__checkbox .checkbox__input'
+    );
+    const checkAllChx = document.querySelector(
+      '#check-all-items .checkbox__input'
+    );
+    const removeBtn = document.querySelector('.products-cart__remove-btn');
+    const checkAllCheckboxes = () => {
+      checkboxes.forEach(checkbox => {
+        if (checkAllChx.checked || checkAllChx.hasAttribute('checked')) {
+          checkbox.checked = true;
+          checkbox.classList.add('_checked');
+          removeBtn.removeAttribute('disabled');
+        } else {
+          checkbox.checked = false;
+          checkbox.classList.remove('_checked');
+          removeBtn.setAttribute('disabled', '');
+        }
+      });
+    };
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+          checkbox.closest('.checkbox').classList.add('_checked');
+        } else {
+          checkbox.closest('.checkbox').classList.remove('_checked');
+        }
+        if (document.querySelector('.checkbox._checked')) {
+          removeBtn.removeAttribute('disabled');
+        } else {
+          removeBtn.setAttribute('disabled', '');
+        }
+      });
     });
+    checkAllChx.addEventListener('change', checkAllCheckboxes);
+
+    checkAllCheckboxes();
   }
 
   // choose store
@@ -416,8 +438,19 @@ document.addEventListener('DOMContentLoaded', function () {
             if (target.closest('.select-store')) {
               target.closest('.select-store').classList.add('_choosen');
             }
+
             if (option.checked) {
               target.innerHTML = txt;
+              if (document.querySelector('.products-cart__btn._disabled')) {
+                document
+                  .querySelector('.products-cart__btn._disabled')
+                  .classList.remove('_disabled');
+              }
+              if (document.querySelector('.docked-info__btn._disabled')) {
+                document
+                  .querySelector('.docked-info__btn._disabled')
+                  .classList.remove('_disabled');
+              }
             }
           };
 
@@ -542,6 +575,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    if (target.closest('.promocode-order-info__clear-btn')) {
+      document.querySelector('.promocode-order-info__input input').value = '';
+    }
+    if (target.closest('.promocode-order-info__btn')) {
+      document.querySelector('.order-info__promocode').classList.add('_active');
+    }
+    if (target.closest('a._disabled')) {
+      e.preventDefault();
+    }
     if (target.closest('[data-verify-btn]')) {
       const parent = target.closest('[data-modal-parent]');
       const inputs = parent.querySelectorAll('.input-row__input input');
@@ -556,6 +598,9 @@ document.addEventListener('DOMContentLoaded', function () {
         parent.querySelector('.input-row').classList.add('_error');
     }
     if (target.closest('#remove-checked-items')) {
+      document
+        .querySelector('.products-cart__remove-btn')
+        .setAttribute('disabled', '');
       if (
         document.querySelectorAll('.cart-item__checkbox input:checked').length
       ) {
@@ -572,9 +617,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (target.closest('.cart-btn') || target.closest('.heart-btn')) {
       e.preventDefault();
       target.closest('button').classList.toggle('_active');
-    }
-    if (target.closest('.promocode-order-info__btn')) {
-      target.closest('.promocode-order-info').classList.add('_active');
     }
     if (target.closest('.test__option')) {
       if (document.querySelector('.test__btn').hasAttribute('disabled')) {

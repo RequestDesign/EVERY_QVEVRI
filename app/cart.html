@@ -32,7 +32,7 @@
 </head>
 
 <body style="opacity: 0">
-	<div class="wrapper chapter-page ">
+	<div class="wrapper chapter-page cart-page">
 		<header data-scroll="50" data-scroll-show class="chapter-header">
 			<div class="chapter-header__container container">
 				<a href="#" class="chapter-header__link arr-link"><span class="arr-link__text txt txt_md">Назад к покупкам</span></a>
@@ -69,210 +69,212 @@
 									<span class="checkbox__text txt">Выбрать все</span>
 								</label>
 							</div>
-							<button id="remove-checked-items" type="button" class="products-cart__remove-btn txt">
+							<button disabled data-modal="#deleteCartItemsModal" type="button" class="products-cart__remove-btn txt">
 								Удалить выбранные
 							</button>
 						</div>
 						<div class="products-cart__content">
-							<div class="products-cart__items">
-								<div class="products-cart__item-wrap">
-									<div class="products-cart__item cart-item">
-										<div class="cart-item__body">
-											<div class="cart-item__checkbox">
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="" name="form[]" />
-													<span class="checkbox__text txt"></span>
-												</label>
-											</div>
-											<a href="#" class="cart-item__image-wrap">
-												<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
-											</a>
-											<div class="cart-item__info">
-												<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi</a>
-												<span class="cart-item__vendor-code txt">Артикул 123456789</span>
-												<ul class="cart-item__features product-features">
-													<li class="product-features__item txt txt_16">
-														Россия
-													</li>
-													<li class="product-features__item txt txt_16">
-														Красное
-													</li>
-													<li class="product-features__item txt txt_16">
-														Сухое
-													</li>
-													<li class="product-features__item txt txt_16">
-														0.75 л
-													</li>
-												</ul>
-												<div class="cart-item__pricing">
-													<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
-														<button type="button" class="quantity__button quantity__button_minus"></button>
-														<div class="quantity__input">
-															<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
-														</div>
-														<button type="button" class="quantity__button quantity__button_plus"></button>
+							<div class="products-cart__products">
+								<div class="products-cart__items-group">
+									<div class="products-cart__items">
+										<div class="products-cart__item-wrap">
+											<div class="products-cart__item cart-item">
+												<div class="cart-item__body">
+													<div class="cart-item__checkbox">
+														<label class="checkbox">
+															<input class="checkbox__input" type="checkbox" value="" name="form[]" />
+															<span class="checkbox__text txt"></span>
+														</label>
 													</div>
-													<div class="cart-item__price-wrap">
-														<div class="cart-item__price price txt txt_wide">
-															<span class="price__value">1 200₽</span>
-															<span class="price__value price__value_old">1 700₽</span>
+													<a href="#" class="cart-item__image-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
+													</a>
+													<div class="cart-item__info">
+														<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi</a>
+														<span class="cart-item__vendor-code txt">Артикул 123456789</span>
+														<ul class="cart-item__features product-features">
+															<li class="product-features__item txt txt_16">
+																Россия
+															</li>
+															<li class="product-features__item txt txt_16">
+																Красное
+															</li>
+															<li class="product-features__item txt txt_16">
+																Сухое
+															</li>
+															<li class="product-features__item txt txt_16">
+																0.75 л
+															</li>
+														</ul>
+														<div class="cart-item__pricing">
+															<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
+																<button type="button" class="quantity__button quantity__button_minus"></button>
+																<div class="quantity__input">
+																	<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
+																</div>
+																<button type="button" class="quantity__button quantity__button_plus"></button>
+															</div>
+															<div class="cart-item__price-wrap">
+																<div class="cart-item__price price txt txt_wide">
+																	<span class="price__value">1 200₽</span>
+																	<span class="price__value price__value_old">1 700₽</span>
+																</div>
+																<div class="cart-item__coins coins">
+																	<span class="coins__value txt">16</span>
+																</div>
+															</div>
 														</div>
-														<div class="cart-item__coins coins">
-															<span class="coins__value txt">16</span>
+														<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
+															<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
+																<span class="heart-btn__text txt">В избранное</span>
+																<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
+																</svg>
+															</button>
+															<button type="button" class="cart-item__remove-btn txt">
+																<span class="cart-item__remove-btn-txt">Удалить</span>
+															</button>
 														</div>
 													</div>
 												</div>
-												<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
-													<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
-														<span class="heart-btn__text txt">В избранное</span>
-														<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
-														</svg>
-													</button>
-													<button type="button" class="cart-item__remove-btn txt">
-														<span class="cart-item__remove-btn-txt">Удалить</span>
-													</button>
-												</div>
+												<div class="cart-item__footer mobile-only"></div>
 											</div>
+											<button type="button" class="products-cart__remove-item-btn remove-item-btn">
+												<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
+											</button>
 										</div>
-										<div class="cart-item__footer mobile-only"></div>
-									</div>
-									<button type="button" class="products-cart__remove-item-btn remove-item-btn">
-										<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
-									</button>
-								</div>
-								<div class="products-cart__item-wrap">
-									<div class="products-cart__item cart-item">
-										<div class="cart-item__body">
-											<div class="cart-item__checkbox">
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="" name="form[]" />
-													<span class="checkbox__text txt"></span>
-												</label>
-											</div>
-											<a href="#" class="cart-item__image-wrap">
-												<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
-											</a>
-											<div class="cart-item__info">
-												<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi Saperavi Binekhi</a>
-												<span class="cart-item__vendor-code txt">Артикул 123456789</span>
-												<ul class="cart-item__features product-features">
-													<li class="product-features__item txt txt_16">
-														Россия
-													</li>
-													<li class="product-features__item txt txt_16">
-														Красное
-													</li>
-													<li class="product-features__item txt txt_16">
-														Сухое
-													</li>
-													<li class="product-features__item txt txt_16">
-														0.75 л
-													</li>
-												</ul>
-												<div class="cart-item__pricing">
-													<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
-														<button type="button" class="quantity__button quantity__button_minus"></button>
-														<div class="quantity__input">
-															<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
-														</div>
-														<button type="button" class="quantity__button quantity__button_plus"></button>
+										<div class="products-cart__item-wrap">
+											<div class="products-cart__item cart-item">
+												<div class="cart-item__body">
+													<div class="cart-item__checkbox">
+														<label class="checkbox">
+															<input class="checkbox__input" type="checkbox" value="" name="form[]" />
+															<span class="checkbox__text txt"></span>
+														</label>
 													</div>
-													<div class="cart-item__price-wrap">
-														<div class="cart-item__price price txt txt_wide">
-															<span class="price__value">1 200₽</span>
+													<a href="#" class="cart-item__image-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
+													</a>
+													<div class="cart-item__info">
+														<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi Saperavi Binekhi</a>
+														<span class="cart-item__vendor-code txt">Артикул 123456789</span>
+														<ul class="cart-item__features product-features">
+															<li class="product-features__item txt txt_16">
+																Россия
+															</li>
+															<li class="product-features__item txt txt_16">
+																Красное
+															</li>
+															<li class="product-features__item txt txt_16">
+																Сухое
+															</li>
+															<li class="product-features__item txt txt_16">
+																0.75 л
+															</li>
+														</ul>
+														<div class="cart-item__pricing">
+															<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
+																<button type="button" class="quantity__button quantity__button_minus"></button>
+																<div class="quantity__input">
+																	<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
+																</div>
+																<button type="button" class="quantity__button quantity__button_plus"></button>
+															</div>
+															<div class="cart-item__price-wrap">
+																<div class="cart-item__price price txt txt_wide">
+																	<span class="price__value">1 200₽</span>
+																</div>
+																<div class="cart-item__coins coins">
+																	<span class="coins__value txt">16</span>
+																</div>
+															</div>
 														</div>
-														<div class="cart-item__coins coins">
-															<span class="coins__value txt">16</span>
+														<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
+															<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
+																<span class="heart-btn__text txt">В избранное</span>
+																<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
+																</svg>
+															</button>
+															<button type="button" class="cart-item__remove-btn txt">
+																<span class="cart-item__remove-btn-txt">Удалить</span>
+															</button>
 														</div>
 													</div>
 												</div>
-												<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
-													<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
-														<span class="heart-btn__text txt">В избранное</span>
-														<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
-														</svg>
-													</button>
-													<button type="button" class="cart-item__remove-btn txt">
-														<span class="cart-item__remove-btn-txt">Удалить</span>
-													</button>
-												</div>
+												<div class="cart-item__footer mobile-only"></div>
 											</div>
+											<button type="button" class="products-cart__remove-item-btn remove-item-btn">
+												<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
+											</button>
 										</div>
-										<div class="cart-item__footer mobile-only"></div>
-									</div>
-									<button type="button" class="products-cart__remove-item-btn remove-item-btn">
-										<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
-									</button>
-
-								</div>
-								<div class="products-cart__item-wrap">
-									<div class="products-cart__item cart-item">
-										<div class="cart-item__body">
-											<div class="cart-item__checkbox">
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="" name="form[]" />
-													<span class="checkbox__text txt"></span>
-												</label>
-											</div>
-											<a href="#" class="cart-item__image-wrap">
-												<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
-											</a>
-											<div class="cart-item__info">
-												<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi</a>
-												<span class="cart-item__vendor-code txt">Артикул 123456789</span>
-												<ul class="cart-item__features product-features">
-													<li class="product-features__item txt txt_16">
-														Россия
-													</li>
-													<li class="product-features__item txt txt_16">
-														Красное
-													</li>
-													<li class="product-features__item txt txt_16">
-														Сухое
-													</li>
-													<li class="product-features__item txt txt_16">
-														0.75 л
-													</li>
-												</ul>
-												<div class="cart-item__pricing">
-													<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
-														<button type="button" class="quantity__button quantity__button_minus"></button>
-														<div class="quantity__input">
-															<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
-														</div>
-														<button type="button" class="quantity__button quantity__button_plus"></button>
+										<div class="products-cart__item-wrap">
+											<div class="products-cart__item cart-item">
+												<div class="cart-item__body">
+													<div class="cart-item__checkbox">
+														<label class="checkbox">
+															<input class="checkbox__input" type="checkbox" value="" name="form[]" />
+															<span class="checkbox__text txt"></span>
+														</label>
 													</div>
-													<div class="cart-item__price-wrap">
-														<div class="cart-item__price price txt txt_wide">
-															<span class="price__value">1 200₽</span>
-															<span class="price__value price__value_old">1 700₽</span>
+													<a href="#" class="cart-item__image-wrap">
+														<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="cart-item__image" />
+													</a>
+													<div class="cart-item__info">
+														<a href="#" class="cart-item__heading tl2">Вино Saperavi Binekhi</a>
+														<span class="cart-item__vendor-code txt">Артикул 123456789</span>
+														<ul class="cart-item__features product-features">
+															<li class="product-features__item txt txt_16">
+																Россия
+															</li>
+															<li class="product-features__item txt txt_16">
+																Красное
+															</li>
+															<li class="product-features__item txt txt_16">
+																Сухое
+															</li>
+															<li class="product-features__item txt txt_16">
+																0.75 л
+															</li>
+														</ul>
+														<div class="cart-item__pricing">
+															<div data-dom-replace=".cart-item__pricing,.cart-item__actions,.cart-item" class="cart-item__quantity quantity">
+																<button type="button" class="quantity__button quantity__button_minus"></button>
+																<div class="quantity__input">
+																	<input type="number" autocomplete="off" type="text" name="form[]" value="1" />
+																</div>
+																<button type="button" class="quantity__button quantity__button_plus"></button>
+															</div>
+															<div class="cart-item__price-wrap">
+																<div class="cart-item__price price txt txt_wide">
+																	<span class="price__value">1 200₽</span>
+																	<span class="price__value price__value_old">1 700₽</span>
+																</div>
+																<div class="cart-item__coins coins">
+																	<span class="coins__value txt">16</span>
+																</div>
+															</div>
 														</div>
-														<div class="cart-item__coins coins">
-															<span class="coins__value txt">16</span>
+														<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
+															<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
+																<span class="heart-btn__text txt">В избранное</span>
+																<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
+																</svg>
+															</button>
+															<button type="button" class="cart-item__remove-btn txt">
+																<span class="cart-item__remove-btn-txt">Удалить</span>
+															</button>
 														</div>
 													</div>
 												</div>
-												<div data-dom-replace=".cart-item__info,.cart-item__footer,.cart-item" class="cart-item__actions">
-													<button type="button" class="cart-item__heart-btn heart-btn heart-btn_has-text">
-														<span class="heart-btn__text txt">В избранное</span>
-														<svg class="heart-btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M16.744 25.8938C16.336 26.0354 15.664 26.0354 15.256 25.8938C11.776 24.7258 4 19.8534 4 11.5949C4 7.94944 6.988 5 10.672 5C12.856 5 14.788 6.95125 16 8.55574C17.212 6.95125 19.156 5 21.328 5C25.012 5 28 7.94944 28 11.5949C28 19.8534 20.224 24.7258 16.744 25.8938Z" fill="#E9E8E8" />
-														</svg>
-													</button>
-													<button type="button" class="cart-item__remove-btn txt">
-														<span class="cart-item__remove-btn-txt">Удалить</span>
-													</button>
-												</div>
+												<div class="cart-item__footer mobile-only"></div>
 											</div>
+											<button type="button" class="products-cart__remove-item-btn remove-item-btn">
+												<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
+											</button>
 										</div>
-										<div class="cart-item__footer mobile-only"></div>
 									</div>
-									<button type="button" class="products-cart__remove-item-btn remove-item-btn">
-										<div class="remove-item-btn__icon-wrap"><img src="img/icons/cart-white.svg" alt="" class="remove-item-btn__icon"></div>
-									</button>
-
 								</div>
 							</div>
 							<div class="products-cart__aside-content">
@@ -280,8 +282,7 @@
 									<div class="points-banner__text-content">
 										<span class="points-banner__subtitle caps caps_md">Начислим баллы</span>
 										<p class="points-banner__text txt txt_16">
-											Чтобы получить бонусы, войдите или зарегистрируйтесь на
-											сайте
+											Бонусы будут зачислены после совершения покупки
 										</p>
 									</div>
 									<div class="points-banner__coins coins coins_white">
@@ -336,6 +337,8 @@
 											<div class="promocode-order-info__input-wrap">
 												<div class="promocode-order-info__input input">
 													<input autocomplete="off" type="text" name="form[]" data-error placeholder="Промокод" class="input__field" />
+													<button type="button" class="promocode-order-info__hide-btn"><img src="img/icons/cross-gray.svg" alt="" class="promocode-order-info__hide-btn-icon"></button>
+
 												</div>
 												<span class="promocode-order-info__hint txt txt_16">Можно применить только один промокод</span>
 											</div>
@@ -354,7 +357,7 @@
 												<path d="M3.0148 7.07484C4.65646 -0.141827 15.3481 -0.133494 16.9815 7.08317C17.9398 11.3165 15.3065 14.8998 12.9981 17.1165C11.3231 18.7332 8.67313 18.7332 6.9898 17.1165C4.6898 14.8998 2.05646 11.3082 3.0148 7.07484Z" stroke="#303033" stroke-width="2" />
 											</svg>
 										</div>
-										<span id="choosen-store" class="btn__text caps">Выбрать магазин</span>
+										<span id="choosen-store" class="btn__text caps">г. Москва, б-р Смоленский, д. 7/9</span>
 									</button>
 								</div>
 								<p class="products-cart__policy-txt txt txt_14">
@@ -762,6 +765,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -817,6 +821,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -872,6 +877,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -927,6 +933,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -982,6 +989,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -1037,6 +1045,7 @@
 														<span class="badge__text txt txt_16">Эксклюзив</span>
 													</div>
 												</div>
+												<div class="menu-product-card__organic organic"></div>
 											</div>
 											<button type="button" class="menu-product-card__heart-btn heart-btn">
 												<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -2241,6 +2250,52 @@
 							<div class="account-modal__image-wrap">
 								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- удалить товары -->
+		<div id="deleteCartItemsModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_delete-cart-items">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">удалить товары</span>
+							<p class="txt-info-modal__text txt">
+								Вы точно хотите удалить выбранные товары? Отменить данное действие
+								будет невозможно.
+							</p>
+							<button id="remove-checked-items" data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Удалить</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- товар закончился -->
+		<div id="unavailableCartItemModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_unavailable-cart-item">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">упс, товар уже закончился</span>
+							<p class="txt-info-modal__text txt">
+								Часть товаров уже нет в наличии. Вы можете добавить их в избранное и
+								приобрести, когда они снова будут в продаже.
+							</p>
+							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Добавить в избранное</span>
+							</button>
 						</div>
 					</div>
 				</div>

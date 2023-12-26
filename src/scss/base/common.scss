@@ -2176,6 +2176,13 @@
 
   &__link {
     margin-right: auto;
+
+    &[disabled] {
+      .btn__text {
+        color: $gray;
+        border-bottom: 1px solid $gray;
+      }
+    }
     @media (max-width: 48em) {
       margin-bottom: 2.4rem;
     }
@@ -2547,9 +2554,19 @@
   // .promocode-order-info__input
 
   &__input {
+    position: relative;
     margin-bottom: 0.2rem;
+    ._error & {
+      border-bottom: 1px solid $red;
+    }
+    input {
+      padding-right: 2rem;
+    }
     @media (max-width: 48em) {
       margin-bottom: 2rem;
+      input {
+        padding-right: 4rem;
+      }
     }
   }
 
@@ -2557,6 +2574,31 @@
 
   &__hint {
     color: $gray;
+    ._error & {
+      color: $red;
+    }
+  }
+
+  // .promocode-order-info__clear-btn
+
+  &__clear-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    @media (max-width: 48em) {
+      top: 1rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  // .promocode-order-info__clear-btn-icon
+
+  &__clear-btn-icon {
+    height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -2569,10 +2611,41 @@
     padding: 4rem;
   }
 
+  // .choose-store-banner__store
+
+  &__store {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    &::before {
+      content: '';
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(@img/icons/loc.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+      &::before {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
   // .choose-store-banner__btn
 
   &__btn {
     margin-right: auto;
+    .btn__text {
+      @media (max-width: 48em) {
+        font-size: 2.3rem;
+      }
+    }
   }
 }
 

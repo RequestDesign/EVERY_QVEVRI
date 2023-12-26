@@ -5331,6 +5331,52 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- удалить товары -->
+		<div id="deleteCartItemsModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_delete-cart-items">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">удалить товары</span>
+							<p class="txt-info-modal__text txt">
+								Вы точно хотите удалить выбранные товары? Отменить данное действие
+								будет невозможно.
+							</p>
+							<button id="remove-checked-items" data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Удалить</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- товар закончился -->
+		<div id="unavailableCartItemModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_unavailable-cart-item">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">упс, товар уже закончился</span>
+							<p class="txt-info-modal__text txt">
+								Часть товаров уже нет в наличии. Вы можете добавить их в избранное и
+								приобрести, когда они снова будут в продаже.
+							</p>
+							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Добавить в избранное</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div style="height: 0; position: absolute">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
 				<clipPath id="clip-img-mobile">
