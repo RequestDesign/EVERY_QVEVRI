@@ -231,6 +231,7 @@ body::after {
   &__buttons {
     display: flex;
     column-gap: 0.8rem;
+    width: 100%;
     .txt-info-modal__btn {
       flex: 0 0 50%;
     }
@@ -295,6 +296,9 @@ body::after {
       .txt-info-modal_points-pay & {
         max-width: 60rem;
       }
+      .txt-info-modal_confirm-email & {
+        max-width: 65rem;
+      }
     }
   }
 
@@ -302,6 +306,27 @@ body::after {
 
   &__btn {
     width: 100%;
+    .txt-info-modal_confirm-email & {
+      span {
+        display: inline-block;
+        @media (max-width: 48em) {
+          font-size: 2.7rem;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    ._init-countdown & {
+      .txt-info-modal_confirm-email & {
+        span {
+          display: none;
+          &:last-child {
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 
   // .txt-info-modal__list
@@ -361,7 +386,7 @@ body::after {
 
 .account-modal,
 .verify-code-modal,
-.no-message-modal {
+.info-modal {
   @media (max-width: 48em) {
     padding: 0;
     .modal__content {
@@ -791,7 +816,7 @@ body::after {
 
 // --------------------------------------------------------------------------
 
-.no-message-modal {
+.info-modal {
   &.modal {
     .modal__content {
       padding: 6.4rem 2.4rem;
@@ -808,19 +833,19 @@ body::after {
     }
   }
 
-  // .no-message-modal_phone-number
+  // .info-modal_phone-number
 
   &_phone-number {
   }
 
-  // .no-message-modal__inner
+  // .info-modal__inner
 
   &__inner {
     display: flex;
     flex-direction: column;
   }
 
-  // .no-message-modal__title
+  // .info-modal__title
 
   &__title {
     margin-bottom: 5.6rem;
@@ -829,7 +854,7 @@ body::after {
     }
   }
 
-  // .no-message-modal__head-text
+  // .info-modal__head-text
 
   &__head-text {
     margin-bottom: 2.4rem;
@@ -839,7 +864,7 @@ body::after {
     }
   }
 
-  // .no-message-modal__list
+  // .info-modal__list
 
   &__list {
     padding-left: 2rem;
@@ -855,30 +880,30 @@ body::after {
     }
   }
 
-  // .no-message-modal__list-item
+  // .info-modal__list-item
 
   &__list-item {
     list-style: decimal;
   }
 
-  // .no-message-modal__list-text
+  // .info-modal__list-text
 
   &__list-text {
   }
 
-  // .no-message-modal__list-subtitle
+  // .info-modal__list-subtitle
 
   &__list-subtitle {
   }
 
-  // .no-message-modal__link
+  // .info-modal__link
 
   &__link {
     color: $red;
     text-decoration: underline $red;
   }
 
-  // .no-message-modal__text
+  // .info-modal__text
 
   &__text {
   }

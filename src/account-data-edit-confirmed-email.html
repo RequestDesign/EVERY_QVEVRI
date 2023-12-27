@@ -237,7 +237,7 @@
                           <div class="form-personal-data-account__fields">
                             <div class="form-personal-data-account__field">
                               <div
-                                class="form-personal-data-account__input input input_edit">
+                                class="form-personal-data-account__input input _verified">
                                 <input
                                   disabled
                                   data-validate
@@ -250,36 +250,6 @@
                                   data-error="Обязательное поле"
                                   placeholder="E-mail"
                                   class="input__field" />
-                              </div>
-                              <div
-                                class="group-personal-data-account__hint hint hint_has-heading">
-                                <div class="hint__heading">
-                                  <span class="hint__heading-txt txt txt_16"
-                                    >Требует подтверждения</span
-                                  >
-                                  <button type="button" class="hint__icon-wrap">
-                                    <img
-                                      src="img/icons/hint-red.svg"
-                                      alt=""
-                                      class="hint__icon" />
-                                  </button>
-                                </div>
-                                <div class="hint__body">
-                                  <p class="hint__text txt txt_16">
-                                    Письмо с подтверждением было отправлено на
-                                    данную почту
-                                  </p>
-                                  <div class="hint__countdown txt txt_md">
-                                    Отправить повторно через
-                                    <span data-countdown="1">01:00</span>
-                                  </div>
-                                  <button
-                                    data-start-countdown-btn
-                                    type="button"
-                                    class="hint__btn txt txt_md">
-                                    Отправить повторно
-                                  </button>
-                                </div>
                               </div>
                             </div>
                             <div class="form-personal-data-account__field">
@@ -298,6 +268,75 @@
                                   placeholder="Телефон"
                                   class="input__field" />
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="user-passwords"
+                          class="form-personal-data-account__group form-personal-data-account__group_pass">
+                          <span
+                            class="form-personal-data-account__heading subtitle"
+                            >Смена пароля</span
+                          >
+                          <div class="form-personal-data-account__fields">
+                            <div
+                              class="form-personal-data-account__input input">
+                              <input
+                                id="old-pass"
+                                data-static
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="password"
+                                name="form[]"
+                                data-error="Неверный пароль"
+                                placeholder="Введите старый пароль"
+                                class="input__field" />
+                            </div>
+                            <div
+                              class="form-personal-data-account__input input input_has-hint">
+                              <input
+                                id="new-pass"
+                                data-static
+                                data-validate
+                                data-required="pass"
+                                autocomplete="off"
+                                name="form[]"
+                                disabled
+                                placeholder="Новый пароль"
+                                class="input__field" />
+
+                              <button
+                                data-modal="#passRequireModal"
+                                type="button"
+                                class="input__hint hint hint_has-heading">
+                                <div class="hint__heading">
+                                  <span class="hint__heading-txt txt txt_16"
+                                    >Слабый пароль</span
+                                  >
+                                  <div class="hint__icon-wrap">
+                                    <img
+                                      src="img/icons/hint-red.svg"
+                                      alt=""
+                                      class="hint__icon" />
+                                  </div>
+                                </div>
+                              </button>
+                            </div>
+                            <div
+                              class="form-personal-data-account__input input">
+                              <input
+                                id="repeat-pass"
+                                data-validate
+                                data-static
+                                data-required
+                                disabled
+                                autocomplete="off"
+                                type="password"
+                                name="form[]"
+                                data-error="Неверный пароль"
+                                placeholder="Повторите пароль"
+                                class="input__field" />
                             </div>
                           </div>
                         </div>

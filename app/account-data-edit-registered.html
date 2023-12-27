@@ -3880,9 +3880,9 @@
 												<div class="personal-data-account__user-avatar user-avatar">
 													<label class="user-avatar__inner">
 														<input type="file" class="user-avatar__input" />
-														<div class="user-avatar__wrap">
+														<div data-modal="#uploadAvatarModal" class="user-avatar__wrap">
 															<div class="user-avatar__image-wrap">
-																<img src="img/icons/avatar.svg" alt="" class="user-avatar__image" />
+																<img data-src="img/icons/avatar.svg" src="img/icons/avatar.svg" alt="" class="user-avatar__image" />
 															</div>
 															<div class="user-avatar__caption">
 																<img src="img/icons/avatar-upload.svg" alt="" class="user-avatar__caption-icon" />
@@ -3901,18 +3901,17 @@
 																	</button>
 																</li>
 																<li class="user-avatar__dropdown-item">
-																	<button type="button" class="user-avatar__dropdown-item-content txt txt_red">
+																	<button data-remove-avatar-btn type="button" class="user-avatar__dropdown-item-content txt txt_red">
 																		Удалить фото
 																	</button>
 																</li>
 															</ul>
 														</div>
-														<button type="button" class="user-avatar__close-btn">
-															<img src="img/icons/cross-white.svg" alt="" class="user-avatar__close-btn-icon" />
-														</button>
+														<button data-remove-avatar-btn type="button" class="user-avatar__i"></button>
 													</label>
 												</div>
 												<div class="personal-data-account__head-info">
+													<span class="personal-data-account__error-message txt txt_16">Размер фотографии превышает 500 Кбайт</span>
 													<span class="personal-data-account__heading tl2">id_111111</span>
 													<p data-da=".form-personal-data-account__head,768,last" class="personal-data-account__head-text txt txt_16">
 														Загрузите фото и получите
@@ -3927,16 +3926,16 @@
 												<span class="form-personal-data-account__heading subtitle">Личные данные</span>
 												<div class="form-personal-data-account__fields">
 													<div class="form-personal-data-account__input input input_required">
-														<input data-required data-validate="letters-only" value="Константинопольский" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Фамилия" class="input__field" />
+														<input data-required data-validate="letters-only" value="Константинопольский" autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="Фамилия" class="input__field" />
 													</div>
 													<div class="form-personal-data-account__input input input_date input_required">
-														<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата рождения" maxlength="10" class="input__field" />
+														<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="Дата рождения" maxlength="10" class="input__field" />
 														<button data-dp-btn type="button" class="input__calendar-btn">
 															<img src="img/icons/calendar.svg" alt="" class="input__calendar-btn-icon" />
 														</button>
 													</div>
 													<div class="form-personal-data-account__input input input_required">
-														<input data-required data-validate="letters-only" value="Константин" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Имя" class="input__field" />
+														<input data-required data-validate="letters-only" value="Константин" autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="Имя" class="input__field" />
 													</div>
 													<div class="form-personal-data-account__options">
 														<label class="form-personal-data-account__option option option_reversed">
@@ -3949,7 +3948,7 @@
 														</label>
 													</div>
 													<div class="form-personal-data-account__input input">
-														<input data-validate="letters-only" autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field" />
+														<input data-static data-validate="letters-only" autocomplete="off" type="text" name="form[]" data-error placeholder="Отчество" class="input__field" />
 													</div>
 												</div>
 											</div>
@@ -3958,37 +3957,13 @@
 												<div class="form-personal-data-account__fields">
 													<div class="form-personal-data-account__field">
 														<div class="form-personal-data-account__input input input_required">
-															<input autocomplete="off" type="email" name="form[]" data-error placeholder="E-mail" class="input__field" />
+															<input data-validate data-required autocomplete="off" type="email" name="form[]" data-error="Обязательное поле" placeholder="E-mail" class="input__field" />
 														</div>
 													</div>
 													<div class="form-personal-data-account__field">
-														<div class="form-personal-data-account__input input input_edit">
-															<input disabled data-value="+7 (999) 999 99-99" value="+7 (999) 999 99-99" autocomplete="off" type="tel" name="form[]" data-error placeholder="Телефон" class="input__field" />
-															<button data-modal="#updatePhoneNumberModal" type="button" class="input__edit-btn">
-																<svg class="input__edit-btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M11.0475 3.00002L4.20585 10.2417C3.94752 10.5167 3.69752 11.0584 3.64752 11.4334L3.33918 14.1333C3.23085 15.1083 3.93085 15.775 4.89752 15.6084L7.58085 15.15C7.95585 15.0834 8.48085 14.8084 8.73918 14.525L15.5809 7.28335C16.7642 6.03335 17.2975 4.60835 15.4558 2.86668C13.6225 1.14168 12.2308 1.75002 11.0475 3.00002Z" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-																	<path d="M9.90625 4.20801C10.2646 6.50801 12.1312 8.26634 14.4479 8.49967" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-																	<path d="M2.5 18.333H17.5" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</button>
+														<div class="form-personal-data-account__input input _verified">
+															<input disabled data-validate data-required data-value="+7 (999) 999 99-99" value="+7 (999) 999 99-99" autocomplete="off" type="tel" name="form[]" data-error="Обязательное поле" placeholder="Телефон" class="input__field" />
 														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-personal-data-account__group form-personal-data-account__group_pass">
-												<span class="form-personal-data-account__heading subtitle">Смена пароля</span>
-												<p class="form-personal-data-account__text txt">
-													Чтобы получить пароль, подтвердите E-mail
-												</p>
-												<div class="form-personal-data-account__fields">
-													<div class="form-personal-data-account__input input">
-														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Введите пароль" class="input__field" />
-													</div>
-													<div class="form-personal-data-account__input input">
-														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Новый пароль" class="input__field" />
-													</div>
-													<div class="form-personal-data-account__input input">
-														<input autocomplete="off" type="password" name="form[]" data-error placeholder="Повторите пароль" class="input__field" />
 													</div>
 												</div>
 											</div>
@@ -4014,7 +3989,7 @@
 											</button>
 										</div>
 										<div class="status-banner__track">
-											<span data-cash-sum="1200" class="status-banner__current-value txt txt_wide"></span>
+											<span data-cash-sum="0" class="status-banner__current-value txt txt_wide"></span>
 											<div class="status-banner__track-image-wrap">
 												<div class="status-banner__track-image"></div>
 												<div class="status-banner__clip-path-container">
@@ -4029,7 +4004,7 @@
 									</a>
 									<a href="#" class="personal-data-account__coins-history-banner coins-history-banner">
 										<div class="coins-history-banner__text-content">
-											<span class="coins-history-banner__heading tl2">1200</span>
+											<span class="coins-history-banner__heading tl2">0</span>
 											<span class="coins-history-banner__text txt txt_16">Баллов на счёте</span>
 										</div>
 										<button type="button" class="coins-history-banner__link btn btn_icon">
@@ -4568,52 +4543,52 @@
 		</div>
 
 		<!-- не приходит смс -->
-		<div id="noPhoneMessageModal" aria-hidden="true" class="modal modal_fs no-message-modal no-message-modal_phone-number">
+		<div id="noPhoneMessageModal" aria-hidden="true" class="modal modal_fs info-modal info-modal_phone-number">
 			<div class="modal__wrapper">
 				<div class="modal__content">
-					<button data-da=".no-message-modal_phone-number .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
+					<button data-da=".info-modal_phone-number .info-modal__inner,768,first" data-close type="button" class="modal__close">
 						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
 					</button>
 					<div class="modal__body">
-						<div class="no-message-modal__inner">
-							<span class="no-message-modal__title tl2">Не поступает SMS с кодом</span>
-							<p class="no-message-modal__head-text txt">
+						<div class="info-modal__inner">
+							<span class="info-modal__title tl2">Не поступает SMS с кодом</span>
+							<p class="info-modal__head-text txt">
 								Если вы столкнулись с проблемой неполучения SMS-кода, есть несколько
 								шагов, которые можно предпринять:
 							</p>
-							<ul class="no-message-modal__list">
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Проверьте правильность номера телефона.</span>
+							<ul class="info-modal__list">
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Проверьте правильность номера телефона.</span>
 										Убедитесь, что вы указали правильный номер телефона в настройках
 										вашего профиля.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Проверьте соединение с сетью.</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Проверьте соединение с сетью.</span>
 										Убедитесь, что у вас хорошее соединение с мобильной сетью, так
 										как плохая связь может привести к задержкам в доставке SMS.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
 										Иногда SMS-коды могут попадать в папку со спамом. Пожалуйста,
 										проверьте эту папку в вашем мобильном устройстве.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Попробуйте еще раз.</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Попробуйте еще раз.</span>
 										В случае отсутствия SMS-кода,
-										<a href="#" class="no-message-modal__link">попробуйте запросить его повторно</a>.
+										<a href="#" class="info-modal__link">попробуйте запросить его повторно</a>.
 									</span>
 								</li>
 							</ul>
-							<p class="no-message-modal__text txt">
+							<p class="info-modal__text txt">
 								Если проблема сохраняется, свяжитесь с нашей
-								<a href="#" class="no-message-modal__link">службой поддержки</a>, и
+								<a href="#" class="info-modal__link">службой поддержки</a>, и
 								мы постараемся помочь вам как можно быстрее.
 							</p>
 						</div>
@@ -4623,52 +4598,52 @@
 		</div>
 
 		<!-- не приходит письмо -->
-		<div id="noEmailMessageModal" aria-hidden="true" class="modal modal_fs no-message-modal no-message-modal_email">
+		<div id="noEmailMessageModal" aria-hidden="true" class="modal modal_fs info-modal info-modal_email">
 			<div class="modal__wrapper">
 				<div class="modal__content">
-					<button data-da=".no-message-modal_email .no-message-modal__inner,768,first" data-close type="button" class="modal__close">
+					<button data-da=".info-modal_email .info-modal__inner,768,first" data-close type="button" class="modal__close">
 						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
 					</button>
 					<div class="modal__body">
-						<div class="no-message-modal__inner">
-							<span class="no-message-modal__title tl2">Не поступает письмо с кодом</span>
-							<p class="no-message-modal__head-text txt">
+						<div class="info-modal__inner">
+							<span class="info-modal__title tl2">Не поступает письмо с кодом</span>
+							<p class="info-modal__head-text txt">
 								Если вы не получили письмо с кодом на ваш адрес электронной почты,
 								рекомендуем выполнить следующие шаги:
 							</p>
-							<ul class="no-message-modal__list">
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
+							<ul class="info-modal__list">
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Проверьте папку «Спам»</span>
 										Иногда письма могут попадать в папку со спамом. Пожалуйста,
 										проверьте эту папку в вашем почтовом ящике.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Проверьте правильность адреса.</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Проверьте правильность адреса.</span>
 										Убедитесь, что вы ввели правильный адрес электронной почты при
 										регистрации или оформлении заказа.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Повторите запрос.</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Повторите запрос.</span>
 										Если письмо не поступило,
-										<span class="no-message-modal__link">попробуйте повторно запросить код</span>.
+										<span class="info-modal__link">попробуйте повторно запросить код</span>.
 									</span>
 								</li>
-								<li class="no-message-modal__list-item txt">
-									<span class="no-message-modal__list-text">
-										<span class="no-message-modal__list-subtitle txt_md">Белый список.</span>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Белый список.</span>
 										Добавьте наш адрес электронной почты в белый список вашего
 										почтового клиента, чтобы гарантировать доставку.
 									</span>
 								</li>
 							</ul>
-							<p class="no-message-modal__text txt">
+							<p class="info-modal__text txt">
 								Если проблема сохраняется, свяжитесь с нашей
-								<a href="#" class="no-message-modal__link">службой поддержки</a>, и
+								<a href="#" class="info-modal__link">службой поддержки</a>, и
 								мы постараемся помочь вам как можно быстрее.
 							</p>
 						</div>
@@ -5218,6 +5193,144 @@
 							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
 								<span class="btn__text txt txt_md">Добавить в избранное</span>
 							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- загрузить фото -->
+		<div id="uploadAvatarModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_upload-avatar">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">загрузка фотографии</span>
+							<p class="txt-info-modal__text txt">
+								Загрузите фото и получите
+								<span class="bold">100</span> приветственных баллов. Вы можете
+								загрузить изображение в формате JPG и PNG размером до 500 Кбайт.
+							</p>
+							<button data-upload-avatar-btn data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Выбрать файл</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- подвтердить почту -->
+		<div id="confirmEmailModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_confirm-email">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Подтвердите почту</span>
+							<p class="txt-info-modal__text txt">
+								Письмо с подтверждением было отправлено на почту:
+								constantinopolitan.konstantin@gmail.com
+							</p>
+							<button data-start-countdown-btn type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Отправить повторно</span>
+								<span class="btn__text txt txt_md">Отправить повторно через
+									<span data-countdown="0.2">01:00</span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- пароль обновлён -->
+		<div id="updatedPassModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_updated-pass">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Пароль успешно обновлен</span>
+							<p class="txt-info-modal__text txt">
+								Ваш аккаунт теперь защищен надежным паролем.
+							</p>
+							<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Продолжить</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- требования к паролю -->
+		<div id="passRequireModal" aria-hidden="true" class="modal modal_fs info-modal info-modal_pass-require">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-da=".info-modal_pass-require .info-modal__inner,768,first" data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="info-modal__inner">
+							<span class="info-modal__title tl2">Требования к паролю</span>
+							<ul class="info-modal__list">
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Длина пароля.</span>
+										Пароль должен содержать не менее 6 символов.
+									</span>
+								</li>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Буквы верхнего и нижнего регистра.</span>
+										Пароль должен включать хотя бы одну букву верхнего регистра (A-Z) и хотя бы одну букву нижнего регистра (a-z).
+									</span>
+								</li>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Цифры.</span>
+										Пароль должен содержать хотя бы одну цифру (0-9).
+									</span>
+								</li>
+								<li class="info-modal__list-item txt">
+									<span class="info-modal__list-text">
+										<span class="info-modal__list-subtitle txt_md">Специальные символы. </span>В пароле должен присутствовать хотя бы один специальный символ (!, @, #, $ и так далее).
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- покинуть страницу -->
+		<div id="leavePageModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_leave-page">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Вы уверены, что хотите выйти?</span>
+							<p class="txt-info-modal__text txt">
+								Внесенные изменения не будут сохранены. Вы действительно хотите покинуть страницу?
+							</p>
+							<div class="txt-info-modal__buttons">
+								<button type="button" class="txt-info-modal__btn btn btn_solid">
+									<span class="btn__text txt txt_md">Выйти</span>
+								</button>
+								<button data-close type="button" class="txt-info-modal__btn btn btn_ol">
+									<span class="btn__text txt txt_md">Отмена</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

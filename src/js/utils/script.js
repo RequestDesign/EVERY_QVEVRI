@@ -16,6 +16,102 @@ import { formValidate } from './form/form.js';
 // --------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
+  // user pass fields
+  if (
+    document.querySelectorAll(
+      '.form-personal-data-account__group_pass .input__field'
+    ).length
+  ) {
+    document
+      .querySelectorAll('.form-personal-data-account__group_pass .input__field')
+      .forEach(inp => {
+        inp.addEventListener('input', function () {
+          inp.value = inp.value.replace(' ', '');
+        });
+      });
+  }
+
+  // timer
+  const initTimer = (el, minutes, btn) => {
+    const elTxt = el.innerHTML;
+
+    let timeInSecs;
+    let ticker;
+
+    function tick() {
+      let secs = timeInSecs;
+      if (secs > 0) {
+        timeInSecs--;
+      } else {
+        clearInterval(ticker);
+        btn.removeAttribute('disabled');
+        setTimeout(() => {
+          el.innerHTML = elTxt;
+        }, 0);
+        if (el.closest('._init-countdown')) {
+          el.closest('._init-countdown').classList.remove('_init-countdown');
+        }
+        // startTimer(Number(minutes) * 60);
+      }
+
+      const mins = Math.floor(secs / 60);
+      secs %= 60;
+      const pretty =
+        (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+
+      el.innerHTML = pretty;
+    }
+    function startTimer(secs) {
+      timeInSecs = parseInt(secs);
+      ticker = setInterval(tick, 1000);
+    }
+    startTimer(Number(minutes) * 60);
+  };
+
+  // user avatar
+  if (document.querySelector('.user-avatar__input')) {
+    const parent = document.querySelector('.personal-data-account__head-inner');
+    const image = document.querySelector('.user-avatar__image');
+    const inp = document.querySelector('.user-avatar__input');
+
+    const readURL = input => {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const size = Math.round(input.files[0].size / 1000);
+          input.value = '';
+
+          // check size
+          if (size > 500) {
+            parent.classList.add('_error');
+          } else if (size <= 500) {
+            image.src = e.target.result;
+            parent.classList.remove('_error');
+          }
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    };
+
+    inp.addEventListener('input', function () {
+      readURL(this);
+    });
+    document.addEventListener('click', function (e) {
+      if (
+        e.target.closest('[data-remove-avatar-btn]') &&
+        !parent.classList.contains('_error')
+      ) {
+        e.preventDefault();
+        image.src = image.dataset.src;
+      }
+      if (e.target.closest('[data-upload-avatar-btn]')) {
+        inp.click();
+      }
+    });
+  }
+
   // magnifier
   const initMagnifier = () => {
     const magnifier = document.getElementById('magnifier');
@@ -467,6 +563,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // console.log(target);
 
     if (window.innerWidth <= 768) {
+      // if (document.querySelector('.user-avatar__inner')) {
+      //   setActiveClass(
+      //     e,
+      //     '.user-avatar__inner',
+      //     '.user-avatar__wrap',
+      //     '_active',
+      //     true
+      //   );
+      // }
       if (bodyLockStatus && target.closest('.hero-product__image-wrap')) {
         document.documentElement.classList.add('_fullscreen-image');
         bodyLock();
@@ -511,15 +616,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (bodyLockStatus && target.closest('[data-close-account-menu]')) {
         bodyUnlock();
         document.documentElement.classList.remove('_show-account-menu');
-      }
-      if (document.querySelector('.user-avatar__inner')) {
-        setActiveClass(
-          e,
-          '.user-avatar__inner',
-          '.user-avatar__wrap',
-          '_active',
-          true
-        );
       }
       if (target.closest('#show-navbar-btn')) {
         target.closest('.account-page__group').classList.add;
@@ -575,6 +671,16 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    if (target.closest('.reg-warning__close-btn')) {
+      target.closest('.reg-warning').classList.add('_hidden');
+    }
+    if (target.closest('[data-start-countdown-btn]')) {
+      const countdown = target.parentElement.querySelector('[data-countdown]');
+      const button = target.closest('[data-start-countdown-btn]');
+      button.setAttribute('disabled', '');
+      initTimer(countdown, countdown.dataset.countdown, button);
+      button.parentElement.classList.add('_init-countdown');
+    }
     if (target.closest('.promocode-order-info__clear-btn')) {
       document.querySelector('.promocode-order-info__input input').value = '';
     }

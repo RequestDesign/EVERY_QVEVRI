@@ -32,7 +32,7 @@
 </head>
 
 <body style="opacity: 0">
-	<div class="wrapper account-page account-page_empty-coins-history">
+	<div class="wrapper account-page account-page_personal-data">
 		<header data-scroll="50" data-scroll-show class="header">
 			<div class="header__container container">
 				<div class="header__top">
@@ -4055,579 +4055,140 @@
 					<div class="account-page__inner">
 						<div class="account-page__group">
 							<button id="show-navbar-btn" type="button" class="account-page__heading tl2">
-								История баллов
+								Личные данные
 							</button>
 							<div class="account-page__navbar navbar-account-page">
 								<nav class="navbar-account-page__navigation">
-									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
+									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">Личные данные</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Мои заказы</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Вы заказывали</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Статусы</span></a>
-									<a href="#" class="navbar-account-page__link _active"><span class="navbar-account-page__link-txt txt txt_md">История баллов</span></a>
+									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">История баллов</span></a>
 									<a href="#" class="navbar-account-page__link"><span class="navbar-account-page__link-txt txt txt_md">Избранные товары</span></a>
 								</nav>
 								<a href="#" class="navbar-account-page__logout-btn logout-btn txt txt_md">Выйти</a>
 							</div>
 						</div>
 						<div class="account-page__content">
-							<div class="account-page__coins-history coins-history-account">
-								<div class="coins-history-account__hero hero-no-products">
-									<div class="hero-no-products__text-wrap">
-										<span class="hero-no-products__heading tl2">У вас еще нет истории баллов</span>
-										<p class="hero-no-products__text txt">
-											Покупайте товары и получайте баллы
-										</p>
-										<a href="#" class="hero-no-products__link btn btn_round">
-											<div class="btn__icon-wrap"></div>
-											<span class="btn__text">Перейти в каталог</span>
-										</a>
-									</div>
-									<div class="hero-no-products__image-wrap">
-										<img src="img/bg/8530567fa04ba2567d5f7d6552745b46b100b88f.webp" alt="" class="hero-no-products__image" />
-									</div>
-								</div>
-								<div data-shopify-section="1" class="coins-history-account__shopify-section shopify-section shopify-section_group">
-									<div class="shopify-section__container container">
-										<div class="shopify-section__head">
-											<span class="shopify-section__number txt txt_wide desktop-only"></span>
-											<span class="shopify-section__title tl1">рекомендуем</span>
-											<div class="shopify-section__sl-control sl-control sl-control_reversed desktop-only">
-												<div class="sl-control__nav sl-nav">
-													<button type="button" class="sl-nav__arrow sl-nav__arrow_next">
-														<img src="img/icons/sl-arr.svg" alt="" class="sl-nav__arrow-icon" />
-													</button>
-													<button type="button" class="sl-nav__arrow sl-nav__arrow_prev">
-														<img src="img/icons/sl-arr.svg" alt="" class="sl-nav__arrow-icon" />
-													</button>
+							<div class="account-page__personal-data personal-data-account">
+								<div class="personal-data-account__main-content">
+									<div class="personal-data-account__main-inner">
+										<div class="personal-data-account__head">
+											<div class="personal-data-account__head-inner">
+												<div class="personal-data-account__user-avatar">
+													<img src="img/icons/avatar.svg" alt="" class="personal-data-account__user-avatar-img" />
 												</div>
-												<div class="sl-control__pagination-wrap">
-													<div class="sl-control__pagination sl-pagination txt txt_wide"></div>
+												<div class="personal-data-account__head-info">
+													<span class="personal-data-account__heading tl2">константин Константинопольский</span>
 												</div>
 											</div>
 										</div>
-										<p class="shopify-section__text txt txt_md">Рекомендации на основе просмотренного</p>
-										<div class="shopify-section__body">
-											<div class="shopify-section__carousel">
-												<div class="shopify-section__slider swiper">
-													<div class="shopify-section__wrapper swiper-wrapper">
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/f451401b1af808c4a81312eac1d7ff15.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/6c8e6103ef45b935d19aad65e5724.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/c4f191d740ecdc8e5437c11e253bdffb404da0f4.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
-														<a href="#" class="shopify-section__slide menu-product-card swiper-slide">
-															<div class="menu-product-card__head">
-																<div class="menu-product-card__head-group">
-																	<div class="menu-product-card__badges">
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">-25%</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Суперцена</span>
-																		</div>
-																		<div class="menu-product-card__badge badge">
-																			<span class="badge__text txt txt_16">Эксклюзив</span>
-																		</div>
-																	</div>
-																	<div class="menu-product-card__organic organic"></div>
-																</div>
-																<button type="button" class="menu-product-card__heart-btn heart-btn">
-																	<svg class="heart-btn__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-																		<path d="M24.992 37.8584C24.448 38.0472 23.552 38.0472 23.008 37.8584C18.368 36.3011 8 29.8045 8 18.7933C8 13.9326 11.984 10 16.896 10C19.808 10 22.384 12.6017 24 14.741C25.616 12.6017 28.208 10 31.104 10C36.016 10 40 13.9326 40 18.7933C40 29.8045 29.632 36.3011 24.992 37.8584Z" fill="#E9E8E8"></path>
-																	</svg>
-																</button>
-															</div>
-															<div class="menu-product-card__preview">
-																<div class="menu-product-card__image-wrap">
-																	<img src="img/products/2b0d27228da4ca96e2784b73daf3d465006102e0.webp" alt="" class="menu-product-card__image" />
-																</div>
-															</div>
-															<div class="menu-product-card__info">
-																<span class="menu-product-card__heading tl2">Вино
-																	Saperavi Binekhi</span>
-																<div class="menu-product-card__reviews">
-																	<div class="menu-product-card__grade grade">
-																		<span class="grade__text txt txt_md">4.5</span>
-																	</div>
-																</div>
-																<ul class="menu-product-card__features txt txt_16">
-																	<li class="menu-product-card__feature">Россия</li>
-																	<li class="menu-product-card__feature">Красное</li>
-																	<li class="menu-product-card__feature">Сухое</li>
-																	<li class="menu-product-card__feature">0.75 л</li>
-																</ul>
-																<div class="menu-product-card__characteristics characteristics">
-																	<ul class="characteristics__list">
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Вино:</span>
-																			<span class="characteristics__text">Полусухое, белое
-																			</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Объем:</span>
-																			<span class="characteristics__text">0.75 л</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Крепость:</span>
-																			<span class="characteristics__text">12.5%</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Страна, регион:</span>
-																			<span class="characteristics__text">Грузия, Кахетия</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Бренд:</span>
-																			<span class="characteristics__text">Binekhi</span>
-																		</li>
-																		<li class="characteristics__item txt">
-																			<span class="characteristics__label">Производитель:</span>
-																			<span class="characteristics__text">Vasi+</span>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<div class="menu-product-card__group">
-																<div class="menu-product-card__price-wrap">
-																	<div class="menu-product-card__price price">
-																		<span class="price__value txt txt_wide">1 200₽</span>
-																		<span class="price__value price__value_old txt txt_wide">1 700₽</span>
-																	</div>
-																</div>
-																<div class="menu-product-card__actions">
-																	<button class="menu-product-card__cart-btn cart-btn">
-																		<img src="img/icons/bag-white.svg" alt="" class="cart-btn__icon" />
-																	</button>
-																</div>
-															</div>
-														</a>
+										<div class="personal-data-account__body">
+											<div class="personal-data-account__group group-personal-data-account">
+												<span class="group-personal-data-account__heading subtitle">
+													Личные данные
+												</span>
+												<div class="group-personal-data-account__content">
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Фамилия</span>
+														<span class="group-personal-data-account__text txt">Константинопольский</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">дата рождения</span>
+														<span class="group-personal-data-account__text txt">12.11.1999</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Имя</span>
+														<span class="group-personal-data-account__text txt">Константин</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">пол</span>
+														<span class="group-personal-data-account__text txt">Мужской</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">отчество</span>
+														<span class="group-personal-data-account__text txt">Константинович</span>
 													</div>
 												</div>
 											</div>
+											<div class="personal-data-account__group group-personal-data-account">
+												<span class="group-personal-data-account__heading subtitle">
+													Контактные данные
+												</span>
+												<div class="group-personal-data-account__content">
+													<div class="group-personal-data-account__item group-personal-data-account__item_email">
+														<span class="group-personal-data-account__subtitle caps caps_md">E-mail</span>
+														<span class="group-personal-data-account__text txt">constantinopolitan.konsta@mail.ru</span>
+													</div>
+													<div class="group-personal-data-account__item">
+														<span class="group-personal-data-account__subtitle caps caps_md">Номер телефона</span>
+														<span class="group-personal-data-account__text txt">+7 (999) 999 99-99</span>
+													</div>
+												</div>
+											</div>
+											<div class="personal-data-account__checkbox">
+												<label class="checkbox">
+													<input checked class="checkbox__input" type="checkbox" value="" name="form[]" />
+													<span class="checkbox__text txt txt_md">Получать чеки по e-mail</span>
+												</label>
+												<div class="personal-data-account__checkbox-hint txt txt_16">
+													Чеки будут приходить на указанную электронную почту
+												</div>
+											</div>
 										</div>
+										<div class="personal-data-account__footer">
+											<a href="#" class="personal-data-account__edit-btn btn-link btn-link_edit txt txt_md">
+												Редактировать профиль
+											</a>
+											<button data-modal="#confirmAccDeletionModal" type="button" class="personal-data-account__delete-btn btn-link btn-link_delete txt txt_md">
+												Удалить аккаунт
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="personal-data-account__aside-content">
+									<div class="personal-data-account__status-banner status-banner">
+										<div class="status-banner__text-content">
+											<span class="status-banner__heading tl2">новичок</span>
+											<p class="status-banner__text txt">
+												<span class="status-banner__txt-content">
+													Кэшбек 5%
+													<span class="desktop-only"> на все товары </span>
+												</span>
+												<span class="status-banner__txt-content txt_16">*кроме акционных</span>
+											</p>
+											<a href="#" class="status-banner__link btn btn_icon">
+												<span class="btn__text txt txt_md">Подробнее</span>
+											</a>
+										</div>
+										<div class="status-banner__track">
+											<span data-cash-sum="1200" class="status-banner__current-value txt txt_wide"></span>
+											<div class="status-banner__track-image-wrap">
+												<div class="status-banner__track-image"></div>
+												<div class="status-banner__clip-path-container">
+													<div class="status-banner__track-image status-banner__track-image_red"></div>
+												</div>
+											</div>
+											<div class="status-banner__range">
+												<span data-total-cash-sum="5000" class="status-banner__range-value txt txt_16"></span>
+												<span class="status-banner__range-value txt txt_16">0</span>
+											</div>
+										</div>
+									</div>
+									<div class="personal-data-account__coins-history-banner coins-history-banner">
+										<div class="coins-history-banner__text-content">
+											<span class="coins-history-banner__heading tl2">1200</span>
+											<span class="coins-history-banner__text txt txt_16">Баллов на счёте</span>
+										</div>
+										<a href="#" class="coins-history-banner__link btn btn_icon">
+											<span class="btn__text txt txt_md">История баллов</span>
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">

@@ -3,9 +3,10 @@
   @@include('html/_head.htm',{ "title":"Личный профиль" })
   <body style="opacity: 0">
     <div class="wrapper account-page account-page_personal-data-edit-reg">
-      @@include('html/_header.htm',{})
+      @@include('html/_header.htm')
+
       <main class="main">
-        <section class="account-page__chapter">
+        <section data-modal="#leavePageModal" class="account-page__chapter">
           <div class="account-page__container container">
             <div class="account-page__inner">
               <div class="account-page__group">
@@ -162,6 +163,7 @@
                                 data-validate
                                 data-required
                                 data-dp
+                                value="17.11.1999"
                                 autocomplete="off"
                                 type="text"
                                 name="form[]"
@@ -218,6 +220,7 @@
                             <div
                               class="form-personal-data-account__input input">
                               <input
+                                value="Константинович"
                                 data-static
                                 data-validate="letters-only"
                                 autocomplete="off"
@@ -240,64 +243,167 @@
                                 class="form-personal-data-account__input input input_edit">
                                 <input
                                   disabled
-                                  data-validate
-                                  data-required
                                   data-value="constantinopolitan.konstantin@gmail.com"
                                   value="constantinopolitan.konstantin@gmail.com"
                                   autocomplete="off"
                                   type="email"
                                   name="form[]"
-                                  data-error="Обязательное поле"
+                                  data-error
                                   placeholder="E-mail"
                                   class="input__field" />
-                              </div>
-                              <div
-                                class="group-personal-data-account__hint hint hint_has-heading">
-                                <div class="hint__heading">
-                                  <span class="hint__heading-txt txt txt_16"
-                                    >Требует подтверждения</span
-                                  >
-                                  <button type="button" class="hint__icon-wrap">
-                                    <img
-                                      src="img/icons/hint-red.svg"
-                                      alt=""
-                                      class="hint__icon" />
-                                  </button>
-                                </div>
-                                <div class="hint__body">
-                                  <p class="hint__text txt txt_16">
-                                    Письмо с подтверждением было отправлено на
-                                    данную почту
-                                  </p>
-                                  <div class="hint__countdown txt txt_md">
-                                    Отправить повторно через
-                                    <span data-countdown="1">01:00</span>
-                                  </div>
-                                  <button
-                                    data-start-countdown-btn
-                                    type="button"
-                                    class="hint__btn txt txt_md">
-                                    Отправить повторно
-                                  </button>
-                                </div>
+                                <button
+                                  data-modal="#updateEmailModal"
+                                  type="button"
+                                  class="input__edit-btn">
+                                  <svg
+                                    class="input__edit-btn-icon"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M11.0475 3.00002L4.20585 10.2417C3.94752 10.5167 3.69752 11.0584 3.64752 11.4334L3.33918 14.1333C3.23085 15.1083 3.93085 15.775 4.89752 15.6084L7.58085 15.15C7.95585 15.0834 8.48085 14.8084 8.73918 14.525L15.5809 7.28335C16.7642 6.03335 17.2975 4.60835 15.4558 2.86668C13.6225 1.14168 12.2308 1.75002 11.0475 3.00002Z"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                    <path
+                                      d="M9.90625 4.20801C10.2646 6.50801 12.1312 8.26634 14.4479 8.49967"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                    <path
+                                      d="M2.5 18.333H17.5"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                </button>
                               </div>
                             </div>
                             <div class="form-personal-data-account__field">
                               <div
-                                class="form-personal-data-account__input input _verified">
+                                class="form-personal-data-account__input input input_edit">
                                 <input
                                   disabled
-                                  data-validate
-                                  data-required
                                   data-value="+7 (999) 999 99-99"
                                   value="+7 (999) 999 99-99"
                                   autocomplete="off"
                                   type="tel"
                                   name="form[]"
-                                  data-error="Обязательное поле"
+                                  data-error
                                   placeholder="Телефон"
                                   class="input__field" />
+                                <button
+                                  data-modal="#updatePhoneNumberModal"
+                                  type="button"
+                                  class="input__edit-btn">
+                                  <svg
+                                    class="input__edit-btn-icon"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M11.0475 3.00002L4.20585 10.2417C3.94752 10.5167 3.69752 11.0584 3.64752 11.4334L3.33918 14.1333C3.23085 15.1083 3.93085 15.775 4.89752 15.6084L7.58085 15.15C7.95585 15.0834 8.48085 14.8084 8.73918 14.525L15.5809 7.28335C16.7642 6.03335 17.2975 4.60835 15.4558 2.86668C13.6225 1.14168 12.2308 1.75002 11.0475 3.00002Z"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                    <path
+                                      d="M9.90625 4.20801C10.2646 6.50801 12.1312 8.26634 14.4479 8.49967"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                    <path
+                                      d="M2.5 18.333H17.5"
+                                      stroke="#B3B3B3"
+                                      stroke-width="2"
+                                      stroke-miterlimit="10"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round" />
+                                  </svg>
+                                </button>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          id="user-passwords"
+                          class="form-personal-data-account__group form-personal-data-account__group_pass">
+                          <span
+                            class="form-personal-data-account__heading subtitle"
+                            >Смена пароля</span
+                          >
+                          <div class="form-personal-data-account__fields">
+                            <div
+                              class="form-personal-data-account__input input">
+                              <input
+                                id="old-pass"
+                                data-static
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="password"
+                                name="form[]"
+                                data-error="Неверный пароль"
+                                placeholder="Введите старый пароль"
+                                class="input__field" />
+                            </div>
+                            <div
+                              class="form-personal-data-account__input input input_has-hint">
+                              <input
+                                id="new-pass"
+                                data-static
+                                data-validate
+                                data-required="pass"
+                                autocomplete="off"
+                                name="form[]"
+                                disabled
+                                placeholder="Новый пароль"
+                                class="input__field" />
+
+                              <button
+                                data-modal="#passRequireModal"
+                                type="button"
+                                class="input__hint hint hint_has-heading">
+                                <div class="hint__heading">
+                                  <span class="hint__heading-txt txt txt_16"
+                                    >Слабый пароль</span
+                                  >
+                                  <div class="hint__icon-wrap">
+                                    <img
+                                      src="img/icons/hint-red.svg"
+                                      alt=""
+                                      class="hint__icon" />
+                                  </div>
+                                </div>
+                              </button>
+                            </div>
+                            <div
+                              class="form-personal-data-account__input input">
+                              <input
+                                id="repeat-pass"
+                                data-validate
+                                data-static
+                                data-required
+                                disabled
+                                autocomplete="off"
+                                type="password"
+                                name="form[]"
+                                data-error="Неверный пароль"
+                                placeholder="Повторите пароль"
+                                class="input__field" />
                             </div>
                           </div>
                         </div>
@@ -305,9 +411,7 @@
                       <button
                         type="submit"
                         class="form-personal-data-account__btn btn btn_ol">
-                        <span class="btn__text txt txt_md"
-                          >Сохранить изменения</span
-                        >
+                        <span class="btn__text txt txt_md">Сохранить</span>
                       </button>
                     </form>
                   </div>

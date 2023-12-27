@@ -2,7 +2,7 @@
 <html lang="ru">
   @@include('html/_head.htm',{ "title":"Личный профиль" })
   <body style="opacity: 0">
-    <div class="wrapper account-page account-page_personal-data-edit-reg">
+    <div class="wrapper account-page account-page_personal-data">
       @@include('html/_header.htm',{})
       <main class="main">
         <section class="account-page__chapter">
@@ -58,76 +58,21 @@
               <div class="account-page__content">
                 <div class="account-page__personal-data personal-data-account">
                   <div class="personal-data-account__main-content">
-                    <form
-                      data-save-fields
-                      data-dev
-                      action="#"
-                      class="personal-data-account__form form-personal-data-account">
-                      <div class="form-personal-data-account__head">
+                    <div class="personal-data-account__main-inner">
+                      <div class="personal-data-account__head">
                         <div class="personal-data-account__head-inner">
-                          <div
-                            class="personal-data-account__user-avatar user-avatar">
-                            <label class="user-avatar__inner">
-                              <input type="file" class="user-avatar__input" />
-                              <div
-                                data-modal="#uploadAvatarModal"
-                                class="user-avatar__wrap">
-                                <div class="user-avatar__image-wrap">
-                                  <img
-                                    data-src="@img/icons/avatar.svg"
-                                    src="@img/icons/avatar.svg"
-                                    alt=""
-                                    class="user-avatar__image" />
-                                </div>
-                                <div class="user-avatar__caption">
-                                  <img
-                                    src="@img/icons/avatar-upload.svg"
-                                    alt=""
-                                    class="user-avatar__caption-icon" />
-                                </div>
-                              </div>
-                              <div class="user-avatar__dropdown">
-                                <ul class="user-avatar__dropdown-list">
-                                  <li class="user-avatar__dropdown-item">
-                                    <button
-                                      type="button"
-                                      class="user-avatar__dropdown-item-content txt">
-                                      Медиатека
-                                    </button>
-                                  </li>
-                                  <li class="user-avatar__dropdown-item">
-                                    <button
-                                      type="button"
-                                      class="user-avatar__dropdown-item-content txt">
-                                      Сделать снимок
-                                    </button>
-                                  </li>
-                                  <li class="user-avatar__dropdown-item">
-                                    <button
-                                      data-remove-avatar-btn
-                                      type="button"
-                                      class="user-avatar__dropdown-item-content txt txt_red">
-                                      Удалить фото
-                                    </button>
-                                  </li>
-                                </ul>
-                              </div>
-                              <button
-                                data-remove-avatar-btn
-                                type="button"
-                                class="user-avatar__i"></button>
-                            </label>
+                          <div class="personal-data-account__user-avatar">
+                            <img
+                              src="@img/icons/avatar.svg"
+                              alt=""
+                              class="personal-data-account__user-avatar-img" />
                           </div>
                           <div class="personal-data-account__head-info">
-                            <span
-                              class="personal-data-account__error-message txt txt_16"
-                              >Размер фотографии превышает 500 Кбайт</span
-                            >
                             <span class="personal-data-account__heading tl2"
-                              >id_111111</span
+                              >константин Константинопольский</span
                             >
                             <p
-                              data-da=".form-personal-data-account__head,768,last"
+                              data-da=".personal-data-account__head,768,last"
                               class="personal-data-account__head-text txt txt_16">
                               Загрузите фото и получите
                               <span class="txt txt_md">100</span> приветственных
@@ -136,184 +81,125 @@
                           </div>
                         </div>
                       </div>
-                      <div class="form-personal-data-account__body">
-                        <div class="form-personal-data-account__group">
+                      <div class="personal-data-account__body">
+                        <div
+                          class="personal-data-account__group group-personal-data-account">
                           <span
-                            class="form-personal-data-account__heading subtitle"
-                            >Личные данные</span
-                          >
-                          <div class="form-personal-data-account__fields">
-                            <div
-                              class="form-personal-data-account__input input input_required">
-                              <input
-                                data-required
-                                data-validate="letters-only"
-                                value="Константинопольский"
-                                autocomplete="off"
-                                type="text"
-                                name="form[]"
-                                data-error="Обязательное поле"
-                                placeholder="Фамилия"
-                                class="input__field" />
+                            class="group-personal-data-account__heading subtitle">
+                            Личные данные
+                          </span>
+                          <div class="group-personal-data-account__content">
+                            <div class="group-personal-data-account__item">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >Фамилия</span
+                              >
+                              <span
+                                class="group-personal-data-account__text txt"
+                                >Константинопольский</span
+                              >
+                            </div>
+                            <div class="group-personal-data-account__item">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >дата рождения</span
+                              >
+                              <span
+                                class="group-personal-data-account__text txt"
+                                >12.11.1999</span
+                              >
+                            </div>
+                            <div class="group-personal-data-account__item">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >Имя</span
+                              >
+                              <span
+                                class="group-personal-data-account__text txt"
+                                >Константин</span
+                              >
                             </div>
                             <div
-                              class="form-personal-data-account__input input input_date input_required">
-                              <input
-                                data-validate
-                                data-required
-                                data-dp
-                                autocomplete="off"
-                                type="text"
-                                name="form[]"
-                                data-error="Обязательное поле"
-                                placeholder="Дата рождения"
-                                maxlength="10"
-                                class="input__field" />
-                              <button
-                                data-dp-btn
-                                type="button"
-                                class="input__calendar-btn">
-                                <img
-                                  src="@img/icons/calendar.svg"
-                                  alt=""
-                                  class="input__calendar-btn-icon" />
-                              </button>
+                              class="group-personal-data-account__item _empty">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >пол</span
+                              >
                             </div>
                             <div
-                              class="form-personal-data-account__input input input_required">
-                              <input
-                                data-required
-                                data-validate="letters-only"
-                                value="Константин"
-                                autocomplete="off"
-                                type="text"
-                                name="form[]"
-                                data-error="Обязательное поле"
-                                placeholder="Имя"
-                                class="input__field" />
-                            </div>
-                            <div class="form-personal-data-account__options">
-                              <label
-                                class="form-personal-data-account__option option option_reversed">
-                                <input
-                                  hidden
-                                  class="option__input"
-                                  checked
-                                  type="radio"
-                                  value="1"
-                                  name="option" />
-                                <span class="option__text txt">Муж</span>
-                              </label>
-                              <label
-                                class="form-personal-data-account__option option option_reversed">
-                                <input
-                                  hidden
-                                  class="option__input"
-                                  type="radio"
-                                  value="2"
-                                  name="option" />
-                                <span class="option__text txt">Жен</span>
-                              </label>
-                            </div>
-                            <div
-                              class="form-personal-data-account__input input">
-                              <input
-                                data-static
-                                data-validate="letters-only"
-                                autocomplete="off"
-                                type="text"
-                                name="form[]"
-                                data-error
-                                placeholder="Отчество"
-                                class="input__field" />
+                              class="group-personal-data-account__item _empty">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >отчество</span
+                              >
                             </div>
                           </div>
                         </div>
-                        <div class="form-personal-data-account__group">
+                        <div
+                          class="personal-data-account__group group-personal-data-account">
                           <span
-                            class="form-personal-data-account__heading subtitle"
-                            >Контактные данные</span
-                          >
-                          <div class="form-personal-data-account__fields">
-                            <div class="form-personal-data-account__field">
-                              <div
-                                class="form-personal-data-account__input input input_edit">
-                                <input
-                                  disabled
-                                  data-validate
-                                  data-required
-                                  data-value="constantinopolitan.konstantin@gmail.com"
-                                  value="constantinopolitan.konstantin@gmail.com"
-                                  autocomplete="off"
-                                  type="email"
-                                  name="form[]"
-                                  data-error="Обязательное поле"
-                                  placeholder="E-mail"
-                                  class="input__field" />
-                              </div>
-                              <div
-                                class="group-personal-data-account__hint hint hint_has-heading">
-                                <div class="hint__heading">
-                                  <span class="hint__heading-txt txt txt_16"
-                                    >Требует подтверждения</span
-                                  >
-                                  <button type="button" class="hint__icon-wrap">
-                                    <img
-                                      src="img/icons/hint-red.svg"
-                                      alt=""
-                                      class="hint__icon" />
-                                  </button>
-                                </div>
-                                <div class="hint__body">
-                                  <p class="hint__text txt txt_16">
-                                    Письмо с подтверждением было отправлено на
-                                    данную почту
-                                  </p>
-                                  <div class="hint__countdown txt txt_md">
-                                    Отправить повторно через
-                                    <span data-countdown="1">01:00</span>
-                                  </div>
-                                  <button
-                                    data-start-countdown-btn
-                                    type="button"
-                                    class="hint__btn txt txt_md">
-                                    Отправить повторно
-                                  </button>
-                                </div>
-                              </div>
+                            class="group-personal-data-account__heading subtitle">
+                            Контактные данные
+                          </span>
+                          <div class="group-personal-data-account__content">
+                            <div
+                              class="group-personal-data-account__item group-personal-data-account__item_email">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >E-mail</span
+                              >
+                              <span
+                                class="group-personal-data-account__text txt"
+                                >—</span
+                              >
                             </div>
-                            <div class="form-personal-data-account__field">
-                              <div
-                                class="form-personal-data-account__input input _verified">
-                                <input
-                                  disabled
-                                  data-validate
-                                  data-required
-                                  data-value="+7 (999) 999 99-99"
-                                  value="+7 (999) 999 99-99"
-                                  autocomplete="off"
-                                  type="tel"
-                                  name="form[]"
-                                  data-error="Обязательное поле"
-                                  placeholder="Телефон"
-                                  class="input__field" />
-                              </div>
+                            <div class="group-personal-data-account__item">
+                              <span
+                                class="group-personal-data-account__subtitle caps caps_md"
+                                >Номер телефона</span
+                              >
+                              <span
+                                class="group-personal-data-account__text txt"
+                                >+7 (999) 999 99-99</span
+                              >
                             </div>
+                          </div>
+                        </div>
+                        <div class="personal-data-account__checkbox">
+                          <label class="checkbox">
+                            <input
+                              checked
+                              class="checkbox__input"
+                              type="checkbox"
+                              value=""
+                              name="form[]" />
+                            <span class="checkbox__text txt txt_md"
+                              >Получать чеки по e-mail</span
+                            >
+                          </label>
+                          <div
+                            class="personal-data-account__checkbox-hint txt txt_16">
+                            Чеки будут приходить на указанную электронную почту
                           </div>
                         </div>
                       </div>
-                      <button
-                        type="submit"
-                        class="form-personal-data-account__btn btn btn_ol">
-                        <span class="btn__text txt txt_md"
-                          >Сохранить изменения</span
-                        >
-                      </button>
-                    </form>
+                      <div class="personal-data-account__footer">
+                        <a
+                          href="#"
+                          class="personal-data-account__edit-btn btn-link btn-link_edit txt txt_md">
+                          Редактировать профиль
+                        </a>
+                        <button
+                          data-modal="#confirmAccDeletionModal"
+                          type="button"
+                          class="personal-data-account__delete-btn btn-link btn-link_delete txt txt_md">
+                          Удалить аккаунт
+                        </button>
+                      </div>
+                    </div>
                   </div>
                   <div class="personal-data-account__aside-content">
-                    <a
-                      href="#"
+                    <div
                       class="personal-data-account__status-banner status-banner">
                       <div class="status-banner__text-content">
                         <span class="status-banner__heading tl2">новичок</span>
@@ -326,11 +212,9 @@
                             >*кроме акционных</span
                           >
                         </p>
-                        <button
-                          type="button"
-                          class="status-banner__link btn btn_icon">
+                        <a href="#" class="status-banner__link btn btn_icon">
                           <span class="btn__text txt txt_md">Подробнее</span>
-                        </button>
+                        </a>
                       </div>
                       <div class="status-banner__track">
                         <span
@@ -352,9 +236,8 @@
                           >
                         </div>
                       </div>
-                    </a>
-                    <a
-                      href="#"
+                    </div>
+                    <div
                       class="personal-data-account__coins-history-banner coins-history-banner">
                       <div class="coins-history-banner__text-content">
                         <span class="coins-history-banner__heading tl2"
@@ -364,12 +247,12 @@
                           >Баллов на счёте</span
                         >
                       </div>
-                      <button
-                        type="button"
+                      <a
+                        href="#"
                         class="coins-history-banner__link btn btn_icon">
                         <span class="btn__text txt txt_md">История баллов</span>
-                      </button>
-                    </a>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

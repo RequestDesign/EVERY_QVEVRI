@@ -124,6 +124,10 @@ export let formValidate = {
     return error;
   },
   validateInput(formRequiredItem) {
+    const oldPassInp = document.getElementById('old-pass');
+    const newPassInp = document.getElementById('new-pass');
+    const repeatPassInp = document.getElementById('repeat-pass');
+
     let error = 0;
 
     if (formRequiredItem.dataset.required === 'email') {
@@ -141,8 +145,11 @@ export let formValidate = {
       this.addError(formRequiredItem);
       error++;
     } else {
-      if (!formRequiredItem.value.trim()) {
-        formRequiredItem.dataset.error = 'Заполните поле';
+      if (
+        !formRequiredItem.value.trim() &&
+        !formRequiredItem.hasAttribute('data-static')
+      ) {
+        formRequiredItem.dataset.error = 'Обязательное поле';
         this.addError(formRequiredItem);
         error++;
       } else if (formRequiredItem.dataset.validate === 'letters-only') {
@@ -152,6 +159,58 @@ export let formValidate = {
           this.addError(formRequiredItem);
           error++;
         }
+      } else if (formRequiredItem.id === 'old-pass') {
+        if (
+          formRequiredItem.value &&
+          !formRequiredItem.classList.contains('_form-error')
+        ) {
+          formRequiredItem.parentElement.classList.add('_verified');
+          newPassInp.removeAttribute('disabled');
+        } else {
+          formRequiredItem.parentElement.classList.remove('_verified');
+          newPassInp.parentElement.classList.remove('_verified');
+          repeatPassInp.parentElement.classList.remove('_verified');
+          newPassInp.setAttribute('disabled', '');
+          repeatPassInp.setAttribute('disabled', '');
+          newPassInp.value = '';
+          repeatPassInp.value = '';
+          this.removeError(newPassInp);
+          this.removeError(repeatPassInp);
+        }
+      } else if (formRequiredItem.dataset.required === 'pass') {
+        const passRegex =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$@!%&*?])(.{6,})/;
+
+        if (!passRegex.test(formRequiredItem.value)) {
+          formRequiredItem.parentElement.classList.remove('_verified');
+          repeatPassInp.parentElement.classList.remove('_verified');
+          repeatPassInp.setAttribute('disabled', '');
+          repeatPassInp.value = '';
+
+          this.addError(formRequiredItem);
+          this.removeError(repeatPassInp);
+          error++;
+        } else {
+          formRequiredItem.parentElement.classList.add('_verified');
+          repeatPassInp.removeAttribute('disabled');
+        }
+      } else if (formRequiredItem.id === 'repeat-pass') {
+        if (
+          formRequiredItem.value.trim() &&
+          document.getElementById('new-pass').value !== formRequiredItem.value
+        ) {
+          formRequiredItem.dataset.error = 'Неверный пароль';
+          formRequiredItem.parentElement.classList.remove('_verified');
+
+          this.addError(formRequiredItem);
+          error++;
+        } else if (!formRequiredItem.value.trim()) {
+          formRequiredItem.dataset.error = 'Обязательное поле';
+          this.addError(formRequiredItem);
+          error++;
+        } else {
+          formRequiredItem.parentElement.classList.add('_verified');
+        }
       } else {
         this.removeError(formRequiredItem);
       }
@@ -159,7 +218,6 @@ export let formValidate = {
     return error;
   },
   addError(formRequiredItem) {
-    document.documentElement.style = '--borderColor: #eb5749';
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
     formRequiredItem.parentElement.classList.remove('_filled');
@@ -177,6 +235,7 @@ export let formValidate = {
     }
   },
   removeError(formRequiredItem) {
+    console.log(formRequiredItem);
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
     if (!formRequiredItem.closest('.input-row')) {

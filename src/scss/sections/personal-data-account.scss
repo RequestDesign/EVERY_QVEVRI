@@ -77,14 +77,25 @@
   &__head-info {
     display: flex;
     flex-direction: column;
+    @media (min-width: 48em) {
+      row-gap: 1.6rem;
+    }
+  }
+
+  // .personal-data-account__error-message
+
+  &__error-message {
+    margin-bottom: 1.6rem;
+    display: none;
+    color: $red;
+    ._error & {
+      display: block;
+    }
   }
 
   // .personal-data-account__heading
 
   &__heading {
-    @media (min-width: 48em) {
-      margin-bottom: 1.6rem;
-    }
   }
 
   // .personal-data-account__head-text

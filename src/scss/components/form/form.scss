@@ -47,6 +47,13 @@ form._error {
     display: flex;
     flex-direction: column;
     &_pass {
+      .form-personal-data-account__fields {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 48em) {
+          width: 50%;
+        }
+      }
       .account-page_personal-data-edit-reg & {
         .form-personal-data-account__heading {
           margin-bottom: 3.6rem;
@@ -68,9 +75,6 @@ form._error {
         }
         .form-personal-data-account__input {
           grid-column: 1/2;
-          &._verified {
-            pointer-events: none;
-          }
         }
       }
     }

@@ -52,6 +52,11 @@ input:disabled {
       right: auto;
     }
   }
+  &_has-hint {
+    .form-error {
+      display: none;
+    }
+  }
   &_date {
     .input__calendar-btn {
       flex: 0 0 2rem;
@@ -159,6 +164,11 @@ input:disabled {
   &__field {
     flex: 1 1 auto;
     width: 100%;
+    &:disabled {
+      &::placeholder {
+        color: $gray;
+      }
+    }
     &::placeholder {
       content: '*';
       color: $black;
@@ -196,6 +206,20 @@ input:disabled {
     @media (max-width: 48em) {
       width: 4rem;
       height: 4rem;
+    }
+  }
+
+  // .input__hint
+
+  &__hint {
+    &.hint {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+    }
+    ._form-error & {
+      display: block;
     }
   }
 }
