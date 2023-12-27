@@ -3300,6 +3300,12 @@
               placeholder="Я ищу..."
               class="input__field" />
           </div>
+          <button type="button" class="header__remove-btn _hidden">
+            <img
+              src="@img/icons/cross.svg"
+              alt=""
+              class="header__remove-btn-icon _hidden" />
+          </button>
           <button
             type="submit"
             class="header__search-btn btn btn_icon desktop-only">
@@ -3795,7 +3801,9 @@
                   stroke-linejoin="round" />
               </svg>
 
-              <span class="actions-header__counter counter _hidden">3</span></a
+              <div class="actions-header__counter counter">
+                <span>2</span>
+              </div></a
             >
           </li>
           <li class="actions-header__item actions-header__item_cart">
@@ -3834,7 +3842,9 @@
                   stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
-              <span class="actions-header__counter counter _hidden">3</span></a
+              <div class="actions-header__counter counter">
+                <span>3</span>
+              </div></a
             >
             <div class="actions-header__cart header-cart">
               <div class="header-cart__head">

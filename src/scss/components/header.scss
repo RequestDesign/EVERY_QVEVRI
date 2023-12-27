@@ -355,6 +355,23 @@
       height: 3.5rem;
     }
   }
+
+  // .header__remove-btn
+
+  &__remove-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    &._hidden {
+      display: none;
+    }
+  }
+
+  // .header__remove-btn-icon
+
+  &__remove-btn-icon {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 // --------------------------------------------------------------------------

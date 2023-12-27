@@ -892,16 +892,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const onMouseOverHandler = e => {
     const target = e.target;
 
-    // if (window.innerWidth > 768) {
-    //   if (target.closest('.ambassadors-promo__card')) {
-    //     removeClasses(
-    //       document.querySelectorAll('.ambassadors-promo__card'),
-    //       '_active'
-    //     );
-    //     target.closest('.ambassadors-promo__card').classList.add('_active');
-    //   }
-    // }
-
     if (target.closest('.header-subnav__sublink')) {
       removeClasses(
         document.querySelectorAll('.header-subnav__sublink'),

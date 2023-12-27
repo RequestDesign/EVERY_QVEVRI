@@ -1,108 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/_head.htm',{ "title":"Тест" })
+  @@include('html/_head.htm',{ "title":"Главная" })
   <body style="opacity: 0">
-    <div class="wrapper tests-page tests-page_test chapter">
+    <div class="wrapper chapter">
       @@include('html/_header.htm',{})
       <main class="main">
-        <section class="tests-page__test test">
-          <div class="test__container container">
-            <div class="test__head">
-              <nav class="test__breadcrumbs breadcrumbs caps">
-                <a href="#" class="breadcrumbs__text">Главная</a>
-                <span class="breadcrumbs__text">как хранить вино</span>
-              </nav>
-            </div>
-            <div class="test__body">
-              <div class="test__content">
-                <span class="test__counter txt">Вопрос 5 <span>/ 5</span></span>
-                <span class="test__title tl1 mobile-only"
-                  >Как хранить вино?</span
-                >
-                <span class="test__subtitle caps caps_md"
-                  >Принесли вино домой, но хотите открыть его по какому-нибудь
-                  важному поводу. Куда поставите на хранение?</span
-                >
-                <div class="test__options">
-                  <label class="test__option option option_reversed">
-                    <input
-                      disabled
-                      hidden
-                      class="option__input"
-                      type="radio"
-                      value="1"
-                      name="option" />
-                    <span class="option__text caps caps_md"> Холодильник </span>
-                    <span class="option__hint txt"
-                      >Если он не трясется и держит температуру</span
-                    >
-                  </label>
-                  <label class="test__option option option_reversed">
-                    <input
-                      disabled
-                      hidden
-                      class="option__input"
-                      type="radio"
-                      value="2"
-                      name="option" />
-                    <span class="option__text caps caps_md">Подоконник</span>
-                  </label>
-                  <label class="test__option option option_reversed">
-                    <input
-                      disabled
-                      hidden
-                      class="option__input"
-                      type="radio"
-                      value="3"
-                      name="option" />
-                    <span class="option__text caps caps_md">Балкон</span>
-                  </label>
-                  <label
-                    class="test__option option option_green option_reversed">
-                    <input
-                      disabled
-                      checked
-                      hidden
-                      class="option__input"
-                      type="radio"
-                      value="4"
-                      name="option" />
-                    <span class="option__text caps caps_md"
-                      >Темный прохладный угол
-                    </span>
-                    <span class="option__hint txt"
-                      >Подойдет, если нет винного шкафа</span
-                    >
-                  </label>
-                </div>
-                <button type="button" class="test__btn btn btn_solid">
-                  <span class="btn__text txt txt_md">Завершить тест</span>
-                </button>
-              </div>
-              <div class="test__images test-images">
-                <div
-                  class="test-images__image-wrap test-images__image-wrap_large">
-                  <div class="test-images__image-content">
-                    <img
-                      src="@img/tests/dbf594934943b6b7976f9835b2c3f79e.webp"
-                      alt=""
-                      class="test-images__image" />
-                  </div>
-                </div>
-                <div
-                  class="test-images__image-wrap test-images__image-wrap_small">
-                  <div class="test-images__image-content">
-                    <img
-                      src="@img/tests/159f7244f1945bdcfe5dc2257c42e8c2.webp"
-                      alt=""
-                      class="test-images__image" />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section class="no-search-results">
+          <div class="no-search-results__container container">
+            <span class="no-search-results__title tl2">Ничего не найдено</span>
+            <p class="no-search-results__text txt">
+              По запросу «<span>ККККК</span>» ничего не найдено. Попробуйте поискать по-другому
+              или сократить запрос.
+            </p>
           </div>
         </section>
-        <section data-shopify-section="1" class="tests-page__shopify-section shopify-section shopify-section_group">
+        <section data-shopify-section="1" class="shopify-section shopify-section_group">
           <div class="shopify-section__container container">
             <div class="shopify-section__head">
               <span
@@ -609,6 +521,31 @@
                         </div>
                       </div>
                     </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mainpage__location location">
+          <div class="location__container container">
+            <span class="location__title tl1">мы <span>на карте</span></span>
+            <div data-map class="location__map"></div>
+            <div class="location__info">
+              <p data-da=".location__panel,768,last" class="location__text txt">
+                Находимся рядом с метро Чкаловская и Петроградская
+              </p>
+              <div class="location__panel">
+                <div class="location__image-wrap desktop-only">
+                  <img
+                    src="@img/bg/8dd172f1ddf93591e4cc3534560fd673.webp"
+                    class="location__image" />
+                </div>
+                <div class="location__text-wrap">
+                  <span class="location__address"
+                    ><span class="location__address-txt txt"
+                      ><span>Санкт-Петербург, </span> Левашовский пр. 13а</span
+                    ></span
+                  >
                 </div>
               </div>
             </div>

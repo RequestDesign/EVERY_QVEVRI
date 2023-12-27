@@ -1,0 +1,32 @@
+.no-search-results {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  @media (max-width: 48em) {
+    margin-top: 6.4rem;
+    margin-bottom: 10rem;
+  }
+
+  // .no-search-results__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .no-search-results__title
+
+  &__title {
+    margin-bottom: 1.2rem;
+    @media (max-width: 48em) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  // .no-search-results__text
+
+  &__text {
+    @media (min-width: 48em) {
+      max-width: 50.9rem;
+    }
+  }
+}

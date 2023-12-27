@@ -69,7 +69,9 @@
                             class="personal-data-account__user-avatar user-avatar">
                             <label class="user-avatar__inner">
                               <input type="file" class="user-avatar__input" />
-                              <div class="user-avatar__wrap">
+                              <div
+                                data-modal="#uploadAvatarModal"
+                                class="user-avatar__wrap">
                                 <div class="user-avatar__image-wrap">
                                   <img
                                     src="@img/icons/avatar.svg"
@@ -112,15 +114,14 @@
                               <button
                                 data-remove-avatar-btn
                                 type="button"
-                                class="user-avatar__remove-btn">
-                                <img
-                                  src="@img/icons/cross-white.svg"
-                                  alt=""
-                                  class="user-avatar__remove-btn-icon" />
-                              </button>
+                                class="user-avatar__i"></button>
                             </label>
                           </div>
                           <div class="personal-data-account__head-info">
+                            <span
+                              class="personal-data-account__error-message txt txt_16"
+                              >Размер фотографии превышает 500 Кбайт</span
+                            >
                             <span class="personal-data-account__heading tl2"
                               >константин Константинопольский</span
                             >
