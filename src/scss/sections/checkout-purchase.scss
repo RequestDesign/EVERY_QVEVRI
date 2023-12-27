@@ -163,6 +163,9 @@
     display: flex;
     align-items: center;
     column-gap: 1.3rem;
+    &_choose {
+      display: none;
+    }
     &::before {
       content: '';
       flex: 0 0 2rem;
@@ -172,6 +175,12 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    ._choosen & {
+      display: none;
+      &_choose {
+        display: flex;
+      }
     }
     @media (max-width: 48em) {
       column-gap: 2rem;

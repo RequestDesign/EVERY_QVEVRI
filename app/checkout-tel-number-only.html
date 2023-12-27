@@ -62,7 +62,7 @@
 						<span class="purchase-checkout__quantity txt">9 товаров</span>
 					</div>
 					<div class="purchase-checkout__body">
-						<form data-modal-message="#orderMadeModal" data-dev action="#" class="purchase-checkout__form">
+						<form id="checkout-form" data-modal-message="#orderMadeModal" data-dev action="#" class="purchase-checkout__form">
 							<div class="purchase-checkout__steps">
 								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_data">
 									<span class="step-purchase-checkout__heading tl2">Ваши данные</span>
@@ -83,8 +83,11 @@
 								</div>
 								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_shipping">
 									<span class="step-purchase-checkout__heading tl2">самовывоз из магазина</span>
-									<div class="step-purchase-checkout__choosen-store">
-										<span id="choosen-store" class="caps">г. Москва, б-р Смоленский, д. 7/9</span>
+									<button data-modal="#chooseStoreModal" type="button" class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_btn">
+										<span class="caps">Выбрать магазин</span>
+									</button>
+									<div class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_choose">
+										<span id="choosen-store" class="caps"></span>
 										<button data-modal="#chooseStoreModal" type="button" class="step-purchase-checkout__edit-btn">
 											<img src="img/icons/edit-black.svg" alt="" class="step-purchase-checkout__edit-btn-icon" />
 										</button>
@@ -93,7 +96,7 @@
 								<div class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_date">
 									<span class="step-purchase-checkout__heading tl2">заберу с</span>
 									<div class="step-purchase-checkout__input input input_date">
-										<input data-validate data-required data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата" maxlength="10" class="input__field" />
+										<input data-validate data-required="date" data-dp autocomplete="off" type="text" name="form[]" data-error="Заполните поле" placeholder="Дата" maxlength="10" class="input__field" />
 										<button data-dp-btn type="button" class="input__calendar-btn">
 											<img src="img/icons/calendar.svg" alt="" class="input__calendar-btn-icon" />
 										</button>
@@ -232,7 +235,7 @@
 									и
 									<a href="#" class="info-purchase-checkout__policy-txt-link">политики конфиденциальности</a>
 								</p>
-								<button type="submit" class="info-purchase-checkout__btn btn btn_solid">
+								<button id="checkout-form-btn" type="submit" class="info-purchase-checkout__btn btn btn_solid">
 									<span class="btn__text txt txt_md">Заказать</span>
 								</button>
 							</div>

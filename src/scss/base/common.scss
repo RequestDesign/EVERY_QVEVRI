@@ -2611,6 +2611,30 @@
     padding: 4rem;
   }
 
+  // .choose-store-banner__edit-icon
+
+  &__edit-icon {
+    display: none;
+    ._choosen & {
+      display: inline-block;
+      flex: 0 0 2rem;
+      width: 2rem;
+      height: 2rem;
+      @media (max-width: 48em) {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  // .choose-store-banner__edit-icon-image
+
+  &__edit-icon-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
   // .choose-store-banner__store
 
   &__store {
@@ -2641,6 +2665,11 @@
 
   &__btn {
     margin-right: auto;
+    &.btn_link_black .btn__text {
+      ._choosen & {
+        border: none;
+      }
+    }
     .btn__text {
       @media (max-width: 48em) {
         font-size: 2.3rem;

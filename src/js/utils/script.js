@@ -534,19 +534,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (target.closest('.select-store')) {
               target.closest('.select-store').classList.add('_choosen');
             }
+            if (target.closest('.choose-store-banner')) {
+              target.closest('.choose-store-banner').classList.add('_choosen');
+            }
+            if (target.closest('.step-purchase-checkout_shipping')) {
+              target
+                .closest('.step-purchase-checkout_shipping')
+                .classList.add('_choosen');
+            }
 
             if (option.checked) {
               target.innerHTML = txt;
-              if (document.querySelector('.products-cart__btn._disabled')) {
-                document
-                  .querySelector('.products-cart__btn._disabled')
-                  .classList.remove('_disabled');
-              }
-              if (document.querySelector('.docked-info__btn._disabled')) {
-                document
-                  .querySelector('.docked-info__btn._disabled')
-                  .classList.remove('_disabled');
-              }
             }
           };
 

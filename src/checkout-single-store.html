@@ -15,6 +15,7 @@
             </div>
             <div class="purchase-checkout__body">
               <form
+                id="checkout-form"
                 data-modal-message="#orderMadeModal"
                 data-dev
                 action="#"
@@ -27,10 +28,10 @@
                     >
                     <div class="step-purchase-checkout__fields">
                       <div
-                        class="step-purchase-checkout__input input input_required">
+                        class="step-purchase-checkout__input input input_required _verified">
                         <input
-                          data-validate
-                          data-required
+                          disabled
+                          value="Константин"
                           autocomplete="off"
                           type="text"
                           name="form[]"
@@ -39,10 +40,10 @@
                           class="input__field" />
                       </div>
                       <div
-                        class="step-purchase-checkout__input input input_required">
+                        class="step-purchase-checkout__input input input_required _verified">
                         <input
-                          data-validate
-                          data-required
+                          disabled
+                          value="Константинопольский"
                           autocomplete="off"
                           type="text"
                           name="form[]"
@@ -51,11 +52,10 @@
                           class="input__field" />
                       </div>
                       <div
-                        class="step-purchase-checkout__input input input_required">
+                        class="step-purchase-checkout__input input input_required _verified">
                         <input
-                          data-phone-mask
-                          data-validate
-                          data-required
+                          disabled
+                          value="+ 7 (999) 999 99-99"
                           autocomplete="off"
                           type="tel"
                           name="form[]"
@@ -64,10 +64,10 @@
                           class="input__field" />
                       </div>
                       <div
-                        class="step-purchase-checkout__input input input_required">
+                        class="step-purchase-checkout__input input _verified">
                         <input
-                          data-validate
-                          data-required
+                          disabled
+                          value="example@gmail.com"
                           autocomplete="off"
                           type="email"
                           name="form[]"
@@ -78,30 +78,14 @@
                     </div>
                   </div>
                   <div
-                    class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_shipping _choosen">
+                    class="purchase-checkout__step step-purchase-checkout step-purchase-checkout_shipping">
                     <span class="step-purchase-checkout__heading tl2"
                       >самовывоз из магазина</span
                     >
-                    <button
-                      data-modal="#chooseStoreModal"
-                      type="button"
-                      class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_btn">
-                      <span class="caps">Выбрать магазин</span>
-                    </button>
-                    <div
-                      class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_choose">
-                      <span id="choosen-store" class="caps"
+                    <div class="step-purchase-checkout__choosen-store">
+                      <span class="caps"
                         >г. Москва, б-р Смоленский, д. 7/9</span
                       >
-                      <button
-                        data-modal="#chooseStoreModal"
-                        type="button"
-                        class="step-purchase-checkout__edit-btn">
-                        <img
-                          src="@img/icons/edit-black.svg"
-                          alt=""
-                          class="step-purchase-checkout__edit-btn-icon" />
-                      </button>
                     </div>
                   </div>
                   <div
@@ -340,6 +324,7 @@
                     >
                   </p>
                   <button
+                    id="checkout-form-btn"
                     type="submit"
                     class="info-purchase-checkout__btn btn btn_solid">
                     <span class="btn__text txt txt_md">Заказать</span>

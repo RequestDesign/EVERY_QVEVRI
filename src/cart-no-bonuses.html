@@ -23,7 +23,7 @@
                     <span class="checkbox__text txt">Выбрать все</span>
                   </label>
                 </div>
-                <button disabled data-modal="#deleteCartItemsModal"  type="button" class="products-cart__remove-btn txt">
+                <button data-modal="#deleteCartItemsModal"  type="button" class="products-cart__remove-btn txt">
                   Удалить выбранные
                 </button>
               </div>
@@ -444,7 +444,7 @@
                     </div>
                   </div>
                   <div
-                    class="products-cart__choose-store choose-store-banner">
+                    class="products-cart__choose-store choose-store-banner _choosen">
                     <button
                     data-modal="#chooseStoreModal"
                       type="button"
@@ -468,6 +468,7 @@
                         </svg>
                       </div>
                       <span id="choosen-store" class="btn__text caps">г. Москва, б-р Смоленский, д. 7/9</span>
+                      <div class="choose-store-banner__edit-icon"><img src="@img/icons/edit-black.svg" alt="" class="choose-store-banner__edit-icon-image"></div>
                     </button>
                   </div>
                   <p class="products-cart__policy-txt txt txt_14">

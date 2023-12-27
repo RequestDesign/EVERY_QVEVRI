@@ -15,6 +15,7 @@
             </div>
             <div class="purchase-checkout__body">
               <form
+                id="checkout-form"
                 data-modal-message="#orderMadeModal"
                 data-dev
                 action="#"
@@ -81,10 +82,15 @@
                     <span class="step-purchase-checkout__heading tl2"
                       >самовывоз из магазина</span
                     >
-                    <div class="step-purchase-checkout__choosen-store">
-                      <span id="choosen-store" class="caps"
-                        >г. Москва, б-р Смоленский, д. 7/9</span
-                      >
+                    <button
+                      data-modal="#chooseStoreModal"
+                      type="button"
+                      class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_btn">
+                      <span class="caps">Выбрать магазин</span>
+                    </button>
+                    <div
+                      class="step-purchase-checkout__choosen-store step-purchase-checkout__choosen-store_choose">
+                      <span id="choosen-store" class="caps"></span>
                       <button
                         data-modal="#chooseStoreModal"
                         type="button"
@@ -104,7 +110,7 @@
                     <div class="step-purchase-checkout__input input input_date">
                       <input
                         data-validate
-                        data-required
+                        data-required="date"
                         data-dp
                         autocomplete="off"
                         type="text"
@@ -332,6 +338,7 @@
                     >
                   </p>
                   <button
+                    id="checkout-form-btn"
                     type="submit"
                     class="info-purchase-checkout__btn btn btn_solid">
                     <span class="btn__text txt txt_md">Заказать</span>
