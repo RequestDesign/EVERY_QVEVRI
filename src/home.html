@@ -3,9 +3,9 @@
   @@include('html/_head.htm',{ "title":"Главная" })
   <body style="opacity: 0">
     <div class="wrapper mainpage">
-      @@include('html/_header.htm',{})
+      @@include('html/_header.htm',{"_modifier": "_modifier", "txt": "text"})
       <main class="main">
-        <section class="mainpage__hero hero">
+        <section data-modal="#noPhoneMessageModal" class="mainpage__hero hero">
           <div class="hero__container container">
             <div class="hero__head">
               <div class="hero__sl-control sl-control">

@@ -285,5 +285,8 @@
 
   &__btn {
     width: 100%;
+    @media (max-width: 48em) {
+      order: 1;
+    }
   }
 }

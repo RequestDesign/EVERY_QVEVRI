@@ -917,8 +917,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // document events
-  document.addEventListener('click', onClickHandler);
-  document.addEventListener('mouseover', onMouseOverHandler);
+  // document.addEventListener('click', onClickHandler);
+  // document.addEventListener('mouseover', onMouseOverHandler);
   // window events
   window.addEventListener('resize', function () {
     if (document.documentElement.classList.contains('_search-box-opened')) {

@@ -82,6 +82,21 @@
     }
   }
 
+  // .hero-tests__text-ps
+
+  &__text-ps {
+    margin-bottom: 13rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    .hero-tests__text {
+      margin: 0;
+    }
+    @media (max-width: 48em) {
+      margin-bottom: 10rem;
+    }
+  }
+
   // .hero-tests__subtitle
 
   &__subtitle {

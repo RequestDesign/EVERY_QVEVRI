@@ -1743,11 +1743,6 @@
 									</span>
 								</li>
 							</ul>
-							<p class="info-modal__text txt">
-								Если проблема сохраняется, свяжитесь с нашей
-								<a href="#" class="info-modal__link">службой поддержки</a>, и
-								мы постараемся помочь вам как можно быстрее.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -1798,11 +1793,6 @@
 									</span>
 								</li>
 							</ul>
-							<p class="info-modal__text txt">
-								Если проблема сохраняется, свяжитесь с нашей
-								<a href="#" class="info-modal__link">службой поддержки</a>, и
-								мы постараемся помочь вам как можно быстрее.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -1935,35 +1925,7 @@
 								<button type="button" class="account-modal__link btn btn_link">
 									<span class="btn__text txt txt_16">Войти по e-mail</span>
 								</button>
-								<div class="account-modal__login-methods">
-									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
-									<ul class="account-modal__login-methods-list">
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
-											</button>
-										</li>
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
-											</button>
-										</li>
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">Google</span>
-											</button>
-										</li>
-									</ul>
-								</div>
+								<p class="account-modal__text account-modal__text_lower txt txt_16">Вход по e-mail доступен только зарегистрированным пользователям</p>
 							</div>
 							<div class="account-modal__image-wrap">
 								<img src="img/bg/7d3ae7f6633ec34e2dea5f1fa6e4d010.webp" alt="" class="account-modal__image" />
@@ -2054,35 +2016,6 @@
 										<span class="btn__text txt txt_md">Войти</span>
 									</button>
 								</form>
-								<div class="account-modal__login-methods">
-									<span class="account-modal__login-methods-txt txt txt_16">Войти через</span>
-									<ul class="account-modal__login-methods-list">
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/vk-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">ВКонтакте</span>
-											</button>
-										</li>
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/apple-id-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">Apple ID</span>
-											</button>
-										</li>
-										<li class="account-modal__login-method login-method">
-											<button type="button" class="login-method__inner">
-												<div class="login-method__icon-wrap">
-													<img src="img/icons/google-i.svg" alt="" class="login-method__icon" />
-												</div>
-												<span class="login-method__text txt txt_md desktop-only">Google</span>
-											</button>
-										</li>
-									</ul>
-								</div>
 								<button type="button" class="account-modal__tel-login-btn btn btn_link">
 									<span class="btn__text txt txt_16">Войти по номеру телефона</span>
 								</button>
@@ -2493,7 +2426,38 @@
 				</div>
 			</div>
 		</div>
-		<div style="height: 0; position: absolute">
+
+		<!-- напоминание о регистрации -->
+		<div id="regReminderModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_reg-reminder">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<span class="txt-info-modal__title tl2">Вы можете зарегистрироваться.</span>
+							<p class="txt-info-modal__text txt">
+								Вы можете получить баллы для оплаты товара при следующем заказе. Пройдите регистрацию и будьте участником нашей <a href="#">системы лояльности</a>.
+							</p>
+							<button type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Зарегистрироваться</span>
+							</button>
+							<a href="#" class="txt-info-modal__link btn btn_link"><span class="btn__text txt txt_16">Оформить заказ без регистрации</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -110vh;
+    left: -110vw;
+    visibility: hidden;
+    opacity: 0;
+  ">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148" height="148" viewBox="0 0 148 148" fill="none">
 				<clipPath id="clip-img-mobile">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9532 0L59.6688 10.2376L69.9064 34.9532L59.6688 59.6688L34.9532 69.9064L10.2376 59.6688L3.35497e-05 34.9532L10.2376 10.2376L34.9532 0ZM34.9532 78.0939L59.6688 88.3315L69.9064 113.047L59.6688 137.763L34.9532 148L10.2376 137.763L0 113.047L10.2376 88.3315L34.9532 78.0939ZM137.762 10.2376L113.047 9.17735e-05L88.3312 10.2376L78.0937 34.9533L88.3312 59.6689L113.047 69.9065L137.762 59.6689L148 34.9533L137.762 10.2376Z" fill="url(#pattern0)" />
