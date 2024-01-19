@@ -424,6 +424,10 @@ body::after {
       text-transform: uppercase;
       color: $gray;
       transition: color 0.3s ease, border-bottom 0.3s ease;
+      span {
+        font-weight: 400;
+        text-decoration: line-through;
+      }
       @media (max-width: 48em) {
         font-size: 3rem;
         letter-spacing: 0.4rem;
