@@ -873,7 +873,7 @@ document.addEventListener('DOMContentLoaded', function () {
       removeClasses(document.querySelectorAll('.menu-bar__item'), '_active');
       target.closest('.menu-bar__item').classList.add('_active');
     }
-    if (target.closest('.tab')) {
+    if (target.closest('.tab') && !target.closest('.categories-catalog__item')) {
       removeClasses(document.querySelectorAll('.tab'), '_active');
       target.closest('.tab').classList.add('_active');
     }
@@ -917,8 +917,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // document events
-  // document.addEventListener('click', onClickHandler);
-  // document.addEventListener('mouseover', onMouseOverHandler);
+  document.addEventListener('click', onClickHandler);
+  document.addEventListener('mouseover', onMouseOverHandler);
   // window events
   window.addEventListener('resize', function () {
     if (document.documentElement.classList.contains('_search-box-opened')) {

@@ -35,7 +35,7 @@
 	<div class="wrapper blog-page blog-page_news chapter">
 		<header data-scroll="50" data-scroll-show class="header">
 			<div class="header__container container">
-				<div class="header__top undefined">
+				<div class="header__top">
 					<ul data-da=".menu__body,768,last" class="header__links-list">
 						<li class="header__link-item">
 							<a href="#" class="header__link-txt txt txt_16">undefined</a>
@@ -5622,6 +5622,51 @@
 								<span class="btn__text txt txt_md">Зарегистрироваться</span>
 							</button>
 							<a href="#" class="txt-info-modal__link btn btn_link"><span class="btn__text txt txt_16">Оформить заказ без регистрации</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- выбрать тип винтажа -->
+		<div id="chooseTypeModal" aria-hidden="true" class="modal txt-info-modal txt-info-modal_choose-type">
+			<div class="modal__wrapper">
+				<div class="modal__content">
+					<button data-close type="button" class="modal__close">
+						<img src="img/icons/cross-white.svg" alt="" class="modal__close-icon" />
+					</button>
+					<div class="modal__body">
+						<div class="txt-info-modal__inner">
+							<div class="txt-info-modal__title-wrap">
+								<span class="txt-info-modal__title tl2">выберите тип винтажа</span>
+								<div class="txt-info-modal__hint hint">
+									<button type="button" class="hint__icon-wrap">
+										<img src="img/icons/hint.svg" alt="" class="hint__icon" />
+									</button>
+									<div class="hint__body">
+										<p class="hint__text txt txt_16">
+											Подсказка
+										</p>
+									</div>
+								</div>
+							</div>
+							<ul class="txt-info-modal__list">
+								<li class="txt-info-modal__list-item">
+									<input checked type="radio" value="1" name="vintageType" />
+									<span class="txt-info-modal__list-item-txt">2022г — 1200₽</span>
+								</li>
+								<li class="txt-info-modal__list-item">
+									<input type="radio" value="2" name="vintageType" />
+									<span class="txt-info-modal__list-item-txt">2021г — 1200₽</span>
+								</li>
+								<li class="txt-info-modal__list-item">
+									<input type="radio" value="3" name="vintageType" />
+									<span class="txt-info-modal__list-item-txt">2020г — 1200₽</span>
+								</li>
+							</ul>
+							<button type="button" class="txt-info-modal__btn btn btn_ol">
+								<span class="btn__text txt txt_md">Добавить в корзину</span>
+							</button>
 						</div>
 					</div>
 				</div>
