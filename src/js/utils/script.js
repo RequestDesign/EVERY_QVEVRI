@@ -828,11 +828,21 @@ document.addEventListener('DOMContentLoaded', function () {
       bodyUnlock();
     }
     if (target.closest('.tags-catalog__remove-btn-icon')) {
+      const Form = document.getElementById('filter-form');
       const tag = target.closest('.tags-catalog__item');
       const checkedInputs = document.querySelectorAll(
         `[data-filter-text="${tag.dataset.tagText}"] input`
       );
-      checkedInputs.forEach(checkedInput => (checkedInput.checked = false));
+      checkedInputs.forEach(checkedInput => {
+        checkedInput.checked = false;
+        checkedInput.removeAttribute('checked');
+        checkedInput.value = '';
+
+        if (Form) {
+          const event = new Event('change');
+          Form.dispatchEvent(event);
+        }
+      });
 
       tag.remove();
     }
@@ -873,7 +883,10 @@ document.addEventListener('DOMContentLoaded', function () {
       removeClasses(document.querySelectorAll('.menu-bar__item'), '_active');
       target.closest('.menu-bar__item').classList.add('_active');
     }
-    if (target.closest('.tab') && !target.closest('.categories-catalog__item')) {
+    if (
+      target.closest('.tab') &&
+      !target.closest('.categories-catalog__item')
+    ) {
       removeClasses(document.querySelectorAll('.tab'), '_active');
       target.closest('.tab').classList.add('_active');
     }
