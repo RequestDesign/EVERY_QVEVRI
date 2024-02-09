@@ -355,7 +355,12 @@ document.addEventListener('DOMContentLoaded', function () {
       <span class="tags-catalog__text txt">${filterTxt}</span>
       <button type="button" class="tags-catalog__remove-btn"><img src="./img/icons/cross.svg" alt="" class="tags-catalog__remove-btn-icon" /></button>
     `;
-      if (filter.checked) {
+      if (
+        filter.checked &&
+        !document.querySelector(
+          `.tags-catalog__list [data-tag-text="${filterTxt}"]`
+        )
+      ) {
         const tag = document.createElement('div');
         tag.classList.add('tags-catalog__item');
         tag.setAttribute('data-tag-text', filterTxt);
