@@ -144,6 +144,12 @@ export let formValidate = {
     ) {
       this.addError(formRequiredItem);
       error++;
+    } else if (
+      formRequiredItem.type === 'tel' &&
+      formRequiredItem.classList.contains('_is-incomplete')
+    ) {
+      this.addError(formRequiredItem);
+      error++;
     } else {
       if (
         !formRequiredItem.value.trim() &&
@@ -235,7 +241,6 @@ export let formValidate = {
     }
   },
   removeError(formRequiredItem) {
-    console.log(formRequiredItem);
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
     if (!formRequiredItem.closest('.input-row')) {

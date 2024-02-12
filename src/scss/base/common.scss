@@ -4112,8 +4112,9 @@
     opacity: 0;
     visibility: hidden;
     transition: flex 0.4s ease, width 0.4s ease, opacity 0.4s ease,
-      visibility 0.4s ease;
+      visibility 0.4s ease, font-size 0.3s ease;
     will-change: contents;
+    &.swiper-pagination-bullet-active,
     &._revealed {
       flex: 0 0 9rem;
       width: 9rem;
@@ -4122,14 +4123,21 @@
     }
   }
 
+  @media (max-width: 48em){
+     &._static {
+          transform: translateX(-4rem);
+     }
+  }
+
   @media (min-width: 48em) {
-    .swiper-pagination-bullet-active {
-      flex: 0 0 0;
-      width: 0;
-      opacity: 0;
-      visibility: hidden;
-    }
     .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active,
+      &.swiper-pagination-bullet-active._revealed {
+        flex: 0 0 0;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
       &._revealed {
         flex: 0 0 5rem;
         width: 5rem;

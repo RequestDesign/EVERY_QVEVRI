@@ -96,13 +96,13 @@
     user-select: none;
     transition: transform 0.5s ease, padding-bottom 0.5s ease,
       box-shadow 0.5s ease;
-    &:last-child._active {
+    &_right._active {
       transform: rotate(3deg) translateY(5rem) translateX(-100%);
     }
-    &:first-child._active {
+    &_left._active {
       transform: rotate(-3deg) translateY(3rem);
     }
-    &:last-child {
+    &_right {
       left: 100%;
       transform: translateX(-100%);
     }
@@ -115,16 +115,16 @@
       padding: 2.4rem;
       padding-bottom: 8rem;
       width: 38rem;
-      &:first-child {
+      &_left {
         transform: translateY(5rem);
       }
-      &:last-child {
+      &_right {
         transform: translateY(8rem) translateX(-100%);
       }
-      &:first-child._active {
+      &_left._active {
         transform: rotate(-6deg) translateY(5rem);
       }
-      &:last-child._active {
+      &_right._active {
         transform: rotate(6deg) translateY(12rem) translateX(-100%);
       }
     }

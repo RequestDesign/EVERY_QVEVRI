@@ -31,51 +31,63 @@ const changeActiveNum = (pagination, target) => {
   }
 };
 const initDynamicPagination = (swiper, amount) => {
-  if (swiper.slides.length >= 4) {
+  if (swiper.pagination) {
     const bullets = swiper.pagination.bullets;
-    const slides = swiper.slides;
-    const curIndex = swiper.realIndex;
 
-    if (bullets.length) {
-      removeClasses(bullets, '_revealed');
+    if (swiper.slides.length >= 3) {
+      const slides = swiper.slides;
+      const curIndex = swiper.realIndex;
 
-      window.innerWidth <= 768
-        ? bullets[curIndex].classList.add('_revealed')
-        : null;
-      bullets[curIndex + 1]
-        ? bullets[curIndex + 1].classList.add('_revealed')
-        : null;
-      bullets[curIndex + 2]
-        ? bullets[curIndex + 2].classList.add('_revealed')
-        : null;
+      if (bullets.length) {
+        removeClasses(bullets, '_revealed');
 
-      if (amount === 4) {
-        if (window.innerWidth <= 768 && bullets[curIndex + 3]) {
-          swiper.pagination.el.parentElement.style.width = '40rem';
-          bullets[curIndex + 3].classList.add('_revealed');
-        } else if (window.innerWidth <= 768 && !bullets[curIndex + 3]) {
-          swiper.pagination.el.parentElement.style.width = '29rem';
+        window.innerWidth <= 768
+          ? bullets[curIndex].classList.add('_revealed')
+          : null;
+        bullets[curIndex + 1]
+          ? bullets[curIndex + 1].classList.add('_revealed')
+          : null;
+        bullets[curIndex + 2]
+          ? bullets[curIndex + 2].classList.add('_revealed')
+          : null;
+
+        if (amount === 4) {
+          if (window.innerWidth <= 768 && bullets[curIndex + 3]) {
+            swiper.pagination.el.parentElement.style.width = '40rem';
+            bullets[curIndex + 3].classList.add('_revealed');
+          } else if (window.innerWidth <= 768 && !bullets[curIndex + 3]) {
+            swiper.pagination.el.parentElement.style.width = '29rem';
+          }
         }
-      }
 
-      window.innerWidth > 768 && bullets[curIndex + 3]
-        ? bullets[curIndex + 3].classList.add('_revealed')
-        : null;
+        window.innerWidth > 768 && bullets[curIndex + 3]
+          ? bullets[curIndex + 3].classList.add('_revealed')
+          : null;
 
-      if (
-        window.innerWidth <= 768 &&
-        (curIndex === slides.length - 2 || curIndex === slides.length - 1)
-      ) {
-        bullets[slides.length - 3].classList.add('_revealed');
-        bullets[slides.length - 2].classList.add('_revealed');
-        bullets[slides.length - 1].classList.add('_revealed');
+        if (
+          window.innerWidth <= 768 &&
+          (curIndex === slides.length - 2 || curIndex === slides.length - 1)
+        ) {
+          bullets[slides.length - 3].classList.add('_revealed');
+          bullets[slides.length - 2].classList.add('_revealed');
+          bullets[slides.length - 1].classList.add('_revealed');
+        }
+        if (window.innerWidth > 768 && curIndex === slides.length - 1) {
+          bullets[0].classList.add('_revealed');
+          bullets[1].classList.add('_revealed');
+          bullets[2].classList.add('_revealed');
+        }
+      } else if (window.innerWidth > 768) {
+        bullets.forEach(bullet => {
+          if (!bullet.classList.contains('swiper-pagination-bullet-active')) {
+            bullet.classList.add('_revealed');
+          }
+        });
       }
-      if (window.innerWidth > 768 && curIndex === slides.length - 1) {
-        bullets[0].classList.add('_revealed');
-        bullets[1].classList.add('_revealed');
-        bullets[2].classList.add('_revealed');
+    } else {
+      if (swiper.slides.length <= 2) {
+        swiper.pagination.el.classList.add('_static');
       }
-    } else if (window.innerWidth > 768) {
       bullets.forEach(bullet => {
         if (!bullet.classList.contains('swiper-pagination-bullet-active')) {
           bullet.classList.add('_revealed');
