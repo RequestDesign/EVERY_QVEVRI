@@ -841,7 +841,6 @@ document.addEventListener('DOMContentLoaded', function () {
       checkedInputs.forEach(checkedInput => {
         checkedInput.checked = false;
         checkedInput.removeAttribute('checked');
-        checkedInput.value = '';
 
         if (Form) {
           const event = new Event('change');
