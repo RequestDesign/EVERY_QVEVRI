@@ -1,4 +1,9 @@
-import { _slideUp, _slideDown, _slideToggle } from '../utils/utils.js';
+import {
+  _slideUp,
+  _slideDown,
+  _slideToggle,
+  removeClasses,
+} from '../utils/utils.js';
 
 // --------------------------------------------------------------------------
 
@@ -211,11 +216,6 @@ class Select {
     ).relativeSel;
 
     options.innerHTML = this.getOptions(relativeSel);
-    if (relativeSelOptions.querySelector('[selected]')) {
-      options
-        .querySelector(`.${this.classes.option}`)
-        .classList.add(this.classes.selected);
-    }
   }
   // disable select
   disableSelect(select, relativeSel) {
@@ -552,10 +552,7 @@ class Select {
   }
   // get option
   getOption(option, relativeSel) {
-    const selections =
-      option.selected && relativeSel.multiple
-        ? ` ${this.classes.selected}`
-        : '';
+    const selections = option.selected ? ` ${this.classes.selected}` : '';
     const showSelection =
       option.selected &&
       !relativeSel.hasAttribute('data-show-selection') &&
