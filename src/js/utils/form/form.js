@@ -294,7 +294,7 @@ export function formSubmit(options = { validate: true }) {
       });
       form.addEventListener('reset', function (e) {
         const form = e.target;
-        formValidate.formClean(form);
+        // formValidate.formClean(form);
       });
     }
   }
@@ -359,7 +359,7 @@ export function formSubmit(options = { validate: true }) {
       })
     );
     // clean form
-    formValidate.formClean(form);
+    // formValidate.formClean(form);
   }
 }
 
