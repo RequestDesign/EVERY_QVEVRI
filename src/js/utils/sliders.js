@@ -543,7 +543,7 @@ const initSlidersOnResize = () => {
     }
   }
   if (document.querySelector('.search-box__slider')) {
-    new Swiper('.search-box__slider', {
+    const slider = new Swiper('.search-box__slider', {
       modules: [Navigation, Mousewheel],
       slidesPerView: 1.5,
       spaceBetween: 50,
@@ -567,6 +567,17 @@ const initSlidersOnResize = () => {
         },
       },
     });
+
+    const search = document.getElementById('header-input__search');
+    const content = document.getElementById('search_ajax_items');
+
+    if (search && slider && content) {
+      search.addEventListener('input', function () {
+        if (content.querySelectorAll('.swiper-slide').length) {
+          slider.slideTo(0, 0);
+        }
+      });
+    }
   }
   if (document.querySelector('.tabs.swiper')) {
     if (window.innerWidth <= 768 && !tabsSlider) {
